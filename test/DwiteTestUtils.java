@@ -7,6 +7,7 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.io.Reader;
 import java.io.StringWriter;
+import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
@@ -47,6 +48,32 @@ public class DwiteTestUtils {
 		in0.close();
 		out.close();
 		out0.close();
+		
+		return out0.getBuffer().toString();
+	}
+	
+	
+	public static void newTest(Class<?> clazz, String infile, String outfile) throws Exception {
+		String expectedOutput = readLines(outfile);
+		String actualOutput = newRun(clazz, infile);
+		
+		if (!expectedOutput.equals(actualOutput)) {
+			System.out.println("Expected output:");
+			System.out.println(expectedOutput);
+			System.out.println("Actual output:");
+			System.out.println(actualOutput);
+			fail("Output mismatch in " + clazz.getName());
+		}
+	}
+	
+	
+	private static String newRun(Class<?> clazz, String infile) throws IOException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, IllegalArgumentException, InstantiationException {
+		BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(infile), "US-ASCII"));
+		StringWriter out0 = new StringWriter();
+		PrintWriter out = new PrintWriter(out0, true);
+		
+		Constructor<?> cons = clazz.getConstructor(DwiteIo.class);
+		cons.newInstance(new DwiteIo(in, out));
 		
 		return out0.getBuffer().toString();
 	}
