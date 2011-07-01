@@ -1,0 +1,5 @@
+UPGRADING AND REPAIRING PCS
+I
+Both monitor and video card must be set to run at the same vertical refresh rate.  Vertical refresh refers to how quickly the monitor redraws the screen, and is measured in (Hz), or times per second.
+Typical refresh rates for 14-inch diagonal to 17-inch diagonal measure monitors vary from 56Hz to 85Hz, with refresh rates over 72Hz causing less flicker on screen.
+aaabbbcccdddeeefffggghhhiiijjjkkklllmmmnnnooopppqqqrrrssstttuuuvvvwwwxxxyyyzzzAAABBBCCCDDDEEEFFFGGGHHHIIIJJJKKKLLLMMMNNNOOOPPPQQQRRRSSSTTTUUUVVVWWWXXXYYYZZZ

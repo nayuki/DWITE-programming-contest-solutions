@@ -1,0 +1,22 @@
+sum = 3
+For i = 1 To 5
+ sum = sum * 3
+Next i
+sum = 0
+For i = 1 To 100
+ sum = sum + i * (-1)
+Next i
+sum = 5
+For i = 3 To 3
+ sum = sum * 4 + i \ 2
+Next i
+sum = -2
+For i = 1 To 5
+ sum = i * sum * (-1)
+Next i
+sum = -10
+For i = 1 To 48
+ sum = 48 - sum + sum \ i - sum * (-2)
+Next i
+
+

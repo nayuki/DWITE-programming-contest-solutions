@@ -1,0 +1,5 @@
+Try this one baby.
+If I had a million dollars, I would be rich.
+Last week, I almost won $2,000,000
+Remove(startPos, numOfChars) deletes a substring from the String object.  startPos indicates the postion of the character to start deleting, with the first character of the string at position 0. numOfChars indicates the number of characters to delete.
+Last week, I almost won $2000

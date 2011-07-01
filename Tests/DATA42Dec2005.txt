@@ -1,0 +1,5 @@
+UNIVERSITY OF WESTERN ONTARIO
+The Educational Computing Organization of Ontario, April 9, 2005
+Encription algorithms such as RSA ecryption rely on special large numbers that have as their factors too large primes. n=1, 2, ... are 3, 34, 299, 2625, 23378, 210035, ...
+A
+aaabbbcccdddeeefffggghhhiiijjjkkklllmmmnnnooopppqqqrrrssstttuuuvvvwwwxxxyyyzzzAAABBBCCCDDDEEEFFFGGGHHHIIIJJJKKKLLLMMMNNNOOOPPPQQQRRRSSSTTTUUUVVVWWWXXXYYYZZZ

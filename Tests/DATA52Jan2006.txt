@@ -1,0 +1,36 @@
+30
+AB 2
+CA 1
+AG 3
+HA 4
+AI 6
+BC 3
+FB 8
+BG 6
+HB 5
+CD 8
+EC 12
+EL 2
+DF 2
+GD 3
+DM 6
+EF 7
+EM 9
+GF 4
+FI 12
+JF 6
+FK 12
+FL 9
+MF 3
+GH 9
+IG 6
+GJ 16
+HI 4
+HJ 10
+IJ 8
+JK 2
+LA
+EB
+CJ
+HL
+MA

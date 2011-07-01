@@ -1,0 +1,5 @@
+This is a test.
+There were 2000 soldiers on the ship.
+My son was born in 2000
+Substring(startPos, numOfChars) returns a substring of the String object. startPos indicates the position of the character that starts the substring, with the first character of a string at position 0. numOfChars indicates the legth of the string.
+Review 0

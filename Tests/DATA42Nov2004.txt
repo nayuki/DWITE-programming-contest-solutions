@@ -1,0 +1,22 @@
+sum = 7
+For i = 6 To 9
+ sum = sum * 4
+Next i
+sum = 0
+For i = 50 To 60
+ sum = sum + i * (-1)
+Next i
+sum = -3
+For i = 3 To 3
+ sum = sum * 8 + i \ 2
+Next i
+sum = -5
+For i = 2 To 4
+ sum = i * sum * (-4)
+Next i
+sum = -16
+For i = 10 To 60
+ sum = 48 - sum + sum \ i - sum * (-2)
+Next i
+
+
