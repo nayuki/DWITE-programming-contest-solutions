@@ -1,3 +1,5 @@
+import dwite.DwiteIo;
+
 // DWITE - October 2004 - Problem 4: CD-ROM Files
 public class dwite200410p4 {
 	

@@ -1,5 +1,7 @@
 import java.math.BigInteger;
 
+import dwite.DwiteIo;
+
 
 // DWITE - October 2004 - Problem 5: Super Long Sums
 public class dwite200410p5 {

@@ -1,3 +1,5 @@
+package dwite;
+
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -8,7 +10,7 @@ import java.io.PrintWriter;
 import java.util.StringTokenizer;
 
 
-final class DwiteIo {
+public final class DwiteIo {
 	
 	private BufferedReader input;
 	

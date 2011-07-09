@@ -1,3 +1,5 @@
+import dwite.DwiteIo;
+
 // DWITE - October 2004 - Problem 2: 24 Hour Clock
 public class dwite200410p2 {
 	

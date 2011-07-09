@@ -1,3 +1,5 @@
+import dwite.DwiteIo;
+
 // DWITE - October 2004 - Problem 1: Area of Circle
 public class dwite200410p1 {
 	

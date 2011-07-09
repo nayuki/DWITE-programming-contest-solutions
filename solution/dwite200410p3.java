@@ -2,6 +2,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import dwite.DwiteIo;
+
 
 // DWITE - October 2004 - Problem 3: The Tallest in the Class
 public class dwite200410p3 {
