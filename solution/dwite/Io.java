@@ -55,6 +55,11 @@ public final class Io {
 	}
 	
 	
+	public double readDoubleLine() {
+		return Double.parseDouble(readLine());
+	}
+	
+	
 	// Tokenized reads
 	
 	public void tokenizeLine() {

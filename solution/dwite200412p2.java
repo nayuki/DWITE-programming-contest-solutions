@@ -1,27 +1,26 @@
-import java.io.*;
-import java.util.StringTokenizer;
-
-
 // DWITE - December 2004 - Problem 2: Squareland II
-public class dwite200412p2 {
+
+import dwite.*;
+
+
+public final class dwite200412p2 extends Solution {
 	
-	public static void main(BufferedReader in, PrintWriter out) throws IOException {
-		for (int i = 0; i < 5; i++)
-			mainOnce(in, out);
+	public static void main(String[] args) {
+		Runner.run("DATA21.txt", "OUT21.txt", new dwite200412p2());
 	}
 	
 	
-	private static void mainOnce(BufferedReader in, PrintWriter out) throws IOException {
+	protected void runOnce(Io io) {
 		// Read input
-		int n = Integer.parseInt(in.readLine());
-		int s = Integer.parseInt(in.readLine());
+		int n = io.readIntLine();
+		int s = io.readIntLine();
 		int sqrtn = sqrt(n);
 		int sqrts = sqrt(s);
 		int[][] grid = new int[sqrtn][sqrtn];
 		for (int y = 0; y < grid.length; y++) {
-			StringTokenizer st = new StringTokenizer(in.readLine(), " ");
+			io.tokenizeLine();
 			for (int x = 0; x < grid[y].length; x++)
-				grid[y][x] = Integer.parseInt(st.nextToken());
+				grid[y][x] = io.readIntToken();
 		}
 		
 		// Find square with maximum sum
@@ -32,7 +31,7 @@ public class dwite200412p2 {
 		}
 		
 		// Write output
-		out.println(maxsum);
+		io.println(maxsum);
 	}
 	
 	
@@ -55,35 +54,6 @@ public class dwite200412p2 {
 				y ^= 1 << i;
 		}
 		return y;
-	}
-	
-	
-	
-	private static String infile = "DATA21.txt";  // Specify null to use System.in
-	private static String outfile = "OUT21.txt";  // Specify null to use System.out
-	
-	
-	public static void main(String[] args) throws IOException {
-		InputStream in0;
-		if (infile != null) in0 = new FileInputStream(infile);
-		else in0 = System.in;
-		Reader in1 = new InputStreamReader(in0, "US-ASCII");
-		BufferedReader in = new BufferedReader(in1);
-		
-		OutputStream out0;
-		if (outfile != null) out0 = new FileOutputStream(outfile);
-		else out0 = System.out;
-		Writer out1 = new OutputStreamWriter(out0, "US-ASCII");
-		PrintWriter out = new PrintWriter(out1, true);
-		
-		main(in, out);
-		
-		in.close();
-		in1.close();
-		in0.close();
-		out.close();
-		out1.close();
-		out0.close();
 	}
 	
 }

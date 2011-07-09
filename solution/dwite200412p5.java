@@ -1,8 +1,14 @@
-import java.io.*;
-
-
 // DWITE - December 2004 - Problem 5: Hidden Geography
-public class dwite200412p5 {
+
+import dwite.*;
+
+
+public final class dwite200412p5 extends Solution {
+	
+	public static void main(String[] args) {
+		Runner.run("DATA51.txt", "OUT51.txt", new dwite200412p5());
+	}
+	
 	
 	private static final String[] provinces = {
 		"British Columbia", "Alberta", "Saskatchewan", "Manitoba", "Ontario",
@@ -11,15 +17,9 @@ public class dwite200412p5 {
 	
 	
 	
-	public static void main(BufferedReader in, PrintWriter out) throws IOException {
-		for (int i = 0; i < 5; i++)
-			mainOnce(in, out);
-	}
-	
-	
-	private static void mainOnce(BufferedReader in, PrintWriter out) throws IOException {
+	protected void runOnce(Io io) {
 		// Read input
-		String line = normalize(in.readLine());
+		String line = normalize(io.readLine());
 		
 		// Find province at lowest index
 		int minindex = -1;
@@ -34,44 +34,15 @@ public class dwite200412p5 {
 		
 		// Write output
 		if (minindex != -1)
-			out.println(minprovince);
+			io.println(minprovince);
 		else
-			out.println("NO PROVINCE FOUND");
+			io.println("NO PROVINCE FOUND");
 	}
 	
 	
 	// Converts to lowercase and strips all non-letters
 	private static String normalize(String s) {
 		return s.toLowerCase().replaceAll("[^a-z]", "");
-	}
-	
-	
-	
-	private static String infile = "DATA51.txt";  // Specify null to use System.in
-	private static String outfile = "OUT51.txt";  // Specify null to use System.out
-	
-	
-	public static void main(String[] args) throws IOException {
-		InputStream in0;
-		if (infile != null) in0 = new FileInputStream(infile);
-		else in0 = System.in;
-		Reader in1 = new InputStreamReader(in0, "US-ASCII");
-		BufferedReader in = new BufferedReader(in1);
-		
-		OutputStream out0;
-		if (outfile != null) out0 = new FileOutputStream(outfile);
-		else out0 = System.out;
-		Writer out1 = new OutputStreamWriter(out0, "US-ASCII");
-		PrintWriter out = new PrintWriter(out1, true);
-		
-		main(in, out);
-		
-		in.close();
-		in1.close();
-		in0.close();
-		out.close();
-		out1.close();
-		out0.close();
 	}
 	
 }

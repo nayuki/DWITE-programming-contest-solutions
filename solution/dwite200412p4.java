@@ -1,8 +1,14 @@
-import java.io.*;
-
-
 // DWITE - December 2004 - Problem 4: Waring's Prime Number Conjecture
-public class dwite200412p4 {
+
+import dwite.*;
+
+
+public final class dwite200412p4 extends Solution {
+	
+	public static void main(String[] args) {
+		Runner.run("DATA41.txt", "OUT41.txt", new dwite200412p4());
+	}
+	
 	
 	private static boolean[] isPrime;  // [0] = false, [1] = false, [2] = true, [3] = true, [4] = false, [5] = true, ...
 	
@@ -23,21 +29,14 @@ public class dwite200412p4 {
 	}
 	
 	
-	
-	public static void main(BufferedReader in, PrintWriter out) throws IOException {
-		for (int i = 0; i < 5; i++)
-			mainOnce(in, out);
-	}
-	
-	
-	private static void mainOnce(BufferedReader in, PrintWriter out) throws IOException {
-		int n = Integer.parseInt(in.readLine());
+	protected void runOnce(Io io) {
+		int n = io.readIntLine();
 		if (isPrime[n])
-			out.println("PRIME");
+			io.println("PRIME");
 		else
 			// out.println(countSums(n, 3, 0));
 			// out.println(countSumsSemifast(n, 3, 0, 0));
-			out.println(countSumsFast(n));
+			io.println(countSumsFast(n));
 	}
 	
 	
@@ -117,35 +116,6 @@ public class dwite200412p4 {
 				y ^= 1 << i;
 		}
 		return y;
-	}
-	
-	
-	
-	private static String infile = "DATA41.txt";  // Specify null to use System.in
-	private static String outfile = "OUT41.txt";  // Specify null to use System.out
-	
-	
-	public static void main(String[] args) throws IOException {
-		InputStream in0;
-		if (infile != null) in0 = new FileInputStream(infile);
-		else in0 = System.in;
-		Reader in1 = new InputStreamReader(in0, "US-ASCII");
-		BufferedReader in = new BufferedReader(in1);
-		
-		OutputStream out0;
-		if (outfile != null) out0 = new FileOutputStream(outfile);
-		else out0 = System.out;
-		Writer out1 = new OutputStreamWriter(out0, "US-ASCII");
-		PrintWriter out = new PrintWriter(out1, true);
-		
-		main(in, out);
-		
-		in.close();
-		in1.close();
-		in0.close();
-		out.close();
-		out1.close();
-		out0.close();
 	}
 	
 }
