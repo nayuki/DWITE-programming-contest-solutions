@@ -33,14 +33,13 @@ public final class dwite200501p3 extends Solution {
 	}
 	
 	
-	private static int getDigitSum(int n) {  // Valid for 0 <= n < 10 000 000
-		return n /       1 % 10
-		     + n /      10 % 10
-		     + n /     100 % 10
-		     + n /    1000 % 10
-		     + n /   10000 % 10
-		     + n /  100000 % 10
-		     + n / 1000000 % 10;
+	private static int getDigitSum(int n) {
+		int sum = 0;
+		while (n != 0) {
+			sum += n % 10;
+			n /= 10;
+		}
+		return sum;
 	}
 	
 }

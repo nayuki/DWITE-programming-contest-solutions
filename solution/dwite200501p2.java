@@ -20,39 +20,40 @@ public final class dwite200501p2 extends Solution {
 		io.tokenizeLine();
 		int h = io.readIntToken();
 		int w = io.readIntToken();
-		int[][] neighbouringmines = new int[h + 2][w + 2];
+		char[][] grid = new char[h + 2][w + 2];  // Padded
 		Map<Character,Point> queries = new HashMap<Character,Point>();
 		for (int y = 0; y < h; y++) {
 			String line = io.readLine();
 			for (int x = 0; x < w; x++) {
 				char c = line.charAt(x);
-				if (c == '.') ;
-				else if (c == '*')
-					incrementNeighbours(neighbouringmines, x, y);
-				else if (c >= 'a' && c <= 'z')
+				if (c >= 'a' && c <= 'z')
 					queries.put(c, new Point(x, y));
-				else
+				else if (c != '.' && c != '*')
 					throw new AssertionError("Invalid cell");
+				grid[y + 1][x + 1] = c;
 			}
 		}
 		
-		// Process queries and write the output
+		// Process queries and write output
 		SortedSet<Character> querykeys = new TreeSet<Character>(queries.keySet());
 		for (Character key : querykeys) {
 			Point p = queries.get(key);
-			int mines = neighbouringmines[p.y + 1][p.x + 1];
+			int mines = countNeighborMines(grid, p.x, p.y);
 			io.printf("%c-%d%n", key, mines);
 		}
 	}
 	
 	
-	private static void incrementNeighbours(int[][] neighmines, int x, int y) {  // Uses the Moore neighbourhood
-		for (int yy = y - 1; yy <= y+1; yy++) {
-			for (int xx = x - 1; xx <= x+1; xx++) {
-				if (xx != x || yy != y)
-					neighmines[yy + 1][xx + 1]++;
+	// Uses the Moore neighbourhood
+	private static int countNeighborMines(char[][] grid, int x, int y) {
+		int count = 0;
+		for (int dy = -1; dy <= 1; dy++) {
+			for (int dx = -1; dx <= 1; dx++) {
+				if ((dx != 0 || dy != 0) && grid[y + 1 + dy][x + 1 + dx] == '*')
+					count++;
 			}
 		}
+		return count;
 	}
 	
 	
@@ -63,12 +64,10 @@ public final class dwite200501p2 extends Solution {
 		public final int y;
 		
 		
-		
 		public Point(int x, int y) {
 			this.x = x;
 			this.y = y;
 		}
-		
 		
 		
 		public String toString() {

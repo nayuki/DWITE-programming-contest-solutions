@@ -2,8 +2,8 @@
 
 import dwite.*;
 
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 
 public final class dwite200501p1 extends Solution {
@@ -14,9 +14,9 @@ public final class dwite200501p1 extends Solution {
 	
 	
 	public void run(Io io) {
-		// Read input
+		// Read input and sort
 		int n = io.readIntLine();
-		ArrayList<Golfer> golfers = new ArrayList<Golfer>();
+		SortedSet<Golfer> golfers = new TreeSet<Golfer>();
 		for (int i = 0; i < n; i++) {
 			String name = io.readLine();
 			int score = 0;
@@ -25,11 +25,13 @@ public final class dwite200501p1 extends Solution {
 			golfers.add(new Golfer(name, score));
 		}
 		
-		// Sort ascending and write the output
-		Collections.sort(golfers);
-		for (int i = 0; i < 5; i++) {
-			Golfer golfer = golfers.get(i);
+		// Write output
+		int i = 0;
+		for (Golfer golfer : golfers) {
+			if (i == 5)
+				break;
 			io.printf("%s %d%n", golfer.name, golfer.score);
+			i++;
 		}
 	}
 	
@@ -41,12 +43,10 @@ public final class dwite200501p1 extends Solution {
 		public final int score;
 		
 		
-		
 		public Golfer(String name, int score) {
 			this.name = name;
 			this.score = score;
 		}
-		
 		
 		
 		public int compareTo(Golfer g) {
@@ -54,11 +54,6 @@ public final class dwite200501p1 extends Solution {
 				return score - g.score;
 			else
 				return name.compareTo(g.name);
-		}
-		
-		
-		public String toString() {
-			return String.format("%s (%d)", name, score);
 		}
 		
 	}
