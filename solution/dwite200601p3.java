@@ -1,60 +1,42 @@
-import java.io.*;
-import java.util.*;
-
-
 // DWITE - January 2006 - Problem 3: London Knights
-public class dwite200601p3 {
+
+import dwite.*;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+
+public final class dwite200601p3 extends Solution {
 	
-	public static void main(BufferedReader in, PrintWriter out) throws IOException {
+	public static void main(String[] args) {
+		Runner.run("DATA31.txt", "OUT31.txt", new dwite200601p3());
+	}
+	
+	
+	public void run(Io io) {
 		// Read input
-		int n = Integer.parseInt(in.readLine());
+		int n = io.readIntLine();
 		Collection<Player> players = new ArrayList<Player>();
 		for (int i = 0; i < n; i++) {
-			StringTokenizer st = new StringTokenizer(in.readLine(), " ");
-			int playernum = Integer.parseInt(st.nextToken());
-			String lastname = st.nextToken();
-			String firstname = st.nextToken();
+			io.tokenizeLine();
+			int playernum = io.readIntToken();
+			String lastname = io.readToken();
+			String firstname = io.readToken();
 			List<Integer> stats = new ArrayList<Integer>();
-			while (st.hasMoreTokens())
-				stats.add(Integer.parseInt(st.nextToken()));
+			while (io.canReadToken())
+				stats.add(io.readIntToken());
 			players.add(new Player(playernum, firstname, lastname, stats));
 		}
 		
 		// Query and write output
-		out.println(Collections.max(players, new PlayerComparator(1)).getName());
-		out.println(Collections.max(players, new PlayerComparator(2)).getName());
-		out.println(Collections.min(players, new PlayerComparator(4)).getName());
-		out.println(Collections.max(players, new PlayerComparator(5)).getName());
-		out.println(Collections.max(players, new PlayerComparator(6)).getName());
-	}
-	
-	
-	
-	private static String infile = "DATA31.txt";  // Specify null to use System.in
-	private static String outfile = "OUT31.txt";  // Specify null to use System.out
-	
-	
-	public static void main(String[] args) throws IOException {
-		InputStream in0;
-		if (infile != null) in0 = new FileInputStream(infile);
-		else in0 = System.in;
-		Reader in1 = new InputStreamReader(in0, "US-ASCII");
-		BufferedReader in = new BufferedReader(in1);
-		
-		OutputStream out0;
-		if (outfile != null) out0 = new FileOutputStream(outfile);
-		else out0 = System.out;
-		Writer out1 = new OutputStreamWriter(out0, "US-ASCII");
-		PrintWriter out = new PrintWriter(out1, true);
-		
-		main(in, out);
-		
-		in.close();
-		in1.close();
-		in0.close();
-		out.close();
-		out1.close();
-		out0.close();
+		io.println(Collections.max(players, new PlayerComparator(1)).getName());
+		io.println(Collections.max(players, new PlayerComparator(2)).getName());
+		io.println(Collections.min(players, new PlayerComparator(4)).getName());
+		io.println(Collections.max(players, new PlayerComparator(5)).getName());
+		io.println(Collections.max(players, new PlayerComparator(6)).getName());
 	}
 	
 	

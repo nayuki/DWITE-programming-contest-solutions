@@ -1,18 +1,33 @@
-import java.io.*;
-import java.util.*;
-
-
 // DWITE - January 2006 - Problem 5: Distance Between Towns
-public class dwite200601p5 {
+
+import dwite.*;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.PriorityQueue;
+import java.util.Queue;
+
+
+public final class dwite200601p5 extends Solution {
 	
-	public static void main(BufferedReader in, PrintWriter out) throws IOException {
+	public static void main(String[] args) {
+		Runner.run("DATA51.txt", "OUT51.txt", new dwite200601p5());
+	}
+	
+	
+	private Graph graph;
+	
+	
+	public void run(Io io) {
 		// Read input (the graph)
-		int n = Integer.parseInt(in.readLine());
-		Graph graph = new Graph();
+		int n = io.readIntLine();
+		graph = new Graph();
 		for (int i = 0; i < n; i++) {
-			StringTokenizer st = new StringTokenizer(in.readLine(), " ");
-			String edge = st.nextToken();
-			int dist = Integer.parseInt(st.nextToken());
+			io.tokenizeLine();
+			String edge = io.readToken();
+			int dist = io.readIntToken();
 			Node a = graph.getOrAddNode(edge.substring(0, 1));
 			Node b = graph.getOrAddNode(edge.substring(1, 2));
 			a.addEdge(new Edge(b, dist));
@@ -20,14 +35,13 @@ public class dwite200601p5 {
 		}
 		
 		// Process each query
-		for (int i = 0; i < 5; i++)
-			mainOnce(in, out, graph);
+		super.run(io);
 	}
 	
 	
-	private static void mainOnce(BufferedReader in, PrintWriter out, Graph graph) throws IOException {
+	protected void runOnce(Io io) {
 		// Read input
-		String line = in.readLine();
+		String line = io.readLine();
 		Node src  = graph.getOrAddNode(line.substring(0, 1));
 		Node dest = graph.getOrAddNode(line.substring(1, 2));
 		
@@ -54,36 +68,7 @@ public class dwite200601p5 {
 		}
 		
 		// Write output
-		out.println(dest.distance);
-	}
-	
-	
-	
-	private static String infile = "DATA31.txt";  // Specify null to use System.in
-	private static String outfile = "OUT31.txt";  // Specify null to use System.out
-	
-	
-	public static void main(String[] args) throws IOException {
-		InputStream in0;
-		if (infile != null) in0 = new FileInputStream(infile);
-		else in0 = System.in;
-		Reader in1 = new InputStreamReader(in0, "US-ASCII");
-		BufferedReader in = new BufferedReader(in1);
-		
-		OutputStream out0;
-		if (outfile != null) out0 = new FileOutputStream(outfile);
-		else out0 = System.out;
-		Writer out1 = new OutputStreamWriter(out0, "US-ASCII");
-		PrintWriter out = new PrintWriter(out1, true);
-		
-		main(in, out);
-		
-		in.close();
-		in1.close();
-		in0.close();
-		out.close();
-		out1.close();
-		out0.close();
+		io.println(dest.distance);
 	}
 	
 	

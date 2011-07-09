@@ -1,9 +1,17 @@
-import java.io.*;
-import java.util.*;
-
-
 // DWITE - January 2006 - Problem 2: Scrabble
-public class dwite200601p2 {
+
+import dwite.*;
+
+import java.util.HashMap;
+import java.util.Map;
+
+
+public final class dwite200601p2 extends Solution {
+	
+	public static void main(String[] args) {
+		Runner.run("DATA21.txt", "OUT21.txt", new dwite200601p2());
+	}
+	
 	
 	private static final Map<Character,Integer> valueByLetter;
 	
@@ -38,10 +46,14 @@ public class dwite200601p2 {
 	}
 	
 	
+	private int[][] boardvalue;
 	
-	public static void main(BufferedReader in, PrintWriter out) throws IOException {
+	private char[][] board;
+	
+	
+	public void run(Io io) {
 		// 0 = normal, 1 = pink, 2 = red, 3 = light blue, 4 = dark blue, 5-9 = same meaning but to be scored and cleared
-		int[][] boardvalue = {
+		boardvalue = new int[][] {
 			{2, 0, 0, 3, 0, 0, 0, 2, 0, 0, 0, 3, 0, 0, 2},
 			{0, 1, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0, 1, 0},
 			{0, 0, 1, 0, 0, 0, 3, 0, 3, 0, 0, 0, 1, 0, 0},
@@ -58,18 +70,16 @@ public class dwite200601p2 {
 			{0, 1, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0, 1, 0},
 			{2, 0, 0, 3, 0, 0, 0, 2, 0, 0, 0, 3, 0, 0, 2}};
 		
-		char[][] board = new char[15][15];
-		
-		for (int i = 0; i < 5; i++)
-			mainOnce(in, out, board, boardvalue);
+		board = new char[15][15];
+		super.run(io);
 	}
 	
 	
-	private static void mainOnce(BufferedReader in, PrintWriter out, char[][] board, int[][] boardvalue) throws IOException {
-		int col = in.readLine().charAt(0) - 'A';
-		int row = Integer.parseInt(in.readLine()) - 1;
-		boolean horz = in.readLine().equals("ACROSS");
-		String newletters = in.readLine();
+	protected void runOnce(Io io) {
+		int col = io.readLine().charAt(0) - 'A';
+		int row = io.readIntLine() - 1;
+		boolean horz = io.readLine().equals("ACROSS");
+		String newletters = io.readLine();
 		int dx = horz ? 1 : 0;
 		int dy = horz ? 0 : 1;
 		
@@ -97,7 +107,7 @@ public class dwite200601p2 {
 		if (newletters.length() == 7)
 			score += 50;
 		
-		out.println(score);
+		io.println(score);
 		
 		// Clear squares used in this turn
 		for (int y = 0; y < boardvalue.length; y++) {
@@ -178,35 +188,6 @@ public class dwite200601p2 {
 		}
 		score *= wordmult;
 		return score;
-	}
-	
-	
-	
-	private static String infile = "DATA21.txt";  // Specify null to use System.in
-	private static String outfile = "OUT21.txt";  // Specify null to use System.out
-	
-	
-	public static void main(String[] args) throws IOException {
-		InputStream in0;
-		if (infile != null) in0 = new FileInputStream(infile);
-		else in0 = System.in;
-		Reader in1 = new InputStreamReader(in0, "US-ASCII");
-		BufferedReader in = new BufferedReader(in1);
-		
-		OutputStream out0;
-		if (outfile != null) out0 = new FileOutputStream(outfile);
-		else out0 = System.out;
-		Writer out1 = new OutputStreamWriter(out0, "US-ASCII");
-		PrintWriter out = new PrintWriter(out1, true);
-		
-		main(in, out);
-		
-		in.close();
-		in1.close();
-		in0.close();
-		out.close();
-		out1.close();
-		out0.close();
 	}
 	
 }
