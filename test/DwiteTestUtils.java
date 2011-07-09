@@ -1,4 +1,5 @@
 import static org.junit.Assert.fail;
+
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -7,11 +8,12 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.io.Reader;
 import java.io.StringWriter;
-import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 import dwite.Io;
+import dwite.Runner;
+import dwite.Solution;
 
 
 public class DwiteTestUtils {
@@ -69,13 +71,12 @@ public class DwiteTestUtils {
 	}
 	
 	
-	private static String newRun(Class<?> clazz, String infile) throws IOException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, IllegalArgumentException, InstantiationException {
+	private static String newRun(Class<?> clazz, String infile) throws IOException, IllegalAccessException, IllegalArgumentException, InstantiationException {
 		BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(infile), "US-ASCII"));
 		StringWriter out0 = new StringWriter();
 		PrintWriter out = new PrintWriter(out0, true);
 		
-		Constructor<?> cons = clazz.getConstructor(Io.class);
-		cons.newInstance(new Io(in, out));
+		Runner.run(new Io(in, out), (Solution)clazz.newInstance());
 		
 		return out0.getBuffer().toString();
 	}

@@ -1,24 +1,18 @@
+// DWITE - October 2004 - Problem 5: Super Long Sums
+
+import dwite.*;
+
 import java.math.BigInteger;
 
-import dwite.Io;
 
-
-// DWITE - October 2004 - Problem 5: Super Long Sums
-public class dwite200410p5 {
+public final class dwite200410p5 extends Solution {
 	
 	public static void main(String[] args) {
-		new dwite200410p5(new Io("DATA5", "OUT5"));
+		Runner.run("DATA5", "OUT5", new dwite200410p5());
 	}
 	
 	
-	public dwite200410p5(Io io) {
-		for (int i = 0; i < 5; i++)
-			mainOnce(io);
-		io.close();
-	}
-	
-	
-	private static void mainOnce(Io io) {
+	protected void runOnce(Io io) {
 		String x = io.readLine();
 		String y = io.readLine();
 		io.println(new BigInteger(x).add(new BigInteger(y)).toString());  // Easy version

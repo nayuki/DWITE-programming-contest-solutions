@@ -1,19 +1,20 @@
+// DWITE - October 2004 - Problem 3: The Tallest in the Class
+
+import dwite.*;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import dwite.Io;
 
-
-// DWITE - October 2004 - Problem 3: The Tallest in the Class
-public class dwite200410p3 {
+public final class dwite200410p3 extends Solution {
 	
 	public static void main(String[] args) {
-		new dwite200410p3(new Io("DATA3", "OUT3"));
+		Runner.run("DATA3", "OUT3", new dwite200410p3());
 	}
 	
 	
-	public dwite200410p3(Io io) {
+	public void run(Io io) {
 		// Read input
 		List<Student> students = new ArrayList<Student>();
 		int n = io.readIntLine();
