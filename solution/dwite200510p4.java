@@ -1,31 +1,38 @@
-import java.io.*;
-import java.util.StringTokenizer;
-
-
 // DWITE - October 2005 - Problem 4: Minesweeper
-public class dwite200510p4 {
+
+import dwite.*;
+
+
+public final class dwite200510p4 extends Solution {
 	
-	public static void main(BufferedReader in, PrintWriter out) throws IOException {
-		char[][] grid = readGridAndPad(in, 30, 16, ' ');  // Read grid
-		calculateNeighbouringMines(grid);  // Process grid
-		for (int i = 0; i < 5; i++)  // Process queries
-			mainOnce(in, out, grid);
+	public static void main(String[] args) {
+		Runner.run("DATA41.txt", "OUT41.txt", new dwite200510p4());
 	}
 	
 	
-	private static void mainOnce(BufferedReader in, PrintWriter out, char[][] grid) throws IOException {
+	private char[][] grid;
+	
+	
+	public void run(Io io) {
+		grid = readGridAndPad(io, 30, 16, ' ');  // Read grid
+		calculateNeighbouringMines(grid);  // Process grid
+		super.run(io);  // Process queries
+	}
+	
+	
+	protected void runOnce(Io io) {
 		// Read input
-		StringTokenizer st = new StringTokenizer(in.readLine(), " ");
-		int y = Integer.parseInt(st.nextToken());
-		int x = Integer.parseInt(st.nextToken());
+		io.tokenizeLine();
+		int y = io.readIntToken();
+		int x = io.readIntToken();
 		
 		// Make query and write output
 		if (grid[y][x] == 'X')
-			out.println("MINE - YOU LOSE");
+			io.println("MINE - YOU LOSE");
 		else if (grid[y][x] >= '1' && grid[y][x] <= '8')
-			out.printf("NO MINE - %c SURROUNDING IT%n", grid[y][x]);
+			io.printf("NO MINE - %c SURROUNDING IT%n", grid[y][x]);
 		else if (grid[y][x] == '0')
-			out.printf("NO MINE - %d SQUARES REVEALED%n", reveal(grid, x, y, new boolean[grid.length][grid[0].length]));
+			io.printf("NO MINE - %d SQUARES REVEALED%n", reveal(grid, x, y, new boolean[grid.length][grid[0].length]));
 		else
 			throw new AssertionError("Invalid cell");
 	}
@@ -75,10 +82,10 @@ public class dwite200510p4 {
 	
 	
 	
-	private static char[][] readGridAndPad(BufferedReader in, int width, int height, char border) throws IOException {
+	private static char[][] readGridAndPad(Io io, int width, int height, char border) {
 		char[][] grid = new char[height + 2][width + 2];
 		for (int y = 1; y <= height; y++) {
-			String line = in.readLine();
+			String line = io.readLine();
 			for (int x = 1; x <= width; x++)
 				grid[y][x] = line.charAt(x - 1);
 			grid[y][0] = border;
@@ -89,35 +96,6 @@ public class dwite200510p4 {
 			grid[height + 1][x] = border;
 		}
 		return grid;
-	}
-	
-	
-	
-	private static String infile = "DATA41.txt";  // Specify null to use System.in
-	private static String outfile = "OUT41.txt";  // Specify null to use System.out
-	
-	
-	public static void main(String[] args) throws IOException {
-		InputStream in0;
-		if (infile != null) in0 = new FileInputStream(infile);
-		else in0 = System.in;
-		Reader in1 = new InputStreamReader(in0, "US-ASCII");
-		BufferedReader in = new BufferedReader(in1);
-		
-		OutputStream out0;
-		if (outfile != null) out0 = new FileOutputStream(outfile);
-		else out0 = System.out;
-		Writer out1 = new OutputStreamWriter(out0, "US-ASCII");
-		PrintWriter out = new PrintWriter(out1, true);
-		
-		main(in, out);
-		
-		in.close();
-		in1.close();
-		in0.close();
-		out.close();
-		out1.close();
-		out0.close();
 	}
 	
 }

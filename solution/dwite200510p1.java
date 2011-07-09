@@ -1,23 +1,22 @@
-import java.io.*;
+// DWITE - October 2005 - Problem 1: Odometers
+
+import dwite.*;
+
 import java.math.BigInteger;
 
-import dwite.Algorithm;
 
-
-// DWITE - October 2005 - Problem 1: Odometers
-public class dwite200510p1 {
+public final class dwite200510p1 extends Solution {
 	
-	public static void main(BufferedReader in, PrintWriter out) throws IOException {
-		for (int i = 0; i < 5; i++)
-			mainOnce(in, out);
+	public static void main(String[] args) {
+		Runner.run("DATA11.txt", "OUT11.txt", new dwite200510p1());
 	}
 	
 	
-	private static void mainOnce(BufferedReader in, PrintWriter out) throws IOException {
+	protected void runOnce(Io io) {
 		// Read input
-		int[] r1 = Algorithm.toDigits(in.readLine());
-		int d1 = Integer.parseInt(in.readLine());
-		int d2 = Integer.parseInt(in.readLine());
+		int[] r1 = Algorithm.toDigits(io.readLine());
+		int d1 = io.readIntLine();
+		int d2 = io.readIntLine();
 		
 		// Find the nearest next suitable odometer reading
 		int n1 = countOccurrences(r1, d1);
@@ -31,7 +30,7 @@ public class dwite200510p1 {
 			diff = diff.add(BigInteger.valueOf(10).pow(r1.length));
 		
 		// Write output
-		out.printf("%s %d%n", toString(r2), diff);
+		io.printf("%s %d%n", toString(r2), diff);
 	}
 	
 	
@@ -118,35 +117,6 @@ public class dwite200510p1 {
 		for (int i = 0; i < digits.length; i++)
 			sb.append((char)('0' + digits[i]));
 		return sb.toString();
-	}
-	
-	
-	
-	private static String infile = "DATA11.txt";  // Specify null to use System.in
-	private static String outfile = "OUT11.txt";  // Specify null to use System.out
-	
-	
-	public static void main(String[] args) throws IOException {
-		InputStream in0;
-		if (infile != null) in0 = new FileInputStream(infile);
-		else in0 = System.in;
-		Reader in1 = new InputStreamReader(in0, "US-ASCII");
-		BufferedReader in = new BufferedReader(in1);
-		
-		OutputStream out0;
-		if (outfile != null) out0 = new FileOutputStream(outfile);
-		else out0 = System.out;
-		Writer out1 = new OutputStreamWriter(out0, "US-ASCII");
-		PrintWriter out = new PrintWriter(out1, true);
-		
-		main(in, out);
-		
-		in.close();
-		in1.close();
-		in0.close();
-		out.close();
-		out1.close();
-		out0.close();
 	}
 	
 }
