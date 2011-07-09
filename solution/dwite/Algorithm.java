@@ -25,4 +25,16 @@ public final class Algorithm {
 		return Math.abs(x);
 	}
 	
+	
+	public static int[] toDigits(String str) {
+		int[] digits = new int[str.length()];
+		for (int i = 0; i < digits.length; i++) {
+			char c = str.charAt(i);
+			if (c < '0' || c > '9')
+				throw new IllegalArgumentException();
+			digits[i] = c - '0';
+		}
+		return digits;
+	}
+	
 }

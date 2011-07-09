@@ -1,3 +1,5 @@
+import dwite.Algorithm;
+
 import java.io.*;
 
 
@@ -14,7 +16,7 @@ public class dwite200602p3 {
 		String line = in.readLine();
 		if (line.length() != 12)
 			throw new AssertionError("Invalid length for UPC digit sequence");
-		int sum = getUpcSumWithoutCheckDigit(toDigits(line));
+		int sum = getUpcSumWithoutCheckDigit(Algorithm.toDigits(line));
 		out.printf("%s%d%n", line.substring(0, 11), (10 - sum) % 10);  // Calculate the correct check digit using modular arithmetic magic
 	}
 	
@@ -26,15 +28,6 @@ public class dwite200602p3 {
 			else            sum += digits[i] * 1;
 		}
 		return sum % 10;
-	}
-	
-	
-	
-	private static int[] toDigits(String s) {
-		int[] digits = new int[s.length()];
-		for (int i = 0; i < digits.length; i++)
-			digits[i] = s.charAt(i) - '0';
-		return digits;
 	}
 	
 	

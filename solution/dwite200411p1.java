@@ -11,7 +11,7 @@ public final class dwite200411p1 extends Solution {
 	
 	
 	protected void runOnce(Io io) {
-		int[] digits = toDigits(io.readLine());
+		int[] digits = Algorithm.toDigits(io.readLine());
 		int sum = getLuhnSum(digits);
 		if (sum % 10 == 0)
 			io.println("VALID");
@@ -37,18 +37,6 @@ public final class dwite200411p1 extends Solution {
 				sum += digits[i] / 5 + digits[i] % 5 * 2;
 		}
 		return sum;
-	}
-	
-	
-	private static int[] toDigits(String str) {
-		int[] digits = new int[str.length()];
-		for (int i = 0; i < digits.length; i++) {
-			char c = str.charAt(i);
-			if (c < '0' || c > '9')
-				throw new IllegalArgumentException();
-			digits[i] = c - '0';
-		}
-		return digits;
 	}
 	
 }

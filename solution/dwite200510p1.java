@@ -1,6 +1,8 @@
 import java.io.*;
 import java.math.BigInteger;
 
+import dwite.Algorithm;
+
 
 // DWITE - October 2005 - Problem 1: Odometers
 public class dwite200510p1 {
@@ -13,7 +15,7 @@ public class dwite200510p1 {
 	
 	private static void mainOnce(BufferedReader in, PrintWriter out) throws IOException {
 		// Read input
-		int[] r1 = toDigits(in.readLine());
+		int[] r1 = Algorithm.toDigits(in.readLine());
 		int d1 = Integer.parseInt(in.readLine());
 		int d2 = Integer.parseInt(in.readLine());
 		
@@ -116,15 +118,6 @@ public class dwite200510p1 {
 		for (int i = 0; i < digits.length; i++)
 			sb.append((char)('0' + digits[i]));
 		return sb.toString();
-	}
-	
-	
-	
-	private static int[] toDigits(String s) {
-		int[] digits = new int[s.length()];
-		for (int i = 0; i < digits.length; i++)
-			digits[i] = s.charAt(i) - '0';
-		return digits;
 	}
 	
 	
