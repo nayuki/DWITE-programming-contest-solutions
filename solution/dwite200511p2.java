@@ -1,24 +1,23 @@
-import java.io.*;
-import java.util.StringTokenizer;
-
-
 // DWITE - November 2005 - Problem 2: Variations on the Game of Life
-public class dwite200511p2 {
+
+import dwite.*;
+
+
+public final class dwite200511p2 extends Solution {
 	
-	public static void main(BufferedReader in, PrintWriter out) throws IOException {
-		for (int i = 0; i < 5; i++)
-			mainOnce(in, out);
+	public static void main(String[] args) {
+		Runner.run("DATA21.txt", "OUT21.txt", new dwite200511p2());
 	}
 	
 	
-	private static void mainOnce(BufferedReader in, PrintWriter out) throws IOException {
+	protected void runOnce(Io io) {
 		// Read input
-		StringTokenizer st = new StringTokenizer(in.readLine(), " ");
-		int height = Integer.parseInt(st.nextToken());
-		int width = Integer.parseInt(st.nextToken());
-		char[][] grid = readGridAndPad(in, width, height, ' ');
+		io.tokenizeLine();
+		int height = io.readIntToken();
+		int width = io.readIntToken();
+		char[][] grid = readGridAndPad(io, width, height, ' ');
 		
-		String rule = in.readLine();
+		String rule = io.readLine();
 		boolean[] live = parseRule(rule.split("/")[0]);
 		boolean[] birth = parseRule(rule.split("/")[1]);
 		
@@ -27,7 +26,7 @@ public class dwite200511p2 {
 			iterate(grid, live, birth);
 		
 		// Write output
-		out.println(countTotalAlive(grid));
+		io.println(countTotalAlive(grid));
 	}
 	
 	
@@ -88,10 +87,10 @@ public class dwite200511p2 {
 	
 	
 	
-	private static char[][] readGridAndPad(BufferedReader in, int width, int height, char border) throws IOException {
+	private static char[][] readGridAndPad(Io io, int width, int height, char border) {
 		char[][] grid = new char[height + 2][width + 2];
 		for (int y = 1; y <= height; y++) {
-			String line = in.readLine();
+			String line = io.readLine();
 			for (int x = 1; x <= width; x++)
 				grid[y][x] = line.charAt(x - 1);
 			grid[y][0] = border;
@@ -102,35 +101,6 @@ public class dwite200511p2 {
 			grid[height + 1][x] = border;
 		}
 		return grid;
-	}
-	
-	
-	
-	private static String infile = "DATA21.txt";  // Specify null to use System.in
-	private static String outfile = "OUT21.txt";  // Specify null to use System.out
-	
-	
-	public static void main(String[] args) throws IOException {
-		InputStream in0;
-		if (infile != null) in0 = new FileInputStream(infile);
-		else in0 = System.in;
-		Reader in1 = new InputStreamReader(in0, "US-ASCII");
-		BufferedReader in = new BufferedReader(in1);
-		
-		OutputStream out0;
-		if (outfile != null) out0 = new FileOutputStream(outfile);
-		else out0 = System.out;
-		Writer out1 = new OutputStreamWriter(out0, "US-ASCII");
-		PrintWriter out = new PrintWriter(out1, true);
-		
-		main(in, out);
-		
-		in.close();
-		in1.close();
-		in0.close();
-		out.close();
-		out1.close();
-		out0.close();
 	}
 	
 }
