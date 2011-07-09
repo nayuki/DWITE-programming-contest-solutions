@@ -1,19 +1,27 @@
-import java.io.*;
-import java.util.*;
-
-
 // DWITE - January 2005 - Problem 1: DWITE Golf Tournament
-public class dwite200501p1 {
+
+import dwite.*;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+
+public final class dwite200501p1 extends Solution {
 	
-	public static void main(BufferedReader in, PrintWriter out) throws IOException {
+	public static void main(String[] args) {
+		Runner.run("DATA11.txt", "OUT11.txt", new dwite200501p1());
+	}
+	
+	
+	public void run(Io io) {
 		// Read input
-		int n = Integer.parseInt(in.readLine());
+		int n = io.readIntLine();
 		ArrayList<Golfer> golfers = new ArrayList<Golfer>();
 		for (int i = 0; i < n; i++) {
-			String name = in.readLine();
+			String name = io.readLine();
 			int score = 0;
 			for (int j = 0; j < 9; j++)
-				score += Integer.parseInt(in.readLine());
+				score += io.readIntLine();
 			golfers.add(new Golfer(name, score));
 		}
 		
@@ -21,37 +29,8 @@ public class dwite200501p1 {
 		Collections.sort(golfers);
 		for (int i = 0; i < 5; i++) {
 			Golfer golfer = golfers.get(i);
-			out.printf("%s %d%n", golfer.name, golfer.score);
+			io.printf("%s %d%n", golfer.name, golfer.score);
 		}
-	}
-	
-	
-	
-	private static String infile = "DATA11.txt";  // Specify null to use System.in
-	private static String outfile = "OUT11.txt";  // Specify null to use System.out
-	
-	
-	public static void main(String[] args) throws IOException {
-		InputStream in0;
-		if (infile != null) in0 = new FileInputStream(infile);
-		else in0 = System.in;
-		Reader in1 = new InputStreamReader(in0, "US-ASCII");
-		BufferedReader in = new BufferedReader(in1);
-		
-		OutputStream out0;
-		if (outfile != null) out0 = new FileOutputStream(outfile);
-		else out0 = System.out;
-		Writer out1 = new OutputStreamWriter(out0, "US-ASCII");
-		PrintWriter out = new PrintWriter(out1, true);
-		
-		main(in, out);
-		
-		in.close();
-		in1.close();
-		in0.close();
-		out.close();
-		out1.close();
-		out0.close();
 	}
 	
 	
