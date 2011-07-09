@@ -40,9 +40,11 @@ public final class dwite200411p4 extends Solution {
 		expectNextToken(io, "Next");
 		expectNextToken(io, "i");
 		
+		// Execute formula
 		for (int i = start; i <= finish; i++)
 			sum = executeOnce(sum, i, formula);
 		
+		// Write output
 		io.println(sum);
 	}
 	

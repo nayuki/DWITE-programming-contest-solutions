@@ -16,7 +16,6 @@ public final class dwite200412p5 extends Solution {
 	};
 	
 	
-	
 	protected void runOnce(Io io) {
 		// Read input
 		String line = normalize(io.readLine());
