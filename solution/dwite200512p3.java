@@ -1,23 +1,20 @@
-import java.io.*;
-import java.util.StringTokenizer;
-
-import dwite.Algorithm;
-
-
 // DWITE - December 2005 - Problem 3: Reducing Fractions
-public class dwite200512p3 {
+
+import dwite.*;
+
+
+public final class dwite200512p3 extends Solution {
 	
-	public static void main(BufferedReader in, PrintWriter out) throws IOException {
-		for (int i = 0; i < 5; i++)
-			mainOnce(in, out);
+	public static void main(String[] args) {
+		Runner.run("DATA31.txt", "OUT31.txt", new dwite200512p3());
 	}
 	
 	
-	private static void mainOnce(BufferedReader in, PrintWriter out) throws IOException {
+	protected void runOnce(Io io) {
 		// Read input
-		StringTokenizer st = new StringTokenizer(in.readLine(), " ");
-		int n = Integer.parseInt(st.nextToken());
-		int d = Integer.parseInt(st.nextToken());
+		io.tokenizeLine();
+		int n = io.readIntToken();
+		int d = io.readIntToken();
 		
 		if (d == 0)
 			throw new AssertionError("Zero denominator");
@@ -30,7 +27,7 @@ public class dwite200512p3 {
 		
 		// Write the negative sign if applicable, and handle positive fractions from now on
 		if (n < 0) {
-			out.print("-");
+			io.print("-");
 			n = -n;
 		}
 		
@@ -40,38 +37,9 @@ public class dwite200512p3 {
 		d /= gcd;
 		
 		// Write output in the appropriate format
-		if (d == 1)     out.printf("%d%n", n);                      // Integer
-		else if (n < d) out.printf("%d/%d%n", n, d);                // Simple fraction
-		else            out.printf("%d %d/%d%n", n / d, n % d, d);  // Mixed fraction
-	}
-	
-	
-	
-	private static String infile = "DATA31.txt";  // Specify null to use System.in
-	private static String outfile = "OUT31.txt";  // Specify null to use System.out
-	
-	
-	public static void main(String[] args) throws IOException {
-		InputStream in0;
-		if (infile != null) in0 = new FileInputStream(infile);
-		else in0 = System.in;
-		Reader in1 = new InputStreamReader(in0, "US-ASCII");
-		BufferedReader in = new BufferedReader(in1);
-		
-		OutputStream out0;
-		if (outfile != null) out0 = new FileOutputStream(outfile);
-		else out0 = System.out;
-		Writer out1 = new OutputStreamWriter(out0, "US-ASCII");
-		PrintWriter out = new PrintWriter(out1, true);
-		
-		main(in, out);
-		
-		in.close();
-		in1.close();
-		in0.close();
-		out.close();
-		out1.close();
-		out0.close();
+		if (d == 1)     io.printf("%d%n", n);                      // Integer
+		else if (n < d) io.printf("%d/%d%n", n, d);                // Simple fraction
+		else            io.printf("%d %d/%d%n", n / d, n % d, d);  // Mixed fraction
 	}
 	
 }

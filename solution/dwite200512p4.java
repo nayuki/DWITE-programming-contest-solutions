@@ -1,18 +1,18 @@
-import java.io.*;
-
-
 // DWITE - December 2005 - Problem 4: Now I Know My ABC's
-public class dwite200512p4 {
+
+import dwite.*;
+
+
+public final class dwite200512p4 extends Solution {
 	
-	public static void main(BufferedReader in, PrintWriter out) throws IOException {
-		for (int i = 0; i < 5; i++)
-			mainOnce(in, out);
+	public static void main(String[] args) {
+		Runner.run("DATA41.txt", "OUT41.txt", new dwite200512p4());
 	}
 	
 	
-	private static void mainOnce(BufferedReader in, PrintWriter out) throws IOException {
+	protected void runOnce(Io io) {
 		// Read input
-		String line = in.readLine();
+		String line = io.readLine();
 		
 		// Count frequencies
 		int[] freq = new int[26];
@@ -27,46 +27,17 @@ public class dwite200512p4 {
 		for (int i = 0; i < freq.length; i++) {
 			if (freq[i] != 0) {
 				if (initial) initial = false;
-				else out.print(":");
-				out.printf("%c-%d", (char)('A' + i), freq[i]);
+				else io.print(":");
+				io.printf("%c-%d", (char)('A' + i), freq[i]);
 			}
 		}
-		out.println();
+		io.println();
 	}
 	
 	
 	private static boolean isLetter(char c) {
 		return c >= 'A' && c <= 'Z'
 		    || c >= 'a' && c <= 'z';
-	}
-	
-	
-	
-	private static String infile = "DATA41.txt";  // Specify null to use System.in
-	private static String outfile = "OUT41.txt";  // Specify null to use System.out
-	
-	
-	public static void main(String[] args) throws IOException {
-		InputStream in0;
-		if (infile != null) in0 = new FileInputStream(infile);
-		else in0 = System.in;
-		Reader in1 = new InputStreamReader(in0, "US-ASCII");
-		BufferedReader in = new BufferedReader(in1);
-		
-		OutputStream out0;
-		if (outfile != null) out0 = new FileOutputStream(outfile);
-		else out0 = System.out;
-		Writer out1 = new OutputStreamWriter(out0, "US-ASCII");
-		PrintWriter out = new PrintWriter(out1, true);
-		
-		main(in, out);
-		
-		in.close();
-		in1.close();
-		in0.close();
-		out.close();
-		out1.close();
-		out0.close();
 	}
 	
 }
