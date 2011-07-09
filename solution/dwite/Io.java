@@ -62,6 +62,11 @@ public final class Io {
 	}
 	
 	
+	public boolean canReadToken() {
+		return tokenizer.hasMoreTokens();
+	}
+	
+	
 	public String readToken() {
 		return tokenizer.nextToken();
 	}
@@ -78,6 +83,18 @@ public final class Io {
 	
 	
 	// Writes
+	
+	public void print(int x) {
+		output.print(x);
+	}
+	
+	public void print(String s) {
+		output.print(s);
+	}
+	
+	public void println() {
+		output.println();
+	}
 	
 	public void println(int x) {
 		output.println(x);

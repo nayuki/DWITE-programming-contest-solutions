@@ -1,48 +1,49 @@
-import java.io.*;
-import java.util.*;
-
-
 // DWITE - November 2004 - Problem 4: For Loops
-public class dwite200411p4 {
+
+import dwite.*;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Stack;
+
+
+public final class dwite200411p4 extends Solution {
 	
-	public static void main(BufferedReader in, PrintWriter out) throws IOException {
-		for (int i = 0; i < 5; i++)
-			mainOnce(in, out);
+	public static void main(String[] args) {
+		Runner.run("DATA41.txt", "OUT41.txt", new dwite200411p4());
 	}
 	
 	
-	private static void mainOnce(BufferedReader in, PrintWriter out) throws IOException {
+	protected void runOnce(Io io) {
 		// Parse input
-		StringTokenizer st;
+		io.tokenizeLine();  // "sum = value"
+		expectNextToken(io, "sum");
+		expectNextToken(io, "=");
+		int sum = io.readIntToken();
 		
-		st = new StringTokenizer(in.readLine(), " ");  // "sum = value"
-		expectNextToken(st, "sum");
-		expectNextToken(st, "=");
-		int sum = Integer.parseInt(st.nextToken());
+		io.tokenizeLine();  // "For i = start To finish"
+		expectNextToken(io, "For");
+		expectNextToken(io, "i");
+		expectNextToken(io, "=");
+		int start = io.readIntToken();
+		expectNextToken(io, "To");
+		int finish = io.readIntToken();
 		
-		st = new StringTokenizer(in.readLine(), " ");  // "For i = start To finish"
-		expectNextToken(st, "For");
-		expectNextToken(st, "i");
-		expectNextToken(st, "=");
-		int start = Integer.parseInt(st.nextToken());
-		expectNextToken(st, "To");
-		int finish = Integer.parseInt(st.nextToken());
-		
-		st = new StringTokenizer(in.readLine(), " ");  // "sum = formula"
-		expectNextToken(st, "sum");
-		expectNextToken(st, "=");
+		io.tokenizeLine();  // "sum = formula"
+		expectNextToken(io, "sum");
+		expectNextToken(io, "=");
 		List<String> formula = new ArrayList<String>();
-		while (st.hasMoreTokens())
-			formula.add(st.nextToken());
+		while (io.canReadToken())
+			formula.add(io.readToken());
 		
-		st = new StringTokenizer(in.readLine(), " ");  // "Next i"
-		expectNextToken(st, "Next");
-		expectNextToken(st, "i");
+		io.tokenizeLine();  // "Next i"
+		expectNextToken(io, "Next");
+		expectNextToken(io, "i");
 		
 		for (int i = start; i <= finish; i++)
 			sum = executeOnce(sum, i, formula);
 		
-		out.println(sum);
+		io.println(sum);
 	}
 	
 	
@@ -113,39 +114,10 @@ public class dwite200411p4 {
 	}
 	
 	
-	private static void expectNextToken(StringTokenizer st, String expectedToken) {
-		String actualToken = st.nextToken();
+	private static void expectNextToken(Io io, String expectedToken) {
+		String actualToken = io.readToken();
 		if (!expectedToken.equals(actualToken))
 			throw new AssertionError(String.format("Expected \"%s\", got \"%s\"", expectedToken, actualToken));
-	}
-	
-	
-	
-	private static String infile = "DATA41.txt";  // Specify null to use System.in
-	private static String outfile = "OUT41.txt";  // Specify null to use System.out
-	
-	
-	public static void main(String[] args) throws IOException {
-		InputStream in0;
-		if (infile != null) in0 = new FileInputStream(infile);
-		else in0 = System.in;
-		Reader in1 = new InputStreamReader(in0, "US-ASCII");
-		BufferedReader in = new BufferedReader(in1);
-		
-		OutputStream out0;
-		if (outfile != null) out0 = new FileOutputStream(outfile);
-		else out0 = System.out;
-		Writer out1 = new OutputStreamWriter(out0, "US-ASCII");
-		PrintWriter out = new PrintWriter(out1, true);
-		
-		main(in, out);
-		
-		in.close();
-		in1.close();
-		in0.close();
-		out.close();
-		out1.close();
-		out0.close();
 	}
 	
 }

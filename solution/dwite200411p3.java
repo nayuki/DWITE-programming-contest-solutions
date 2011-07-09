@@ -1,19 +1,20 @@
-import java.io.*;
+// DWITE - November 2004 - Problem 3: Factoring
+
+import dwite.*;
+
 import java.util.*;
 
 
-// DWITE - November 2004 - Problem 3: Factoring
-public class dwite200411p3 {
+public final class dwite200411p3 extends Solution {
 	
-	public static void main(BufferedReader in, PrintWriter out) throws IOException {
-		for (int i = 0; i < 5; i++)
-			mainOnce(in, out);
+	public static void main(String[] args) {
+		Runner.run("DATA31.txt", "OUT31.txt", new dwite200411p3());
 	}
 	
 	
-	private static void mainOnce(BufferedReader in, PrintWriter out) throws IOException {
+	protected void runOnce(Io io) {
 		// Read input
-		Polynomial poly = parsePolynomial(in.readLine()).reduce();
+		Polynomial poly = parsePolynomial(io.readLine()).reduce();
 		
 		// Find factors
 		ArrayList<Integer> output = new ArrayList<Integer>();
@@ -31,10 +32,10 @@ public class dwite200411p3 {
 		boolean initial = true;
 		for (int i : output) {
 			if (initial) initial = false;
-			else out.print(" ");
-			out.print(i);
+			else io.print(" ");
+			io.print(i);
 		}
-		out.println();
+		io.println();
 	}
 	
 	
@@ -75,35 +76,6 @@ public class dwite200411p3 {
 			y = z;
 		}
 		return Math.abs(x);
-	}
-	
-	
-	
-	private static String infile = "DATA31.txt";  // Specify null to use System.in
-	private static String outfile = "OUT31.txt";  // Specify null to use System.out
-	
-	
-	public static void main(String[] args) throws IOException {
-		InputStream in0;
-		if (infile != null) in0 = new FileInputStream(infile);
-		else in0 = System.in;
-		Reader in1 = new InputStreamReader(in0, "US-ASCII");
-		BufferedReader in = new BufferedReader(in1);
-		
-		OutputStream out0;
-		if (outfile != null) out0 = new FileOutputStream(outfile);
-		else out0 = System.out;
-		Writer out1 = new OutputStreamWriter(out0, "US-ASCII");
-		PrintWriter out = new PrintWriter(out1, true);
-		
-		main(in, out);
-		
-		in.close();
-		in1.close();
-		in0.close();
-		out.close();
-		out1.close();
-		out0.close();
 	}
 	
 	
