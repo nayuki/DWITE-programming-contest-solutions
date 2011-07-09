@@ -1,21 +1,21 @@
-import dwite.DwiteIo;
+import dwite.Io;
 
 // DWITE - October 2004 - Problem 4: CD-ROM Files
 public class dwite200410p4 {
 	
 	public static void main(String[] args) {
-		new dwite200410p4(new DwiteIo("DATA4", "OUT4"));
+		new dwite200410p4(new Io("DATA4", "OUT4"));
 	}
 	
 	
-	public dwite200410p4(DwiteIo io) {
+	public dwite200410p4(Io io) {
 		for (int i = 0; i < 5; i++)
 			mainOnce(io);
 		io.close();
 	}
 	
 	
-	private static void mainOnce(DwiteIo io) {
+	private static void mainOnce(Io io) {
 		io.tokenizeLine();
 		int capacity = io.readIntToken();  // Variable A
 		int files = io.readIntToken();     // Variable n

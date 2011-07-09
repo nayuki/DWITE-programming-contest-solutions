@@ -11,7 +11,7 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-import dwite.DwiteIo;
+import dwite.Io;
 
 
 public class DwiteTestUtils {
@@ -74,8 +74,8 @@ public class DwiteTestUtils {
 		StringWriter out0 = new StringWriter();
 		PrintWriter out = new PrintWriter(out0, true);
 		
-		Constructor<?> cons = clazz.getConstructor(DwiteIo.class);
-		cons.newInstance(new DwiteIo(in, out));
+		Constructor<?> cons = clazz.getConstructor(Io.class);
+		cons.newInstance(new Io(in, out));
 		
 		return out0.getBuffer().toString();
 	}

@@ -1,21 +1,21 @@
-import dwite.DwiteIo;
+import dwite.Io;
 
 // DWITE - October 2004 - Problem 1: Area of Circle
 public class dwite200410p1 {
 	
 	public static void main(String[] args) {
-		new dwite200410p1(new DwiteIo("DATA1", "OUT1"));
+		new dwite200410p1(new Io("DATA1", "OUT1"));
 	}
 	
 	
-	public dwite200410p1(DwiteIo io) {
+	public dwite200410p1(Io io) {
 		for (int i = 0; i < 5; i++)
 			mainOnce(io);
 		io.close();
 	}
 	
 	
-	private static void mainOnce(DwiteIo io) {
+	private static void mainOnce(Io io) {
 		io.tokenizeLine();
 		double x1 = io.readDoubleToken();
 		double y1 = io.readDoubleToken();

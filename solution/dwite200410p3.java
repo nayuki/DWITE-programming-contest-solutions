@@ -2,18 +2,18 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import dwite.DwiteIo;
+import dwite.Io;
 
 
 // DWITE - October 2004 - Problem 3: The Tallest in the Class
 public class dwite200410p3 {
 	
 	public static void main(String[] args) {
-		new dwite200410p3(new DwiteIo("DATA3", "OUT3"));
+		new dwite200410p3(new Io("DATA3", "OUT3"));
 	}
 	
 	
-	public dwite200410p3(DwiteIo io) {
+	public dwite200410p3(Io io) {
 		// Read input
 		List<Student> students = new ArrayList<Student>();
 		int n = io.readIntLine();

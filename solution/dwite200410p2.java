@@ -1,21 +1,21 @@
-import dwite.DwiteIo;
+import dwite.Io;
 
 // DWITE - October 2004 - Problem 2: 24 Hour Clock
 public class dwite200410p2 {
 	
 	public static void main(String[] args) {
-		new dwite200410p2(new DwiteIo("DATA2", "OUT2"));
+		new dwite200410p2(new Io("DATA2", "OUT2"));
 	}
 	
 	
-	public dwite200410p2(DwiteIo io) {
+	public dwite200410p2(Io io) {
 		for (int i = 0; i < 5; i++)
 			mainOnce(io);
 		io.close();
 	}
 	
 	
-	private static void mainOnce(DwiteIo io) {
+	private static void mainOnce(Io io) {
 		String line = io.readLine();
 		int hour = Integer.parseInt(line.substring(0, 2));
 		int minute = Integer.parseInt(line.substring(3, 5));
