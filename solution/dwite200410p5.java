@@ -9,7 +9,7 @@ public class dwite200410p5 {
 	}
 	
 	
-	dwite200410p5(DwiteIo io) {
+	public dwite200410p5(DwiteIo io) {
 		for (int i = 0; i < 5; i++)
 			mainOnce(io);
 		io.close();

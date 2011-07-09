@@ -11,7 +11,7 @@ public class dwite200410p3 {
 	}
 	
 	
-	dwite200410p3(DwiteIo io) {
+	public dwite200410p3(DwiteIo io) {
 		// Read input
 		List<Student> students = new ArrayList<Student>();
 		int n = io.readIntLine();
