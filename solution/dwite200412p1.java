@@ -16,23 +16,11 @@ public final class dwite200412p1 extends Solution {
 	
 	
 	private static String factor(int x) {
-		for (int i = 2, end = sqrt(x); i <= end; i++) {
+		for (int i = 2, end = Algorithm.sqrt(x); i <= end; i++) {
 			if (x % i == 0)
 				return String.format("%d*%s", i, factor(x / i));  // x is composite
 		}
 		return Integer.toString(x);  // x is prime
-	}
-	
-	
-	
-	private static int sqrt(int x) {
-		int y = 0;
-		for (int i = 15; i >= 0; i--) {
-			y |= 1 << i;
-			if (y > 46340 || y * y > x)
-				y ^= 1 << i;
-		}
-		return y;
 	}
 	
 }

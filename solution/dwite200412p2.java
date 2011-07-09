@@ -14,8 +14,8 @@ public final class dwite200412p2 extends Solution {
 		// Read input
 		int n = io.readIntLine();
 		int s = io.readIntLine();
-		int sqrtn = sqrt(n);
-		int sqrts = sqrt(s);
+		int sqrtn = Algorithm.sqrt(n);
+		int sqrts = Algorithm.sqrt(s);
 		int[][] grid = new int[sqrtn][sqrtn];
 		for (int y = 0; y < grid.length; y++) {
 			io.tokenizeLine();
@@ -42,18 +42,6 @@ public final class dwite200412p2 extends Solution {
 				sum += map[y + i][x + j];
 		}
 		return sum;
-	}
-	
-	
-	
-	private static int sqrt(int x) {
-		int y = 0;
-		for (int i = 15; i >= 0; i--) {
-			y |= 1 << i;
-			if (y > 46340 || y * y > x)
-				y ^= 1 << i;
-		}
-		return y;
 	}
 	
 }

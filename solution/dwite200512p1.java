@@ -1,5 +1,7 @@
 import java.io.*;
 
+import dwite.Algorithm;
+
 
 // DWITE - December 2005 - Problem 1: Semiprimes
 public class dwite200512p1 {
@@ -28,7 +30,7 @@ public class dwite200512p1 {
 	
 	
 	private static boolean isSemiprime(int n) {
-		for (int i = 2, end = sqrt(n); i <= end; i++) {
+		for (int i = 2, end = Algorithm.sqrt(n); i <= end; i++) {
 			if (n % i == 0) {  // One factor found (always prime)
 				return isPrime(n / i);
 			}
@@ -39,22 +41,11 @@ public class dwite200512p1 {
 	
 	
 	private static boolean isPrime(int n) {
-		for (int i = 2, end = sqrt(n); i <= end; i++) {
+		for (int i = 2, end = Algorithm.sqrt(n); i <= end; i++) {
 			if (n % i == 0)
 				return false;
 		}
 		return true;
-	}
-	
-	
-	private static int sqrt(int x) {
-		int y = 0;
-		for (int i = 15; i >= 0; i--) {
-			y |= 1 << i;
-			if (y > 46340 || y * y > x)
-				y ^= 1 << i;
-		}
-		return y;
 	}
 	
 	

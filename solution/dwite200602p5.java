@@ -1,6 +1,8 @@
 import java.io.*;
 import java.util.StringTokenizer;
 
+import dwite.Algorithm;
+
 
 // DWITE - February 2006 - Problem 5: Prime Palindromes
 public class dwite200602p5 {
@@ -46,24 +48,13 @@ public class dwite200602p5 {
 			isPrime[2] = true;
 		for (int i = 3; i <= n; i += 2)
 			isPrime[i] = true;
-		for (int i = 3, end = sqrt(n); i <= end; i += 2) {
+		for (int i = 3, end = Algorithm.sqrt(n); i <= end; i += 2) {
 			if (isPrime[i]) {
 				for (int j = i * 3; j <= n; j += i << 1)
 					isPrime[j] = false;
 			}
 		}
 		return isPrime;
-	}
-	
-	
-	private static int sqrt(int x) {
-		int y = 0;
-		for (int i = 15; i >= 0; i--) {
-			y |= 1 << i;
-			if (y > 46340 || y * y > x)
-				y ^= 1 << i;
-		}
-		return y;
 	}
 	
 	
