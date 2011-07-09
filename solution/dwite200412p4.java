@@ -17,7 +17,7 @@ public final class dwite200412p4 extends Solution {
 	
 	
 	static {
-		isPrime = sievePrimes(99999);
+		isPrime = Algorithm.sievePrimes(99999);
 		primes = new int[isPrime.length];
 		primesLength = 0;
 		for (int i = 0; i < isPrime.length; i++) {
@@ -88,23 +88,6 @@ public final class dwite200412p4 extends Solution {
 			}
 		}
 		return count;
-	}
-	
-	
-	
-	private static boolean[] sievePrimes(int n) {
-		boolean[] isPrime = new boolean[n + 1];
-		if (n >= 2)
-			isPrime[2] = true;
-		for (int i = 3; i <= n; i += 2)
-			isPrime[i] = true;
-		for (int i = 3, end = Algorithm.sqrt(n); i <= end; i += 2) {
-			if (isPrime[i]) {
-				for (int j = i * 3; j <= n; j += i << 1)
-					isPrime[j] = false;
-			}
-		}
-		return isPrime;
 	}
 	
 }

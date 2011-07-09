@@ -6,7 +6,7 @@ import dwite.Algorithm;
 // DWITE - December 2006 - Problem 3: Circular Primes
 public class dwite200612p3 {
 	
-	private static boolean[] isPrime = sievePrimes(999999);
+	private static boolean[] isPrime = Algorithm.sievePrimes(999999);
 	
 	
 	public static void main(BufferedReader in, PrintWriter out) throws IOException {
@@ -47,23 +47,6 @@ public class dwite200612p3 {
 			shift %= str.length();
 			return str.substring(shift, str.length()) + str.substring(0, shift);
 		}
-	}
-	
-	
-	
-	private static boolean[] sievePrimes(int n) {
-		boolean[] isPrime = new boolean[n + 1];
-		if (n >= 2)
-			isPrime[2] = true;
-		for (int i = 3; i <= n; i += 2)
-			isPrime[i] = true;
-		for (int i = 3, end = Algorithm.sqrt(n); i <= end; i += 2) {
-			if (isPrime[i]) {
-				for (int j = i * 3; j <= n; j += i << 1)
-					isPrime[j] = false;
-			}
-		}
-		return isPrime;
 	}
 	
 	
