@@ -15,4 +15,14 @@ public final class Algorithm {
 		return y;
 	}
 	
+	
+	public static int gcd(int x, int y) {
+		while (y != 0) {
+			int z = x % y;
+			x = y;
+			y = z;
+		}
+		return Math.abs(x);
+	}
+	
 }

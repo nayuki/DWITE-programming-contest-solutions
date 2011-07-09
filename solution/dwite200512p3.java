@@ -1,6 +1,8 @@
 import java.io.*;
 import java.util.StringTokenizer;
 
+import dwite.Algorithm;
+
 
 // DWITE - December 2005 - Problem 3: Reducing Fractions
 public class dwite200512p3 {
@@ -33,7 +35,7 @@ public class dwite200512p3 {
 		}
 		
 		// Reduce to lowest terms
-		int gcd = gcd(n, d);
+		int gcd = Algorithm.gcd(n, d);
 		n /= gcd;
 		d /= gcd;
 		
@@ -41,17 +43,6 @@ public class dwite200512p3 {
 		if (d == 1)     out.printf("%d%n", n);                      // Integer
 		else if (n < d) out.printf("%d/%d%n", n, d);                // Simple fraction
 		else            out.printf("%d %d/%d%n", n / d, n % d, d);  // Mixed fraction
-	}
-	
-	
-	
-	private static int gcd(int x, int y) {
-		while (y != 0) {
-			int z = x % y;
-			x = y;
-			y = z;
-		}
-		return x;
 	}
 	
 	

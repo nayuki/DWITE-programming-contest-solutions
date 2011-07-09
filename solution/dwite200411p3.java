@@ -69,17 +69,6 @@ public final class dwite200411p3 extends Solution {
 	
 	
 	
-	private static int gcd(int x, int y) {
-		while (y != 0) {
-			int z = x % y;
-			x = y;
-			y = z;
-		}
-		return Math.abs(x);
-	}
-	
-	
-	
 	private static class Polynomial {
 		
 		private final List<Integer> coefficients;  // From highest power downward
@@ -107,7 +96,7 @@ public final class dwite200411p3 extends Solution {
 		public Polynomial reduce() {
 			int gcd = coefficients.get(0);
 			for (int a : coefficients) {
-				gcd = gcd(a, gcd);
+				gcd = Algorithm.gcd(a, gcd);
 			}
 			
 			if (gcd == 1)
@@ -190,7 +179,7 @@ public final class dwite200411p3 extends Solution {
 		public Fraction(int num, int denom) {
 			if (denom == 0)
 				throw new IllegalArgumentException("Zero denominator");
-			int gcd = gcd(num, denom);
+			int gcd = Algorithm.gcd(num, denom);
 			num /= gcd;
 			denom /= gcd;
 			this.num = num;
