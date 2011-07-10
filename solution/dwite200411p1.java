@@ -12,14 +12,13 @@ public final class dwite200411p1 extends Solution {
 	
 	protected void runOnce() {
 		int[] digits = Algorithm.toDigits(io.readLine());
-		int sum = getLuhnSum(digits);
-		if (sum % 10 == 0)
+		if (isLuhnValid(digits))
 			io.println("VALID");
 		else {
 			// Try all values for the last digit
 			for (int i = 0; i < 10; i++) {
 				digits[digits.length - 1] = i;
-				if (getLuhnSum(digits) % 10 == 0) {  // Guaranteed to execute before the loop ends
+				if (isLuhnValid(digits)) {  // Guaranteed to execute before the loop ends
 					io.printf("INVALID %d%n", digits[digits.length - 1]);
 					break;
 				}
@@ -28,7 +27,7 @@ public final class dwite200411p1 extends Solution {
 	}
 	
 	
-	private static int getLuhnSum(int[] digits) {
+	private static boolean isLuhnValid(int[] digits) {
 		int sum = 0;
 		for (int i = 0; i < digits.length; i++) {
 			if ((i + digits.length) % 2 == 1)
@@ -36,7 +35,7 @@ public final class dwite200411p1 extends Solution {
 			else
 				sum += digits[i] / 5 + digits[i] % 5 * 2;
 		}
-		return sum;
+		return sum % 10 == 0;
 	}
 	
 }

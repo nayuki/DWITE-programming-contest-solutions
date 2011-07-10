@@ -13,9 +13,9 @@ public final class dwite200410p4 extends Solution {
 	protected void runOnce() {
 		io.tokenizeLine();
 		int capacity = io.readIntToken();  // Variable A
-		int files = io.readIntToken();     // Variable n
+		int files    = io.readIntToken();  // Variable n
 		
-		// Solve subset sum problem using dynamic programming
+		// Solve knapsack problem using dynamic programming
 		boolean[] possible = new boolean[capacity + 1];
 		possible[0] = true;
 		for (int i = 0; i < files; i++) {

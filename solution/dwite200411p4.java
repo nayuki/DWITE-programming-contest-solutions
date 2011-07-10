@@ -82,6 +82,8 @@ public final class dwite200411p4 extends Solution {
 			operands.push(evaluate(x, y, operators.pop()));
 		}
 		
+		if (operands.size() != 1)
+			throw new AssertionError();
 		return operands.pop();
 	}
 	

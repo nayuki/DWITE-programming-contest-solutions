@@ -22,12 +22,12 @@ public final class dwite200411p5 extends Solution {
 	
 	
 	private static String getRating(int wct) {
-		if      (  0 < wct             ) throw new IllegalArgumentException("Undefined for positive wind chill temperature");
-		else if (-10 < wct && wct <   0) return "LOW";
-		else if (-25 < wct && wct < -10) return "MODERATE";
-		else if (-45 < wct && wct < -25) return "COLD";
-		else if (-60 < wct && wct < -45) return "EXTREME";
-		else if (             wct < -60) return "DANGER";
+		if      (  0 <  wct              ) throw new IllegalArgumentException("Undefined for positive wind chill temperature");
+		else if (- 9 <= wct && wct <=   0) return "LOW";
+		else if (-24 <= wct && wct <= -10) return "MODERATE";
+		else if (-44 <= wct && wct <= -25) return "COLD";
+		else if (-59 <= wct && wct <= -45) return "EXTREME";
+		else if (              wct <= -60) return "DANGER";
 		else throw new AssertionError();  // Impossible; defies the laws of arithmetic
 	}
 	
