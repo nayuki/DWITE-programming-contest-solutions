@@ -36,7 +36,7 @@ public final class dwite200511p4 extends Solution {
 		for (int i = minBlocks.length - 1; i >= 0; i--) {
 			if (minBlocks[i] == Integer.MAX_VALUE / 2)
 				continue;
-			for (int j = 1; j <= blockCount && i+j*blockHeight < minBlocks.length; j++) {
+			for (int j = 1; j <= blockCount && i + j * blockHeight < minBlocks.length; j++) {
 				minBlocks[i + j * blockHeight] = Math.min(minBlocks[i] + j, minBlocks[i + j * blockHeight]);
 			}
 		}

@@ -10,27 +10,30 @@ public final class dwite200510p2 extends Solution {
 	}
 	
 	
+	private char[][] grid;
+	
+	
 	public void run() {
 		// Read input
 		io.tokenizeLine();
 		int height = io.readIntToken();
 		int width = io.readIntToken();
-		char[][] grid = io.readGridAndPad(width, height, '.');
+		grid = io.readGridAndPad(width, height, '.');
 		
 		// Compute and write output
 		for (int i = 0; i <= 100; i++) {
 			if (isBreakpoint(i))
-				io.println(countTotalAlive(grid));
-			nextGeneration(grid);
+				io.println(countTotalAlive());
+			nextGeneration();
 		}
 	}
 	
 	
-	private static void nextGeneration(char[][] grid) {
+	private void nextGeneration() {
 		char[][] newGrid = new char[grid.length][grid[0].length];
 		for (int y = 1; y < grid.length - 1; y++) {
 			for (int x = 1; x < grid[0].length - 1; x++) {
-				int liveneigh = countLiveNeighbours(grid, x, y);
+				int liveneigh = countLiveNeighbors(x, y);
 				if (grid[y][x] == '.' && liveneigh == 3)  // Birth
 					newGrid[y][x] = 'X';
 				else if (grid[y][x] == 'X' && (liveneigh < 2 || liveneigh > 3))  // Death
@@ -44,7 +47,7 @@ public final class dwite200510p2 extends Solution {
 	}
 	
 	
-	private static int countLiveNeighbours(char[][] grid, int x, int y) {
+	private int countLiveNeighbors(int x, int y) {
 		int count = 0;
 		if (grid[y - 1][x - 1] == 'X') count++;
 		if (grid[y - 1][x + 0] == 'X') count++;
@@ -58,7 +61,7 @@ public final class dwite200510p2 extends Solution {
 	}
 	
 	
-	private static int countTotalAlive(char[][] grid) {
+	private int countTotalAlive() {
 		int count = 0;
 		for (int y = 1; y < grid.length - 1; y++) {
 			for (int x = 1; x < grid[0].length - 1; x++) {

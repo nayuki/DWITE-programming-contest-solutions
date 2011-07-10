@@ -13,12 +13,15 @@ public final class dwite200512p2 extends Solution {
 	}
 	
 	
+	private char[][] grid;
+	
+	
 	protected void runOnce() {
 		// Read input
 		io.tokenizeLine();
 		int height = io.readIntToken();
 		int width = io.readIntToken();
-		char[][] grid = io.readGridAndPad(width, height, '#');
+		grid = io.readGridAndPad(width, height, '#');
 		
 		// Find entry cell position
 		int startx = -1;
@@ -35,8 +38,8 @@ public final class dwite200512p2 extends Solution {
 		}
 		
 		// Compute shortest path length
-		// int length = findShortestPathDfs(grid, startx, starty);
-		int length = findShortestPathBfs(grid, startx, starty);
+		//int length = findShortestPathDfs(startx, starty);
+		int length = findShortestPathBfs(startx, starty);
 		
 		// Write output
 		io.println(length - 1);  // The number of dots is length-1
@@ -44,7 +47,7 @@ public final class dwite200512p2 extends Solution {
 	
 	
 	@SuppressWarnings("unused")
-	private static int findShortestPathDfs(char[][] grid, int x, int y) {
+	private int findShortestPathDfs(int x, int y) {
 		if (grid[y][x] == 'X')
 			return 0;
 		if (grid[y][x] == '#')
@@ -52,16 +55,16 @@ public final class dwite200512p2 extends Solution {
 		
 		int min = Integer.MAX_VALUE / 2;  // Length of the rest of the path
 		grid[y][x] = '#';
-		min = Math.min(findShortestPathDfs(grid, x - 1, y + 0), min);
-		min = Math.min(findShortestPathDfs(grid, x + 1, y + 0), min);
-		min = Math.min(findShortestPathDfs(grid, x + 0, y - 1), min);
-		min = Math.min(findShortestPathDfs(grid, x + 0, y + 1), min);
+		min = Math.min(findShortestPathDfs(x - 1, y + 0), min);
+		min = Math.min(findShortestPathDfs(x + 1, y + 0), min);
+		min = Math.min(findShortestPathDfs(x + 0, y - 1), min);
+		min = Math.min(findShortestPathDfs(x + 0, y + 1), min);
 		grid[y][x] = '.';
 		return 1 + min;
 	}
 	
 	
-	private static int findShortestPathBfs(char[][] grid, int startx, int starty) {
+	private int findShortestPathBfs(int startx, int starty) {
 		Queue<Point> queue = new LinkedList<Point>();
 		queue.offer(new Point(startx, starty, 0));
 		while (true) {
@@ -94,17 +97,10 @@ public final class dwite200512p2 extends Solution {
 		public final int distance;
 		
 		
-		
 		public Point(int x, int y, int dist) {
 			this.x = x;
 			this.y = y;
 			this.distance = dist;
-		}
-		
-		
-		
-		public String toString() {
-			return String.format("(%d, %d)", x, y);
 		}
 		
 	}

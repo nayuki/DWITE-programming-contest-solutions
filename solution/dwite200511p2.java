@@ -10,48 +10,51 @@ public final class dwite200511p2 extends Solution {
 	}
 	
 	
+	private char[][] grid;
+	
+	private boolean[] live;
+	private boolean[] birth;
+	
+	
 	protected void runOnce() {
 		// Read input
 		io.tokenizeLine();
 		int height = io.readIntToken();
 		int width = io.readIntToken();
-		char[][] grid = io.readGridAndPad(width, height, ' ');
+		grid = io.readGridAndPad(width, height, ' ');
 		
 		String rule = io.readLine();
-		boolean[] live = parseRule(rule.split("/")[0]);
-		boolean[] birth = parseRule(rule.split("/")[1]);
+		live = parseRule(rule.split("/")[0]);
+		birth = parseRule(rule.split("/")[1]);
 		
 		// Compute
 		for (int i = 0; i < 25; i++)
-			iterate(grid, live, birth);
+			nextGeneration();
 		
 		// Write output
-		io.println(countTotalAlive(grid));
+		io.println(countTotalAlive());
 	}
 	
 	
-	
-	private static void iterate(char[][] grid, boolean[] live, boolean[] birth) {
-		char[][] gridnew = new char[grid.length][grid[0].length];
+	private void nextGeneration() {
+		char[][] newGrid = new char[grid.length][grid[0].length];
 		for (int y = 1; y < grid.length - 1; y++) {
 			for (int x = 1; x < grid[0].length - 1; x++) {
-				int liveneigh = countLiveNeighbours(grid, x, y);
+				int liveneigh = countLiveNeighbors(x, y);
 				if (grid[y][x] == '.' && birth[liveneigh])  // Birth
-					gridnew[y][x] = 'X';
+					newGrid[y][x] = 'X';
 				else if (grid[y][x] == 'X' && !live[liveneigh])  // Death
-					gridnew[y][x] = '.';
+					newGrid[y][x] = '.';
 				else  // Unchanged
-					gridnew[y][x] = grid[y][x];
+					newGrid[y][x] = grid[y][x];
 			}
 		}
-		for (int y = 1; y < grid.length - 1; y++) {
-			for (int x = 1; x < grid[0].length - 1; x++)
-				grid[y][x] = gridnew[y][x];
-		}
+		for (int y = 1; y < grid.length - 1; y++)
+			System.arraycopy(newGrid[y], 1, grid[y], 1, grid[y].length - 2);
 	}
 	
 	
-	private static int countLiveNeighbours(char[][] grid, int x, int y) {
+	private int countLiveNeighbors(int x, int y) {
 		int count = 0;
 		if (grid[y - 1][x - 1] == 'X') count++;
 		if (grid[y - 1][x + 0] == 'X') count++;
@@ -65,7 +68,7 @@ public final class dwite200511p2 extends Solution {
 	}
 	
 	
-	private static int countTotalAlive(char[][] grid) {
+	private int countTotalAlive() {
 		int count = 0;
 		for (int y = 1; y < grid.length - 1; y++) {
 			for (int x = 1; x < grid[0].length - 1; x++) {
@@ -77,7 +80,7 @@ public final class dwite200511p2 extends Solution {
 	}
 	
 	
-	// For example, turns "235" into [false, false, true, true, false, true, false, false, false]
+	// For example, "235" becomes [false, false, true, true, false, true, false, false, false]
 	private static boolean[] parseRule(String s) {
 		boolean[] result = new boolean[9];
 		for (int i = 0; i < s.length(); i++)
