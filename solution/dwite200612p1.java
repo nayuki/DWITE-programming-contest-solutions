@@ -15,7 +15,7 @@ public final class dwite200612p1 extends Solution {
 		int bags = io.readIntLine();
 		io.tokenizeLine();
 		
-		// Solve subset sum problem using dynamic programming
+		// Solve knapsack problem using dynamic programming
 		boolean[] possible = new boolean[capacity + 1];
 		possible[0] = true;
 		for (int i = 0; i < bags; i++) {

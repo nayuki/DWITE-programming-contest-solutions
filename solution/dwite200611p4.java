@@ -18,9 +18,9 @@ public final class dwite200611p4 extends Solution {
 	private static final int WIDTH = 8;
 	
 	
-	
 	@SuppressWarnings("unchecked")
 	public void run() {
+		// Read grid
 		int[][] money = new int[HEIGHT][WIDTH];
 		for (int y = 0; y < HEIGHT; y++) {
 			io.tokenizeLine();
@@ -28,6 +28,7 @@ public final class dwite200611p4 extends Solution {
 				money[y][x] = io.readIntToken();
 		}
 		
+		// Dynamic programming
 		List<Integer>[][] maxmoney = new List[HEIGHT][WIDTH];
 		for (int y = HEIGHT - 1; y >= 0; y--) {
 			for (int x = 0; x < WIDTH; x++) {

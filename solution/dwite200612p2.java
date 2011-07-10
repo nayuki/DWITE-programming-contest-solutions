@@ -30,7 +30,6 @@ public final class dwite200612p2 extends Solution {
 		private int y;
 		
 		
-		
 		public Point(int n) {
 			int s = ceilingSqrt(n);
 			if (s % 2 == 0) {

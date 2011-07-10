@@ -55,14 +55,14 @@ public final class dwite200611p3 extends Solution {
 		String num;
 		if (power != 0 && (coef == -1 || coef == 1)) num = "";
 		else num = Integer.toString(Math.abs(coef));
-		return String.format("%s%s%s", sign, num, formatPowerOfX(power));
+		return sign + num + formatPowerOfX(power);
 	}
 	
 	
 	private static String formatPowerOfX(int power) {
 		if (power == 0) return "";
 		else if (power == 1) return "x";
-		else return String.format("x^%d", power);
+		else return "x^" + power;
 	}
 	
 }

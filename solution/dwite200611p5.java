@@ -42,7 +42,7 @@ public final class dwite200611p5 extends Solution {
 			else
 				return null;
 		} else {
-			for (int i = Math.min(n,max), end = (n+terms-1)/terms; i >= end; i--) {
+			for (int i = Math.min(n, max), end = (n + terms - 1) / terms; i >= end; i--) {
 				if (!isPrime[i])
 					continue;
 				String temp = solve(n - i, terms - 1, i);

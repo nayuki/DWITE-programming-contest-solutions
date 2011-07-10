@@ -18,7 +18,7 @@ public final class dwite200701p4 extends Solution {
 	}
 	
 	
-	// Returns the number of ways n can be written as a sum of k positive integers.
+	// Returns the number of ways n can be written as an unordered sum of k positive integers.
 	private static int partition(int n, int k) {
 		if (k > n)
 			return 0;
