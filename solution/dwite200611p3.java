@@ -1,23 +1,22 @@
-import java.io.*;
-import java.util.StringTokenizer;
-
-
 // DWITE - November 2006 - Problem 3: Linear Binomial Products
-public class dwite200611p3 {
+
+import dwite.*;
+
+
+public final class dwite200611p3 extends Solution {
 	
-	public static void main(BufferedReader in, PrintWriter out) throws IOException {
-		for (int i = 0; i < 5; i++)
-			mainOnce(in, out);
+	public static void main(String[] args) {
+		Runner.run("DATA31.txt", "OUT31.txt", new dwite200611p3());
 	}
 	
 	
-	private static void mainOnce(BufferedReader in, PrintWriter out) throws IOException {
+	protected void runOnce(Io io) {
 		// Read input (the coefficients for (ax+b) and (cx+d))
-		StringTokenizer st = new StringTokenizer(in.readLine(), " ");
-		int a = Integer.parseInt(st.nextToken());
-		int b = Integer.parseInt(st.nextToken());
-		int c = Integer.parseInt(st.nextToken());
-		int d = Integer.parseInt(st.nextToken());
+		io.tokenizeLine();
+		int a = io.readIntToken();
+		int b = io.readIntToken();
+		int c = io.readIntToken();
+		int d = io.readIntToken();
 		
 		// Calculate the coefficients for (a2 x^2 + a1 x + a0). Using the distributive property, of course.
 		int a2 = a * c;
@@ -25,7 +24,7 @@ public class dwite200611p3 {
 		int a0 = b * d;
 		
 		// Write output
-		out.printf("(%s)(%s)=%s%n", formatPolynomial(a, b), formatPolynomial(c, d), formatPolynomial(a2, a1, a0));
+		io.printf("(%s)(%s)=%s%n", formatPolynomial(a, b), formatPolynomial(c, d), formatPolynomial(a2, a1, a0));
 	}
 	
 	
@@ -64,35 +63,6 @@ public class dwite200611p3 {
 		if (power == 0) return "";
 		else if (power == 1) return "x";
 		else return String.format("x^%d", power);
-	}
-	
-	
-	
-	private static String infile = "DATA31.txt";  // Specify null to use System.in
-	private static String outfile = "OUT31.txt";  // Specify null to use System.out
-	
-	
-	public static void main(String[] args) throws IOException {
-		InputStream in0;
-		if (infile != null) in0 = new FileInputStream(infile);
-		else in0 = System.in;
-		Reader in1 = new InputStreamReader(in0, "US-ASCII");
-		BufferedReader in = new BufferedReader(in1);
-		
-		OutputStream out0;
-		if (outfile != null) out0 = new FileOutputStream(outfile);
-		else out0 = System.out;
-		Writer out1 = new OutputStreamWriter(out0, "US-ASCII");
-		PrintWriter out = new PrintWriter(out1, true);
-		
-		main(in, out);
-		
-		in.close();
-		in1.close();
-		in0.close();
-		out.close();
-		out1.close();
-		out0.close();
 	}
 	
 }

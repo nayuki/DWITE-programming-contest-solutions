@@ -1,22 +1,31 @@
-import java.io.*;
-import java.util.*;
-
-
 // DWITE - November 2006 - Problem 4: Money Prize
-public class dwite200611p4 {
 
+import dwite.*;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+
+public final class dwite200611p4 extends Solution {
+	
+	public static void main(String[] args) {
+		Runner.run("DATA41.txt", "OUT41.txt", new dwite200611p4());
+	}
+	
+	
 	private static final int HEIGHT = 8;
 	private static final int WIDTH = 8;
 	
 	
 	
 	@SuppressWarnings("unchecked")
-	public static void main(BufferedReader in, PrintWriter out) throws IOException {
+	public void run(Io io) {
 		int[][] money = new int[HEIGHT][WIDTH];
 		for (int y = 0; y < HEIGHT; y++) {
-			StringTokenizer st = new StringTokenizer(in.readLine(), " ");
+			io.tokenizeLine();
 			for (int x = 0; x < WIDTH; x++)
-				money[y][x] = Integer.parseInt(st.nextToken());
+				money[y][x] = io.readIntToken();
 		}
 		
 		List<Integer>[][] maxmoney = new List[HEIGHT][WIDTH];
@@ -40,36 +49,7 @@ public class dwite200611p4 {
 		
 		List<Integer> end = maxmoney[0][WIDTH - 1];
 		for (int i = 0; i < Math.min(5, end.size()); i++)
-			out.println(end.get(i));
-	}
-	
-	
-	
-	private static String infile = "DATA41.txt";  // Specify null to use System.in
-	private static String outfile = "OUT41.txt";  // Specify null to use System.out
-	
-	
-	public static void main(String[] args) throws IOException {
-		InputStream in0;
-		if (infile != null) in0 = new FileInputStream(infile);
-		else in0 = System.in;
-		Reader in1 = new InputStreamReader(in0, "US-ASCII");
-		BufferedReader in = new BufferedReader(in1);
-		
-		OutputStream out0;
-		if (outfile != null) out0 = new FileOutputStream(outfile);
-		else out0 = System.out;
-		Writer out1 = new OutputStreamWriter(out0, "US-ASCII");
-		PrintWriter out = new PrintWriter(out1, true);
-		
-		main(in, out);
-		
-		in.close();
-		in1.close();
-		in0.close();
-		out.close();
-		out1.close();
-		out0.close();
+			io.println(end.get(i));
 	}
 	
 }
