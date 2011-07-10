@@ -1,5 +1,7 @@
 // DWITE - December 2004 - Problem 4: Waring's Prime Number Conjecture
 
+import java.util.Arrays;
+
 import dwite.*;
 
 
@@ -13,19 +15,19 @@ public final class dwite200412p4 extends Solution {
 	private static boolean[] isPrime;  // [0] = false, [1] = false, [2] = true, [3] = true, [4] = false, [5] = true, ...
 	
 	private static int[] primes;  // 2, 3, 5, 7, 11, 13, 17, 19, ...
-	private static int primesLength;
 	
 	
 	static {
 		isPrime = Algorithm.sievePrimes(99999);
 		primes = new int[isPrime.length];
-		primesLength = 0;
+		int primeslen = 0;
 		for (int i = 0; i < isPrime.length; i++) {
 			if (isPrime[i]) {
-				primes[primesLength] = i;
-				primesLength++;
+				primes[primeslen] = i;
+				primeslen++;
 			}
 		}
+		primes = Arrays.copyOf(primes, primeslen);
 	}
 	
 	
@@ -69,7 +71,7 @@ public final class dwite200412p4 extends Solution {
 				return 0;
 		} else {
 			int count = 0;
-			for (int i = minimumIndex, end = sum / terms; i < primesLength && primes[i] <= end; i++)
+			for (int i = minimumIndex, end = sum / terms; i < primes.length && primes[i] <= end; i++)
 				count += countSumsSemifast(sum - primes[i], terms - 1, primes[i], i);
 			return count;
 		}
@@ -79,9 +81,9 @@ public final class dwite200412p4 extends Solution {
 	// Hard-coded for 3-term sums.
 	private static int countSumsFast(int sum) {
 		int count = 0;
-		for (int i = 0, iend = sum / 3; i < primesLength && primes[i] <= iend; i++) {
+		for (int i = 0, iend = sum / 3; i < primes.length && primes[i] <= iend; i++) {
 			int temp = sum - primes[i];
-			for (int j = i, jend = temp / 2; j < primesLength && primes[j] <= jend; j++) {
+			for (int j = i, jend = temp / 2; j < primes.length && primes[j] <= jend; j++) {
 				// temp-primes[j] >= primes[j] because of jend
 				if (isPrime[temp - primes[j]])
 					count++;

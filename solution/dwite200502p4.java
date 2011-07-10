@@ -3,6 +3,7 @@
 import dwite.*;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 
@@ -30,10 +31,8 @@ public final class dwite200502p4 extends Solution {
 		
 		// Mark everything as uninitialized with -1
 		for (int i = 0; i < mincost.length; i++) {
-			for (int j = 0; j < mincost[i].length; j++) {
-				mincost[i][j] = -1;
-				maxcost[i][j] = -1;
-			}
+			Arrays.fill(mincost[i], -1);
+			Arrays.fill(maxcost[i], -1);
 		}
 		
 		// Dynamic programming lies ahead

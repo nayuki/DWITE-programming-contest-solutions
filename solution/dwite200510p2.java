@@ -27,22 +27,20 @@ public final class dwite200510p2 extends Solution {
 	
 	
 	private static void nextGeneration(char[][] grid) {
-		char[][] gridnew = new char[grid.length][grid[0].length];
+		char[][] newGrid = new char[grid.length][grid[0].length];
 		for (int y = 1; y < grid.length - 1; y++) {
 			for (int x = 1; x < grid[0].length - 1; x++) {
 				int liveneigh = countLiveNeighbours(grid, x, y);
 				if (grid[y][x] == '.' && liveneigh == 3)  // Birth
-					gridnew[y][x] = 'X';
+					newGrid[y][x] = 'X';
 				else if (grid[y][x] == 'X' && (liveneigh < 2 || liveneigh > 3))  // Death
-					gridnew[y][x] = '.';
+					newGrid[y][x] = '.';
 				else  // Unchanged
-					gridnew[y][x] = grid[y][x];
+					newGrid[y][x] = grid[y][x];
 			}
 		}
-		for (int y = 1; y < grid.length - 1; y++) {
-			for (int x = 1; x < grid[0].length - 1; x++)
-				grid[y][x] = gridnew[y][x];
-		}
+		for (int y = 1; y < grid.length - 1; y++)
+			System.arraycopy(newGrid[y], 1, grid[y], 1, grid[y].length - 2);
 	}
 	
 	

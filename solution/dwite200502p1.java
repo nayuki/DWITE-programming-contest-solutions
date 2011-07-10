@@ -25,19 +25,18 @@ public final class dwite200502p1 extends Solution {
 	}
 	
 	
-	private static double getArea(int A, int B, int C, int D) {
-		int temp = distanceSquared(B,C) + distanceSquared(D,A) - distanceSquared(A,B) - distanceSquared(C,D);
-		return Math.sqrt(4*distanceSquared(B,D)*distanceSquared(A,C) - temp*temp) / 4;
+	// Each of a, b, c, d is the index of a point
+	private static double getArea(int a, int b, int c, int d) {
+		int temp = distSqr(b, c) + distSqr(d, a) - distSqr(a, b) - distSqr(c, d);
+		return Math.sqrt(4 * distSqr(b, d) * distSqr(a, c) - temp * temp) / 4;
 	}
 	
 	
-	private static int distanceSquared(int A, int B) {
-		return magnitudeSquared(x[A] - x[B], y[A] - y[B]);
-	}
-	
-	
-	private static int magnitudeSquared(int x, int y) {
-		return x * x + y * y;
+	// Each of a, b is the index of a point
+	private static int distSqr(int a, int b) {
+		int dx = x[a] - x[b];
+		int dy = y[a] - y[b];
+		return dx * dx + dy * dy;
 	}
 	
 }

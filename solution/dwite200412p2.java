@@ -25,8 +25,8 @@ public final class dwite200412p2 extends Solution {
 		
 		// Find square with maximum sum
 		int maxsum = 0;
-		for (int y = 0; y+sqrts <= sqrtn; y++) {
-			for (int x = 0; x+sqrts <= sqrtn; x++)
+		for (int y = 0; y + sqrts <= sqrtn; y++) {
+			for (int x = 0; x + sqrts <= sqrtn; x++)
 				maxsum = Math.max(sum(grid, x, y, sqrts, sqrts), maxsum);
 		}
 		
@@ -35,11 +35,12 @@ public final class dwite200412p2 extends Solution {
 	}
 	
 	
-	private static int sum(int[][] map, int x, int y, int w, int h) {
+	// Naive algorithm
+	private static int sum(int[][] grid, int x, int y, int w, int h) {
 		int sum = 0;
 		for (int i = 0; i < h; i++) {
 			for (int j = 0; j < w; j++)
-				sum += map[y + i][x + j];
+				sum += grid[y + i][x + j];
 		}
 		return sum;
 	}

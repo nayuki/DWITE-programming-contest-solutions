@@ -39,7 +39,7 @@ public final class dwite200502p2 extends Solution {
 	private static boolean isCurrentSnakeCoiled(char[][] grid) {
 		for (int y = 1; y < grid.length - 1; y++) {
 			for (int x = 1; x < grid[y].length - 1; x++) {
-				if (grid[y][x] == 'O' && countCurrentNeighbours(grid, x, y) >= 3)
+				if (grid[y][x] == 'O' && countCurrentNeighbors(grid, x, y) >= 3)
 					return true;
 			}
 		}
@@ -64,7 +64,7 @@ public final class dwite200502p2 extends Solution {
 	}
 	
 	
-	private static int countCurrentNeighbours(char[][] grid, int x, int y) {
+	private static int countCurrentNeighbors(char[][] grid, int x, int y) {
 		int count = 0;
 		if (grid[y - 1][x - 1] == 'O') count++;
 		if (grid[y - 1][x + 0] == 'O') count++;

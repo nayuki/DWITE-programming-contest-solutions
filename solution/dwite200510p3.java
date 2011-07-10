@@ -23,15 +23,15 @@ public final class dwite200510p3 extends Solution {
 			b = temp;
 		}
 		
-		// Compute the sum 'a + a+1 + a+2 + ... + b-2 + b-1 + b' in closed form
+		// Compute the sum a + a+1 + a+2 + ... + b-2 + b-1 + b in closed form
 		int sum = (b-a+1) * (a+b) / 2;  // Alternatively, b*(b+1)/2 - a*(a-1)/2
 		
 		// Build the summation expression
 		StringBuffer sb = new StringBuffer();
 		for (int i = a; i <= b; i++) {
-			sb.append(i);
-			if (i != b)  // Suppress the plus for the last number
+			if (i != a)  // Suppress the plus for the leading number
 				sb.append("+");
+			sb.append(i);
 		}
 		
 		// Write output

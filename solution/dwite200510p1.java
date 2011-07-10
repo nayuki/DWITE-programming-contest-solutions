@@ -21,7 +21,7 @@ public final class dwite200510p1 extends Solution {
 		// Find the nearest next suitable odometer reading
 		int n1 = countOccurrences(r1, d1);
 		int[] r2 = r1.clone();
-		// r2 = solveSlow(n1, d2, r2);
+		//r2 = solveSlow(n1, d2, r2);
 		r2 = solveFast(n1, d2, r2);
 		
 		// Compute distance from initial reading to target reading

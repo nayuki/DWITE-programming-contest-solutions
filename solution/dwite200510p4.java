@@ -15,7 +15,7 @@ public final class dwite200510p4 extends Solution {
 	
 	public void run() {
 		grid = readGridAndPad(io, 30, 16, ' ');  // Read grid
-		calculateNeighbouringMines(grid);  // Process grid
+		calculateNeighboringMines(grid);  // Process grid
 		super.run();  // Process queries
 	}
 	
@@ -57,17 +57,17 @@ public final class dwite200510p4 extends Solution {
 	}
 	
 	
-	private static void calculateNeighbouringMines(char[][] grid) {
+	private static void calculateNeighboringMines(char[][] grid) {
 		for (int y = 1; y < grid.length - 1; y++) {
 			for (int x = 1; x < grid[0].length - 1; x++) {
 				if (grid[y][x] == '.')
-					grid[y][x] = (char)(getMineNeighbourCount(grid, x, y) + '0');
+					grid[y][x] = (char)(getMineNeighborCount(grid, x, y) + '0');
 			}
 		}
 	}
 	
 	
-	private static int getMineNeighbourCount(char[][] grid, int x, int y) {
+	private static int getMineNeighborCount(char[][] grid, int x, int y) {
 		int count = 0;
 		if (grid[y - 1][x - 1] == 'X') count++;
 		if (grid[y - 1][x + 0] == 'X') count++;

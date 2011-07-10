@@ -16,20 +16,20 @@ public final class dwite200501p3 extends Solution {
 		int end = io.readIntLine();
 		
 		// Compute longest run
-		int longestrun = 0;
-		int currentrun = 0;
+		int longestRun = 0;
+		int currentRun = 0;
 		for (int i = start; i <= end; i++) {
 			if (i % getDigitSum(i) == 0)
-				currentrun++;
+				currentRun++;
 			else {
-				longestrun = Math.max(currentrun, longestrun);
-				currentrun = 0;
+				longestRun = Math.max(currentRun, longestRun);
+				currentRun = 0;
 			}
 		}
-		longestrun = Math.max(currentrun, longestrun);
+		longestRun = Math.max(currentRun, longestRun);
 		
 		// Write output
-		io.println(longestrun);
+		io.println(longestRun);
 	}
 	
 	
