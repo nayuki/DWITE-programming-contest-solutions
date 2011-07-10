@@ -2,7 +2,10 @@
 
 import dwite.*;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.StringTokenizer;
 
 
 public final class dwite200411p3 extends Solution {
