@@ -15,7 +15,7 @@ public final class dwite200510p2 extends Solution {
 		io.tokenizeLine();
 		int height = io.readIntToken();
 		int width = io.readIntToken();
-		char[][] grid = readGridAndPad(io, width, height, '.');
+		char[][] grid = io.readGridAndPad(width, height, '.');
 		
 		// Compute and write output
 		for (int i = 0; i <= 100; i++) {
@@ -76,24 +76,6 @@ public final class dwite200510p2 extends Solution {
 		    || i ==  10
 		    || i ==  50
 		    || i == 100;
-	}
-	
-	
-	
-	private static char[][] readGridAndPad(Io io, int width, int height, char border) {
-		char[][] grid = new char[height + 2][width + 2];
-		for (int y = 1; y <= height; y++) {
-			String line = io.readLine();
-			for (int x = 1; x <= width; x++)
-				grid[y][x] = line.charAt(x - 1);
-			grid[y][0] = border;
-			grid[y][width + 1] = border;
-		}
-		for (int x = 0; x < width + 2; x++) {
-			grid[0][x] = border;
-			grid[height + 1][x] = border;
-		}
-		return grid;
 	}
 	
 }

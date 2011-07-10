@@ -14,7 +14,7 @@ public final class dwite200510p4 extends Solution {
 	
 	
 	public void run() {
-		grid = readGridAndPad(io, 30, 16, ' ');  // Read grid
+		grid = io.readGridAndPad(30, 16, ' ');  // Read grid
 		calculateNeighboringMines(grid);  // Process grid
 		super.run();  // Process queries
 	}
@@ -78,24 +78,6 @@ public final class dwite200510p4 extends Solution {
 		if (grid[y + 1][x + 0] == 'X') count++;
 		if (grid[y + 1][x + 1] == 'X') count++;
 		return count;
-	}
-	
-	
-	
-	private static char[][] readGridAndPad(Io io, int width, int height, char border) {
-		char[][] grid = new char[height + 2][width + 2];
-		for (int y = 1; y <= height; y++) {
-			String line = io.readLine();
-			for (int x = 1; x <= width; x++)
-				grid[y][x] = line.charAt(x - 1);
-			grid[y][0] = border;
-			grid[y][width + 1] = border;
-		}
-		for (int x = 0; x < width + 2; x++) {
-			grid[0][x] = border;
-			grid[height + 1][x] = border;
-		}
-		return grid;
 	}
 	
 }

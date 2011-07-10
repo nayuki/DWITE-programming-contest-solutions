@@ -87,6 +87,23 @@ public final class Io {
 	}
 	
 	
+	public char[][] readGridAndPad(int width, int height, char border) {
+		char[][] grid = new char[height + 2][width + 2];
+		for (int y = 1; y <= height; y++) {
+			String line = readLine();
+			for (int x = 1; x <= width; x++)
+				grid[y][x] = line.charAt(x - 1);
+			grid[y][0] = border;
+			grid[y][width + 1] = border;
+		}
+		for (int x = 0; x < width + 2; x++) {
+			grid[0][x] = border;
+			grid[height + 1][x] = border;
+		}
+		return grid;
+	}
+	
+	
 	// Writes
 	
 	public void print(int x) {
