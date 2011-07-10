@@ -105,6 +105,10 @@ public final class Io {
 		output.println(x);
 	}
 	
+	public void println(double x) {
+		output.println(x);
+	}
+	
 	public void println(String s) {
 		output.println(s);
 	}
