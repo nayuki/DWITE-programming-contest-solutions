@@ -4,7 +4,6 @@ import dwite.*;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Stack;
 
 
 public final class dwite200411p4 extends Solution {
@@ -32,9 +31,10 @@ public final class dwite200411p4 extends Solution {
 		io.tokenizeLine();  // "sum = formula"
 		expectNextToken(io, "sum");
 		expectNextToken(io, "=");
-		List<String> formula = new ArrayList<String>();
+		List<Object> formula = new ArrayList<Object>();
 		while (io.canReadToken())
 			formula.add(io.readToken());
+		parseNumbers(formula);
 		
 		io.tokenizeLine();  // "Next i"
 		expectNextToken(io, "Next");
@@ -42,79 +42,83 @@ public final class dwite200411p4 extends Solution {
 		
 		// Execute formula
 		for (int i = start; i <= finish; i++)
-			sum = executeOnce(sum, i, formula);
+			sum = evaluate(sum, i, formula);
 		
 		// Write output
 		io.println(sum);
 	}
 	
 	
-	private static int executeOnce(int sum, int i, List<String> formula) {
-		// Dijkstra's shunting yard algorithm
-		Stack<Integer> operands = new Stack<Integer>();
-		Stack<Character> operators = new Stack<Character>();
-		for (String token : formula) {
-			if (isOperator(token)) {
-				// Operators
-				while (!operators.empty() && canEvaluate(operators.peek(), token.charAt(0))) {
-					int y = operands.pop();
-					int x = operands.pop();
-					operands.push(evaluate(x, y, operators.pop()));
-				}
-				operators.push(token.charAt(0));
-			} else {
-				// Values
-				int value;
-				if (token.equals("sum"))
-					value = sum;
-				else if (token.equals("i"))
-					value = i;
-				else if (token.charAt(0) == '(')
-					value = Integer.parseInt(token.substring(1, token.length() - 1));
-				else
-					value = Integer.parseInt(token);
-				operands.push(value);
+	private static void parseNumbers(List<Object> formula) {
+		for (int i = 0; i < formula.size(); i++) {
+			Object token = formula.get(i);
+			if (token instanceof String) {
+				String tok = (String)token;
+				if (tok.matches("\\d+"))
+					formula.set(i, Integer.parseInt(tok));
+				else if (tok.matches("\\(-?\\d+\\)"))
+					formula.set(i, Integer.parseInt(tok.substring(1, tok.length() - 1)));
 			}
 		}
-		while (!operators.empty()) {
-			int y = operands.pop();
-			int x = operands.pop();
-			operands.push(evaluate(x, y, operators.pop()));
+	}
+	
+	
+	private static int evaluate(int sum, int i, List<Object> formula) {
+		// Make a copy of the formula
+		formula = new ArrayList<Object>(formula);
+		
+		// Scan for multiplication and division
+		for (int j = 0; j < formula.size(); j++) {
+			Object token = formula.get(j);
+			if (token.equals("*") || token.equals("\\")) {
+				int x = getValue(sum, i, formula.get(j - 1));
+				int y = getValue(sum, i, formula.get(j + 1));
+				int z;
+				if (token.equals("*")) z = x * y;
+				else                   z = x / y;
+				// Replace x OP y with z
+				formula.subList(j - 1, j + 2).clear();
+				formula.add(j - 1, z);
+				j -= 2;
+			}
 		}
 		
-		if (operands.size() != 1)
-			throw new AssertionError();
-		return operands.pop();
-	}
-	
-	
-	// Returns true if opA has higher precedence than opB.
-	private static boolean canEvaluate(char opA, char opB) {
-		if (opB == '+' || opB == '-')
-			return opA == '+' || opA == '-' || opA == '*' || opA == '\\';
-		else if (opB == '*' || opB == '\\')
-			return opA == '*' || opA == '\\';
-		else
-			throw new AssertionError("Invalid operator");
-	}
-	
-	
-	private static int evaluate(int x, int y, char op) {
-		switch (op) {
-			case '+' : return x + y;
-			case '-' : return x - y;
-			case '*' : return x * y;
-			case '\\': return x / y;
-			default: throw new AssertionError("Invalid operator");
+		// Scan for addition and subtraction
+		for (int j = 0; j < formula.size(); j++) {
+			Object token = formula.get(j);
+			if (token.equals("+") || token.equals("-")) {
+				int x = getValue(sum, i, formula.get(j - 1));
+				int y = getValue(sum, i, formula.get(j + 1));
+				int z;
+				if (token.equals("+")) z = x + y;
+				else                   z = x - y;
+				// Replace x OP y with z
+				formula.subList(j - 1, j + 2).clear();
+				formula.add(j - 1, z);
+				j -= 2;
+			}
 		}
+		
+		if (formula.size() != 1)
+			throw new IllegalArgumentException("Invalid formula");
+		else
+			return getValue(sum, i, formula.get(0));
 	}
 	
 	
-	private static boolean isOperator(String s) {
-		return s.equals("+")
-		    || s.equals("-")
-		    || s.equals("*")
-		    || s.equals("\\");
+	private static int getValue(int sum, int i, Object token) {
+		if (token instanceof Integer)
+			return (Integer)token;
+		else if (token instanceof String) {
+			String tok = (String)token;
+			if (tok.equals("i"))
+				return i;
+			else if (tok.equals("sum"))
+				return sum;
+			else
+				throw new IllegalArgumentException("Not a value: " + tok);
+		} else
+			throw new IllegalArgumentException("Not a value: " + token);
 	}
 	
 	
