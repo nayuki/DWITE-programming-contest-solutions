@@ -3,10 +3,8 @@ import static org.junit.Assert.fail;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.io.Reader;
 import java.io.StringWriter;
 
 import dwite.Io;
@@ -33,7 +31,7 @@ public class DwiteTestUtils {
 	}
 	
 	
-	private static String run(Class<?> clazz, String infile) throws IOException, IllegalAccessException, IllegalArgumentException, InstantiationException {
+	private static String run(Class<?> clazz, String infile) throws Exception {
 		BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(infile), "US-ASCII"));
 		StringWriter out0 = new StringWriter();
 		PrintWriter out = new PrintWriter(out0, true);
@@ -45,11 +43,9 @@ public class DwiteTestUtils {
 	
 	
 	private static String readLines(String file) throws IOException {
-		InputStream in0 = new FileInputStream(file);
-		Reader in1 = new InputStreamReader(in0, "US-ASCII");
-		BufferedReader in = new BufferedReader(in1);
+		BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(file), "US-ASCII"));
 		
-		StringBuffer sb = new StringBuffer();
+		StringBuilder sb = new StringBuilder();
 		while (true) {
 			String line = in.readLine();
 			if (line == null)
@@ -58,11 +54,9 @@ public class DwiteTestUtils {
 		}
 		
 		in.close();
-		in1.close();
-		in0.close();
-		
 		return sb.toString();
 	}
+	
 	
 	
 	private DwiteTestUtils() {}
