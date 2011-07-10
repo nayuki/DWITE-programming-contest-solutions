@@ -8,8 +8,6 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.io.Reader;
 import java.io.StringWriter;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 
 import dwite.Io;
 import dwite.Runner;
@@ -30,48 +28,12 @@ public class DwiteTestUtils {
 			System.out.println(expectedOutput);
 			System.out.println("Actual output:");
 			System.out.println(actualOutput);
-			fail("Output mismatch in "+clazz.getName());
-		}
-		
-	}
-	
-	
-	private static String run(Class<?> clazz, String infile) throws IOException, NoSuchMethodException, IllegalAccessException, InvocationTargetException {
-		InputStream in0 = new FileInputStream(infile);
-		Reader in1 = new InputStreamReader(in0, "US-ASCII");
-		BufferedReader in = new BufferedReader(in1);
-		
-		StringWriter out0 = new StringWriter();
-		PrintWriter out = new PrintWriter(out0, true);
-		
-		Method method = clazz.getMethod("main", BufferedReader.class, PrintWriter.class);
-		method.invoke(null, in, out);
-		
-		in.close();
-		in1.close();
-		in0.close();
-		out.close();
-		out0.close();
-		
-		return out0.getBuffer().toString();
-	}
-	
-	
-	public static void newTest(Class<?> clazz, String infile, String outfile) throws Exception {
-		String expectedOutput = readLines(outfile);
-		String actualOutput = newRun(clazz, infile);
-		
-		if (!expectedOutput.equals(actualOutput)) {
-			System.out.println("Expected output:");
-			System.out.println(expectedOutput);
-			System.out.println("Actual output:");
-			System.out.println(actualOutput);
 			fail("Output mismatch in " + clazz.getName());
 		}
 	}
 	
 	
-	private static String newRun(Class<?> clazz, String infile) throws IOException, IllegalAccessException, IllegalArgumentException, InstantiationException {
+	private static String run(Class<?> clazz, String infile) throws IOException, IllegalAccessException, IllegalArgumentException, InstantiationException {
 		BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(infile), "US-ASCII"));
 		StringWriter out0 = new StringWriter();
 		PrintWriter out = new PrintWriter(out0, true);
