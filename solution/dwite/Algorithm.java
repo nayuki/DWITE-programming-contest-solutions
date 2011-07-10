@@ -53,4 +53,8 @@ public final class Algorithm {
 		return isPrime;
 	}
 	
+	
+	
+	private Algorithm() {}
+	
 }

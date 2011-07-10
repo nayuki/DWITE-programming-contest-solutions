@@ -102,4 +102,7 @@ public class DwiteTestUtils {
 		return sb.toString();
 	}
 	
+	
+	private DwiteTestUtils() {}
+	
 }
