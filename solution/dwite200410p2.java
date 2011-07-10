@@ -10,7 +10,7 @@ public final class dwite200410p2 extends Solution {
 	}
 	
 	
-	protected void runOnce(Io io) {
+	protected void runOnce() {
 		String line = io.readLine();
 		int hour = Integer.parseInt(line.substring(0, 2));
 		int minute = Integer.parseInt(line.substring(3, 5));

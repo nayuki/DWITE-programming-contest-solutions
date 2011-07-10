@@ -13,7 +13,7 @@ public final class dwite200502p4 extends Solution {
 	}
 	
 	
-	protected void runOnce(Io io) {
+	protected void runOnce() {
 		// Read the input of matrix dimensions
 		List<Integer> dimensions = new ArrayList<Integer>();
 		io.tokenizeLine();

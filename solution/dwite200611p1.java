@@ -10,7 +10,7 @@ public final class dwite200611p1 extends Solution {
 	}
 	
 	
-	protected void runOnce(Io io) {
+	protected void runOnce() {
 		// Read input
 		String line = io.readLine();
 		

@@ -10,7 +10,7 @@ public final class dwite200612p5 extends Solution {
 	}
 	
 	
-	protected void runOnce(Io io) {
+	protected void runOnce() {
 		// Read input
 		String ciphertext = io.readLine();
 		String someplaintext = io.readLine();

@@ -9,7 +9,8 @@ public final class Runner {
 	
 	
 	public static void run(Io io, Solution sol) {
-		sol.run(io);
+		sol.io = io;
+		sol.run();
 	}
 	
 	

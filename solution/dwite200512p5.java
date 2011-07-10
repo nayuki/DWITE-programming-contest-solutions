@@ -13,7 +13,7 @@ public final class dwite200512p5 extends Solution {
 	}
 	
 	
-	protected void runOnce(Io io) {
+	protected void runOnce() {
 		int total = Integer.parseInt(io.readLine());
 		int n = Integer.parseInt(io.readLine());
 		io.tokenizeLine();

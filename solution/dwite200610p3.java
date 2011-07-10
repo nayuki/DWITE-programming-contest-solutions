@@ -14,7 +14,7 @@ public final class dwite200610p3 extends Solution {
 	}
 	
 	
-	public void run(Io io) {
+	public void run() {
 		// Read input
 		int n = io.readIntLine();
 		List<Player> players = new ArrayList<Player>();

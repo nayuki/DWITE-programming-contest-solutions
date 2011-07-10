@@ -10,7 +10,7 @@ public final class dwite200511p1 extends Solution {
 	}
 	
 	
-	protected void runOnce(Io io) {
+	protected void runOnce() {
 		// Read input and take the arithmetic mean
 		double x = 0;
 		double y = 0;

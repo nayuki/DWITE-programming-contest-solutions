@@ -10,7 +10,7 @@ public final class dwite200510p5 extends Solution {
 	}
 	
 	
-	protected void runOnce(Io io) {
+	protected void runOnce() {
 		// Read input
 		io.tokenizeLine();
 		int d1 = io.readIntToken();

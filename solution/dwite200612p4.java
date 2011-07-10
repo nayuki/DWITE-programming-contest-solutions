@@ -12,7 +12,7 @@ public final class dwite200612p4 extends Solution {
 	}
 	
 	
-	protected void runOnce(Io io) {
+	protected void runOnce() {
 		BigInteger n = new BigInteger(io.readLine());
 		BigInteger temp = n;
 		for (int i = 0; ; i++) {

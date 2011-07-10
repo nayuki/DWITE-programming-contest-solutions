@@ -18,7 +18,7 @@ public final class dwite200611p5 extends Solution {
 	}
 	
 	
-	protected void runOnce(Io io) {
+	protected void runOnce() {
 		int n = io.readIntLine();
 		io.printf("%d=%s%n", n, solve(n));
 	}

@@ -10,7 +10,7 @@ public final class dwite200411p5 extends Solution {
 	}
 	
 	
-	protected void runOnce(Io io) {
+	protected void runOnce() {
 		// Read input
 		int temp = io.readIntLine();  // Variable Tair
 		int wind = io.readIntLine();  // Variable V10metre

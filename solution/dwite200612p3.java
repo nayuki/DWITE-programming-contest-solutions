@@ -13,7 +13,7 @@ public final class dwite200612p3 extends Solution {
 	private static boolean[] isPrime = Algorithm.sievePrimes(999999);
 	
 	
-	protected void runOnce(Io io) {
+	protected void runOnce() {
 		// Read input
 		int n = io.readIntLine();
 		

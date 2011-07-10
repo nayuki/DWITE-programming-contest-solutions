@@ -10,7 +10,7 @@ public final class dwite200412p3 extends Solution {
 	}
 	
 	
-	protected void runOnce(Io io) {
+	protected void runOnce() {
 		// Read input
 		double length     = io.readDoubleLine();  // Variable L
 		double separation = io.readDoubleLine();  // Variable D

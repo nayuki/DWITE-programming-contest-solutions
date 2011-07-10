@@ -10,7 +10,7 @@ public final class dwite200511p5 extends Solution {
 	}
 	
 	
-	protected void runOnce(Io io) {
+	protected void runOnce() {
 		String line = io.readLine();
 		for (int i = 0; i < line.length(); i += 4) {
 			int word = 0;  // 24 bits

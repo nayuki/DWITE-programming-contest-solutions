@@ -12,7 +12,7 @@ public final class dwite200510p1 extends Solution {
 	}
 	
 	
-	protected void runOnce(Io io) {
+	protected void runOnce() {
 		// Read input
 		int[] r1 = Algorithm.toDigits(io.readLine());
 		int d1 = io.readIntLine();

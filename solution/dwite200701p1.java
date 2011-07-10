@@ -10,7 +10,7 @@ public final class dwite200701p1 extends Solution {
 	}
 	
 	
-	protected void runOnce(Io io) {
+	protected void runOnce() {
 		// Read input
 		double coneheight = io.readDoubleLine();
 		double coneradius = io.readDoubleLine();

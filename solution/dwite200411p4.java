@@ -14,7 +14,7 @@ public final class dwite200411p4 extends Solution {
 	}
 	
 	
-	protected void runOnce(Io io) {
+	protected void runOnce() {
 		// Parse input
 		io.tokenizeLine();  // "sum = value"
 		expectNextToken(io, "sum");

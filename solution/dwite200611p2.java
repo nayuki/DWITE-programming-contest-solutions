@@ -16,13 +16,13 @@ public final class dwite200611p2 extends Solution {
 	private List<Integer> winningNumbers;
 	
 	
-	public void run(Io io) {
+	public void run() {
 		winningNumbers = readNumbers(io);
-		super.run(io);
+		super.run();
 	}
 	
 	
-	protected void runOnce(Io io) {
+	protected void runOnce() {
 		// Read input
 		List<Integer> numbers = readNumbers(io);
 		

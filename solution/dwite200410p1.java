@@ -10,7 +10,7 @@ public final class dwite200410p1 extends Solution {
 	}
 	
 	
-	protected void runOnce(Io io) {
+	protected void runOnce() {
 		io.tokenizeLine();
 		double x1 = io.readDoubleToken();
 		double y1 = io.readDoubleToken();

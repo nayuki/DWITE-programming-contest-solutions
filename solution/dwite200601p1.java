@@ -10,7 +10,7 @@ public final class dwite200601p1 extends Solution {
 	}
 	
 	
-	protected void runOnce(Io io) {
+	protected void runOnce() {
 		// Read input
 		double h = io.readDoubleLine();
 		double r = io.readDoubleLine();

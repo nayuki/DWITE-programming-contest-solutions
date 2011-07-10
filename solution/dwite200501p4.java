@@ -20,7 +20,7 @@ public final class dwite200501p4 extends Solution {
 	};
 	
 	
-	protected void runOnce(Io io) {
+	protected void runOnce() {
 		io.tokenizeLine();
 		int m = getMonth(io.readToken());
 		String daystr = io.readToken();

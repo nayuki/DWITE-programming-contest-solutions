@@ -20,7 +20,7 @@ public final class dwite200601p5 extends Solution {
 	private Graph graph;
 	
 	
-	public void run(Io io) {
+	public void run() {
 		// Read input (the graph)
 		int n = io.readIntLine();
 		graph = new Graph();
@@ -35,11 +35,11 @@ public final class dwite200601p5 extends Solution {
 		}
 		
 		// Process each query
-		super.run(io);
+		super.run();
 	}
 	
 	
-	protected void runOnce(Io io) {
+	protected void runOnce() {
 		// Read input
 		String line = io.readLine();
 		Node src  = graph.getOrAddNode(line.substring(0, 1));

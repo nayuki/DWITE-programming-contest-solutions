@@ -3,12 +3,15 @@ package dwite;
 
 public class Solution {
 	
-	public void run(Io io) {
+	protected Io io;
+	
+	
+	public void run() {
 		for (int i = 0; i < 5; i++)
-			runOnce(io);
+			runOnce();
 	}
 	
 	
-	protected void runOnce(Io io) {}
+	protected void runOnce() {}
 	
 }

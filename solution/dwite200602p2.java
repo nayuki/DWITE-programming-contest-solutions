@@ -13,7 +13,7 @@ public final class dwite200602p2 extends Solution {
 	private static final int CAPACITY = 1440;
 	
 	
-	protected void runOnce(Io io) {
+	protected void runOnce() {
 		// Solve subset sum problem using dynamic programming
 		boolean[] possible = new boolean[CAPACITY + 1];
 		possible[0] = true;

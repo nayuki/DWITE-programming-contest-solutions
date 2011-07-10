@@ -13,7 +13,7 @@ public final class dwite200511p4 extends Solution {
 	private static final int MAX_HEIGHT = 32000;
 	
 	
-	protected void runOnce(Io io) {
+	protected void runOnce() {
 		int[] minBlocks = new int[MAX_HEIGHT + 1];  // minBlocks[i] is the minimum number of blocks to build a tower of height i
 		minBlocks[0] = 0;
 		for (int i = 1; i < minBlocks.length; i++)

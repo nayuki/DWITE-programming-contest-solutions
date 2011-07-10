@@ -14,7 +14,7 @@ public final class dwite200502p1 extends Solution {
 	private static final int[] y = { 1,  2, -1, -2,  2,  3, -3, -3,  3,  4, -2, -5,  5,  5, -5, -5,  4,  1, -4, -1};
 	
 	
-	protected void runOnce(Io io) {
+	protected void runOnce() {
 		String s = io.readLine();
 		int a = s.charAt(0) - 'A';
 		int b = s.charAt(1) - 'A';

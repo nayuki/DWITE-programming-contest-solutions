@@ -14,7 +14,7 @@ public final class dwite200602p1 extends Solution {
 	private int[] py;
 	
 	
-	public void run(Io io) {
+	public void run() {
 		// Read input (the points)
 		int n = io.readIntLine();
 		px = new int[n];
@@ -26,11 +26,11 @@ public final class dwite200602p1 extends Solution {
 		}
 		
 		// Process each geometric line
-		super.run(io);
+		super.run();
 	}
 	
 	
-	protected void runOnce(Io io) {
+	protected void runOnce() {
 		// Read input (a pair of points defining the line)
 		io.tokenizeLine();
 		int x1 = io.readIntToken();

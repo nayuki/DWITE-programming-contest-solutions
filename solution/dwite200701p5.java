@@ -16,7 +16,7 @@ public final class dwite200701p5 extends Solution {
 	}
 	
 	
-	protected void runOnce(Io io) {
+	protected void runOnce() {
 		// Read input
 		io.tokenizeLine();
 		io.readToken();  // Discard N, the number of candies

@@ -56,7 +56,7 @@ public final class dwite200610p1 extends Solution {
 	}
 	
 	
-	protected void runOnce(Io io) {
+	protected void runOnce() {
 		// Read input
 		int n = io.readIntLine();
 		String papersize = io.readLine();

@@ -29,7 +29,7 @@ public final class dwite200412p4 extends Solution {
 	}
 	
 	
-	protected void runOnce(Io io) {
+	protected void runOnce() {
 		int n = io.readIntLine();
 		if (isPrime[n])
 			io.println("PRIME");

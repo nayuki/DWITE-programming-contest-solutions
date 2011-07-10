@@ -38,7 +38,7 @@ public final class dwite200601p4 extends Solution {
 	}
 	
 	
-	protected void runOnce(Io io) {
+	protected void runOnce() {
 		io.tokenizeLine();
 		int x = io.readIntToken();
 		String fromunit = io.readToken();

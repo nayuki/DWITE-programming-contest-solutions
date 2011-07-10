@@ -15,7 +15,7 @@ public final class dwite200411p3 extends Solution {
 	}
 	
 	
-	protected void runOnce(Io io) {
+	protected void runOnce() {
 		// Read input
 		Polynomial poly = parsePolynomial(io.readLine()).reduce();
 		

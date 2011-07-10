@@ -20,7 +20,7 @@ public final class dwite200611p4 extends Solution {
 	
 	
 	@SuppressWarnings("unchecked")
-	public void run(Io io) {
+	public void run() {
 		int[][] money = new int[HEIGHT][WIDTH];
 		for (int y = 0; y < HEIGHT; y++) {
 			io.tokenizeLine();

@@ -13,14 +13,14 @@ public final class dwite200510p4 extends Solution {
 	private char[][] grid;
 	
 	
-	public void run(Io io) {
+	public void run() {
 		grid = readGridAndPad(io, 30, 16, ' ');  // Read grid
 		calculateNeighbouringMines(grid);  // Process grid
-		super.run(io);  // Process queries
+		super.run();  // Process queries
 	}
 	
 	
-	protected void runOnce(Io io) {
+	protected void runOnce() {
 		// Read input
 		io.tokenizeLine();
 		int y = io.readIntToken();

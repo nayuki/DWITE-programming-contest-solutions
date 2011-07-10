@@ -10,7 +10,7 @@ public final class dwite200410p4 extends Solution {
 	}
 	
 	
-	protected void runOnce(Io io) {
+	protected void runOnce() {
 		io.tokenizeLine();
 		int capacity = io.readIntToken();  // Variable A
 		int files = io.readIntToken();     // Variable n

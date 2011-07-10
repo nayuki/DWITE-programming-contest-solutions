@@ -10,7 +10,7 @@ public final class dwite200411p1 extends Solution {
 	}
 	
 	
-	protected void runOnce(Io io) {
+	protected void runOnce() {
 		int[] digits = Algorithm.toDigits(io.readLine());
 		int sum = getLuhnSum(digits);
 		if (sum % 10 == 0)

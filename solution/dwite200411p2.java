@@ -10,7 +10,7 @@ public final class dwite200411p2 extends Solution {
 	}
 	
 	
-	protected void runOnce(Io io) {
+	protected void runOnce() {
 		int n = io.readIntLine();  // The total number of lots
 		int s = io.readIntLine();  // The size of a lot to choose
 		int csqrt = Algorithm.sqrt(n) - Algorithm.sqrt(s) + 1;  // The number of choices along one dimension

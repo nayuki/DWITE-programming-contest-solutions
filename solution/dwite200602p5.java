@@ -13,7 +13,7 @@ public final class dwite200602p5 extends Solution {
 	private static boolean[] isPrime = Algorithm.sievePrimes(1000000);
 	
 	
-	protected void runOnce(Io io) {
+	protected void runOnce() {
 		// Read input
 		io.tokenizeLine();
 		int start = io.readIntToken();

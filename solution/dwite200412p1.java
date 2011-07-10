@@ -10,7 +10,7 @@ public final class dwite200412p1 extends Solution {
 	}
 	
 	
-	protected void runOnce(Io io) {
+	protected void runOnce() {
 		io.println(factor(io.readIntLine()));
 	}
 	

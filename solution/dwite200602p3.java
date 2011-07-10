@@ -10,7 +10,7 @@ public final class dwite200602p3 extends Solution {
 	}
 	
 	
-	protected void runOnce(Io io) {
+	protected void runOnce() {
 		String line = io.readLine();
 		if (line.length() != 12)
 			throw new AssertionError("Invalid length for UPC digit sequence");

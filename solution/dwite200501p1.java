@@ -13,7 +13,7 @@ public final class dwite200501p1 extends Solution {
 	}
 	
 	
-	public void run(Io io) {
+	public void run() {
 		// Read input and sort
 		int n = io.readIntLine();
 		SortedSet<Golfer> golfers = new TreeSet<Golfer>();

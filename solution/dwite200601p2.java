@@ -51,7 +51,7 @@ public final class dwite200601p2 extends Solution {
 	private char[][] board;
 	
 	
-	public void run(Io io) {
+	public void run() {
 		// 0 = normal, 1 = pink, 2 = red, 3 = light blue, 4 = dark blue, 5-9 = same meaning but to be scored and cleared
 		boardvalue = new int[][] {
 			{2, 0, 0, 3, 0, 0, 0, 2, 0, 0, 0, 3, 0, 0, 2},
@@ -71,11 +71,11 @@ public final class dwite200601p2 extends Solution {
 			{2, 0, 0, 3, 0, 0, 0, 2, 0, 0, 0, 3, 0, 0, 2}};
 		
 		board = new char[15][15];
-		super.run(io);
+		super.run();
 	}
 	
 	
-	protected void runOnce(Io io) {
+	protected void runOnce() {
 		int col = io.readLine().charAt(0) - 'A';
 		int row = io.readIntLine() - 1;
 		boolean horz = io.readLine().equals("ACROSS");

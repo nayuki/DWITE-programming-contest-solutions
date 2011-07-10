@@ -10,7 +10,7 @@ public final class dwite200602p4 extends Solution {
 	}
 	
 	
-	protected void runOnce(Io io) {
+	protected void runOnce() {
 		int[][] board = new int[6][7];  // 0 = unfilled, 1 = red, 2 = blue
 		String moves = io.readLine();
 		for (int i = 0; i < moves.length(); i++) {

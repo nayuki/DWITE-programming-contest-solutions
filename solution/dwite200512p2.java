@@ -13,7 +13,7 @@ public final class dwite200512p2 extends Solution {
 	}
 	
 	
-	protected void runOnce(Io io) {
+	protected void runOnce() {
 		// Read input
 		io.tokenizeLine();
 		int height = io.readIntToken();

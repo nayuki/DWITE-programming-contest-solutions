@@ -10,7 +10,7 @@ public final class dwite200502p5 extends Solution {
 	}
 	
 	
-	protected void runOnce(Io io) {
+	protected void runOnce() {
 		// Read input
 		int h = io.readIntLine();         // Water depth in metres
 		int d = io.readIntLine() * 1000;  // Distance in metres

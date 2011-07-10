@@ -10,7 +10,7 @@ public final class dwite200612p1 extends Solution {
 	}
 	
 	
-	protected void runOnce(Io io) {
+	protected void runOnce() {
 		int capacity = io.readIntLine();  // Capacity of storage box
 		int bags = io.readIntLine();
 		io.tokenizeLine();

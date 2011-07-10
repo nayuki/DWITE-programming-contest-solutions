@@ -13,7 +13,7 @@ public final class dwite200511p3 extends Solution {
 	private static final int[] syllablePattern = {2, 4, 6, 8, 2};
 	
 	
-	protected void runOnce(Io io) {
+	protected void runOnce() {
 		int worstdev = 0;
 		int worstline = -1;
 		for (int i = 0; i < 5; i++) {

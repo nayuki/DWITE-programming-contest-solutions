@@ -10,7 +10,7 @@ public final class dwite200611p3 extends Solution {
 	}
 	
 	
-	protected void runOnce(Io io) {
+	protected void runOnce() {
 		// Read input (the coefficients for (ax+b) and (cx+d))
 		io.tokenizeLine();
 		int a = io.readIntToken();

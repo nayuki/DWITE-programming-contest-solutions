@@ -13,7 +13,7 @@ public final class dwite200701p3 extends Solution {
 	private static final int[] cumulativeDays = {-1, -1, -1, 0, 31, 61, 92, 122, 153, 184, 214, 245, 275, 306, 337};
 	
 	
-	protected void runOnce(Io io) {
+	protected void runOnce() {
 		String[] tokens = io.readLine().split("[ /:]");
 		int day = Integer.parseInt(tokens[0]);
 		int mth = Integer.parseInt(tokens[1]);

@@ -12,7 +12,7 @@ public final class dwite200410p5 extends Solution {
 	}
 	
 	
-	protected void runOnce(Io io) {
+	protected void runOnce() {
 		String x = io.readLine();
 		String y = io.readLine();
 		io.println(new BigInteger(x).add(new BigInteger(y)).toString());  // Easy version
