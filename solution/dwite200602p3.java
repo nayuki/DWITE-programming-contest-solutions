@@ -1,23 +1,21 @@
-import dwite.Algorithm;
-
-import java.io.*;
-
-
 // DWITE - February 2006 - Problem 3: UPC Check Digit
-public class dwite200602p3 {
+
+import dwite.*;
+
+
+public final class dwite200602p3 extends Solution {
 	
-	public static void main(BufferedReader in, PrintWriter out) throws IOException {
-		for (int i = 0; i < 5; i++)
-			mainOnce(in, out);
+	public static void main(String[] args) {
+		Runner.run("DATA31.txt", "OUT31.txt", new dwite200602p3());
 	}
 	
 	
-	private static void mainOnce(BufferedReader in, PrintWriter out) throws IOException {
-		String line = in.readLine();
+	protected void runOnce(Io io) {
+		String line = io.readLine();
 		if (line.length() != 12)
 			throw new AssertionError("Invalid length for UPC digit sequence");
 		int sum = getUpcSumWithoutCheckDigit(Algorithm.toDigits(line));
-		out.printf("%s%d%n", line.substring(0, 11), (10 - sum) % 10);  // Calculate the correct check digit using modular arithmetic magic
+		io.printf("%s%d%n", line.substring(0, 11), (10 - sum) % 10);  // Calculate the correct check digit using modular arithmetic magic
 	}
 	
 	
@@ -28,35 +26,6 @@ public class dwite200602p3 {
 			else            sum += digits[i] * 1;
 		}
 		return sum % 10;
-	}
-	
-	
-	
-	private static String infile = "DATA31.txt";  // Specify null to use System.in
-	private static String outfile = "OUT31.txt";  // Specify null to use System.out
-	
-	
-	public static void main(String[] args) throws IOException {
-		InputStream in0;
-		if (infile != null) in0 = new FileInputStream(infile);
-		else in0 = System.in;
-		Reader in1 = new InputStreamReader(in0, "US-ASCII");
-		BufferedReader in = new BufferedReader(in1);
-		
-		OutputStream out0;
-		if (outfile != null) out0 = new FileOutputStream(outfile);
-		else out0 = System.out;
-		Writer out1 = new OutputStreamWriter(out0, "US-ASCII");
-		PrintWriter out = new PrintWriter(out1, true);
-		
-		main(in, out);
-		
-		in.close();
-		in1.close();
-		in0.close();
-		out.close();
-		out1.close();
-		out0.close();
 	}
 	
 }
