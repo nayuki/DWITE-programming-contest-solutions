@@ -1,9 +1,17 @@
-import java.io.*;
-import java.util.*;
-
-
 // DWITE - October 2006 - Problem 1: Pete's Printing Press
-public class dwite200610p1 {
+
+import dwite.*;
+
+import java.util.HashMap;
+import java.util.Map;
+
+
+public final class dwite200610p1 extends Solution {
+	
+	public static void main(String[] args) {
+		Runner.run("DATA11.txt", "OUT11.txt", new dwite200610p1());
+	}
+	
 	
 	private static final Map<PrintingConfiguration,Double> unitCostByConfig;
 	
@@ -48,52 +56,16 @@ public class dwite200610p1 {
 	}
 	
 	
-	
-	public static void main(BufferedReader in, PrintWriter out) throws IOException {
-		for (int i = 0; i < 5; i++)
-			mainOnce(in, out);
-	}
-	
-	
-	private static void mainOnce(BufferedReader in, PrintWriter out) throws IOException {
+	protected void runOnce(Io io) {
 		// Read input
-		int n = Integer.parseInt(in.readLine());
-		String papersize = in.readLine();
-		String colour = in.readLine();
+		int n = io.readIntLine();
+		String papersize = io.readLine();
+		String colour = io.readLine();
 		
 		// Compute and write output
 		PrintingConfiguration config = new PrintingConfiguration(n, papersize, colour);
 		double cost = n * unitCostByConfig.get(config);
-		out.printf("$%.2f%n", cost);
-	}
-	
-	
-	
-	private static String infile = "DATA11.txt";  // Specify null to use System.in
-	private static String outfile = "OUT11.txt";  // Specify null to use System.out
-	
-	
-	public static void main(String[] args) throws IOException {
-		InputStream in0;
-		if (infile != null) in0 = new FileInputStream(infile);
-		else in0 = System.in;
-		Reader in1 = new InputStreamReader(in0, "US-ASCII");
-		BufferedReader in = new BufferedReader(in1);
-		
-		OutputStream out0;
-		if (outfile != null) out0 = new FileOutputStream(outfile);
-		else out0 = System.out;
-		Writer out1 = new OutputStreamWriter(out0, "US-ASCII");
-		PrintWriter out = new PrintWriter(out1, true);
-		
-		main(in, out);
-		
-		in.close();
-		in1.close();
-		in0.close();
-		out.close();
-		out1.close();
-		out0.close();
+		io.printf("$%.2f%n", cost);
 	}
 	
 	

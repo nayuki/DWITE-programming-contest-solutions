@@ -1,20 +1,29 @@
-import java.io.*;
-import java.util.*;
-
-
 // DWITE - October 2006 - Problem 3: Basketball Statistics II
-public class dwite200610p3 {
+
+import dwite.*;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+
+public final class dwite200610p3 extends Solution {
 	
-	public static void main(BufferedReader in, PrintWriter out) throws IOException {
+	public static void main(String[] args) {
+		Runner.run("DATA31.txt", "OUT31.txt", new dwite200610p3());
+	}
+	
+	
+	public void run(Io io) {
 		// Read input
-		int n = Integer.parseInt(in.readLine());
+		int n = io.readIntLine();
 		List<Player> players = new ArrayList<Player>();
 		for (int i = 0; i < n; i++) {
-			String name = in.readLine();
-			int foulshots = Integer.parseInt(in.readLine());
-			int fieldgoals = Integer.parseInt(in.readLine());
-			int threepointbaskets = Integer.parseInt(in.readLine());
-			int time = Integer.parseInt(in.readLine());
+			String name = io.readLine();
+			int foulshots = io.readIntLine();
+			int fieldgoals = io.readIntLine();
+			int threepointbaskets = io.readIntLine();
+			int time = io.readIntLine();
 			players.add(new Player(name, foulshots, fieldgoals, threepointbaskets, time));
 		}
 		
@@ -22,37 +31,8 @@ public class dwite200610p3 {
 		Collections.sort(players, Collections.reverseOrder());
 		for (int i = 0; i < Math.min(5,players.size()); i++) {
 			Player player = players.get(i);
-			out.printf("%s-%.3f%n", player.name, player.getPpm());
+			io.printf("%s-%.3f%n", player.name, player.getPpm());
 		}
-	}
-	
-	
-	
-	private static String infile = "DATA31.txt";  // Specify null to use System.in
-	private static String outfile = "OUT31.txt";  // Specify null to use System.out
-	
-	
-	public static void main(String[] args) throws IOException {
-		InputStream in0;
-		if (infile != null) in0 = new FileInputStream(infile);
-		else in0 = System.in;
-		Reader in1 = new InputStreamReader(in0, "US-ASCII");
-		BufferedReader in = new BufferedReader(in1);
-		
-		OutputStream out0;
-		if (outfile != null) out0 = new FileOutputStream(outfile);
-		else out0 = System.out;
-		Writer out1 = new OutputStreamWriter(out0, "US-ASCII");
-		PrintWriter out = new PrintWriter(out1, true);
-		
-		main(in, out);
-		
-		in.close();
-		in1.close();
-		in0.close();
-		out.close();
-		out1.close();
-		out0.close();
 	}
 	
 	

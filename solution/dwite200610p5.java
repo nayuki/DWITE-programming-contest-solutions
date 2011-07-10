@@ -1,20 +1,21 @@
-import java.io.*;
+// DWITE - October 2006 - Problem 5: Bad Input II
+
+import dwite.*;
+
 import java.math.BigInteger;
 
 
-// DWITE - October 2006 - Problem 5: Bad Input II
-public class dwite200610p5 {
+public final class dwite200610p5 extends Solution {
 	
-	public static void main(BufferedReader in, PrintWriter out) throws IOException {
-		for (int i = 0; i < 5; i++)
-			mainOnce(in, out);
+	public static void main(String[] args) {
+		Runner.run("DATA51.txt", "OUT51.txt", new dwite200610p5());
 	}
 	
 	
-	private static void mainOnce(BufferedReader in, PrintWriter out) throws IOException {
+	protected void runOnce(Io io) {
 		// Read input
-		String a = in.readLine();
-		String b = in.readLine();
+		String a = io.readLine();
+		String b = io.readLine();
 		
 		// Process and compute
 		a = sanitizeUsingRegex(a);
@@ -24,7 +25,7 @@ public class dwite200610p5 {
 		BigInteger z = x.add(y);
 		
 		// Write output
-		out.println(z);
+		io.println(z.toString());
 	}
 	
 	
@@ -47,35 +48,6 @@ public class dwite200610p5 {
 	
 	private static boolean isDigit(char c) {
 		return c >= '0' && c <= '9';
-	}
-	
-	
-	
-	private static String infile = "DATA51.txt";  // Specify null to use System.in
-	private static String outfile = "OUT51.txt";  // Specify null to use System.out
-	
-	
-	public static void main(String[] args) throws IOException {
-		InputStream in0;
-		if (infile != null) in0 = new FileInputStream(infile);
-		else in0 = System.in;
-		Reader in1 = new InputStreamReader(in0, "US-ASCII");
-		BufferedReader in = new BufferedReader(in1);
-		
-		OutputStream out0;
-		if (outfile != null) out0 = new FileOutputStream(outfile);
-		else out0 = System.out;
-		Writer out1 = new OutputStreamWriter(out0, "US-ASCII");
-		PrintWriter out = new PrintWriter(out1, true);
-		
-		main(in, out);
-		
-		in.close();
-		in1.close();
-		in0.close();
-		out.close();
-		out1.close();
-		out0.close();
 	}
 	
 }
