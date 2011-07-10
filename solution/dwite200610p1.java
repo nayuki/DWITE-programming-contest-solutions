@@ -13,46 +13,51 @@ public final class dwite200610p1 extends Solution {
 	}
 	
 	
-	private static final Map<PrintingConfiguration,Double> unitCostByConfig;
+	private static final Map<PrintConfig,Double> unitCostByConfig;
 	
 	static {
-		unitCostByConfig = new HashMap<PrintingConfiguration,Double>();
+		unitCostByConfig = new HashMap<PrintConfig,Double>();
 		
-		unitCostByConfig.put(new PrintingConfiguration(    1, "8.5\"x11\"", "B&W"), 0.08);
-		unitCostByConfig.put(new PrintingConfiguration(  100, "8.5\"x11\"", "B&W"), 0.06);
-		unitCostByConfig.put(new PrintingConfiguration(  500, "8.5\"x11\"", "B&W"), 0.05);
-		unitCostByConfig.put(new PrintingConfiguration( 1000, "8.5\"x11\"", "B&W"), 0.04);
-		unitCostByConfig.put(new PrintingConfiguration(10000, "8.5\"x11\"", "B&W"), 0.03);
+		addConfig(    1, "8.5\"x11\"", "B&W", 0.08);
+		addConfig(  100, "8.5\"x11\"", "B&W", 0.06);
+		addConfig(  500, "8.5\"x11\"", "B&W", 0.05);
+		addConfig( 1000, "8.5\"x11\"", "B&W", 0.04);
+		addConfig(10000, "8.5\"x11\"", "B&W", 0.03);
 		
-		unitCostByConfig.put(new PrintingConfiguration(    1, "8.5\"x14\"", "B&W"), 0.09);
-		unitCostByConfig.put(new PrintingConfiguration(  100, "8.5\"x14\"", "B&W"), 0.07);
-		unitCostByConfig.put(new PrintingConfiguration(  500, "8.5\"x14\"", "B&W"), 0.06);
-		unitCostByConfig.put(new PrintingConfiguration( 1000, "8.5\"x14\"", "B&W"), 0.05);
-		unitCostByConfig.put(new PrintingConfiguration(10000, "8.5\"x14\"", "B&W"), 0.03);
+		addConfig(    1, "8.5\"x14\"", "B&W", 0.09);
+		addConfig(  100, "8.5\"x14\"", "B&W", 0.07);
+		addConfig(  500, "8.5\"x14\"", "B&W", 0.06);
+		addConfig( 1000, "8.5\"x14\"", "B&W", 0.05);
+		addConfig(10000, "8.5\"x14\"", "B&W", 0.03);
 		
-		unitCostByConfig.put(new PrintingConfiguration(    1, "11\"x17\"", "B&W"), 0.15);
-		unitCostByConfig.put(new PrintingConfiguration(  100, "11\"x17\"", "B&W"), 0.12);
-		unitCostByConfig.put(new PrintingConfiguration(  500, "11\"x17\"", "B&W"), 0.10);
-		unitCostByConfig.put(new PrintingConfiguration( 1000, "11\"x17\"", "B&W"), 0.08);
-		unitCostByConfig.put(new PrintingConfiguration(10000, "11\"x17\"", "B&W"), 0.05);
+		addConfig(    1, "11\"x17\"", "B&W", 0.15);
+		addConfig(  100, "11\"x17\"", "B&W", 0.12);
+		addConfig(  500, "11\"x17\"", "B&W", 0.10);
+		addConfig( 1000, "11\"x17\"", "B&W", 0.08);
+		addConfig(10000, "11\"x17\"", "B&W", 0.05);
 		
-		unitCostByConfig.put(new PrintingConfiguration(    1, "8.5\"x11\"", "COLOUR"), 0.75);
-		unitCostByConfig.put(new PrintingConfiguration(  100, "8.5\"x11\"", "COLOUR"), 0.65);
-		unitCostByConfig.put(new PrintingConfiguration(  500, "8.5\"x11\"", "COLOUR"), 0.55);
-		unitCostByConfig.put(new PrintingConfiguration( 1000, "8.5\"x11\"", "COLOUR"), 0.45);
-		unitCostByConfig.put(new PrintingConfiguration(10000, "8.5\"x11\"", "COLOUR"), 0.30);
+		addConfig(    1, "8.5\"x11\"", "COLOUR", 0.75);
+		addConfig(  100, "8.5\"x11\"", "COLOUR", 0.65);
+		addConfig(  500, "8.5\"x11\"", "COLOUR", 0.55);
+		addConfig( 1000, "8.5\"x11\"", "COLOUR", 0.45);
+		addConfig(10000, "8.5\"x11\"", "COLOUR", 0.30);
 		
-		unitCostByConfig.put(new PrintingConfiguration(    1, "8.5\"x14\"", "COLOUR"), 0.90);
-		unitCostByConfig.put(new PrintingConfiguration(  100, "8.5\"x14\"", "COLOUR"), 0.85);
-		unitCostByConfig.put(new PrintingConfiguration(  500, "8.5\"x14\"", "COLOUR"), 0.65);
-		unitCostByConfig.put(new PrintingConfiguration( 1000, "8.5\"x14\"", "COLOUR"), 0.50);
-		unitCostByConfig.put(new PrintingConfiguration(10000, "8.5\"x14\"", "COLOUR"), 0.30);
+		addConfig(    1, "8.5\"x14\"", "COLOUR", 0.90);
+		addConfig(  100, "8.5\"x14\"", "COLOUR", 0.85);
+		addConfig(  500, "8.5\"x14\"", "COLOUR", 0.65);
+		addConfig( 1000, "8.5\"x14\"", "COLOUR", 0.50);
+		addConfig(10000, "8.5\"x14\"", "COLOUR", 0.30);
 		
-		unitCostByConfig.put(new PrintingConfiguration(    1, "11\"x17\"", "COLOUR"), 1.40);
-		unitCostByConfig.put(new PrintingConfiguration(  100, "11\"x17\"", "COLOUR"), 1.20);
-		unitCostByConfig.put(new PrintingConfiguration(  500, "11\"x17\"", "COLOUR"), 1.10);
-		unitCostByConfig.put(new PrintingConfiguration( 1000, "11\"x17\"", "COLOUR"), 0.90);
-		unitCostByConfig.put(new PrintingConfiguration(10000, "11\"x17\"", "COLOUR"), 0.60);
+		addConfig(    1, "11\"x17\"", "COLOUR", 1.40);
+		addConfig(  100, "11\"x17\"", "COLOUR", 1.20);
+		addConfig(  500, "11\"x17\"", "COLOUR", 1.10);
+		addConfig( 1000, "11\"x17\"", "COLOUR", 0.90);
+		addConfig(10000, "11\"x17\"", "COLOUR", 0.60);
+	}
+	
+	
+	private static void addConfig(int quantity, String paperSize, String colour, double unitCost) {
+		unitCostByConfig.put(new PrintConfig(quantity, paperSize, colour), unitCost);
 	}
 	
 	
@@ -63,14 +68,14 @@ public final class dwite200610p1 extends Solution {
 		String colour = io.readLine();
 		
 		// Compute and write output
-		PrintingConfiguration config = new PrintingConfiguration(n, papersize, colour);
+		PrintConfig config = new PrintConfig(n, papersize, colour);
 		double cost = n * unitCostByConfig.get(config);
 		io.printf("$%.2f%n", cost);
 	}
 	
 	
 	
-	private static class PrintingConfiguration {
+	private static class PrintConfig {
 		
 		/*
 		 * 0 for [1, 99]
@@ -79,24 +84,24 @@ public final class dwite200610p1 extends Solution {
 		 * 3 for [1000, 9999]
 		 * 4 for [10000, infinity)
 		 */
-		private int quantityClass;
+		private final int quantityClass;
 		
 		/*
 		 * 0 for 8.5 in. x 11 in.
 		 * 1 for 8.5 in. x 14 in.
 		 * 2 for 11 in. x 17 in.
 		 */
-		private int paperClass;
+		private final int paperClass;
 		
 		/*
 		 * true for colour copies
 		 * false for black and white copies
 		 */
-		private boolean colour;
+		private final boolean colour;
 		
 		
 		
-		public PrintingConfiguration(int quantity, String paperSize, String colour) {
+		public PrintConfig(int quantity, String paperSize, String colour) {
 			if      (quantity <     1) throw new AssertionError("Invalid quantity");
 			else if (quantity <   100) quantityClass = 0;
 			else if (quantity <   500) quantityClass = 1;
@@ -119,10 +124,10 @@ public final class dwite200610p1 extends Solution {
 		public boolean equals(Object other) {
 			if (this == other)
 				return true;
-			else if (!(other instanceof PrintingConfiguration))
+			else if (!(other instanceof PrintConfig))
 				return false;
 			else {
-				PrintingConfiguration pc = (PrintingConfiguration)other;
+				PrintConfig pc = (PrintConfig)other;
 				return quantityClass == pc.quantityClass
 				    && paperClass    == pc.paperClass
 				    && colour        == pc.colour;

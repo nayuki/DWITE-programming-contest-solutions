@@ -10,12 +10,15 @@ public final class dwite200602p4 extends Solution {
 	}
 	
 	
+	private int[][] board;
+	
+	
 	protected void runOnce() {
-		int[][] board = new int[6][7];  // 0 = unfilled, 1 = red, 2 = blue
+		board = new int[6][7];  // 0 = unfilled, 1 = red, 2 = blue
 		String moves = io.readLine();
 		for (int i = 0; i < moves.length(); i++) {
-			drop(board, moves.charAt(i) - '1', i % 2 + 1);
-			if (hasWinner(board)) {
+			drop(moves.charAt(i) - '1', i % 2 + 1);
+			if (hasWinner()) {
 				String winner;
 				if (i % 2 == 0) winner = "RED";
 				else            winner = "BLUE";
@@ -26,8 +29,8 @@ public final class dwite200602p4 extends Solution {
 	}
 	
 	
-	private static void drop(int[][] board, int x, int color) {
-		for (int y = board.length-1; y >= 0; y--) {
+	private void drop(int x, int color) {
+		for (int y = board.length - 1; y >= 0; y--) {
 			if (board[y][x] == 0) {
 				board[y][x] = color;
 				return;
@@ -37,18 +40,18 @@ public final class dwite200602p4 extends Solution {
 	}
 	
 	
-	private static boolean hasWinner(int[][] board) {
-		return hasWinner(board,  1, 0)   // Horizontal
-		    || hasWinner(board,  0, 1)   // Vertical
-		    || hasWinner(board,  1, 1)   // Forward diagonal
-		    || hasWinner(board, -1, 1);  // Backward diagonal
+	private boolean hasWinner() {
+		return hasWinner( 1, 0)   // Horizontal
+		    || hasWinner( 0, 1)   // Vertical
+		    || hasWinner( 1, 1)   // Forward diagonal
+		    || hasWinner(-1, 1);  // Backward diagonal
 	}
 	
 	
-	private static boolean hasWinner(int[][] board, int dirX, int dirY) {
+	private boolean hasWinner(int dirX, int dirY) {
 		for (int y = 0; y < board.length; y++) {
 			for (int x = 0; x < board[y].length; x++) {
-				if (isWinner(board, x, y, dirX, dirY))
+				if (isWinner(x, y, dirX, dirY))
 					return true;
 			}
 		}
@@ -56,7 +59,7 @@ public final class dwite200602p4 extends Solution {
 	}
 	
 	
-	private static boolean isWinner(int[][] board, int startX, int startY, int dirX, int dirY) {
+	private boolean isWinner(int startX, int startY, int dirX, int dirY) {
 		if (board[startY][startX] == 0)
 			return false;
 		for (int i = 1; i < 4; i++) {

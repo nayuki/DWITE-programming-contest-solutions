@@ -46,33 +46,25 @@ public final class dwite200601p2 extends Solution {
 	}
 	
 	
-	private int[][] boardvalue;
+	// 0 = normal, 1 = pink, 2 = red, 3 = light blue, 4 = dark blue, 5-9 = same meaning but to be scored and cleared
+	private int[][] boardvalue = {
+		{2, 0, 0, 3, 0, 0, 0, 2, 0, 0, 0, 3, 0, 0, 2},
+		{0, 1, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0, 1, 0},
+		{0, 0, 1, 0, 0, 0, 3, 0, 3, 0, 0, 0, 1, 0, 0},
+		{3, 0, 0, 1, 0, 0, 0, 3, 0, 0, 0, 1, 0, 0, 3},
+		{0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0},
+		{0, 4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0, 4, 0},
+		{0, 0, 3, 0, 0, 0, 3, 0, 3, 0, 0, 0, 3, 0, 0},
+		{2, 0, 0, 3, 0, 0, 0, 1, 0, 0, 0, 3, 0, 0, 2},
+		{0, 0, 3, 0, 0, 0, 3, 0, 3, 0, 0, 0, 3, 0, 0},
+		{0, 4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0, 4, 0},
+		{0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0},
+		{3, 0, 0, 1, 0, 0, 0, 3, 0, 0, 0, 1, 0, 0, 3},
+		{0, 0, 1, 0, 0, 0, 3, 0, 3, 0, 0, 0, 1, 0, 0},
+		{0, 1, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0, 1, 0},
+		{2, 0, 0, 3, 0, 0, 0, 2, 0, 0, 0, 3, 0, 0, 2}};
 	
-	private char[][] board;
-	
-	
-	public void run() {
-		// 0 = normal, 1 = pink, 2 = red, 3 = light blue, 4 = dark blue, 5-9 = same meaning but to be scored and cleared
-		boardvalue = new int[][] {
-			{2, 0, 0, 3, 0, 0, 0, 2, 0, 0, 0, 3, 0, 0, 2},
-			{0, 1, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0, 1, 0},
-			{0, 0, 1, 0, 0, 0, 3, 0, 3, 0, 0, 0, 1, 0, 0},
-			{3, 0, 0, 1, 0, 0, 0, 3, 0, 0, 0, 1, 0, 0, 3},
-			{0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0},
-			{0, 4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0, 4, 0},
-			{0, 0, 3, 0, 0, 0, 3, 0, 3, 0, 0, 0, 3, 0, 0},
-			{2, 0, 0, 3, 0, 0, 0, 1, 0, 0, 0, 3, 0, 0, 2},
-			{0, 0, 3, 0, 0, 0, 3, 0, 3, 0, 0, 0, 3, 0, 0},
-			{0, 4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0, 4, 0},
-			{0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0},
-			{3, 0, 0, 1, 0, 0, 0, 3, 0, 0, 0, 1, 0, 0, 3},
-			{0, 0, 1, 0, 0, 0, 3, 0, 3, 0, 0, 0, 1, 0, 0},
-			{0, 1, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0, 1, 0},
-			{2, 0, 0, 3, 0, 0, 0, 2, 0, 0, 0, 3, 0, 0, 2}};
-		
-		board = new char[15][15];
-		super.run();
-	}
+	private char[][] board = new char[15][15];
 	
 	
 	protected void runOnce() {
@@ -92,16 +84,16 @@ public final class dwite200601p2 extends Solution {
 			}
 		}
 		if (horz) {
-			score += scoreHorizontal(col - 1, row, board, boardvalue);
+			score += scoreHorizontal(col - 1, row);
 			for (int x = 0; x < boardvalue[row].length; x++) {
 				if (boardvalue[row][x] >= 5)
-					score += scoreVertical(x, row, board, boardvalue);
+					score += scoreVertical(x, row);
 			}
 		} else {
-			score += scoreVertical(col, row - 1, board, boardvalue);
+			score += scoreVertical(col, row - 1);
 			for (int y = 0; y < boardvalue.length; y++) {
 				if (boardvalue[y][col] >= 5)
-					score += scoreHorizontal(col, y, board, boardvalue);
+					score += scoreHorizontal(col, y);
 			}
 		}
 		if (newletters.length() == 7)
@@ -109,7 +101,7 @@ public final class dwite200601p2 extends Solution {
 		
 		io.println(score);
 		
-		// Clear squares used in this turn
+		// Clear premium squares used in this turn
 		for (int y = 0; y < boardvalue.length; y++) {
 			for (int x = 0; x < boardvalue[y].length; x++) {
 				if (boardvalue[y][x] == 5)
@@ -119,11 +111,11 @@ public final class dwite200601p2 extends Solution {
 	}
 	
 	
-	private static int scoreHorizontal(int x, int y, char[][] board, int[][] boardvalue) {
+	private int scoreHorizontal(int x, int y) {
 		int start, end;
-		for (start = x; start >= 1 && board[y][start - 1] != 0; start--) ;
-		for (end = x; end < board[y].length-1 && board[y][end + 1] != 0; end++) ;
-		if (end - start + 1 == 1)
+		for (start = x; start - 1 >= 0 && board[y][start - 1] != 0; start--);
+		for (end = x; end + 1 < board[y].length && board[y][end + 1] != 0; end++);
+		if (start == end)
 			return 0;
 		
 		int score = 0;
@@ -131,20 +123,11 @@ public final class dwite200601p2 extends Solution {
 		for (int i = start; i <= end; i++) {
 			int letterscore = valueByLetter.get(board[y][i]);
 			switch (boardvalue[y][i]) {
-				case 5:
-					break;
-				case 6:
-					wordmult *= 2;
-					break;
-				case 7:
-					wordmult *= 3;
-					break;
-				case 8:
-					letterscore *= 2;
-					break;
-				case 9:
-					letterscore *= 3;
-					break;
+				case 5:  break;
+				case 6:  wordmult *= 2;  break;
+				case 7:  wordmult *= 3;  break;
+				case 8:  letterscore *= 2;  break;
+				case 9:  letterscore *= 3;  break;
 			}
 			score += letterscore;
 			if (boardvalue[y][i] >= 5)
@@ -155,11 +138,11 @@ public final class dwite200601p2 extends Solution {
 	}
 	
 	
-	private static int scoreVertical(int x, int y, char[][] board, int[][] boardvalue) {
+	private int scoreVertical(int x, int y) {
 		int start, end;
-		for (start = y; start >= 1 && board[start - 1][x] != 0; start--) ;
-		for (end = y; end < board.length-1 && board[end + 1][x] != 0; end++) ;
-		if (end - start + 1 == 1)
+		for (start = y; start - 1 >= 0 && board[start - 1][x] != 0; start--);
+		for (end = y; end + 1 < board.length && board[end + 1][x] != 0; end++);
+		if (start == end)
 			return 0;
 		
 		int score = 0;
@@ -167,20 +150,11 @@ public final class dwite200601p2 extends Solution {
 		for (int i = start; i <= end; i++) {
 			int letterscore = valueByLetter.get(board[i][x]);
 			switch (boardvalue[i][x]) {
-				case 5:
-					break;
-				case 6:
-					wordmult *= 2;
-					break;
-				case 7:
-					wordmult *= 3;
-					break;
-				case 8:
-					letterscore *= 2;
-					break;
-				case 9:
-					letterscore *= 3;
-					break;
+				case 5:  break;
+				case 6:  wordmult *= 2;  break;
+				case 7:  wordmult *= 3;  break;
+				case 8:  letterscore *= 2;  break;
+				case 9:  letterscore *= 3;  break;
 			}
 			score += letterscore;
 			if (boardvalue[i][x] >= 5)

@@ -22,9 +22,8 @@ public final class dwite200512p5 extends Solution {
 		for (int i = 0; i < n; i++) {
 			int x = io.readIntToken();
 			if (!instances.containsKey(x))
-				instances.put(x, 1);
-			else
-				instances.put(x, instances.get(x) + 1);
+				instances.put(x, 0);
+			instances.put(x, instances.get(x) + 1);
 		}
 		
 		// Subset sum problem using dynamic programming

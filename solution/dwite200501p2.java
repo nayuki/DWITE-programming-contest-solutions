@@ -15,12 +15,15 @@ public final class dwite200501p2 extends Solution {
 	}
 	
 	
+	private char[][] grid;
+	
+	
 	public void run() {
 		// Read input
 		io.tokenizeLine();
 		int h = io.readIntToken();
 		int w = io.readIntToken();
-		char[][] grid = new char[h + 2][w + 2];  // Padded
+		grid = new char[h + 2][w + 2];  // Padded
 		Map<Character,Point> queries = new HashMap<Character,Point>();
 		for (int y = 0; y < h; y++) {
 			String line = io.readLine();
@@ -38,14 +41,14 @@ public final class dwite200501p2 extends Solution {
 		SortedSet<Character> querykeys = new TreeSet<Character>(queries.keySet());
 		for (Character key : querykeys) {
 			Point p = queries.get(key);
-			int mines = countNeighborMines(grid, p.x, p.y);
+			int mines = countNeighborMines(p.x, p.y);
 			io.printf("%c-%d%n", key, mines);
 		}
 	}
 	
 	
 	// Uses the Moore neighbourhood
-	private static int countNeighborMines(char[][] grid, int x, int y) {
+	private int countNeighborMines(int x, int y) {
 		int count = 0;
 		for (int dy = -1; dy <= 1; dy++) {
 			for (int dx = -1; dx <= 1; dx++) {

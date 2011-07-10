@@ -10,12 +10,15 @@ public final class dwite200610p4 extends Solution {
 	}
 	
 	
+	private char[][] grid;
+	
+	
 	protected void runOnce() {
 		// Read input
 		io.tokenizeLine();
 		int height = io.readIntToken();
 		int width = io.readIntToken();
-		char[][] grid = new char[height][width];
+		grid = new char[height][width];
 		for (int y = 0; y < height; y++) {
 			String line = io.readLine();
 			for (int x = 0; x < width; x++)
@@ -25,25 +28,25 @@ public final class dwite200610p4 extends Solution {
 		// Compute
 		int count = 0;
 		for (int i = 1; i <= Math.min(width, height); i++)
-			count += countSquares(grid, i);
+			count += countSquares(i);
 		
 		// Write output
 		io.println(count);
 	}
 	
 	
-	private static int countSquares(char[][] grid, int size) {
+	private int countSquares(int size) {
 		int count = 0;
-		for (int y = 0; y < grid.length-size+1; y++) {
-			for (int x = 0; x < grid[y].length-size+1; x++) {
-				count += isSquare(grid, x, y, size);
+		for (int y = 0; y < grid.length - size + 1; y++) {
+			for (int x = 0; x < grid[y].length - size + 1; x++) {
+				count += isSquare(x, y, size);
 			}
 		}
 		return count;
 	}
 	
 	
-	private static int isSquare(char[][] grid, int x, int y, int size) {
+	private int isSquare(int x, int y, int size) {
 		for (int i = 0; i < size; i++) {
 			for (int j = 0; j < size; j++) {
 				if (grid[y + i][x + j] != '*')

@@ -29,7 +29,7 @@ public final class dwite200610p3 extends Solution {
 		
 		// Sort descending by points per minute and write output
 		Collections.sort(players, Collections.reverseOrder());
-		for (int i = 0; i < Math.min(5,players.size()); i++) {
+		for (int i = 0; i < Math.min(5, players.size()); i++) {
 			Player player = players.get(i);
 			io.printf("%s-%.3f%n", player.name, player.getPpm());
 		}
@@ -44,13 +44,11 @@ public final class dwite200610p3 extends Solution {
 		public final int time;  // In minutes
 		
 		
-		
 		public Player(String name, int foulShots, int fieldGoals, int threePointBaskets, int time) {
 			this.name = name;
 			score = foulShots*1 + fieldGoals*2 + threePointBaskets*3;
 			this.time = time;
 		}
-		
 		
 		
 		public double getPpm() {

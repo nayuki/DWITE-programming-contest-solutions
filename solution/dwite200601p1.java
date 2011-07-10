@@ -17,7 +17,7 @@ public final class dwite200601p1 extends Solution {
 		double v = io.readDoubleLine();
 		
 		// Compute and write output
-		double x = Math.pow(3 * v * h * h / (3.1415926 * r * r), 1 / 3D);  // Height of water
+		double x = Math.pow(3 * v * h * h / (3.1415926 * r * r), 1 / 3.0);  // Height of water
 		io.printf("%.2f%n", x);
 	}
 	

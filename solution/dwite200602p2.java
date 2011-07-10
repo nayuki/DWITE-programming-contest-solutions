@@ -14,7 +14,7 @@ public final class dwite200602p2 extends Solution {
 	
 	
 	protected void runOnce() {
-		// Solve subset sum problem using dynamic programming
+		// Solve knapsack problem using dynamic programming
 		boolean[] possible = new boolean[CAPACITY + 1];
 		possible[0] = true;
 		int n = io.readIntLine();

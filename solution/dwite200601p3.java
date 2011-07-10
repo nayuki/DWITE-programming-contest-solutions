@@ -49,14 +49,12 @@ public final class dwite200601p3 extends Solution {
 		private final List<Integer> statistics;
 		
 		
-		
 		public Player(int playerNum, String firstName, String lastName, List<Integer> stats) {
 			this.playerNumber = playerNum;
 			this.firstName = firstName;
 			this.lastName = lastName;
 			this.statistics = stats;
 		}
-		
 		
 		
 		public String getName() {
@@ -77,22 +75,15 @@ public final class dwite200601p3 extends Solution {
 		private int statIndexToCompare;
 		
 		
-		
 		public PlayerComparator(int index) {
 			this.statIndexToCompare = index;
 		}
-		
 		
 		
 		public int compare(Player p0, Player p1) {
 			Integer stat0 = p0.statistics.get(statIndexToCompare);
 			Integer stat1 = p1.statistics.get(statIndexToCompare);
 			return stat0.compareTo(stat1);
-		}
-		
-		
-		public String toString() {
-			return String.format("Player comparator (%d)", statIndexToCompare);
 		}
 		
 	}

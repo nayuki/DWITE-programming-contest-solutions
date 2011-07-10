@@ -13,41 +13,9 @@ public final class dwite200610p5 extends Solution {
 	
 	
 	protected void runOnce() {
-		// Read input
-		String a = io.readLine();
-		String b = io.readLine();
-		
-		// Process and compute
-		a = sanitizeUsingRegex(a);
-		b = sanitizeUsingRegex(b);
-		BigInteger x = new BigInteger(a);
-		BigInteger y = new BigInteger(b);
-		BigInteger z = x.add(y);
-		
-		// Write output
-		io.println(z.toString());
-	}
-	
-	
-	@SuppressWarnings("unused")
-	private static String sanitize(String s) {
-		StringBuilder sb = new StringBuilder();
-		for (int i = 0; i < s.length(); i++) {
-			char c = s.charAt(i);
-			if (isDigit(c))
-				sb.append(c);
-		}
-		return sb.toString();
-	}
-	
-	
-	private static String sanitizeUsingRegex(String s) {
-		return s.replaceAll("[^0-9]", "");
-	}
-	
-	
-	private static boolean isDigit(char c) {
-		return c >= '0' && c <= '9';
+		String a = io.readLine().replaceAll("[^0-9]", "");
+		String b = io.readLine().replaceAll("[^0-9]", "");
+		io.println(new BigInteger(a).add(new BigInteger(b)).toString());
 	}
 	
 }

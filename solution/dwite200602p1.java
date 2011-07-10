@@ -15,7 +15,7 @@ public final class dwite200602p1 extends Solution {
 	
 	
 	public void run() {
-		// Read input (the points)
+		// Read the points
 		int n = io.readIntLine();
 		px = new int[n];
 		py = new int[n];

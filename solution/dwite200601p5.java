@@ -79,12 +79,10 @@ public final class dwite200601p5 extends Solution {
 		private Map<String,Node> nodeByName;
 		
 		
-		
 		public Graph() {
 			nodes = new ArrayList<Node>();
 			nodeByName = new HashMap<String,Node>();
 		}
-		
 		
 		
 		public Node getOrAddNode(String name) {
@@ -114,13 +112,11 @@ public final class dwite200601p5 extends Solution {
 		public int distance;
 		
 		
-		
 		public Node(String name) {
 			this.name = name;
 			edges = new ArrayList<Edge>();
 			distance = -1;
 		}
-		
 		
 		
 		public void addEdge(Edge e) {
@@ -152,12 +148,10 @@ public final class dwite200601p5 extends Solution {
 		public final int distance;
 		
 		
-		
 		public Edge(Node dest, int dist) {
 			distance = dist;
 			destination = dest;
 		}
-		
 		
 		
 		public String toString() {
