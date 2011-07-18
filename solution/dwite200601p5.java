@@ -1,4 +1,5 @@
 // DWITE - January 2006 - Problem 5: Distance Between Towns
+// Solution by Nayuki Minase
 
 import java.util.ArrayList;
 import java.util.Collection;

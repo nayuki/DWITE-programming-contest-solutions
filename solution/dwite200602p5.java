@@ -1,4 +1,5 @@
 // DWITE - February 2006 - Problem 5: Prime Palindromes
+// Solution by Nayuki Minase
 
 
 public final class dwite200602p5 extends DwiteSolution {

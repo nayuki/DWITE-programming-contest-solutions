@@ -1,4 +1,5 @@
 // DWITE - January 2007 - Problem 3: Elapsed Time in Seconds
+// Solution by Nayuki Minase
 
 
 public final class dwite200701p3 extends DwiteSolution {

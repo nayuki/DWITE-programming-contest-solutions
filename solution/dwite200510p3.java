@@ -1,4 +1,5 @@
 // DWITE - October 2005 - Problem 3: Sum 'Em Up
+// Solution by Nayuki Minase
 
 
 public final class dwite200510p3 extends DwiteSolution {

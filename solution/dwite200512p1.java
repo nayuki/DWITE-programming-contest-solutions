@@ -1,4 +1,5 @@
 // DWITE - December 2005 - Problem 1: Semiprimes
+// Solution by Nayuki Minase
 
 
 public final class dwite200512p1 extends DwiteSolution {

@@ -1,4 +1,5 @@
 // DWITE - January 2007 - Problem 5: Dutch Solitaire
+// Solution by Nayuki Minase
 
 import java.util.ArrayList;
 import java.util.Collections;

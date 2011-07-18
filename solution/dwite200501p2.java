@@ -1,4 +1,5 @@
 // DWITE - January 2005 - Problem 2: Minesweeper
+// Solution by Nayuki Minase
 
 import java.util.HashMap;
 import java.util.Map;

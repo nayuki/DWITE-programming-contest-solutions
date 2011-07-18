@@ -1,4 +1,5 @@
 // DWITE - December 2004 - Problem 2: Squareland II
+// Solution by Nayuki Minase
 
 
 public final class dwite200412p2 extends DwiteSolution {

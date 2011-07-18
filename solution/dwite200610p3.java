@@ -1,4 +1,5 @@
 // DWITE - October 2006 - Problem 3: Basketball Statistics II
+// Solution by Nayuki Minase
 
 import java.util.ArrayList;
 import java.util.Collections;

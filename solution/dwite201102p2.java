@@ -1,4 +1,5 @@
 // DWITE - February 2011 - Problem 2: Safe from Rooks
+// Solution by Nayuki Minase
 
 import java.util.HashSet;
 import java.util.Set;

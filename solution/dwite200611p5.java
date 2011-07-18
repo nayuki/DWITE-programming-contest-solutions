@@ -1,4 +1,5 @@
 // DWITE - November 2006 - Problem 5: Goldbach's Weak Conjecture
+// Solution by Nayuki Minase
 
 
 public final class dwite200611p5 extends DwiteSolution {

@@ -1,4 +1,5 @@
 // DWITE - February 2005 - Problem 2: Snakes
+// Solution by Nayuki Minase
 
 
 public final class dwite200502p2 extends DwiteSolution {

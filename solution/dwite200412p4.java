@@ -1,4 +1,5 @@
 // DWITE - December 2004 - Problem 4: Waring's Prime Number Conjecture
+// Solution by Nayuki Minase
 
 import java.util.Arrays;
 

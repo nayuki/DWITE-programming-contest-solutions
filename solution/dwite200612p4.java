@@ -1,4 +1,5 @@
 // DWITE - December 2006 - Problem 4: The Ubiquitous 196
+// Solution by Nayuki Minase
 
 import java.math.BigInteger;
 

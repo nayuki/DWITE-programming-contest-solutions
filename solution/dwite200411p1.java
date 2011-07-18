@@ -1,4 +1,5 @@
 // DWITE - November 2004 - Problem 1: Credit Card Check Digit
+// Solution by Nayuki Minase
 
 
 public final class dwite200411p1 extends DwiteSolution {

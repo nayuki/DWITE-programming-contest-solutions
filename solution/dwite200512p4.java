@@ -1,4 +1,5 @@
 // DWITE - December 2005 - Problem 4: Now I Know My ABC's
+// Solution by Nayuki Minase
 
 
 public final class dwite200512p4 extends DwiteSolution {

@@ -1,4 +1,5 @@
 // DWITE - November 2006 - Problem 3: Linear Binomial Products
+// Solution by Nayuki Minase
 
 
 public final class dwite200611p3 extends DwiteSolution {

@@ -1,4 +1,5 @@
 // DWITE - January 2006 - Problem 3: London Knights
+// Solution by Nayuki Minase
 
 import java.util.ArrayList;
 import java.util.Collection;

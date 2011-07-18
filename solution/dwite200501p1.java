@@ -1,4 +1,5 @@
 // DWITE - January 2005 - Problem 1: DWITE Golf Tournament
+// Solution by Nayuki Minase
 
 import java.util.ArrayList;
 import java.util.Collections;

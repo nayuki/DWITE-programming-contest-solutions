@@ -1,4 +1,5 @@
 // DWITE - October 2004 - Problem 1: Area of Circle
+// Solution by Nayuki Minase
 
 
 public final class dwite200410p1 extends DwiteSolution {

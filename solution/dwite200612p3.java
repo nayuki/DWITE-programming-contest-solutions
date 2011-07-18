@@ -1,4 +1,5 @@
 // DWITE - December 2006 - Problem 3: Circular Primes
+// Solution by Nayuki Minase
 
 
 public final class dwite200612p3 extends DwiteSolution {

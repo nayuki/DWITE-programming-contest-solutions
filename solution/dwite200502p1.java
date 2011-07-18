@@ -1,4 +1,5 @@
 // DWITE - February 2005 - Problem 1: Bretschneider's Formula
+// Solution by Nayuki Minase
 
 
 public final class dwite200502p1 extends DwiteSolution {

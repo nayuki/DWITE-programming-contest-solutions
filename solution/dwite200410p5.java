@@ -1,4 +1,5 @@
 // DWITE - October 2004 - Problem 5: Super Long Sums
+// Solution by Nayuki Minase
 
 import java.math.BigInteger;
 

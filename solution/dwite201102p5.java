@@ -1,4 +1,5 @@
 // DWITE - February 2011 - Problem 5: Cube World
+// Solution by Nayuki Minase
 
 
 public final class dwite201102p5 extends DwiteSolution {

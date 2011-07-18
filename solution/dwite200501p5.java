@@ -1,4 +1,5 @@
 // DWITE - January 2005 - Problem 5: Different Bases Multiplication
+// Solution by Nayuki Minase
 
 
 public final class dwite200501p5 extends DwiteSolution {

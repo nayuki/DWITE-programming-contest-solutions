@@ -1,4 +1,5 @@
 // DWITE - February 2005 - Problem 4: Matrix Chain Product
+// Solution by Nayuki Minase
 
 import java.util.ArrayList;
 import java.util.Arrays;

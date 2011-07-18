@@ -1,4 +1,5 @@
 // DWITE - December 2004 - Problem 5: Hidden Geography
+// Solution by Nayuki Minase
 
 
 public final class dwite200412p5 extends DwiteSolution {

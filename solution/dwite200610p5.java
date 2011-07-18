@@ -1,4 +1,5 @@
 // DWITE - October 2006 - Problem 5: Bad Input II
+// Solution by Nayuki Minase
 
 import java.math.BigInteger;
 

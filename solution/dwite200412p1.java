@@ -1,4 +1,5 @@
 // DWITE - December 2004 - Problem 1: Prime Factorization
+// Solution by Nayuki Minase
 
 
 public final class dwite200412p1 extends DwiteSolution {

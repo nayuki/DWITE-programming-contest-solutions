@@ -1,4 +1,5 @@
 // DWITE - January 2005 - Problem 3: Harshad Numbers
+// Solution by Nayuki Minase
 
 
 public final class dwite200501p3 extends DwiteSolution {

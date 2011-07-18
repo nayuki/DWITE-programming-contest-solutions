@@ -1,4 +1,5 @@
 // DWITE - October 2006 - Problem 1: Pete's Printing Press
+// Solution by Nayuki Minase
 
 import java.util.HashMap;
 import java.util.Map;

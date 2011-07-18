@@ -1,4 +1,5 @@
 // DWITE - October 2004 - Problem 4: CD-ROM Files
+// Solution by Nayuki Minase
 
 
 public final class dwite200410p4 extends DwiteSolution {

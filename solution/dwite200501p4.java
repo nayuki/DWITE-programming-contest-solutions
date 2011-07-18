@@ -1,4 +1,5 @@
 // DWITE - January 2005 - Problem 4: Zeller's Congruence
+// Solution by Nayuki Minase
 
 
 public final class dwite200501p4 extends DwiteSolution {

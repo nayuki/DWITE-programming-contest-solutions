@@ -1,4 +1,5 @@
 // DWITE - November 2005 - Problem 1: Quadrilateral Centroid
+// Solution by Nayuki Minase
 
 
 public final class dwite200511p1 extends DwiteSolution {

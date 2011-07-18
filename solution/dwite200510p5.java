@@ -1,4 +1,5 @@
 // DWITE - October 2005 - Problem 5: Five Digit Divisibility
+// Solution by Nayuki Minase
 
 
 public final class dwite200510p5 extends DwiteSolution {

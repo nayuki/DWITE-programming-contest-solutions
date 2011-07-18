@@ -1,4 +1,5 @@
 // DWITE - February 2011 - Problem 3: Balancing Act
+// Solution by Nayuki Minase
 
 
 public final class dwite201102p3 extends DwiteSolution {

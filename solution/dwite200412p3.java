@@ -1,4 +1,5 @@
 // DWITE - December 2004 - Problem 3: Reflections
+// Solution by Nayuki Minase
 
 
 public final class dwite200412p3 extends DwiteSolution {

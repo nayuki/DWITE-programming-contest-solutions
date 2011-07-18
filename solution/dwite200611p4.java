@@ -1,4 +1,5 @@
 // DWITE - November 2006 - Problem 4: Money Prize
+// Solution by Nayuki Minase
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -1,4 +1,5 @@
 // DWITE - November 2004 - Problem 5: Wind Chill
+// Solution by Nayuki Minase
 
 
 public final class dwite200411p5 extends DwiteSolution {

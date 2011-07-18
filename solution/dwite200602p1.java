@@ -1,4 +1,5 @@
 // DWITE - February 2006 - Problem 1: Points on a Line
+// Solution by Nayuki Minase
 
 
 public final class dwite200602p1 extends DwiteSolution {

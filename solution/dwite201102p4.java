@@ -1,4 +1,5 @@
 // DWITE - February 2011 - Problem 4: New type of wordplay
+// Solution by Nayuki Minase
 
 
 public final class dwite201102p4 extends DwiteSolution {

@@ -1,4 +1,5 @@
 // DWITE - November 2006 - Problem 2: Lottery Ticket Checker
+// Solution by Nayuki Minase
 
 import java.util.ArrayList;
 import java.util.List;

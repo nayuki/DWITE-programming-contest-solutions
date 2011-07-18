@@ -1,4 +1,5 @@
 // DWITE - December 2006 - Problem 1: Jimmy's Lost His Marbles
+// Solution by Nayuki Minase
 
 
 public final class dwite200612p1 extends DwiteSolution {

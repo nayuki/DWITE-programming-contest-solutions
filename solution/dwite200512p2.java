@@ -1,4 +1,5 @@
 // DWITE - December 2005 - Problem 2: The Maze
+// Solution by Nayuki Minase
 
 import java.util.LinkedList;
 import java.util.Queue;

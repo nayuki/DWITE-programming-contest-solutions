@@ -1,4 +1,5 @@
 // DWITE - October 2005 - Problem 4: Minesweeper
+// Solution by Nayuki Minase
 
 
 public final class dwite200510p4 extends DwiteSolution {

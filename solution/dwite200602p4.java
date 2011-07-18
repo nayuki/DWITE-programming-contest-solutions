@@ -1,4 +1,5 @@
 // DWITE - February 2006 - Problem 4: Connect-4
+// Solution by Nayuki Minase
 
 
 public final class dwite200602p4 extends DwiteSolution {

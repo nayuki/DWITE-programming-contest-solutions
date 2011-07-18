@@ -1,4 +1,5 @@
 // DWITE - February 2011 - Problem 1: Colourful Words
+// Solution by Nayuki Minase
 
 
 public final class dwite201102p1 extends DwiteSolution {

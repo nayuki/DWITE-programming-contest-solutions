@@ -1,4 +1,5 @@
 // DWITE - December 2005 - Problem 5: How Many Sums
+// Solution by Nayuki Minase
 
 import java.util.HashMap;
 import java.util.Map;

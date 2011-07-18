@@ -1,4 +1,5 @@
 // DWITE - October 2006 - Problem 4: Count Squares
+// Solution by Nayuki Minase
 
 
 public final class dwite200610p4 extends DwiteSolution {

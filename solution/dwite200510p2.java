@@ -1,4 +1,5 @@
 // DWITE - October 2005 - Problem 2: The Game of Life
+// Solution by Nayuki Minase
 
 
 public final class dwite200510p2 extends DwiteSolution {

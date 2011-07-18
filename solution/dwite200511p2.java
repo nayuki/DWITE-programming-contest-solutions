@@ -1,4 +1,5 @@
 // DWITE - November 2005 - Problem 2: Variations on the Game of Life
+// Solution by Nayuki Minase
 
 
 public final class dwite200511p2 extends DwiteSolution {

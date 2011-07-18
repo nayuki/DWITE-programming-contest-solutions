@@ -1,4 +1,5 @@
 // DWITE - February 2006 - Problem 3: UPC Check Digit
+// Solution by Nayuki Minase
 
 
 public final class dwite200602p3 extends DwiteSolution {

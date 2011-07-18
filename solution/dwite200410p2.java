@@ -1,4 +1,5 @@
 // DWITE - October 2004 - Problem 2: 24 Hour Clock
+// Solution by Nayuki Minase
 
 
 public final class dwite200410p2 extends DwiteSolution {

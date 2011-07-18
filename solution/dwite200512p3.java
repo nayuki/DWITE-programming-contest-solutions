@@ -1,4 +1,5 @@
 // DWITE - December 2005 - Problem 3: Reducing Fractions
+// Solution by Nayuki Minase
 
 
 public final class dwite200512p3 extends DwiteSolution {

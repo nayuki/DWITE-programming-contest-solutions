@@ -1,4 +1,5 @@
 // DWITE - November 2005 - Problem 4: Stacking Blocks
+// Solution by Nayuki Minase
 
 
 public final class dwite200511p4 extends DwiteSolution {

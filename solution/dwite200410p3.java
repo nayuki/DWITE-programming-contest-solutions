@@ -1,4 +1,5 @@
 // DWITE - October 2004 - Problem 3: The Tallest in the Class
+// Solution by Nayuki Minase
 
 import java.util.ArrayList;
 import java.util.Collections;

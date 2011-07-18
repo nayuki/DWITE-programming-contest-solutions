@@ -1,4 +1,5 @@
 // DWITE - February 2005 - Problem 3: Simple Continued Fractions
+// Solution by Nayuki Minase
 
 
 public final class dwite200502p3 extends DwiteSolution {

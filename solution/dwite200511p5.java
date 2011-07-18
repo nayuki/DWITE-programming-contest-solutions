@@ -1,4 +1,5 @@
 // DWITE - November 2005 - Problem 5: Base64 Encoding
+// Solution by Nayuki Minase
 
 
 public final class dwite200511p5 extends DwiteSolution {

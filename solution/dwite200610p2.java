@@ -1,4 +1,5 @@
 // DWITE - October 2006 - Problem 2: Body Mass Index
+// Solution by Nayuki Minase
 
 
 public final class dwite200610p2 extends DwiteSolution {

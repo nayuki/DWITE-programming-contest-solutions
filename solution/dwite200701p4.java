@@ -1,4 +1,5 @@
 // DWITE - January 2007 - Problem 4: Number Theory
+// Solution by Nayuki Minase
 
 
 public final class dwite200701p4 extends DwiteSolution {

@@ -1,4 +1,5 @@
 // DWITE - November 2006 - Problem 1: 13375P34|<
+// Solution by Nayuki Minase
 
 
 public final class dwite200611p1 extends DwiteSolution {

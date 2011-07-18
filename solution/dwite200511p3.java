@@ -1,4 +1,5 @@
 // DWITE - November 2005 - Problem 3: Cinquain Poetry
+// Solution by Nayuki Minase
 
 
 public final class dwite200511p3 extends DwiteSolution {

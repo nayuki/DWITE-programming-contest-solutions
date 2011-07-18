@@ -1,4 +1,5 @@
 // DWITE - January 2006 - Problem 4: Equivalent Amounts
+// Solution by Nayuki Minase
 
 import java.util.HashMap;
 import java.util.Map;

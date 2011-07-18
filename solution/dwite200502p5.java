@@ -1,4 +1,5 @@
 // DWITE - February 2005 - Problem 5: Tsunami Speed
+// Solution by Nayuki Minase
 
 
 public final class dwite200502p5 extends DwiteSolution {

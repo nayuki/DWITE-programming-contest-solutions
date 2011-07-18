@@ -1,4 +1,5 @@
 // DWITE - October 2005 - Problem 1: Odometers
+// Solution by Nayuki Minase
 
 import java.math.BigInteger;
 

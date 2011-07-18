@@ -1,4 +1,5 @@
 // DWITE - December 2006 - Problem 2: Ulam Spiral Walkway
+// Solution by Nayuki Minase
 
 
 public final class dwite200612p2 extends DwiteSolution {

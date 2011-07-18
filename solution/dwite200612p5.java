@@ -1,4 +1,5 @@
 // DWITE - December 2006 - Problem 5: Caesar's Cipher
+// Solution by Nayuki Minase
 
 
 public final class dwite200612p5 extends DwiteSolution {

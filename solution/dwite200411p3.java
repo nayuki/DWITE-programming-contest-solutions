@@ -1,4 +1,5 @@
 // DWITE - November 2004 - Problem 3: Factoring
+// Solution by Nayuki Minase
 
 import java.util.ArrayList;
 import java.util.Collections;

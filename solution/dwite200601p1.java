@@ -1,4 +1,5 @@
 // DWITE - January 2006 - Problem 1: Filling The Cone
+// Solution by Nayuki Minase
 
 
 public final class dwite200601p1 extends DwiteSolution {
