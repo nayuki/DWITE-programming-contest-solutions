@@ -12,6 +12,7 @@ public final class dwite201102p4 extends Solution {
 	
 	private String word;
 	
+	// Memoization
 	private boolean[][] isSolvableInitialized;
 	private boolean[][] isSolvable;
 	
@@ -26,9 +27,10 @@ public final class dwite201102p4 extends Solution {
 	
 	private boolean isSolvable(String word) {
 		this.word = word;
-		isSolvableInitialized = new boolean[word.length() + 1][word.length() + 1];
-		isSolvable = new boolean[word.length() + 1][word.length() + 1];
-		return isSolvable(0, word.length());
+		int len = word.length();
+		isSolvableInitialized = new boolean[len + 1][len + 1];
+		isSolvable = new boolean[len + 1][len + 1];
+		return isSolvable(0, len);
 	}
 	
 	
@@ -45,10 +47,10 @@ public final class dwite201102p4 extends Solution {
 			else if (end - start == 1)  // Single character
 				result = false;
 			
-			else {
+			else {  // Two or more characters
 				result = false;
 				
-				// If first and last characters match, then see if the word has the form "c...c <solvable middle> c...c".
+				// If first and last characters match, then check if the word has the form "c...c <solvable middle> c...c".
 				if (word.charAt(start) == word.charAt(end - 1)) {
 					int i = start;
 					while (i < end && word.charAt(start) == word.charAt(i))  // Find head run
@@ -63,11 +65,11 @@ public final class dwite201102p4 extends Solution {
 					result |= isSolvable(i, j);
 				}
 				
-				// See if the word has the form "<solvable part> <solvable part>"
+				// Check if the word has the form "<solvable part> <solvable part>"
 				for (int i = start + 1; i < end; i++)
 					result |= isSolvable(start, i) && isSolvable(i, end);
 				
-				// See if the word has the form "<solvable part ending with c> <solvable part> c"
+				// Check if the word has the form "<solvable part ending with c> <solvable part> c"
 				for (int i = start + 1; i < end; i++) {
 					if (word.charAt(i - 1) == word.charAt(end - 1))
 						result |= isSolvable(start, i) && isSolvable(i, end - 1);

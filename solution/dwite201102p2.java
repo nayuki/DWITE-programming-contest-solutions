@@ -14,10 +14,13 @@ public final class dwite201102p2 extends Solution {
 	
 	
 	protected void runOnce() {
+		// Read sizes
 		io.tokenizeLine();
-		int rows = io.readIntToken();
-		int cols = io.readIntToken();
+		long rows = io.readIntToken();
+		long cols = io.readIntToken();
 		int rooks = io.readIntToken();
+		
+		// We only need to keep track of which rows and which columns have rooks
 		Set<Integer> rookRows = new HashSet<Integer>();
 		Set<Integer> rookCols = new HashSet<Integer>();
 		for (int i = 0; i < rooks; i++) {
@@ -25,7 +28,12 @@ public final class dwite201102p2 extends Solution {
 			rookRows.add(io.readIntToken());
 			rookCols.add(io.readIntToken());
 		}
-		io.println((long)rows * cols - (long)rookRows.size() * cols - (long)rookCols.size() * rows + (long)rookRows.size() * rookCols.size());
+		
+		// Grid size, minus occupied rows, minus occupied columns, but plus occupied intersections (because they were double minused)
+		io.println(  rows * cols
+		           - rookRows.size() * cols
+		           - rookCols.size() * rows
+		           + (long)rookRows.size() * rookCols.size());
 	}
 	
 }

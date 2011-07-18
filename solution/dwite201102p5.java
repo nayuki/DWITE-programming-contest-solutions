@@ -1,3 +1,4 @@
+
 // DWITE - February 2011 - Problem 5: Cube World
 
 import dwite.*;
@@ -16,6 +17,7 @@ public final class dwite201102p5 extends Solution {
 	
 	
 	protected void runOnce() {
+		// Read grid
 		io.tokenizeLine();
 		rows = io.readIntToken();
 		cols = io.readIntToken();
@@ -26,6 +28,7 @@ public final class dwite201102p5 extends Solution {
 				heights[i][j] = io.readIntToken();
 		}
 		
+		// Find water capacity at each level
 		int water = 0;
 		for (int i = 0; i < 50; i++) {
 			water += getWaterCapacity(i);
@@ -35,14 +38,14 @@ public final class dwite201102p5 extends Solution {
 	
 	
 	private int getWaterCapacity(int height) {
-		// Find cube-occupied areas
+		// Find cube-occupied cells
 		boolean[][] unusable = new boolean[rows][cols];
 		for (int i = 0; i < rows; i++) {
 			for (int j = 0; j < cols; j++)
 				unusable[i][j] = heights[i][j] > height;
 		}
 		
-		// Flood fill from the edges
+		// Flood fill from the edges to disqualify cells
 		for (int i = 0; i < rows; i++) {
 			for (int j = 0; j < cols; j++) {
 				if (i == 0 || i == rows - 1 || j == 0 || j == cols - 1)

@@ -11,9 +11,11 @@ public final class dwite201102p3 extends Solution {
 	
 	
 	protected void runOnce() {
+		// Dynamic programming: Knapsack program
 		boolean[] feasibleSum = new boolean[30 * 1000 + 1];
 		feasibleSum[0] = true;
 		
+		// Calculate which sums of weights are feasible
 		int n = io.readIntLine();
 		int total = 0;
 		for (int i = 0; i < n; i++) {
@@ -23,6 +25,7 @@ public final class dwite201102p3 extends Solution {
 				feasibleSum[j + weight] |= feasibleSum[j];
 		}
 		
+		// Start at half of the total weight and search downward for the first feasible weight
 		for (int i = total / 2; i >= 0; i--) {
 			if (feasibleSum[i]) {  // Guaranteed to execute before the loop ends
 				io.println(total - i * 2);
