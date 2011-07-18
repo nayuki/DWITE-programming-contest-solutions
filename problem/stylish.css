@@ -1,0 +1,64 @@
+* {
+    margin:0pt;
+    padding:0pt;
+}
+html {
+    height:100%;
+}
+body {
+    background:#FFFFFF none repeat scroll 0%;
+    color:#222;
+    height:100%;
+    margin:0pt auto;
+    width:800px;
+}
+
+#content{
+    border: thin solid #333;
+    margin: 1em;
+    padding: 1em;
+    font-family:"Lucida Grande","Verdana",sans-serif;
+}
+#title{
+    font-size: 2.2em;
+    font-family:"Helvetica","Arial",sans-serif;
+}
+#problem_meta{
+    float:right;
+}
+#problem_number{
+    font-weight: bold;
+}
+#problem_title{
+    font-family:"Helvetica","Arial",sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+p{
+    margin:0.5em;
+}
+#sample_data{
+    border: 1px solid #999;
+}
+.sample_in{
+    float:left;
+    border: 1px solid #ccc;
+    margin:0.5em;
+    padding:0.2em;
+}
+.sample_out{
+    float:left;
+    border: 1px solid #ccc;
+    margin:0.5em;
+    padding:0.2em;
+}
+ul{
+    list-style: none;
+    margin-left: 2em;
+}
+blockquote{
+	margin-left: 2em;
+	color:#666;
+}
