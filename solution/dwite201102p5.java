@@ -1,4 +1,3 @@
-
 // DWITE - February 2011 - Problem 5: Cube World
 
 import dwite.*;
