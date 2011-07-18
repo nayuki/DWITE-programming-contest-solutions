@@ -1,15 +1,13 @@
 // DWITE - December 2005 - Problem 5: How Many Sums
 
-import dwite.*;
-
 import java.util.HashMap;
 import java.util.Map;
 
 
-public final class dwite200512p5 extends Solution {
+public final class dwite200512p5 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		Runner.run("DATA51.txt", "OUT51.txt", new dwite200512p5());
+		DwiteRunner.run("DATA51.txt", "OUT51.txt", new dwite200512p5());
 	}
 	
 	

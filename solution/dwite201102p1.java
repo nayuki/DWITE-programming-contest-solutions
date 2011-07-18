@@ -1,12 +1,10 @@
 // DWITE - February 2011 - Problem 1: Colourful Words
 
-import dwite.*;
 
-
-public final class dwite201102p1 extends Solution {
+public final class dwite201102p1 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		Runner.run("DATA1.txt", "OUT1.txt", new dwite201102p1());
+		DwiteRunner.run("DATA1.txt", "OUT1.txt", new dwite201102p1());
 	}
 	
 	

@@ -7,9 +7,6 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
-import dwite.Io;
-import dwite.Runner;
-import dwite.Solution;
 
 
 public class DwiteTestUtils {
@@ -36,7 +33,7 @@ public class DwiteTestUtils {
 		StringWriter out0 = new StringWriter();
 		PrintWriter out = new PrintWriter(out0, true);
 		
-		Runner.run(new Io(in, out), (Solution)clazz.newInstance());
+		DwiteRunner.run(new DwiteIo(in, out), (DwiteSolution)clazz.newInstance());
 		
 		return out0.getBuffer().toString();
 	}

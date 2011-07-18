@@ -1,15 +1,13 @@
 // DWITE - November 2004 - Problem 4: For Loops
 
-import dwite.*;
-
 import java.util.ArrayList;
 import java.util.List;
 
 
-public final class dwite200411p4 extends Solution {
+public final class dwite200411p4 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		Runner.run("DATA41.txt", "OUT41.txt", new dwite200411p4());
+		DwiteRunner.run("DATA41.txt", "OUT41.txt", new dwite200411p4());
 	}
 	
 	
@@ -122,7 +120,7 @@ public final class dwite200411p4 extends Solution {
 	}
 	
 	
-	private static void expectNextToken(Io io, String expectedToken) {
+	private static void expectNextToken(DwiteIo io, String expectedToken) {
 		String actualToken = io.readToken();
 		if (!expectedToken.equals(actualToken))
 			throw new AssertionError(String.format("Expected \"%s\", got \"%s\"", expectedToken, actualToken));

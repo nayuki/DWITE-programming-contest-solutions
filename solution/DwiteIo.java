@@ -1,4 +1,4 @@
-package dwite;
+
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -10,7 +10,7 @@ import java.io.PrintWriter;
 import java.util.StringTokenizer;
 
 
-public final class Io {
+public final class DwiteIo {
 	
 	private BufferedReader input;
 	
@@ -20,7 +20,7 @@ public final class Io {
 	
 	
 	
-	public Io(String inFile, String outFile) {
+	public DwiteIo(String inFile, String outFile) {
 		try {
 			input = new BufferedReader(new InputStreamReader(new FileInputStream(inFile), "US-ASCII"));
 			output = new PrintWriter(new OutputStreamWriter(new FileOutputStream(outFile), "US-ASCII"));
@@ -31,7 +31,7 @@ public final class Io {
 	}
 	
 	
-	public Io(BufferedReader input, PrintWriter output) {
+	public DwiteIo(BufferedReader input, PrintWriter output) {
 		this.input = input;
 		this.output = output;
 	}

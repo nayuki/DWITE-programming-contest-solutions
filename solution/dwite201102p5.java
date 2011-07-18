@@ -1,12 +1,10 @@
 // DWITE - February 2011 - Problem 5: Cube World
 
-import dwite.*;
 
-
-public final class dwite201102p5 extends Solution {
+public final class dwite201102p5 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		Runner.run("DATA5.txt", "OUT5.txt", new dwite201102p5());
+		DwiteRunner.run("DATA5.txt", "OUT5.txt", new dwite201102p5());
 	}
 	
 	

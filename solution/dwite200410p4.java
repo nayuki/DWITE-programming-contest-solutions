@@ -1,12 +1,10 @@
 // DWITE - October 2004 - Problem 4: CD-ROM Files
 
-import dwite.*;
 
-
-public final class dwite200410p4 extends Solution {
+public final class dwite200410p4 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		Runner.run("DATA4", "OUT4", new dwite200410p4());
+		DwiteRunner.run("DATA4", "OUT4", new dwite200410p4());
 	}
 	
 	

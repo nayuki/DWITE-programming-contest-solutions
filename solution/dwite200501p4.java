@@ -1,12 +1,10 @@
 // DWITE - January 2005 - Problem 4: Zeller's Congruence
 
-import dwite.*;
 
-
-public final class dwite200501p4 extends Solution {
+public final class dwite200501p4 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		Runner.run("DATA41.txt", "OUT41.txt", new dwite200501p4());
+		DwiteRunner.run("DATA41.txt", "OUT41.txt", new dwite200501p4());
 	}
 	
 	

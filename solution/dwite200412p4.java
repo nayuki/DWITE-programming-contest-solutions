@@ -2,13 +2,11 @@
 
 import java.util.Arrays;
 
-import dwite.*;
 
-
-public final class dwite200412p4 extends Solution {
+public final class dwite200412p4 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		Runner.run("DATA41.txt", "OUT41.txt", new dwite200412p4());
+		DwiteRunner.run("DATA41.txt", "OUT41.txt", new dwite200412p4());
 	}
 	
 	
@@ -18,7 +16,7 @@ public final class dwite200412p4 extends Solution {
 	
 	
 	static {
-		isPrime = Algorithm.sievePrimes(99999);
+		isPrime = DwiteAlgorithm.sievePrimes(99999);
 		primes = new int[isPrime.length];
 		int primeslen = 0;
 		for (int i = 0; i < isPrime.length; i++) {

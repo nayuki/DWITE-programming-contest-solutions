@@ -1,12 +1,10 @@
 // DWITE - January 2005 - Problem 5: Different Bases Multiplication
 
-import dwite.*;
 
-
-public final class dwite200501p5 extends Solution {
+public final class dwite200501p5 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		Runner.run("DATA51.txt", "OUT51.txt", new dwite200501p5());
+		DwiteRunner.run("DATA51.txt", "OUT51.txt", new dwite200501p5());
 	}
 	
 	

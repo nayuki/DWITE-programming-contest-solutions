@@ -1,12 +1,10 @@
 // DWITE - February 2006 - Problem 1: Points on a Line
 
-import dwite.*;
 
-
-public final class dwite200602p1 extends Solution {
+public final class dwite200602p1 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		Runner.run("DATA11.txt", "OUT11.txt", new dwite200602p1());
+		DwiteRunner.run("DATA11.txt", "OUT11.txt", new dwite200602p1());
 	}
 	
 	

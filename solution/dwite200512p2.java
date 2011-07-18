@@ -1,15 +1,13 @@
 // DWITE - December 2005 - Problem 2: The Maze
 
-import dwite.*;
-
 import java.util.LinkedList;
 import java.util.Queue;
 
 
-public final class dwite200512p2 extends Solution {
+public final class dwite200512p2 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		Runner.run("DATA21.txt", "OUT21.txt", new dwite200512p2());
+		DwiteRunner.run("DATA21.txt", "OUT21.txt", new dwite200512p2());
 	}
 	
 	

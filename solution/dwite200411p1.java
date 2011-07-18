@@ -1,17 +1,15 @@
 // DWITE - November 2004 - Problem 1: Credit Card Check Digit
 
-import dwite.*;
 
-
-public final class dwite200411p1 extends Solution {
+public final class dwite200411p1 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		Runner.run("DATA11.txt", "OUT11.txt", new dwite200411p1());
+		DwiteRunner.run("DATA11.txt", "OUT11.txt", new dwite200411p1());
 	}
 	
 	
 	protected void runOnce() {
-		int[] digits = Algorithm.toDigits(io.readLine());
+		int[] digits = DwiteAlgorithm.toDigits(io.readLine());
 		if (isLuhnValid(digits))
 			io.println("VALID");
 		else {

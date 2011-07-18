@@ -1,7 +1,5 @@
 // DWITE - January 2006 - Problem 5: Distance Between Towns
 
-import dwite.*;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -10,10 +8,10 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 
 
-public final class dwite200601p5 extends Solution {
+public final class dwite200601p5 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		Runner.run("DATA51.txt", "OUT51.txt", new dwite200601p5());
+		DwiteRunner.run("DATA51.txt", "OUT51.txt", new dwite200601p5());
 	}
 	
 	

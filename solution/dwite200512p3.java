@@ -1,12 +1,10 @@
 // DWITE - December 2005 - Problem 3: Reducing Fractions
 
-import dwite.*;
 
-
-public final class dwite200512p3 extends Solution {
+public final class dwite200512p3 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		Runner.run("DATA31.txt", "OUT31.txt", new dwite200512p3());
+		DwiteRunner.run("DATA31.txt", "OUT31.txt", new dwite200512p3());
 	}
 	
 	
@@ -32,7 +30,7 @@ public final class dwite200512p3 extends Solution {
 		}
 		
 		// Reduce to lowest terms
-		int gcd = Algorithm.gcd(n, d);
+		int gcd = DwiteAlgorithm.gcd(n, d);
 		n /= gcd;
 		d /= gcd;
 		

@@ -1,12 +1,10 @@
 // DWITE - December 2006 - Problem 1: Jimmy's Lost His Marbles
 
-import dwite.*;
 
-
-public final class dwite200612p1 extends Solution {
+public final class dwite200612p1 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		Runner.run("DATA11.txt", "OUT11.txt", new dwite200612p1());
+		DwiteRunner.run("DATA11.txt", "OUT11.txt", new dwite200612p1());
 	}
 	
 	

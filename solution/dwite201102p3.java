@@ -1,12 +1,10 @@
 // DWITE - February 2011 - Problem 3: Balancing Act
 
-import dwite.*;
 
-
-public final class dwite201102p3 extends Solution {
+public final class dwite201102p3 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		Runner.run("DATA3.txt", "OUT3.txt", new dwite201102p3());
+		DwiteRunner.run("DATA3.txt", "OUT3.txt", new dwite201102p3());
 	}
 	
 	

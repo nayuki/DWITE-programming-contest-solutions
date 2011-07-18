@@ -1,14 +1,12 @@
 // DWITE - October 2004 - Problem 5: Super Long Sums
 
-import dwite.*;
-
 import java.math.BigInteger;
 
 
-public final class dwite200410p5 extends Solution {
+public final class dwite200410p5 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		Runner.run("DATA5", "OUT5", new dwite200410p5());
+		DwiteRunner.run("DATA5", "OUT5", new dwite200410p5());
 	}
 	
 	

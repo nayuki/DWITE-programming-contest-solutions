@@ -1,15 +1,13 @@
 // DWITE - January 2006 - Problem 2: Scrabble
 
-import dwite.*;
-
 import java.util.HashMap;
 import java.util.Map;
 
 
-public final class dwite200601p2 extends Solution {
+public final class dwite200601p2 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		Runner.run("DATA21.txt", "OUT21.txt", new dwite200601p2());
+		DwiteRunner.run("DATA21.txt", "OUT21.txt", new dwite200601p2());
 	}
 	
 	

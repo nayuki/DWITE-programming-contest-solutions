@@ -1,12 +1,10 @@
 // DWITE - February 2011 - Problem 4: New type of wordplay
 
-import dwite.*;
 
-
-public final class dwite201102p4 extends Solution {
+public final class dwite201102p4 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		Runner.run("DATA4.txt", "OUT4.txt", new dwite201102p4());
+		DwiteRunner.run("DATA4.txt", "OUT4.txt", new dwite201102p4());
 	}
 	
 	

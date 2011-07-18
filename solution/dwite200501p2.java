@@ -1,17 +1,15 @@
 // DWITE - January 2005 - Problem 2: Minesweeper
 
-import dwite.*;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
 
-public final class dwite200501p2 extends Solution {
+public final class dwite200501p2 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		Runner.run("DATA21.txt", "OUT21.txt", new dwite200501p2());
+		DwiteRunner.run("DATA21.txt", "OUT21.txt", new dwite200501p2());
 	}
 	
 	
