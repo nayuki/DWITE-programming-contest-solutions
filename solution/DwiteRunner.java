@@ -1,6 +1,3 @@
-
-
-
 public final class DwiteRunner {
 	
 	public static void run(String inFilename, String outFilename, DwiteSolution sol) {

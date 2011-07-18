@@ -1,6 +1,3 @@
-
-
-
 public class DwiteSolution {
 	
 	protected DwiteIo io;

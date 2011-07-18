@@ -1,6 +1,3 @@
-
-
-
 public final class DwiteAlgorithm {
 	
 	public static int sqrt(int x) {
