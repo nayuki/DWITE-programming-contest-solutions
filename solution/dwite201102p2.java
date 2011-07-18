@@ -29,11 +29,7 @@ public final class dwite201102p2 extends Solution {
 			rookCols.add(io.readIntToken());
 		}
 		
-		// Grid size, minus occupied rows, minus occupied columns, but plus occupied intersections (because they were double minused)
-		io.println(  rows * cols
-		           - rookRows.size() * cols
-		           - rookCols.size() * rows
-		           + (long)rookRows.size() * rookCols.size());
+		io.println((rows - rookRows.size()) * (cols - rookCols.size()));
 	}
 	
 }
