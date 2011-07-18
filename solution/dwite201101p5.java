@@ -19,6 +19,7 @@ public final class dwite201101p5 extends DwiteSolution {
 		int e = io.readIntToken();
 		int w = io.readIntToken();
 		
+		// Dynamic programming
 		double[][] prob = new double[SIZE][SIZE];
 		prob[SIZE / 2][SIZE / 2] = 1;
 		for (int i = 0; i < m; i++) {

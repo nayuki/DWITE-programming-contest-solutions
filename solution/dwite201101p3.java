@@ -13,19 +13,16 @@ public final class dwite201101p3 extends DwiteSolution {
 		int n = io.readIntLine();
 		if (n < 0)
 			throw new IllegalArgumentException();
-		char[] digits = ("0" + Integer.toString(n, 2)).toCharArray();
 		
 		// Take the rightmost "01" and swap the digits
-		for (int i = digits.length - 2; i >= 0; i--) {
-			if (digits[i] == '0' && digits[i + 1] == '1') {  // Guaranteed to execute
-				digits[i + 0] = '1';
-				digits[i + 1] = '0';
+		for (int i = 0; i <= 30; i++) {
+			if (((n >>> i) & 3) == 1) {  // Guaranteed to execute
+				n ^= 3 << i;
 				break;
 			}
 		}
 		
-		int m = Integer.parseInt(new String(digits), 2);
-		io.println(m);
+		io.println(n);
 	}
 	
 }

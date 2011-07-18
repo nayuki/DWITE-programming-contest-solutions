@@ -28,7 +28,12 @@ public final class dwite201101p2 extends DwiteSolution {
 	
 	
 	protected void runOnce() {
-		io.println(primes[primes[io.readIntLine() - 1] - 1]);
+		io.println(nthPrime(nthPrime(io.readIntLine())));
+	}
+	
+	
+	private static int nthPrime(int n) {  // n is one-based, i.e. nthPrime(1) == 2, nthPrime(3) == 5, etc.
+		return primes[n - 1];
 	}
 	
 }

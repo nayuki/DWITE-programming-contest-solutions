@@ -11,9 +11,9 @@ public final class dwite201101p1 extends DwiteSolution {
 	
 	protected void runOnce() {
 		int n = io.readIntLine();
-		int width = (n + 1) / 2 * 2 - 1;
+		int width = n % 2 == 0 ? n - 1 : n;
 		for (int i = 0; i < n; i++) {
-			int w = i / 2 * 2 + 1;
+			int w = i % 2 == 0 ? i + 1 : i;
 			print(".", (width - w) / 2);
 			print("*", w);
 			print(".", (width - w) / 2);
