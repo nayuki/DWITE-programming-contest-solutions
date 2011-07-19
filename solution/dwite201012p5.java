@@ -3,7 +3,6 @@
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.regex.Pattern;
 
 
 public final class dwite201012p5 extends DwiteSolution {
@@ -26,14 +25,10 @@ public final class dwite201012p5 extends DwiteSolution {
 	
 	private void runQuery(List<String> dict) {
 		String query = io.readLine();
-		query = query.replaceAll("\\*+", "*");  // Replace consecutive stars with a single star
-		query = query.replace("?", ".");   // Translate from glob to regex
-		query = query.replace("*", ".*");  // Translate from glob to regex
-		Pattern queryPatt = Pattern.compile(query);
-		
 		boolean head = true;
 		for (String word : dict) {
-			if (queryPatt.matcher(word).matches()) {
+			boolean isMatch = isMatch(word, query);
+			if (isMatch) {
 				if (head) head = false;
 				else io.print(", ");
 				io.print(word);
@@ -42,6 +37,42 @@ public final class dwite201012p5 extends DwiteSolution {
 		if (head)
 			io.print("NO MATCH");
 		io.println();
+	}
+	
+	
+	// Implements an non-deterministic finite automaton (NFA)
+	// For reference, read http://swtch.com/~rsc/regexp/regexp1.html
+	private static boolean isMatch(String input, String pattern) {
+		boolean[] inState = new boolean[pattern.length() + 1];
+		inState[0] = true;
+		doEpsilonTransitions(inState, pattern);
+		
+		// For each letter in the input
+		for (int i = 0; i < input.length(); i++) {
+			boolean[] newInState = new boolean[inState.length];
+			// For each state except the last
+			for (int j = 0; j < pattern.length(); j++) {
+				if (inState[j]) {
+					if (pattern.charAt(j) == '?')
+						newInState[j + 1] = true;
+					else if (pattern.charAt(j) == '*')
+						newInState[j] = true;
+					else if (pattern.charAt(j) == input.charAt(i))
+						newInState[j + 1] = true;
+				}
+			}
+			inState = newInState;
+			doEpsilonTransitions(inState, pattern);
+		}
+		return inState[pattern.length()];
+	}
+	
+	
+	private static void doEpsilonTransitions(boolean[] inState, String pattern) {
+		for (int i = 0; i < pattern.length(); i++) {
+			if (inState[i] && pattern.charAt(i) == '*')
+				inState[i + 1] = true;
+		}
 	}
 	
 }

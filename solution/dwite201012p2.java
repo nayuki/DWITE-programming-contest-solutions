@@ -13,19 +13,19 @@ public final class dwite201012p2 extends DwiteSolution {
 		int n = io.readIntLine();
 		int count = 0;
 		for (int i = 1; i <= n; i++)
-			count += countRectangles(i);
+			count += countSmallFactors(i);
 		io.println(count);
 	}
 	
 	
-	private static int countRectangles(int n) {
-		// Find factors
-		int m = 0;
+	// Counts the number of factors <= sqrt(n) by trial division
+	private static int countSmallFactors(int n) {
+		int count = 0;
 		for (int i = 1, end = DwiteAlgorithm.sqrt(n); i <= end; i++) {
 			if (n % i == 0)
-				m++;
+				count++;
 		}
-		return m;
+		return count;
 	}
 	
 }
