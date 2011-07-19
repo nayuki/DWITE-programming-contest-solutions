@@ -9,17 +9,38 @@ public final class dwite201012p3 extends DwiteSolution {
 	}
 	
 	
-	// dp[i] is the number of ways to tile an (i*2) x 3 rectangle with dominoes
-	private static int[] dp;
+	// tilings[i] is the number of ways to tile an (i*2) x 3 rectangle with dominoes, allowing tilings that can be split vertically
+	private static long[] tilings;
 	
 	static {
-		dp = new int[16];
+		tilings = new long[16];
+		for (int i = 0; i < tilings.length; i++) {
+			tilings[i] = countTilingsWithoutSplits(i * 2);
+			
+			// Accumulate all choices for the leftmost split
+			for (int j = 1; j < i; j++) {
+				tilings[i] += countTilingsWithoutSplits(j * 2) * tilings[i - j];
+				tilings[i] %= 1000000;
+			}
+		}
+	}
+	
+	
+	/*
+	 * Returns the number of vertically indivisible ways to tile an n x 3 rectangle with dominoes.
+	 */
+	private static long countTilingsWithoutSplits(int n) {
+		if (n < 0)
+			throw new IllegalArgumentException();
+		else if (n % 2 != 0)  // Odd number
+			return 0;
 		
-		// The 0 x 3 empty board can be tiled in one way
-		dp[0] = 1;
+		// The 0 x 3 empty board can be tiled in one way.
+		else if (n == 0)
+			return 1;
 		
 		/*
-		 * Tilings for 2 x 3 (all vertically indivisible):
+		 * Tilings for 2 x 3:
 		 * +---+  +-+-+  +---+
 		 * |o o|  |o|o|  |o o|
 		 * +---+  | | |  +-+-+
@@ -28,34 +49,28 @@ public final class dwite201012p3 extends DwiteSolution {
 		 * |o o|  |o o|  |o|o|
 		 * +---+  +---+  +-+-+
 		 */
-		dp[1] = 3;
+		else if (n == 2)
+			return 3;
 		
-		for (int i = 2; i < dp.length; i++) {
-			/*
-			 * For (i*2) x 3, we have these two vertically indivisible tilings that look like this:
-			 * +-+---+-+  +---+---+
-			 * |o|o o|o|  |o o|o o|
-			 * | +---+ |  +-+---+-+
-			 * |o|o o|o|  |o|o o|o|
-			 * +-+---+-+  | +---+ |
-			 * |o o|o o|  |o|o o|o|
-			 * +---+---+  +-+---+-+
-			 */
-			dp[i] = 2;
-			
-			// Add the divisible tilings
-			for (int j = 1; j < i; j++) {
-				dp[i] += dp[j] + dp[i - j];
-				dp[i] %= 1000000;
-			}
-		}
+		/*
+		 * For n x 3, we have these two vertically indivisible tilings that look like this:
+		 * +-+---+-+  +---+---+
+		 * |o|o o|o|  |o o|o o|
+		 * | +---+ |  +-+---+-+
+		 * |o|o o|o|  |o|o o|o|
+		 * +-+---+-+  | +---+ |
+		 * |o o|o o|  |o|o o|o|
+		 * +---+---+  +-+---+-+
+		 */
+		else
+			return 2;
 	}
 	
 	
 	protected void runOnce() {
 		int n = io.readIntLine();
 		if (n % 2 == 0)
-			io.println(dp[n / 2]);
+			io.println(tilings[n / 2]);
 		else
 			io.println(0);
 	}
