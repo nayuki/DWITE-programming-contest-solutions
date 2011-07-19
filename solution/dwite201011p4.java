@@ -1,4 +1,4 @@
-// DWITE - December 2010 - Problem 4: Fractions to Decimal
+// DWITE - November 2010 - Problem 4: Fractions to Decimal
 // Solution by Nayuki Minase
 
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-// DWITE - December 2010 - Problem 5: Cogwheels
+// DWITE - November 2010 - Problem 5: Cogwheels
 // Solution by Nayuki Minase
 
 

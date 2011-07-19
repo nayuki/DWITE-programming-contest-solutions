@@ -1,4 +1,4 @@
-// DWITE - December 2010 - Problem 3: Escape and Loot
+// DWITE - November 2010 - Problem 3: Escape and Loot
 // Solution by Nayuki Minase
 
 
@@ -10,10 +10,10 @@ public final class dwite201011p3 extends DwiteSolution {
 	
 	
 	protected void runOnce() {
-		// Read grid
 		final int WIDTH = 8;
 		final int HEIGHT = 8;
-		
+
+		// Read grid
 		char[][] grid = new char[HEIGHT][WIDTH];
 		for (int i = 0; i < HEIGHT; i++) {
 			String line = io.readLine();

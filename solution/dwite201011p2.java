@@ -1,4 +1,4 @@
-// DWITE - December 2010 - Problem 2: Seating Arrangement
+// DWITE - November 2010 - Problem 2: Seating Arrangement
 // Solution by Nayuki Minase
 
 import java.util.Arrays;
@@ -15,7 +15,7 @@ public final class dwite201011p2 extends DwiteSolution {
 		io.tokenizeLine();
 		int n = io.readIntToken();
 		int p = io.readIntToken();
-		boolean[] filled = new boolean[n];
+		boolean[] filled = new boolean[n];  // Whether a seat is filled
 		for (int i = 0; i < p; i++) {
 			int position = findPlace(filled);
 			filled[position] = true;
