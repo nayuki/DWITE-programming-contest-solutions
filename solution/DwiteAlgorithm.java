@@ -1,3 +1,6 @@
+import java.util.Arrays;
+
+
 public final class DwiteAlgorithm {
 	
 	public static int sqrt(int x) {
@@ -48,6 +51,22 @@ public final class DwiteAlgorithm {
 			}
 		}
 		return isPrime;
+	}
+	
+	
+	public static int[][] newIntGrid(int height, int width, int fill) {
+		int[][] result = new int[height][width];
+		for (int i = 0; i < height; i++)
+			Arrays.fill(result[i], fill);
+		return result;
+	}
+	
+	
+	public static char[][] newCharGrid(int height, int width, char fill) {
+		char[][] result = new char[height][width];
+		for (int i = 0; i < height; i++)
+			Arrays.fill(result[i], fill);
+		return result;
 	}
 	
 	
