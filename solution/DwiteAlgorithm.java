@@ -17,6 +17,11 @@ public final class DwiteAlgorithm {
 	
 	
 	public static int gcd(int x, int y) {
+		if (x == Integer.MIN_VALUE && y == Integer.MIN_VALUE)
+			throw new IllegalArgumentException("Answer overflow");
+		
+		x = Math.abs(x);
+		y = Math.abs(y);
 		while (y != 0) {
 			int z = x % y;
 			x = y;
