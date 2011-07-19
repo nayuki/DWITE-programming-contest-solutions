@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en"><head>
+
+	
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<title>DWITE - October 2010 - Ricochet Robot</title>
+		<link href="stylish.css" media="screen" rel="Stylesheet" type="text/css">
+		<link href="stylish_print.css" media="print" rel="Stylesheet" type="text/css">
+	</head><body>
+		<div id="content">
+		<div id="title">DWITE Online Computer Programming Contest</div>
+		<div id="problem_meta">
+		    <div id="date">October 2010</div>
+		    <div id="problem_number">Problem 5</div>
+		</div>
+		<div id="problem_title">Ricochet Robot</div>
+		
+		<p>
+			That vacuum robot from Problem 2 did not work out that well -- its breaks don't work. Luckily it safely stops whenever it hits a wall, so maybe it's not all that bad? We can use software to plan out shortest routes to bounce around from one spot to another, in a 10 by 10 room.
+		</p>
+		<ul>
+		  <li># -- walls</li>
+		  <li>. -- empty space</li>
+		  <li>A -- start position</li>
+		  <li>B -- end position</li>
+		</ul>
+
+		<p>
+			The input file <strong>DATA5.txt</strong> will contain 5 sets of inputs, each a 10 by 10 room as described above. For a visual break in test cases, there will be an additional line of 10 dashes after every input set.
+		</p>
+		<p>
+			The output file <strong>OUT5.txt</strong> will contain 5 lines, each an integer of the minimum number of moves necessary to get from point A to point B.
+		</p>
+		<p>
+			<em>Notes:</em> test cases will be such that it's always possible to come to a stop at point B. The solution requires a stop, not simply a pass over the point. A robot can move in any of the 4 directions, and will continue moving until hitting a wall or an edge of the room.
+		</p>
+		<div id="sample_data">
+		    <div class="sample_in">
+		        Sample Input (first 2 shown):
+		        <pre>
+....#.....
+..A.......
+....B#....
+...#......
+..........
+..........
+..........
+..........
+..........
+..........
+----------
+....#.....
+..A.......
+....B#....
+#..#......
+..........
+..........
+..........
+..........
+..........
+..........
+----------
+		        </pre>
+		    </div>
+		    <div class="sample_out">
+		        Sample Output (first 2 shown):
+		        <pre>
+4
+3
+		        </pre>
+		    </div>
+		    <div style="clear: both;"></div>
+		</div>
+
+	</div></body></html>
