@@ -10,8 +10,11 @@ public final class dwite201010p2 extends DwiteSolution {
 	
 	
 	protected void runOnce() {
+		// Initialize
 		String map = io.readLine();
 		int position = map.indexOf('*');
+		
+		// Simulate
 		for (int i = 0; i < 5; i++) {
 			String inst = io.readLine();
 			if (inst.equals("L"))
@@ -21,6 +24,8 @@ public final class dwite201010p2 extends DwiteSolution {
 			else
 				throw new IllegalArgumentException();
 		}
+		
+		// Print final
 		print(".", position);
 		io.print("*");
 		print(".", map.length() - position - 1);

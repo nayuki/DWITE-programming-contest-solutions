@@ -34,9 +34,10 @@ public final class dwite201010p5 extends DwiteSolution {
 		for (int i = 0; i < WIDTH * HEIGHT; i++)
 			propagateDistances();
 		
+		// Find ending position and print
 		for (int i = 0; i < HEIGHT; i++) {
 			for (int j = 0; j < WIDTH; j++) {
-				if (grid[i + 1][j + 1] == 'B')  // Ending position
+				if (grid[i + 1][j + 1] == 'B')
 					io.println(distance[i + 1][j + 1]);
 			}
 		}

@@ -14,6 +14,8 @@ public final class dwite201010p1 extends DwiteSolution {
 		int d = io.readIntToken();
 		int m = io.readIntToken();
 		int y = io.readIntToken();
+		
+		// Test if (y, m, d) <= (2010 - 13, 10, 27)
 		boolean oldEnough =    y < 1997
 		                    || y == 1997 && m < 10
 		                    || y == 1997 && m == 10 && d <= 27;
