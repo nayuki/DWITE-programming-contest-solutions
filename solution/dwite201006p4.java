@@ -12,10 +12,10 @@ public final class dwite201006p4 extends DwiteSolution {
 	}
 	
 	
-	private static Pattern BRACKET = Pattern.compile("\\((-?\\d+)\\)");
+	private static Pattern BRACKET  = Pattern.compile("\\((-?\\d+)\\)");
 	private static Pattern EXPONENT = Pattern.compile("(-?\\d+)\\^(-?\\d+)");
 	private static Pattern MULT_DIV = Pattern.compile("(-?\\d+)([*/])(-?\\d+)");
-	private static Pattern ADD_SUB = Pattern.compile("(-?\\d+)([+-])(-?\\d+)");
+	private static Pattern ADD_SUB  = Pattern.compile("(-?\\d+)([+-])(-?\\d+)");
 	
 	
 	protected void runOnce() {
