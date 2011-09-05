@@ -13,6 +13,9 @@ public final class dwite201006p5 extends DwiteSolution {
 		io.tokenizeLine();
 		int n = io.readIntToken();
 		int k = io.readIntToken();
+		
+		// The snappers act like a binary counter.
+		// The light is on if and only if k == -1 mod 2^n
 		io.println(((k + 1) & ((1 << n) - 1)) == 0 ? "ON" : "OFF");
 	}
 	
