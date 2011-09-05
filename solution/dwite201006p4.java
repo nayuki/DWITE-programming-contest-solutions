@@ -1,8 +1,8 @@
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 // DWITE - June 2010 - Problem 4: What is this Algebra?
 // Solution by Nayuki Minase
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 public final class dwite201006p4 extends DwiteSolution {
