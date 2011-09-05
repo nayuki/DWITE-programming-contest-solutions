@@ -13,6 +13,8 @@ public final class dwite201006p1 extends DwiteSolution {
 		io.tokenizeLine();
 		int equipped = io.readIntToken();
 		int item = io.readIntToken();
+		if (equipped < 0 || equipped >= 256 || item < 0 || item >= 8)
+			throw new IllegalArgumentException();
 		io.println((equipped >>> item) & 1);
 	}
 	
