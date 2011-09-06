@@ -25,7 +25,7 @@ public final class dwite201003p5 extends DwiteSolution {
 			
 			// Increment
 			int i = a.length - 1;
-			while (i >= 0 && a[i] == 26) {
+			while (i >= 0 && a[i] == 25) {
 				a[i] = 0;
 				i--;
 			}
