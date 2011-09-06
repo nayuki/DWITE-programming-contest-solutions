@@ -10,14 +10,11 @@ public final class dwite200910p4 extends DwiteSolution {
 	
 	
 	protected void runOnce() {
-		int[] hist = new int[26];
 		String line = io.readLine();
-		for (int i = 0; i < line.length(); i++)
-			hist[line.charAt(i) - 'A']++;
-		
 		for (int i = 0; i < line.length(); i++) {
-			if (hist[line.charAt(i) - 'A'] == 1) {
-				io.println(line.charAt(i) + "");
+			char c = line.charAt(i);
+			if (line.indexOf(c, i + 1) == -1 && line.lastIndexOf(c, i - 1) == -1) {
+				io.println(c + "");
 				return;
 			}
 		}
