@@ -29,7 +29,7 @@
 		  Assume that all passwords are four characters long and are made up of capital letters only.
 		</p>
 		<p>
-		  A hash is calculated as follows. Given a password P, made up of four letters a1, a2, a3, a4; each letter is turned into its ASCII value, where A = 65 and Z = 90 -- n1, n2, n3, n4. Let k = n1*10^6 + n2*10^4 + n3*10^2 + n4. Let m = n1*11 + n2*101 + n3*1009 + n4*10007. Then hash(P) = k mod m
+		  A hash is calculated as follows. Given a password P, made up of four letters a1, a2, a3, a4; each letter is turned into its ASCII value, where A = 65 and Z = 90 -- n1, n2, n3, n4. Let k = n1*10<sup>6</sup> + n2*10<sup>4</sup> + n3*10<sup>2</sup> + n4. Let m = n1*11 + n2*101 + n3*1009 + n4*10007. Then hash(P) = k mod m
 		</p>
 		<p>
 		  <em>For example:</em> given a password P = "TONY", there are four letters a1 = T, a2 = O, a3 = N, a4 = Y; and mapped to ASCII n1 = 84, n2 = 79, n3 = 78, n4 = 89. Then k = 84797889. And m = 84*11 + 79*101 + 78*1009 + 89*10007 = 978228. So hash(TONY) = 84797889 % 978228 = 670281
