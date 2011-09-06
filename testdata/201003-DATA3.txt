@@ -1,0 +1,33 @@
+1
+1
+foo 42
+foo 41
+---
+2
+2
+bar 1
+foo 42
+bar 2
+baz 40
+---
+2
+1
+bar 1
+foo 2
+foo 2
+---
+2
+1
+bar 1
+foo 2
+bar 2
+---
+3
+3
+bar 1
+baz 1
+foo 1
+bar 1
+baz 1
+foo 1
+---
