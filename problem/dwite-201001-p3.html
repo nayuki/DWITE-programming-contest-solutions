@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en"><head>
+
+	
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<title>DWITE - January 2010 - Moving at the same time</title>
+		<link href="stylish.css" media="screen" rel="Stylesheet" type="text/css">
+		<link href="stylish_print.css" media="print" rel="Stylesheet" type="text/css">
+	</head><body>
+		<div id="content">
+		<div id="title">DWITE Online Computer Programming Contest</div>
+		<div id="problem_meta">
+		    <div id="date">January 2010</div>
+		    <div id="problem_number">Problem 3</div>
+		</div>
+		<div id="problem_title">Moving at the same time</div>
+		
+		<p>
+			Silly title, but this is exactly what this question addresses. There are too many questions on the CompSci.ca forums asking just that -- <em>"I have 2 (or more) characters in my game, how do I move them both <strong>at the same time</strong>?"</em> This should be obvious to some, and might sound more complicated than it is to others. Maybe the constrains of this question will provide a clue?
+		</p>
+		<p>
+			The input file <strong>DATA3.txt</strong> will contain 5 lines, each line will describe a game field and characters on it. The size of the field is the size of the line, 1 &lt; = N &lt; 20. Periods are empty spaces, while integers 0 &lt; C &lt;= 3 are Characters. The value of the integer represents that character's speed, in the direction to the right of where they are. Ones the character leaves the field, we are no longer concerned with that character. If two characters end up on the same spot, represent them as a sum of their velocities. In the initial input, all of the characters are distinct, and it is guaranteed that the overlapping sum is never greater than 9.
+		</p>
+		<p>
+		  The judge is the observer of the game. Each output line is judge's perception of the game (that is, each output line is a frame of this game's FPS (frames per second)). If a character's velocity is 2, then in time from one frame to the next, that character moves 2 spots to the right.
+		</p>
+		<p>
+			The output file <strong>OUT3.txt</strong> will contain 5 sets of output, 5 lines each, the snapshots of the gamefield for each game as it progresses, starting with the input, and following with 4 frames.
+		</p>
+		<div id="sample_data">
+		    <div class="sample_in">
+		        Sample Input (first 2 shown):
+		        <pre>
+.2..1......
+2.0..
+		        </pre>
+		    </div>
+		    <div class="sample_out">
+		        Sample Output (first 2 shown):
+		        <pre>
+.2..1......
+...2.1.....
+.....21....
+.......3...
+........12.
+2.0..
+..2..
+..0.2
+..0..
+..0..
+		        </pre>
+		    </div>
+		    <div style="clear: both;"></div>
+		</div>
+
+	</div></body></html>
