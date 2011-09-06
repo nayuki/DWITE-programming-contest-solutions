@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en"><head>
+
+	
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<title>DWITE - October 2009 - Running In Circles</title>
+		<link href="stylish.css" media="screen" rel="Stylesheet" type="text/css">
+	</head><body>
+		<div id="content">
+		<div id="title">DWITE Online Computer Programming Contest</div>
+		<div id="problem_meta">
+		    <div id="date">October 2009</div>
+		    <div id="problem_number">Problem 5</div>
+		</div>
+		<div id="problem_title">Running In Circles</div>
+		
+		<p>
+			Given a directional graph (think of it as a map of one way streets), cycles (a loop) are often involved in various problems. We know that one (and only one) cycle exists, and we want to find its length.
+		</p>
+
+		<p>
+			The input file <strong>DATA5.txt</strong> will contain 5 sets of input. The first line will contain a single integer, 1 &lt;= N &lt;= 100, number of pairs describing the graph. Followed by N lines, each having two integers separated by a space. Each of the integers refers to a node, with a directional path from first to second. Node IDs are between 1 and 100, inclusive. <strong>The first node in the list is guaranteed to have a path to the cycle.</strong>
+		</p>
+		<p>
+		    <em>For example:</em> If the graph is described by 4 pairs: 1 2, 2 3, 3 1, 4 5; Then it describes a disjoint graph -- a cycle of length 3 and another pair of nodes. Since it's guaranteed that starting at Node 1 will lead to a cycle, it shouldn't matter that it's not connected to 4 or 5.
+		</p>
+		<p>
+		    <em>Note:</em> a node could link to itself (1 -> 1) and that will form a cycle of size 1.
+		</p>
+		<img src="dwite-200910-p5.png" alt="sample graph described above" />
+		<p>
+			The output file <strong>OUT5.txt</strong> will contain 5 lines of output, each an integer size of the cycle found in a graph.
+		</p>
+		<div id="sample_data">
+		    <div class="sample_in">
+		        Sample Input:
+		        <pre>
+1
+1 1
+2
+1 2
+2 1
+3
+1 2
+2 3
+3 1
+4
+1 2
+2 3
+3 1
+4 5
+5
+1 4
+1 2
+2 3
+3 1
+4 5
+		        </pre>
+		    </div>
+		    <div class="sample_out">
+		        Sample Output:
+		        <pre>
+1
+2
+3
+3
+3
+		        </pre>
+		    </div>
+		    <div style="clear: both;"></div>
+		</div>
+
+	</div></body></html>
