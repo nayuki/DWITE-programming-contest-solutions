@@ -14,6 +14,7 @@ public final class dwite201110p4 extends DwiteSolution {
 	}
 	
 	
+	// Coolness for [0, n] in essentially constant time.
 	private static int getCoolnessFast(int n) {
 		int sum = n / 10 + 1;  // Initially, this is the number of times the ones digit is 0
 		n++;
@@ -27,7 +28,7 @@ public final class dwite201110p4 extends DwiteSolution {
 		return sum;
 	}
 	
-	
+	// Returns x ^ y.
 	private static int pow(int x, int y) {
 		int z = 1;
 		for (int i = 0; i < y; i++)
@@ -36,6 +37,7 @@ public final class dwite201110p4 extends DwiteSolution {
 	}
 	
 	
+	// Coolness for [0, n].
 	private static int getCoolnessSlow(int n) {
 		int sum = 0;
 		for (int i = 0; i <= n; i++)
@@ -43,7 +45,7 @@ public final class dwite201110p4 extends DwiteSolution {
 		return sum;
 	}
 	
-	
+	// Coolness for just n.
 	private static int coolness(int n) {
 		int count = 0;
 		do {

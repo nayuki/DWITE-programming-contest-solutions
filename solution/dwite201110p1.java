@@ -1,9 +1,6 @@
 // DWITE - October 2011 - Problem 1: Arab-lish Numbers
 // Solution by Nayuki Minase
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 
 public final class dwite201110p1 extends DwiteSolution {
 	
@@ -13,21 +10,22 @@ public final class dwite201110p1 extends DwiteSolution {
 	
 	
 	protected void runOnce() {
-		io.println(reverseNumbers(reverse(io.readLine())));
-	}
-	
-	
-	private static String reverseNumbers(String s) {
+		String str = reverse(io.readLine());  // Reverse everything
+		String[] words = str.split(" ");  // Words are separated by one space
 		StringBuilder sb = new StringBuilder();
-		Matcher m = Pattern.compile("(?<!\\S)\\d+(?!\\S)").matcher(s);
-		int index = 0;
-		while (m.find()) {
-			sb.append(s, index, m.start());
-			sb.append(reverse(m.group()));
-			index = m.end();
+		boolean head = true;
+		for (String word : words) {
+			if (head) head = false;
+			else sb.append(" ");
+			
+			if (word.equals(""))
+				throw new IllegalArgumentException();
+			else if (word.matches("\\d+"))
+				sb.append(reverse(word));  // Reverse numbers back
+			else
+				sb.append(word);
 		}
-		sb.append(s, index, s.length());
-		return sb.toString();
+		io.println(sb.toString());
 	}
 	
 	

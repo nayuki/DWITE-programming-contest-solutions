@@ -13,21 +13,21 @@ public final class dwite201110p5 extends DwiteSolution {
 		String str = io.readLine();
 		int n = str.length();
 		
-		int[][] dp = new int[n + 1][n + 1];  // dp[i][j] is the length of the longest possible palindrome for str.substring(i, j)
-		for (int start = 0; start < n; start++)  // Length 1 is obviously a palindrome
-			dp[start][start + 1] = 1;
+		int[][] maxPal = new int[n + 1][n + 1];  // maxPal[i][j] is the length of the longest possible palindrome for str.substring(i, j)
+		for (int start = 0; start < n; start++)  // Length 1 is obviously always a palindrome
+			maxPal[start][start + 1] = 1;
 		
 		for (int len = 2; len <= n; len++) {
 			for (int start = 0; start + len <= n; start++) {
 				int end = start + len;
 				if (str.charAt(start) == str.charAt(end - 1))
-					dp[start][end] = dp[start + 1][end - 1] + 2;
+					maxPal[start][end] = maxPal[start + 1][end - 1] + 2;  // Accept first and last characters
 				else
-					dp[start][end] = Math.max(dp[start + 1][end], dp[start][end - 1]);
+					maxPal[start][end] = Math.max(maxPal[start + 1][end], maxPal[start][end - 1]);  // Delete first or last character and choose the best
 			}
 		}
 		
-		io.println(dp[0][n]);
+		io.println(maxPal[0][n]);
 	}
 	
 }
