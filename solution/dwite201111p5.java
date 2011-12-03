@@ -18,6 +18,7 @@ public final class dwite201111p5 extends DwiteSolution {
 	protected void runOnce() {
 		nameToNodeId = new HashMap<String,Integer>();
 		DisjointSets ds = new DisjointSets(100000);
+		boolean[] hasPortals = new boolean[100000];
 		
 		int n = io.readIntLine();
 		for (int i = 0; i < n; i++) {
@@ -25,10 +26,12 @@ public final class dwite201111p5 extends DwiteSolution {
 			String command = io.readToken();
 			int nodeA = getNodeId(io.readToken());
 			int nodeB = getNodeId(io.readToken());
-			if (command.equals("p"))
+			if (command.equals("p")) {
 				ds.union(nodeA, nodeB);
-			else if (command.equals("q"))
-				io.println(ds.find(nodeA) == ds.find(nodeB) ? "connected" : "not connected");
+				hasPortals[nodeA] = true;
+				hasPortals[nodeB] = true;
+			} else if (command.equals("q"))
+				io.println(ds.find(nodeA) == ds.find(nodeB) && hasPortals[nodeA] ? "connected" : "not connected");
 			else
 				throw new IllegalArgumentException();
 		}

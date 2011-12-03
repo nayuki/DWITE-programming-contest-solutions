@@ -10,6 +10,6 @@ connected
 connected
 not connected
 connected
-not connected
-not connected
 connected
+not connected
+not connected
