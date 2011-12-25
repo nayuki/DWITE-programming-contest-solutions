@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> 
+<html lang="en"><head> 
+ 
+	
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+		<title>DWITE - December 2011 - Tautology</title> 
+		<link href="stylish.css" media="screen" rel="Stylesheet" type="text/css"> 
+		<link href="stylish_print.css" media="print" rel="Stylesheet" type="text/css"> 
+	</head><body> 
+		<div id="content"> 
+		<div id="title">DWITE</div> 
+		<div id="problem_meta"> 
+		    <div id="date">December 2011</div> 
+		    <div id="problem_number">Problem 5</div> 
+		</div> 
+		<div id="problem_title">Tautology</div> 
+		
+		<p>
+			<img src="dwite-201112-p5.png" alt="XKCD Tautology Club"/>
+			<a href="http://xkcd.com/703/">http://xkcd.com/703/</a>
+		</p>
+		<p>
+			We define a propositional formula as follows:
+		</p>
+		<ul>
+			<li>{a,b,...j} are atomic propositions, representing either true or false.</li>
+			<li>If A and B are propositional formulae, then so are:
+				<ul>
+					<li>(A ^ B) -- ^ is boolean "and"</li>
+					<li>(A v B) -- v is boolean "or"</li>
+					<li>~A -- ~ is boolean "not"</li>
+				</ul>
+		</ul>
+		<p>
+			For example, ((a v b) ^ (~c v a)) is a propositional formula. A <strong>tautology</strong> is a propositional formula that equates to <strong>true</strong> for <strong>all possible</strong> value assignments to the atomic propositions. Our previous example ((a v b) ^ (~c v a)) is not a tautology because for the assignments a = false, b = false and c = true, the formula evaluates to a false. However (a v ~a) is a tautology because no matter what the atomic proposition is this equates to true; (true or not-true) == true, (false or not-false) == true.
+		<p> 
+			The input file <strong>DATA5.txt</strong> will contain 5 test cases, each three lines (not more than 255 characters) with a propositional formula per line.
+		</p> 
+		<p>
+			The output file <strong>OUT5.txt</strong> will contain 5 lines of output, each three characters long. <strong>Y</strong> for <strong>tautology</strong>, <strong>N</strong> for <strong>not tautology</strong>.
+		</p>
+
+		<div id="sample_data"> 
+		    <div class="sample_in"> 
+		        Sample Input (first 2 shown):
+		        <pre> 
+((a v b) ^ (~c v a))
+(a v ~a)
+~(a ^ ~a)
+a
+~b
+((a ^ b) v (c ^ ~c))
+		        </pre> 
+		    </div> 
+		    <div class="sample_out"> 
+		        Sample Output (first 2 shown):
+		        <pre> 
+NYY
+NNY
+		        </pre> 
+		    </div> 
+		    <div style="clear: both;"></div> 
+		</div> 
+ 
+	</div></body></html>

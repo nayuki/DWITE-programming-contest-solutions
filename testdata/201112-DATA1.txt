@@ -1,0 +1,25 @@
+-3
+helium -4
+air 0
+socks 1
+brick 10
+-1
+helium -4
+air 0
+socks 1
+brick 10
+1
+helium -4
+air 0
+socks 1
+brick 10
+20
+helium -4
+air 0
+brick 10
+socks 1
+6
+helium -4
+air 0
+brick 10
+socks 2

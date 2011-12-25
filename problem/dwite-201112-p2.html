@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> 
+<html lang="en"><head> 
+ 
+	
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+		<title>DWITE - December 2011 - Magical Ponds</title> 
+		<link href="stylish.css" media="screen" rel="Stylesheet" type="text/css"> 
+		<link href="stylish_print.css" media="print" rel="Stylesheet" type="text/css"> 
+	</head><body> 
+		<div id="content"> 
+		<div id="title">DWITE</div> 
+		<div id="problem_meta"> 
+		    <div id="date">December 2011</div> 
+		    <div id="problem_number">Problem 2</div> 
+		</div> 
+		<div id="problem_title">Magical Ponds</div> 
+		
+		<p>
+			On the mountainous city of Dwitia, there is said to be <strong>N</strong> magical ponds. Any object that touches any of these ponds is said to multiply some fixed number of times! Wanting to test this theory out, Tony makes a perilous trip to these ponds with some number of apples. He places the apples on the first pond, waits for the number of apples to multiply, then takes some portion of these apples from the first pond and places them on the second pond, waits for the number of apples to multiply again, and takes some from the second pond and places them on the third pond, and so on. When he places the apples on the final pond, he realized something remarkable: all the ponds now have the same number of apples! Given how much each pond multiplies the number of apples by, determine the smallest number of apples Tony could have started with.
+		</p>
+		<p> 
+			The input file <strong>DATA2.txt</strong> will contain 5 test cases. The first line of each case is an integer 1 &lt;= N &lt;= 8, the number of magical ponds in Dwitia. The following line has <strong>N</strong> space separated integers 1 &lt;= M &lt;= 10, the number apples would multiply by in each of the ponds. <em>Ponds with M value of 1 are not very magical.</em>
+		</p> 
+		<p>
+			The output file <strong>OUT2.txt</strong> will contain 5 lines of output, the minimal number (<strong>at least 1</strong>; trivial answer of 0 is just too easy and doesn't test for <em>"magicallity"</em>) of apples Tony could have started with, such that all ponds end up with the same number of apples at the end.
+		</p>
+		<p>
+			<em>About first sample input:</em> Starting with 7 apples, the first pond turns them into 14. Tony takes 6 (8 are left in the pond). The second pond turns those 6 into 12. Tony takes 4 (8 are left in the pond). The third pond turns those 4 into 8. At this point all 3 ponds have the same number of apples.
+		</p>
+		<p>
+			<em>About second sample input:</em> while the pond produces a lot of copies, there is only one of them, so starting with any number would make <em>"all ponds have the number number of apples"</em>. Since we are looking for the smallest number that is at least one, 1 is the answer.
+		</p>
+
+		<div id="sample_data"> 
+		    <div class="sample_in"> 
+		        Sample Input (first 2 shown):
+		        <pre> 
+3
+2 2 2
+1
+10
+		        </pre> 
+		    </div> 
+		    <div class="sample_out"> 
+		        Sample Output (first 2 shown):
+		        <pre> 
+7
+1
+		        </pre> 
+		    </div> 
+		    <div style="clear: both;"></div> 
+		</div> 
+ 
+	</div></body></html>

@@ -1,0 +1,35 @@
+1
+100 2 burger fries
+3
+2 burger burger
+2 burger fries
+3 burger fries fries
+1
+200 2 burger fries
+3
+2 burger burger
+2 fries burger
+3 fries fries burger
+2
+100 2 burger fries
+200 3 burger fries drink
+3
+2 burger burger
+3 burger drink fries
+6 burger burger fries burger fries drink
+3
+150 2 burger fries
+100 2 burger fries
+200 3 burger fries drink
+3
+2 burger burger
+2 fries burger
+3 fries burger drink
+3
+200 2 burger fries
+500 3 burger fries fries
+100 3 burger fries drink
+3
+2 burger burger
+4 burger fries burger fries
+2 burger fries drink
