@@ -1,6 +1,10 @@
 // DWITE - December 2011 - Problem 5: Tautology
 // Solution by Nayuki Minase
 
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
 
 public final class dwite201112p5 extends DwiteSolution {
 	
@@ -21,52 +25,85 @@ public final class dwite201112p5 extends DwiteSolution {
 	private static int NUM_ATOMS = 'j' - 'a' + 1;
 	
 	private static boolean isTautology(String formula) {
+		char[] rpnFormula;
+		try {
+			InputStream in = new ByteArrayInputStream(formula.getBytes("US-ASCII"));
+			StringBuilder sb = new StringBuilder();
+			toReversePolishNotation(in, sb);
+			rpnFormula = sb.toString().toCharArray();
+		} catch (IOException e) {
+			throw new AssertionError(e);
+		}
+		
 		for (int i = 0; i < (1 << NUM_ATOMS); i++) {
-			if (!evaluate(assignValues(formula, i)))
+			if (!evaluate(rpnFormula, i))
 				return false;
 		}
 		return true;
 	}
 	
 	
-	private static String assignValues(String formula, int values) {
-		for (int i = 0; i < NUM_ATOMS; i++)
-			formula = formula.replace((char)('a' + i), (((values >>> i) & 1) == 0) ? 'T' : 'F');
-		return formula;
+	private static void toReversePolishNotation(InputStream in, StringBuilder out) {
+		try {
+			char next = (char)in.read();
+			if (next >= 'a' && next <= 'a' + NUM_ATOMS - 1)
+				out.append(next);
+			else if (next == '~') {
+				toReversePolishNotation(in, out);
+				out.append('~');
+				
+			} else if (next == '(') {
+				toReversePolishNotation(in, out);  // Left
+				
+				if (in.read() != ' ')
+					throw new IllegalArgumentException();
+				char op = (char)in.read();
+				if (in.read() != ' ')
+					throw new IllegalArgumentException();
+				
+				toReversePolishNotation(in, out);  // Right
+				
+				if (in.read() != ')')
+					throw new IllegalArgumentException();
+				
+				switch (op) {
+					case '^':  out.append("&");  break;
+					case 'v':  out.append("|");  break;
+					default:   throw new IllegalArgumentException();
+				}
+				
+			} else
+				throw new IllegalArgumentException();
+			
+		} catch (IOException e) {
+			throw new AssertionError(e);
+		}
 	}
 	
 	
-	private static String[][] RULES = {
-		{"~F", "T"},
-		{"~T", "F"},
-		{"(F ^ F)", "F"},
-		{"(F ^ T)", "F"},
-		{"(T ^ F)", "F"},
-		{"(T ^ T)", "T"},
-		{"(F v F)", "F"},
-		{"(F v T)", "T"},
-		{"(T v F)", "T"},
-		{"(T v T)", "T"},
-	};
-	
-	private static boolean evaluate(String formula) {
-		boolean changed;
-		do {
-			changed = false;
-			for (String[] rule : RULES) {
-				String temp = formula.replace(rule[0], rule[1]);
-				if (!temp.equals(formula))
-					changed = true;
-				formula = temp;
-			}
-		} while (changed);
+	private static boolean evaluate(char[] rpnFormula, int values) {
+		boolean[] stack = new boolean[255];
+		int stackSize = 0;
 		
-		if (formula.equals("F"))
-			return false;
-		else if (formula.equals("T"))
-			return true;
-		else
+		for (int c : rpnFormula) {
+			if (c >= 'a' && c <= 'z') {
+				stack[stackSize] = ((values >>> (c - 'a')) & 1) != 0;
+				stackSize++;
+			} else if (c == '~')
+				stack[stackSize - 1] = !stack[stackSize - 1];
+			else if (c == '&') {
+				stack[stackSize - 2] = stack[stackSize - 2] && stack[stackSize - 1];
+				stackSize--;
+			} else if (c == '|') {
+				stack[stackSize - 2] = stack[stackSize - 2] || stack[stackSize - 1];
+				stackSize--;
+			} else
+				throw new IllegalArgumentException();
+		}
+		
+		if (stackSize != 1)
 			throw new IllegalArgumentException();
+		return stack[0];
 	}
 	
 }
