@@ -28,7 +28,7 @@ public final class dwite201112p2 extends DwiteSolution {
 	}
 	
 	
-	protected static BigInteger product(List<BigInteger> list) {
+	private static BigInteger product(List<BigInteger> list) {
 		BigInteger product = BigInteger.ONE;
 		for (BigInteger x : list)
 			product = product.multiply(x);
