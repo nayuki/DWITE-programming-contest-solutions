@@ -32,4 +32,4 @@
 3
 2 burger burger
 4 burger fries burger fries
-2 burger fries drink
+3 burger fries drink
