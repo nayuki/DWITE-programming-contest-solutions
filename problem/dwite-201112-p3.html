@@ -19,20 +19,20 @@
 			A generic fast-food chain had been cutting costs by hiring increasingly cheaper and less trained staff, so now they have a problem -- the cashiers can no longer be trusted to correctly apply combo discounts when customers do <em>want fries with that</em>. Management figures it would be the easiest to just let computers figure out if there's an applicable discount that could be applied to the order.
 		</p>
 		<p> 
-			The input file <strong>DATA3.txt</strong> will contain 5 test cases. Each case will begin with integer 0 &lt;= N &lt;= 10, number of deals available, followed by N lines in the form of <strong>&lt;discount&gt; &lt;num_items&gt; &lt;item1&gt; &lt;item2&gt; ...</strong> All of the prices are in cents, so $1.42 discount would be just an integer: 142. All items are described by a single word, separated by spaces. There will be at least one item, and no more than five. This quantity is described by second item -- num_items.
+			The input file <strong>DATA3.txt</strong> will contain 5 test cases. Each case will begin with the integer 0 &lt;= N &lt;= 10, number of deals available, followed by N lines in the form of <strong>&lt;discount&gt; &lt;num_items&gt; &lt;item1&gt; &lt;item2&gt; ...</strong> . All of the prices are in cents, so a $1.42 discount would be just the integer 142. All items are described by a single word, separated by spaces. There will be at least one item, and no more than five. This quantity is described by second token -- num_items.
 		</p>
 		<p>
-			E.g.: 142 3 burger fries drink
+			e.g.: 142 3 burger fries drink
 		</p>
 		<p>
-			This is followed by integer 1 &lt;= M &lt;= 10, the number of orders in current test case, followed by M lines, each in form of: <strong>&lt;num_items&gt; &lt;item1&gt; &lt;item2&gt; ...</strong>
+			This is followed by an integer 1 &lt;= M &lt;= 10, the number of orders in current test case, followed by M lines, each in form of: <strong>&lt;num_items&gt; &lt;item1&gt; &lt;item2&gt; ...</strong>
 		</p>
 		<p>
 			The output file <strong>OUT3.txt</strong> will print the largest sum of discounts applicable to each order. A discount is applicable if every item listed on the discount description also appears in the order, and every such item had not already contributed to another discount. If there are conflicting applicable discounts (e.g. burger1+drink, burger2+drink, and the order is burger1+burger2+drink), pick the configuration that will produce the largest sum.
 		</p>
 
 		<p>
-			<em>Sample's explanation:</em> first case doesn't have any discounts, so it's 0 for every line. Second case has two discounts available. 2-1: only "burger1+fries" is applicable, so discount 100. 2-2: both "burger1+fries" and "burger2+fries" are possible, but there is only one set of "fries", so we should pick the larger discount; that would be 150. 2-3: Same as previous, but now there are two sets of "fries", so we could separate the order into two separate discounts; 100+150 = 250. <strong>Ordered items don't necessary appear in the same order as the discount specification.</strong>
+			<em>Sample's explanation:</em> the first case doesn't have any discounts, so it's 0 for every line. The second case has two discounts available. 2-1: only "burger1+fries" is applicable, so discount 100. 2-2: both "burger1+fries" and "burger2+fries" are possible, but there is only one set of "fries", so we should pick the larger discount; that would be 150. 2-3: Same as previous, but now there are two sets of "fries", so we could separate the order into two separate discounts; 100+150 = 250. <strong>Ordered items don't necessary appear in the same order as the discount specification.</strong>
 		</p>
 
 		<div id="sample_data"> 
