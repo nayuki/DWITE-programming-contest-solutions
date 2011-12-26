@@ -43,41 +43,31 @@ public final class dwite201112p5 extends DwiteSolution {
 	}
 	
 	
-	private static void toReversePolishNotation(InputStream in, StringBuilder out) {
-		try {
-			char next = (char)in.read();
-			if (next >= 'a' && next <= 'a' + NUM_ATOMS - 1)
-				out.append(next);
-			else if (next == '~') {
-				toReversePolishNotation(in, out);
-				out.append('~');
-				
-			} else if (next == '(') {
-				toReversePolishNotation(in, out);  // Left
-				
-				if (in.read() != ' ')
-					throw new IllegalArgumentException();
-				char op = (char)in.read();
-				if (in.read() != ' ')
-					throw new IllegalArgumentException();
-				
-				toReversePolishNotation(in, out);  // Right
-				
-				if (in.read() != ')')
-					throw new IllegalArgumentException();
-				
-				switch (op) {
-					case '^':  out.append("&");  break;
-					case 'v':  out.append("|");  break;
-					default:   throw new IllegalArgumentException();
-				}
-				
-			} else
-				throw new IllegalArgumentException();
+	private static void toReversePolishNotation(InputStream in, StringBuilder out) throws IOException {
+		char next = (char)in.read();
+		
+		if (next >= 'a' && next <= 'a' + NUM_ATOMS - 1)  // Atom
+			out.append(next);
+		
+		else if (next == '~') {  // Unary negation
+			toReversePolishNotation(in, out);
+			out.append('~');
 			
-		} catch (IOException e) {
-			throw new AssertionError(e);
-		}
+		} else if (next == '(') {  // Binary operations
+			toReversePolishNotation(in, out);  // Left subformula
+			expect(in, ' ');
+			char op = (char)in.read();
+			expect(in, ' ');			
+			toReversePolishNotation(in, out);  // Right subformula
+			expect(in, ')');
+			switch (op) {
+				case '^':  out.append("&");  break;
+				case 'v':  out.append("|");  break;
+				default:   throw new IllegalArgumentException();
+			}
+			
+		} else
+			throw new IllegalArgumentException();
 	}
 	
 	
@@ -104,6 +94,12 @@ public final class dwite201112p5 extends DwiteSolution {
 		if (stackSize != 1)
 			throw new IllegalArgumentException();
 		return stack[0];
+	}
+	
+	
+	private static void expect(InputStream in, char c) throws IOException {
+		if (in.read() != c)
+			throw new IllegalArgumentException();
 	}
 	
 }
