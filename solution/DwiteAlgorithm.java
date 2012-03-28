@@ -49,7 +49,7 @@ public final class DwiteAlgorithm {
 			isPrime[2] = true;
 		for (int i = 3; i <= n; i += 2)
 			isPrime[i] = true;
-		for (int i = 3, end = DwiteAlgorithm.sqrt(n); i <= end; i += 2) {
+		for (int i = 3, end = sqrt(n); i <= end; i += 2) {
 			if (isPrime[i]) {
 				for (int j = i * 3; j <= n; j += i << 1)
 					isPrime[j] = false;
