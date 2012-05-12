@@ -1,0 +1,5 @@
+BBA
+BAB
+AAA
+AAB
+ABB

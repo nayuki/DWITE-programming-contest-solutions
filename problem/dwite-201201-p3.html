@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> 
+<html lang="en"><head> 
+ 
+	
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+		<title>DWITE - January 2012 - Breaking Bonds</title> 
+		<link href="stylish.css" media="screen" rel="Stylesheet" type="text/css"> 
+		<link href="stylish_print.css" media="print" rel="Stylesheet" type="text/css"> 
+	</head><body> 
+		<div id="content"> 
+		<div id="title">DWITE</div> 
+		<div id="problem_meta"> 
+		    <div id="date">January 2012</div> 
+		    <div id="problem_number">Problem 3</div> 
+		</div> 
+		<div id="problem_title">Breaking Bonds</div> 
+		
+		<p>
+			Brian is an expert organic chemist. He deals with compounds consisting of carbon atoms and bonds between them. He is given a compound that is connected: any two carbons are linked by some path of adjacent bonds. Notice that some carbons are connected by multiple bonds, and that they can form rings. With his incredible skills in organic synthesis, Brian is able to break one bond between any two carbons.
+		</p>
+		
+		<center> <img src = "dwite-201201-p3.png"/> </center>
+		
+		<p>
+			Brian would like to know how many ways he can choose one bond to break without disconnecting his compound. In this compound, allylbenzene, only the two marked bonds have this property. The carbons are numbered in some arbitrary way starting from 1, and the bonds are described by pairs of numbers.
+		</p>
+		
+		<p> 
+			The input file <strong>DATA3.txt</strong> will contain 5 test cases. Each test case will begin with 2 space-separated integers: <strong>C</strong> and <strong>B</strong>, the number of carbons and the number of bonds, respectively. Neither value will exceed 1000. <strong>B</strong> lines will follow, each containing 2 space-separated integers, describing the two ends of a bond.
+		</p> 
+		<p>
+			The output file <strong>OUT3.txt</strong> will contain 5 lines of output, a single integer for each test case: the number of edges that, when broken, will disconnect the compound.
+		</p>
+
+		<div id="sample_data"> 
+		    <div class="sample_in"> 
+		        Sample Input (first 2 cases):
+		        <pre> 
+<em>9 13</em>
+1 2
+1 2
+2 3
+3 4
+4 5
+5 6
+5 6
+6 7
+7 8
+7 8
+8 9
+9 4
+9 4
+<em>2 2</em>
+1 2
+2 1
+		        </pre> 
+		    </div> 
+		    <div class="sample_out"> 
+		        Sample Output:
+		        <pre> 
+2
+0
+		        </pre> 
+		    </div> 
+		    <div style="clear: both;"></div> 
+		</div> 
+ 
+	</div></body></html>
