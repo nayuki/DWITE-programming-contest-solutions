@@ -29,28 +29,28 @@ public final class dwite201012p4 extends DwiteSolution {
 		
 		// Initialize distances
 		int[][] distance = new int[HEIGHT + 2][WIDTH + 2];
-		for (int i = 0; i < HEIGHT; i++) {
-			for (int j = 0; j < WIDTH; j++) {
-				switch (map[i + 1][j + 1]) {
-					case 'T':  distance[i + 1][j + 1] = 999;  break;
-					case 'F':  distance[i + 1][j + 1] =   0;  break;
-					case '.':  distance[i + 1][j + 1] =   0;  break;
+		for (int i = 0; i < HEIGHT + 2; i++) {
+			for (int j = 0; j < WIDTH + 2; j++) {
+				switch (map[i][j]) {
+					case '.':  distance[i][j] = 999;  break;
+					case 'T':  distance[i][j] = 999;  break;
+					case 'F':  distance[i][j] =   0;  break;
 					default:  throw new IllegalArgumentException();
 				}
 			}
 		}
 		
-		// Compute all minimum distances
+		// Compute all minimum distances (Bellman-Ford)
 		for (int i = 0; i < WIDTH * HEIGHT; i++) {
 			for (int j = 0; j < HEIGHT; j++) {
 				for (int k = 0; k < WIDTH; k++) {
 					if (map[j + 1][k + 1] == 'T') {
-						int min = distance[j + 1][k + 1];
-						if (map[j + 1][k + 0] != '.') min = Math.min(distance[j + 1][k + 0] + 1, min);
-						if (map[j + 1][k + 2] != '.') min = Math.min(distance[j + 1][k + 2] + 1, min);
-						if (map[j + 0][k + 1] != '.') min = Math.min(distance[j + 0][k + 1] + 1, min);
-						if (map[j + 2][k + 1] != '.') min = Math.min(distance[j + 2][k + 1] + 1, min);
-						distance[j + 1][k + 1] = min;
+						int d = distance[j + 1][k + 1];
+						d = Math.min(distance[j + 1][k + 0] + 1, d);
+						d = Math.min(distance[j + 1][k + 2] + 1, d);
+						d = Math.min(distance[j + 0][k + 1] + 1, d);
+						d = Math.min(distance[j + 2][k + 1] + 1, d);
+						distance[j + 1][k + 1] = d;
 					}
 				}
 			}
@@ -59,8 +59,10 @@ public final class dwite201012p4 extends DwiteSolution {
 		// Find maximum distance
 		int max = 0;
 		for (int i = 0; i < HEIGHT; i++) {
-			for (int j = 0; j < WIDTH; j++)
-				max = Math.max(distance[i + 1][j + 1], max);
+			for (int j = 0; j < WIDTH; j++) {
+				if (map[i + 1][j + 1] == 'T')
+					max = Math.max(distance[i + 1][j + 1], max);
+			}
 		}
 		if (max != 999)
 			io.println(max);
