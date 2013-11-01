@@ -20,7 +20,7 @@ Below are two graphs:
 </p>
 <img src="graph_1.png" alt="first set of graphs" />
 <p>
-One on the left is <em>connected</em>, while the one on the right is <em>not connected</em> (there is no path from node 1 to node 3).
+The one on the left is <em>connected</em>, while the one on the right is <em>not connected</em> (there is no path from node 1 to node 3).
 </p>
 <p>
 An edge of a graph is called a <strong>bridge</strong> if by removing that edge the graph is no longer connected.
@@ -35,11 +35,11 @@ Edge 2-3 however, is not a bridge:
 <img src="graph_3.png" alt="third set of graphs" />
 
 <p>
-You are tasked with finding the number of edges, in a graph, that are bridges. You will be given 5 connected graphs, and you will output 5 single integers for the number of bridges found in graphs.
+You are tasked with finding the number of edges in a graph that are bridges. You will be given 5 connected graphs, and you will output 5 single integers for the number of bridges found in the graphs.
 </p>
 
 <p>
-The input file is <strong>DATA5.txt</strong>. First line will contain a single integer N, number of vertices. Vertices will be numbered 1 to N. 1 &lt;= N &lt;= 100 . Second line will contain a single integer M, number of edges. 0 &lt;= M &lt;= 1000 . Followed by M lines, each describing an edge. An edge is described by two integers, separated by a space. All edges are valid. This format will be repeated 5 times (that is, a line after the last edge of the 1st graph, will be a single integer, describing a number of vertices in the 2nd graph).
+The input file is <strong>DATA5.txt</strong>. The first line will contain a single integer N, the number of vertices. 1 &lt;= N &lt;= 100. Vertices will be numbered from 1 to N. The second line will contain a single integer M, the number of edges. 0 &lt;= M &lt;= 1000. This is followed by M lines, each describing an edge. An edge is described by two integers separated by a space. All edges are valid. This format will be repeated 5 times (that is, the line after the last edge of the 1st graph will be a single integer describing the number of vertices in the 2nd graph).
 </p>
 <p>
 The output file <strong>OUT5.txt</strong> will contain 5 lines, a single integer per line -- the number of bridges in the described graph.</p>
