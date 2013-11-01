@@ -1,0 +1,47 @@
+<html>
+<head>
+<link href="stylish.css" media="screen" rel="Stylesheet" type="text/css" />
+
+</head>
+<body>
+<div id="content">
+<div id="title">DWITE Online Computer Programming Contest</div>
+<div id="problem_meta">
+    <div id="date">November 2007</div>
+    <div id="problem_number">Problem 2</div>
+</div>
+<div id="problem_title">Show Me The Money!</div>
+
+<p>
+The task is to create a small application that will monitor financial transactions and keep a running total, displaying the balance at the end of each day. It should be assumed that the initial balance is zero, and balance is rolled over from one day to the next. Negative balance is a special event that will reset the balance to 0 at the end of that day.</p>
+<p>
+The input file <strong>DATA2.txt</strong> will contain five line, each no more than 255 characters long. Each line represents a stream of transactions with two possible characters <strong>+</strong> or <strong>-</strong> each representing addition and subtraction of one unit from the running balance.
+</p>
+<p>
+The output file <strong>OUT2.txt</strong> will contain five lines. Each line will have an integer, representing a balance at the end of that day's datastream. In a case that balance drops below 0 during any particular stream, <em>"OH NOES!"</em> should be printed to that line instead, and have the balance be reset back to 0, regardless of what follows on that line. Use the exact string output, all upper case, without quotes.
+</p>
+
+<div id="sample_data">
+    <div class="sample_in">
+        Sample Input:
+        <pre>
++++
+++-
+-----++++++++++
+++-+
+--++
+        </pre>
+    </div>
+    <div class="sample_out">
+        Sample Output:
+        <pre>
+3
+4
+OH NOES!
+2
+2
+        </pre>
+    </div>
+    <div style="clear:both;"></div>
+</div>
+</body>

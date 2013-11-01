@@ -1,0 +1,59 @@
+<html>
+<head>
+<link href="stylish.css" media="screen" rel="Stylesheet" type="text/css" />
+
+</head>
+<body>
+<div id="content">
+<div id="title">DWITE Online Computer Programming Contest</div>
+<div id="problem_meta">
+    <div id="date">November 2007</div>
+    <div id="problem_number">Problem 3</div>
+</div>
+<div id="problem_title">Floor Plan</div>
+
+<p>
+A common way to value a house, among other things, is by the area of the rooms. Though it could be less than trivial to accurately calculate the area of a room that is not in a standard shape. Given a floor plan diagram, with rooms of interest marked, their areas should be calculated.
+</p>
+<p>
+The input file <strong>DATA3.txt</strong> will contain two lines with one integer value each, R,C; 0 &lt; R, C &lt;= 40, representing the number of <em>Rows</em> and <em>Columns</em> that make up the floor plan. Followed by R lines, showing the floor plan layout, where:
+</p>
+<ul>
+<li># - wall</li>
+<li>. - open space</li>
+<li>{1..5} - integers 1 to 5, marking rooms of interest</li>
+</ul>
+
+<p>
+The output file <strong>OUT3.txt</strong> will contain 5 lines. Each line will have an integer representing the area of a room of interest. First line should contain the area of room 1, second line of room 2, etc.
+</p>
+<p>
+The area of the room is defined as 1 + number of adjacent open spaces. The integer marker could appear anywhere inside the room.
+</p>
+
+<div id="sample_data">
+    <div class="sample_in">
+        Sample Input:
+        <pre>
+5
+6
+1###..
+##4#5.
+2#####
+.#.#..
+...#.3
+        </pre>
+    </div>
+    <div class="sample_out">
+        Sample Output:
+        <pre>
+1
+6
+4
+1
+4
+        </pre>
+    </div>
+    <div style="clear:both;"></div>
+</div>
+</body>

@@ -1,0 +1,96 @@
+<html>
+<head>
+<link href="stylish.css" media="screen" rel="Stylesheet" type="text/css" />
+
+</head>
+<body>
+<div id="content">
+<div id="title">DWITE Online Computer Programming Contest</div>
+<div id="problem_meta">
+    <div id="date">November 2007</div>
+    <div id="problem_number">Problem 5</div>
+</div>
+<div id="problem_title">Bridges In A Graph</div>
+
+<p>
+A <strong>graph</strong> is a collection of nodes, called <strong>vertices</strong>, connected to each other in some fashion by <strong>edges</strong>. A graph is called <strong>connected</strong> if it is possible to find a path along edges from every point to every other point.
+</p>
+<p>
+Below are two graphs:
+</p>
+<img src="graph_1.png" alt="first set of graphs" />
+<p>
+One on the left is <em>connected</em>, while the one on the right is <em>not connected</em> (there is no path from node 1 to node 3).
+</p>
+<p>
+An edge of a graph is called a <strong>bridge</strong> if by removing that edge the graph is no longer connected.
+</p>
+<p>
+Edge 1-2 in the following graph is a bridge, since by removing it, the graph is no longer connected (no path from node 1 to any other node):
+</p>
+<img src="graph_2.png" alt="second set of graphs" />
+<p>
+Edge 2-3 however, is not a bridge:
+</p>
+<img src="graph_3.png" alt="third set of graphs" />
+
+<p>
+You are tasked with finding the number of edges, in a graph, that are bridges. You will be given 5 connected graphs, and you will output 5 single integers for the number of bridges found in graphs.
+</p>
+
+<p>
+The input file is <strong>DATA5.txt</strong>. First line will contain a single integer N, number of vertices. Vertices will be numbered 1 to N. 1 &lt;= N &lt;= 100 . Second line will contain a single integer M, number of edges. 0 &lt;= M &lt;= 1000 . Followed by M lines, each describing an edge. An edge is described by two integers, separated by a space. All edges are valid. This format will be repeated 5 times (that is, a line after the last edge of the 1st graph, will be a single integer, describing a number of vertices in the 2nd graph).
+</p>
+<p>
+The output file <strong>OUT5.txt</strong> will contain 5 lines, a single integer per line -- the number of bridges in the described graph.</p>
+
+<div id="sample_data">
+    <div class="sample_in">
+        Sample Input (only first of 5 cases shown):
+        <pre>
+6
+7
+1 2
+1 3
+1 4
+1 5
+3 5
+6 2
+6 1
+        </pre>
+    </div>
+    <div class="sample_out">
+        Sample Output (only first of 5 outputs shown):
+        <pre>
+1
+        </pre>
+    </div>
+    <div style="clear:both;"></div>
+</div>
+
+<p>
+<div id="note">
+    <div class="sample_in">
+        Explanation of Input:
+        <pre>
+6 - There are 6 vertices, numbered 1 2 3 4 5 6
+7 - There are 7 edges
+1 2 - Vertex 1 is connected to vertex 2
+1 3 - Vertex 1 is connected to vertex 3
+1 4 - Vertex 1 is connected to vertex 4
+1 5 - Vertex 1 is connected to vertex 5
+3 5 - Vertex 3 is connected to vertex 5
+6 2 - Vertex 6 is connected to vertex 2
+6 1 - Vertex 6 is connected to vertex 1
+        </pre>
+    </div>
+    <div class="sample_out">
+        The sample input would define the following graph:
+        <br/>
+        <img src="graph_4.png" alt="sample graph" />
+        <br/>
+        The only bridge is the edge 1-4.
+    </div>
+    <div style="clear:both;"></div>
+</div>
+</body>
