@@ -88,6 +88,10 @@ public final class dwite201110p3 extends DwiteSolution {
 				return false;
 		}
 		
+		public int hashCode() {
+			return new Double(x).hashCode() + new Double(y).hashCode();
+		}
+		
 	}
 	
 }
