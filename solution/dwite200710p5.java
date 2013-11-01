@@ -7,7 +7,6 @@
  */
 
 import java.util.ArrayDeque;
-import java.util.Arrays;
 import java.util.Queue;
 
 
@@ -24,9 +23,7 @@ public final class dwite200710p5 extends DwiteSolution {
 		int height = io.readIntLine();
 		int width  = io.readIntLine();
 		char[][] grid = io.readGridAndPad(width, height, '#');
-		int[][] distance = new int[grid.length][grid[0].length];
-		for (int[] row : distance)
-			Arrays.fill(row, Integer.MAX_VALUE);
+		int[][] distance = DwiteAlgorithm.newIntGrid(grid.length, grid[0].length, Integer.MAX_VALUE);
 		
 		// Find object locations
 		int exitX   = -1, exitY   = -1;

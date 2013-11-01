@@ -61,8 +61,8 @@ public final class DwiteAlgorithm {
 	
 	public static int[][] newIntGrid(int height, int width, int fill) {
 		int[][] result = new int[height][width];
-		for (int i = 0; i < height; i++)
-			Arrays.fill(result[i], fill);
+		for (int[] row : result)
+			Arrays.fill(row, fill);
 		return result;
 	}
 	

@@ -7,7 +7,6 @@
  */
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 
@@ -30,14 +29,9 @@ public final class dwite200502p4 extends DwiteSolution {
 		}
 		
 		// mincost[i][j] is the minimum cost of multiplying the chain of matrices from i (inclusive) to j (inclusive)
-		int[][] mincost = new int[dimensions.size() - 1][dimensions.size()];
-		int[][] maxcost = new int[dimensions.size() - 1][dimensions.size()];
-		
 		// Mark everything as uninitialized with -1
-		for (int i = 0; i < mincost.length; i++) {
-			Arrays.fill(mincost[i], -1);
-			Arrays.fill(maxcost[i], -1);
-		}
+		int[][] mincost = DwiteAlgorithm.newIntGrid(dimensions.size() - 1, dimensions.size(), -1);
+		int[][] maxcost = DwiteAlgorithm.newIntGrid(dimensions.size() - 1, dimensions.size(), -1);
 		
 		// Dynamic programming lies ahead
 		
