@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<title>DWITE - January 2008 - And the winner is...</title>
+		<link href="stylish.css" media="screen" rel="Stylesheet" type="text/css" />
+	</head>
+	<body>
+		<div id="content">
+		<div id="title">DWITE Online Computer Programming Contest</div>
+		<div id="problem_meta">
+		    <div id="date">January 2008</div>
+		    <div id="problem_number">Problem 2</div>
+		</div>
+		<div id="problem_title">And the winner is...</div>
+		
+		<p>
+			This one is quite straight-forward. Given a list of scores and names, sort the entries from highest score to lowest, to create the highscore table. The only caveat is that this must be an <strong>in-place sort</strong>, meaning that given two entries with the same score, one that appeared earlier in the original unsorted list will always be placed higher than the other entry with the same score.
+		</p>
+		<p>
+			The input file <strong>DATA2.txt</strong> will contain five sets of data, five lines each. Each line will be in the <strong>score name</strong> format. Score is an integer, 0 &lt;= s &lt;= 700. Name is a standard string, possibly including spaces.
+		</p>
+		<p>
+			The output file <strong>OUT2.txt</strong> will contain 25 lines -- five sorted sets. Only the name needs to be given per line.</p>
+		
+		<div id="sample_data">
+		    <div class="sample_in">
+		        Sample Input: (only first two sets shown)
+		        <pre>
+517 Byakuei
+549 O(256)
+571 Clan 345
+584 Beat Guru #1
+609 while (true)
+1 a
+700 b
+10 d
+700 c
+10 e
+		        </pre>
+		    </div>
+		    <div class="sample_out">
+		        Sample Output: (only first two sets shown)
+		        <pre>
+while (true)
+Beat Guru #1
+Clan 345
+O(256)
+Byakuei
+b
+c
+d
+e
+a
+		        </pre>
+		    </div>
+		    <div style="clear:both;"></div>
+		</div>
+
+	</body>
+</html>

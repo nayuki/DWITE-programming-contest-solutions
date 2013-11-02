@@ -1,0 +1,5 @@
+<a rel="nofollow">example link</a>
+<a rel="nofollow" href="http://dwite.ca/">link with rel tag</a>
+<a href="http://compsci.ca/" rel="nofollow">link with nofollow</a>
+<a href="http://compsci.ca/blog" rel="external nofollow">more rels</a>
+<a rel="nofollow">link</a>

@@ -1,0 +1,25 @@
+while (true)
+Beat Guru #1
+Clan 345
+O(256)
+Byakuei
+b
+a
+baz
+bar
+foo
+name
+name name
+name 3
+name 2
+name 1
+Tony
+Dan
+Martin
+Mazer
+octopi
+1st_spot
+2nd_spot
+3rd_spot
+4th_spot
+5th_spot

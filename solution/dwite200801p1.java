@@ -1,0 +1,26 @@
+/* 
+ * DWITE - January 2008 - Problem 1: Curve-shot
+ * Solution by Nayuki Minase
+ * 
+ * http://nayuki.eigenstate.org/page/dwite-programming-contest-solutions
+ * https://github.com/nayuki/DWITE-programming-contest-solutions
+ */
+
+
+public final class dwite200801p1 extends DwiteSolution {
+	
+	public static void main(String[] args) {
+		DwiteRunner.run("DATA1.txt", "OUT1.txt", new dwite200801p1());
+	}
+	
+	
+	protected void runOnce() {
+		io.tokenizeLine();
+		double angle = Math.toRadians(io.readIntToken());
+		int speed = io.readIntToken();
+		double time = speed * Math.sin(angle) / 9.81 * 2;
+		double distance = speed * time * Math.cos(angle);
+		io.println(Math.round(distance));
+	}
+	
+}

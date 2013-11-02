@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<title>DWITE - January 2008 - CurveShot</title>
+		<link href="stylish.css" media="screen" rel="Stylesheet" type="text/css" />
+	</head>
+	<body>
+		<div id="content">
+		<div id="title">DWITE Online Computer Programming Contest</div>
+		<div id="problem_meta">
+		    <div id="date">January 2008</div>
+		    <div id="problem_number">Problem 1</div>
+		</div>
+		<div id="problem_title">Curve-shot</div>
+		
+		<p>
+			In a typical tactical shooting game, trajectory shots are fired from base to target. Given an angle of the aim and power of the shot, we are interested in the distance the projective will travel.
+		</p>
+		<img src="dwite-200801-p1.png" alt="crude trajectory diagram" />
+		<p>
+			Standard rules of physics apply. Shot is fired from the center of the base, at the initial velocity specified, in meters per second. The angle determines horizontal and vertical components of the velocity and is supplied in degrees. The target is on the same level as the base. Gravity supplies constant downward acceleration of 9.81 meters per second^2. There is no wind, or any friction.
+		</p>
+		<p>
+			The input file <strong>DATA1.txt</strong> will contain five lines, each in <strong>angle power</strong> format. Angle in degrees, an integer, 0 &lt;= d &lt;= 90. Power in meter per second, an integer, 0 &lt;= p &lt;= 100.
+		</p>
+		<p>
+			The output file <strong>OUT1.txt</strong> will contain five lines, each stating the expected distance, rounded to the nearest integer.
+		</p>
+		
+		<div id="sample_data">
+		    <div class="sample_in">
+		        Sample Input:
+		        <pre>
+10 100
+25 100
+40 100
+60 100
+85 100
+		        </pre>
+		    </div>
+		    <div class="sample_out">
+		        Sample Output:
+		        <pre>
+349
+781
+1004
+883
+177
+		        </pre>
+		    </div>
+		    <div style="clear:both;"></div>
+		</div>
+
+	</body>
+</html>
