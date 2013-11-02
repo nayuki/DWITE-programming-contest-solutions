@@ -1,0 +1,51 @@
+<html>
+<head>
+<link href="stylish.css" media="screen" rel="Stylesheet" type="text/css" />
+
+</head>
+<body>
+<div id="content">
+<div id="title">DWITE Online Computer Programming Contest</div>
+<div id="problem_meta">
+    <div id="date">December 2007</div>
+    <div id="problem_number">Problem 2</div>
+</div>
+<div id="problem_title">There's An Essay In My Code</div>
+
+<p>
+There's an issue of plagiarism in every academic course, but it seems to be more common in Computer Science classes, possibly because it's not as apparent to spot as, for example, in an English essay. Though a typical program still contains enough English text in string literals and comments, to be an equivalent of a small essay. The task is to extract just such text from a block of code.
+</p>
+<p>
+The input file <strong>DATA2.txt</strong> will contain five lines of input. Valid ASCII text. String literals will be in either &quot; or &#39; quotes. Comments will be C++ style: /* inline */ and // end of line. There will be no nested /* */ comments.
+</p>
+<p>
+The output file <strong>OUT2.txt</strong> will contain five lines, aggregating the text found on the matching lines of the input. The text is defined as any string literal and any comment. Blocks of text found in a line, should be joined together by spaces.
+</p>
+<p>
+	<em>Note:</em> No nested /* */ comments means there will not be a line of input similar to /* /* */ */. Comments found inside a string are deemed to be a part of the string. Strings found inside a comment will be deemed to be a part of the comment. One type of a string literal can contain another. See sample input for clarifications.
+</p>
+
+<div id="sample_data">
+    <div class="sample_in">
+        Sample Input:
+        <pre>
+function my_badly_named_function(); //this is a comment
+puts &quot;some string content&quot; //and comments
+go_go(&quot;gadget&quot; /* notice extra spaces */); //&quot;for inline comment&quot;
+&quot;nested &#39;strings&#39;&quot;
+/*just some //comments*/
+        </pre>
+    </div>
+    <div class="sample_out">
+        Sample Output:
+        <pre>
+this is a comment
+some string content and comments
+gadget  notice extra spaces  &quot;for inline comment&quot;
+nested &#39;strings&#39;
+just some //comments
+        </pre>
+    </div>
+    <div style="clear:both;"></div>
+</div>
+</body>

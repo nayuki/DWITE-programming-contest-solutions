@@ -1,0 +1,5 @@
+function just_end_comments(); //endline comment
+void main("string argument"); //joined with endline comment
+puts /*inline comments*/ 'and text';;
+function mix_it_up(/*commented "strings"*/); //are still 'comments'
+nested.nonsense "abc/* foo // bar */'def'" ///*baz"

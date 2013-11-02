@@ -1,0 +1,5 @@
+endline comment
+string argument joined with endline comment
+inline comments and text
+commented "strings" are still 'comments'
+abc/* foo // bar */'def' /*baz"
