@@ -1,0 +1,23 @@
+S---E     
+xxxxxxxxxx
+...       
+S .       
+. .       
+E..       
+xxxxxxxxxx
+..........
+S        |
+ `--E----`
+xxxxxxxxxx
+ .--o---  
+|   |   ` 
+S---o   | 
+|   |   | 
+ `--E---` 
+xxxxxxxxxx
+.---< >--E
+|       / 
+S--o--. | 
+  `o   Y  
+    `-`   
+xxxxxxxxxx
