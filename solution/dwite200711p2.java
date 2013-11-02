@@ -1,5 +1,5 @@
 /* 
- * DWITE - November 2009 - Problem 2: Show Me The Money!
+ * DWITE - November 2007 - Problem 2: Show Me The Money!
  * Solution by Nayuki Minase
  * 
  * http://nayuki.eigenstate.org/page/dwite-programming-contest-solutions

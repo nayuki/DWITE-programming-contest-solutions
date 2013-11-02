@@ -1,5 +1,5 @@
 /* 
- * DWITE - November 2009 - Problem 4: All Is Balanced
+ * DWITE - November 2007 - Problem 4: All Is Balanced
  * Solution by Nayuki Minase
  * 
  * http://nayuki.eigenstate.org/page/dwite-programming-contest-solutions

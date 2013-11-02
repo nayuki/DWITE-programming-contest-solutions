@@ -1,5 +1,5 @@
 /* 
- * DWITE - November 2009 - Problem 5: Bridges In A Graph
+ * DWITE - November 2007 - Problem 5: Bridges In A Graph
  * Solution by Nayuki Minase
  * 
  * http://nayuki.eigenstate.org/page/dwite-programming-contest-solutions

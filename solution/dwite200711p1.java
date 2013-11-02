@@ -1,5 +1,5 @@
 /* 
- * DWITE - November 2009 - Problem 1: Not Quite Prime
+ * DWITE - November 2007 - Problem 1: Not Quite Prime
  * Solution by Nayuki Minase
  * 
  * http://nayuki.eigenstate.org/page/dwite-programming-contest-solutions

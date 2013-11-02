@@ -1,5 +1,5 @@
 /* 
- * DWITE - November 2009 - Problem 3: Floor Plan
+ * DWITE - November 2007 - Problem 3: Floor Plan
  * Solution by Nayuki Minase
  * 
  * http://nayuki.eigenstate.org/page/dwite-programming-contest-solutions
