@@ -16,17 +16,17 @@
 		<div id="problem_title">Tetris!</div>
 		
 		<p>
-			You are working on a part of Tetris! playing AI that figures out the best move for the current piece, and one part of the information required for this decision is knowing the maximum number of lines that the current piece can score on a given board.
+			You are working on a part of Tetris!-playing AI that figures out the best move for the current piece, and one part of the information required for this decision is knowing the maximum number of lines that the current piece can score on a given board.
 		</p>
 		<p>
-			The board size is 10 units in width, and 6 in height. A line is complete when all 10 units across are filled with a game piece. It is made up on 2 possible characters:
+			The board size is 10 units in width and 6 in height. A line is complete when all 10 units across are filled with a game piece. It is made up on 2 possible characters:
 		</p>
 		<ul>
 			<li># - piece on a board</li>
 			<li>. - empty spot</li>
 		</ul>
 		<p>
-			Pieces in play are standard Tetris pieces, and the current game piece will be described in a 4 by 4 matrix, at the beginning of each data set. The pieces can rotate, and thus can be presented in any orientation. Same character map as the board applies. For example:
+			Pieces in play are standard Tetris pieces, and the current game piece will be described in a 4 by 4 matrix at the beginning of each data set. The pieces can rotate, and thus can be presented in any orientation. The same character map as the board applies. For example:
 		</p>
 		<pre>
 ....
@@ -35,13 +35,13 @@
 ....			
 		</pre>
 		<p>
-			The input file <strong>DATA5.txt</strong> will come in 5 sets, repeating the following pattern: 4 lines, 4 characters each, describing the current piece in play. Followed by 6 lines, 10 characters each, describing the current board.
+			The input file <strong>DATA5.txt</strong> will come in 5 sets, repeating the following pattern: 4 lines, 4 characters each, describing the current piece in play. This is followed by 6 lines, 10 characters each, describing the current board.
 		</p>
 		<p>
-			The output file <strong>OUT5.txt</strong> will contain 5 lines -- a maximum number of lines that a piece can score.
+			The output file <strong>OUT5.txt</strong> will contain 5 lines -- the maximum number of lines that the piece can score.
 		</p>
 		<p>
-			<em>Note:</em> The piece starts dropping from above the supplied 6x10 board, and cannot be moved sideways during the fall. That is, you need concern yourself only with the vertical drop.
+			<em>Note:</em> The piece starts dropping from above the supplied 6x10 board, and cannot be moved sideways during the fall. That is, you need to concern yourself only with the vertical drop.
 		</p>
 		<div id="sample_data">
 		    <div class="sample_in">
