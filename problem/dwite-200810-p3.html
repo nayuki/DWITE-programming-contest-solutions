@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en"><head>
+
+	
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<title>DWITE - October 2008 - School's a maze</title>
+		<link href="stylish.css" media="screen" rel="Stylesheet" type="text/css">
+	</head><body>
+		<div id="content">
+		<div id="title">DWITE Online Computer Programming Contest</div>
+		<div id="problem_meta">
+		    <div id="date">October 2008</div>
+		    <div id="problem_number">Problem 3</div>
+		</div>
+		<div id="problem_title">School's a maze</div>
+		
+		<pre>
+#########A#########
+#...#.........#...#
+#...#.#######.#...#
+#..B#.#FGHIJ#.#E..#
+#.................#
+#####.#######.#####
+#.....#.....#.....#
+#..C#.#.....#.#D..#
+#...#.#.....#.#...#
+#####K#######L#####</pre>
+
+		<p>
+			Given this overly-imaginative layout of a tiny 5 room (1 of which happens to be missing a door) floorplan; letters ABCDEFGHIJKL mark the points of interest. Given a daily schedule, as a sequence of letters, how much would one have to walk, while taking the most optimal paths?
+		</p>
+		<p>
+			Walking is done on . (period)s and letters. There are no diagonal movement. <em>For reference:</em> distance between B to F is <strong>6</strong>. From F to J is <strong>4</strong>. And so the path BFJE will be <strong>16</strong>. If a letter is consecutively followed by itself (such as BB), the distance is 0.
+		</p>
+
+		<p>
+			The input file <strong>DATA3.txt</strong> will contain 10 lines, a copy of the <strong>same map</strong> as presented above. It will be followed by 5 more lines, each a string made up of mentioned capital letters (ABCDEFGHIJKL), 1 &lt;= N &lt; 20 in length, describing the schedule.
+		</p>
+		<p>
+			The output file <strong>OUT3.txt</strong> will contain 5 lines -- optimal distance travelled, for the plan specified.
+		</p>
+		<div id="sample_data">
+		    <div class="sample_in">
+		        Sample Input:
+		        <pre>#########A#########
+#...#.........#...#
+#...#.#######.#...#
+#..B#.#FGHIJ#.#E..#
+#.................#
+#####.#######.#####
+#.....#.....#.....#
+#..C#.#.....#.#D..#
+#...#.#.....#.#...#
+#####K#######L#####
+A
+ABBB
+ABCK
+FGHIJ
+KEBK</pre>
+		    </div>
+		    <div class="sample_out">
+		        Sample Output:
+		        <pre>0
+11
+25
+4
+38</pre>
+		    </div>
+		    <div style="clear: both;"></div>
+		</div>
+
+	</div></body></html>
