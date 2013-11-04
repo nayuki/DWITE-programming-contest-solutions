@@ -1,0 +1,10 @@
+/
+./
+/one/two/
+../
+/one/
+two/
+/one/
+two/../../three/../././../four/five/./
+/one/two/
+./../three/two/../two/
