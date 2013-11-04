@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en"><head>
+
+	
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<title>DWITE - January 2009 - Blow your mind with 4th D</title>
+		<link href="stylish.css" media="screen" rel="Stylesheet" type="text/css">
+	</head><body>
+		<div id="content">
+		<div id="title">DWITE Online Computer Programming Contest</div>
+		<div id="problem_meta">
+		    <div id="date">January 2008</div>
+		    <div id="problem_number">Problem 5</div>
+		</div>
+		<div id="problem_title">Blow your mind with 4th D</div>
+		
+		<p>
+			This should be fun -- this is another one of the <em>maze</em> questions, but this round it's set in 4D. <em>Woah!</em> Alright, don't freak out -- the depth is a constant 1, so you could think of it as a typical 2D maze that changes over time.
+		</p>
+
+    <p>
+      Each maze is a static 5x5 and uses pound signs # for walls and periods . for empty spaces. A for start, B for exit. Each time a step is made, the maze changes to the next frame, as specified in the input file. The valid directions are up/down, left/right + staying in place (skip to next frame); as long as there is no wall in space being moved to, in the next frame. Here's an example on 2x2 maze:
+    </p>
+    <pre>
+4 frames
+A# #. #. ##
+## ## ## #B
+  </pre>
+  <p>
+    The solution is: right, wait, down. Notice how in the first and last steps the maze closes down, forcing a move, while on the 2nd one must wait for a new path to open up. The entire maze expires as the frames end, so 4-1 = 3 is the maximum number of steps to a solution.
+  </p>
+		<p>
+			The input file <strong>DATA5.txt</strong> will contain 5 sets. The first line will specify the number of frames to a maze 1 &lt;= N &lt;= 25. The next N*5 lines will describe N frames of the maze, as explained above.
+		</p>
+		<p>
+			The output file <strong>OUT5.txt</strong> will contain 5 lines -- the shortest path from A to B.
+		</p>
+		<div id="sample_data">
+		    <div class="sample_in">
+		        Sample Input (2 of 5 shown):
+		        <pre>
+7
+#####
+##.##
+A...B
+#####
+#####
+#####
+##.##
+#...B
+#####
+#####
+#####
+##.##
+##..B
+#####
+#####
+#####
+##.##
+#####
+#####
+#####
+#####
+##.##
+....B
+#####
+#####
+#####
+##.##
+....B
+#####
+#####
+#####
+##.##
+....B
+#####
+#####
+3
+#####
+#####
+##A##
+#####
+#####
+#####
+#...#
+#.#.#
+#...#
+#####
+#####
+#####
+##B##
+#####
+#####
+		        </pre>
+		    </div>
+		    <div class="sample_out">
+		        Sample Output (2 of 5 shown):
+		        <pre>
+6
+2
+		        </pre>
+		    </div>
+		    <div style="clear: both;"></div>
+		</div>
+
+	</div></body></html>
