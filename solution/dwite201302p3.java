@@ -24,38 +24,23 @@ public final class dwite201302p3 extends DwiteSolution {
 				throw new IllegalArgumentException();
 		}
 		
-		// Cumulative row sums
-		int[][] cumSum = new int[n][n + 1];
-		for (int y = 0; y < n; y++) {
-			for (int x = 0; x < n; x++)
-				cumSum[y][x + 1] = cumSum[y][x] + (grid[y][x] == '#' ? 1 : 0);
-		}
-		
-		// Count triangles of all possible sizes and positions
 		int count = 0;
-		for (int size = 1; size <= n; size += 2) {
-			int height = size / 2 + 1;
-			for (int y = 0; y + height <= n; y++) {
-				for (int x = 0; x + size <= n; x++) {
-					if (hasTriangle(cumSum, size, x, y))
-						count++;
+		// largestTriangle[y][x+1] is the height of the largest triangle with the top at (x, y),
+		// thus the size of the largest triangle is max(2*k-1, 0)
+		int[][] largestTriangle = new int[n + 1][n + 2];
+		for (int y = n - 1; y >= 0; y--) {
+			for (int x = 0; x < n; x++) {
+				if (grid[y][x] == '#') {
+					int min = Integer.MAX_VALUE;
+					for (int i = -1; i <= 1; i++)
+						min = Math.min(largestTriangle[y + 1][x + 1 + i], min);
+					int height = min + 1;
+					largestTriangle[y][x + 1] = height;
+					count += height;
 				}
 			}
 		}
 		io.println(count);
-	}
-	
-	
-	private static boolean hasTriangle(int[][] cumSum, int size, int x, int y) {
-		int height = size / 2 + 1;
-		for (int i = 0; i < height; i++) {
-			int width = i * 2 + 1;
-			int offset = x + height - 1 - i;
-			int row = y + i;
-			if (cumSum[row][offset + width] - cumSum[row][offset] < width)
-				return false;
-		}
-		return true;
 	}
 	
 }
