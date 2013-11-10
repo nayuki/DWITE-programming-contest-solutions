@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> 
+<html lang="en"><head> 
+ 
+	
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+		<title>DWITE - November 2012 - Word Arithmetic</title> 
+		<link href="stylish.css" media="screen" rel="Stylesheet" type="text/css"> 
+		<link href="stylish_print.css" media="print" rel="Stylesheet" type="text/css"> 
+	</head><body> 
+		<div id="content"> 
+		<div id="title">DWITE</div> 
+		<div id="problem_meta"> 
+		    <div id="date">November 2012</div> 
+		    <div id="problem_number">Problem 2</div> 
+		</div> 
+		<div id="problem_title">Word Arithmetic</div> 
+		
+		<p>
+			Tommy always gets really bored during his English class. However, Tommy loves Math! He spends most of his free time adding two numbers together (it's actually really exciting!). One day he came up with a brilliant idea to both cure his boredom in English class, and to not get caught by his teacher: add words together! The way Tommy adds to words together is exactly how he would add two numbers:
+		</p>
+		<ul>
+			<li>Every letter represents a number: A = 0, B = 1, ..., Z = 25</li>
+			<li>Add the words one letter at a time from right to left</li>
+			<li>If the sum of two letters overflows (that is, greater than Z = 25), then the letter to write down will be the sum modulo (the remainder) 26, and the carry will be the quotient you get when you divide the sum by 26 (so essentially same as two numbers in base 26 instead of base 10).</li>
+		</ul>
+		<p>
+			For example, Z + Z = BY (since Z + Z = 50, and 50 modulo 26 is 24, which is Y, and the carry is the quotient you get when you divide 50 by 26, i.e. 1, which represents B).
+		</p>
+		<p>
+			Note that you don't want the answer to have any leading A (as that's equivalent to having leading 0s).
+		</p>
+		<p> 
+			The input file <strong>DATA2.txt</strong> will contain 5 test cases. Each case a line with two words, <strong>W1</strong> and <strong>W2</strong>, separated by a single space. Every word is at least 1 letter and no more than 254, made up of only upper case letters.
+		</p> 
+		<p>
+			The output file <strong>OUT2.txt</strong> will contain 5 lines of output. Each a single word representing <strong>W1 + W2</strong>, spelled in upper case.
+		</p>
+
+		<div id="sample_data"> 
+		    <div class="sample_in"> 
+		        Sample Input (first 3 shown):
+		        <pre> 
+CAT DOG
+MOM DAD
+ABA A
+		        </pre> 
+		    </div> 
+		    <div class="sample_out"> 
+		        Sample Output (first 3 shown):
+		        <pre> 
+FOZ
+POP
+BA
+		        </pre> 
+		    </div> 
+		    <div style="clear: both;"></div> 
+		</div> 
+		<p>
+			<em>Note on 3rd case:</em> words can be of different length. A = 0 so ABA + 0 shouldn't change, but leading 0s are removed. Since 010 = 10, the answer is 10 (that is, BA).
+		</p>
+ 
+	</div></body></html>

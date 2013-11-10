@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> 
+<html lang="en"><head> 
+ 
+	
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+		<title>DWITE - November 2012 - Sugar Rush</title> 
+		<link href="stylish.css" media="screen" rel="Stylesheet" type="text/css"> 
+		<link href="stylish_print.css" media="print" rel="Stylesheet" type="text/css"> 
+	</head><body> 
+		<div id="content"> 
+		<div id="title">DWITE</div> 
+		<div id="problem_meta"> 
+		    <div id="date">November 2012</div> 
+		    <div id="problem_number">Problem 1</div> 
+		</div> 
+		<div id="problem_title">Sugar Rush</div> 
+		
+		<p>
+			After collecting all the candy you could get at Halloween, you decided to eat all of that candy as fast as possible! However, after having eaten some of them you get a sugar rush, enabling you to eat the remaining pieces even faster! Before starting, you want to calculate how long it will take you to eat all of your candy. From previous Halloweens, you noticed that you start eating one piece of candy at a time (i.e. one piece per mouthful). However, after having eaten <strong>C</strong> pieces, the sugar rush kicks in and you can eat twice as many pieces of candy at a time. Then after having eaten another <strong>C</strong> pieces, the amount you can eat at a time is double yet again! This continues until you finish all of your candy!
+		</p>
+		<p>
+			<em>Note:</em> you can only get one sugar rush at a time, even if you eat 2*<strong>C</strong> pieces of candy in one go.
+		</p>
+		<p> 
+			The input file <strong>DATA1.txt</strong> will contain 5 test cases. Each test case is a line with two integers, 1 &lt;= N C &lt;= 100, representing the <strong>N</strong>umber of pieces of candy you have, and the <strong>C</strong>ount of pieces necessary for the sugar rush.
+		</p> 
+		<p>
+			The output file <strong>OUT1.txt</strong> will contain 5 lines of output. Each a single integer — the minimum number of mouthfuls necessary to eat all <strong>N</strong> pieces of candy, in each of the test cases.
+		</p>
+
+		<div id="sample_data"> 
+		    <div class="sample_in"> 
+		        Sample Input (first 2 shown):
+		        <pre> 
+10 1
+10 5
+		        </pre> 
+		    </div> 
+		    <div class="sample_out"> 
+		        Sample Output (first 2 shown):
+		        <pre> 
+4
+8
+		        </pre> 
+		    </div> 
+		    <div style="clear: both;"></div> 
+		</div> 
+
+		<p>
+			<em>Sample explanation:</em> in first case, the number of pieces doubles after each one. The entire batch is finished as <em>1 + 2 + 4 + 3 = 10</em>; just 4 steps. The last step could have been up to 8 pieces large, but only 3 pieces of candy remained at that point. Second case has only a single sugar rush that matters, one after 5 pieces. So the solution is <em>1 + 1 + 1 + 1 + 1 + 2 + 2 + 1 = 10</em>; 8 steps.
+		</p>
+ 
+	</div></body></html>
