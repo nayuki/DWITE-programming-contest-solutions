@@ -1,0 +1,44 @@
+1
+nancy alice
+3
+dan scooby
+david scooby
+troy shaggy
+10
+a casper
+b casper
+c casper
+d casper
+e casper
+f casper
+g casper
+h casper
+i casper
+j raiden
+5
+jim cowboy
+jane lolcat
+john catdog
+jack jill
+jill jack
+20
+a a
+b b
+c c
+d a
+f f
+g g
+h h
+w b
+i c
+j j
+k k
+l l
+m m
+n n
+o o
+t f
+e l
+z z
+y y
+x x

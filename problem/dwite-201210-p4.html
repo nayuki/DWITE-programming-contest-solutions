@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> 
+<html lang="en"><head> 
+ 
+	
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+		<title>DWITE - October 2012 - Trick or Tree'ing</title> 
+		<link href="stylish.css" media="screen" rel="Stylesheet" type="text/css"> 
+		<link href="stylish_print.css" media="print" rel="Stylesheet" type="text/css"> 
+	</head><body> 
+		<div id="content"> 
+		<div id="title">DWITE</div> 
+		<div id="problem_meta"> 
+		    <div id="date">October 2012</div> 
+		    <div id="problem_number">Problem 4</div> 
+		</div> 
+		<div id="problem_title">Trick or Tree'ing</div> 
+		
+		<p>
+			You just moved into a strange neighbourhood. You notice that the roads in your neighbourhood form a binary tree, with the houses forming the leaves of the tree. But this doesn't really matter to you, because it's all about the candy during Halloween! However having just moved in, you might end up getting lost. So you create a plan: start at the root of your neighbourhood and walk to every house and ask for candy! Before setting off on your adventure however, you want to calculate the minimum number of roads you’ll need to walk and the total amount of candy you'll get.
+		</p>
+		<p> 
+			The input file <strong>DATA4.txt</strong> will contain 5 test cases. Each test case is a line containing a single string, less than 256 characters long, describing the tree your neighbourhood forms. A binary tree can be recursively described as either:
+		</p> 
+		<ul>
+			<li>A leaf <em>c</em>, 1 &lt;= c &lt;= 20, the amount of candy received from the house</li>
+			<li><em>(t t)</em> - where <em>t</em> represents a tree</li>
+		</ul>
+		<p>
+			For example, a tree represented by ((1 5) 8) would look like:<br/>
+			<img src="dwite-201210-p4.png" />
+		</p>
+		<p>
+			The output file <strong>OUT4.txt</strong> will contain 5 lines of output, each a pair of integers <em>R</em> and <em>C</em>. <em>R</em> is the minimum number of roads needed to be traversed to get all the candy (starting from the root (top) of the tree, and not needing to return). <em>C</em> represents the total amount of candy you'll collect.
+		</p>
+
+		<div id="sample_data"> 
+		    <div class="sample_in"> 
+		        Sample Input (first 2 shown):
+		        <pre> 
+((1 5) 8)
+(1 3)
+		        </pre> 
+		    </div> 
+		    <div class="sample_out"> 
+		        Sample Output (first 2 shown):
+		        <pre> 
+6 14
+3 4
+		        </pre> 
+		    </div> 
+		    <div style="clear: both;"></div> 
+		</div> 
+ 
+	</div></body></html>

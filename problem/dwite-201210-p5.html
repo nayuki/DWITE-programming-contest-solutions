@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> 
+<html lang="en"><head> 
+ 
+	
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+		<title>DWITE - October 2012 - Haunted House</title> 
+		<link href="stylish.css" media="screen" rel="Stylesheet" type="text/css"> 
+		<link href="stylish_print.css" media="print" rel="Stylesheet" type="text/css"> 
+	</head><body> 
+		<div id="content"> 
+		<div id="title">DWITE</div> 
+		<div id="problem_meta"> 
+		    <div id="date">October 2012</div> 
+		    <div id="problem_number">Problem 5</div> 
+		</div> 
+		<div id="problem_title">Haunted House</div> 
+		
+		<p>
+			Let's get one thing straight: Halloween is <em>all</em> about the candy. And Little Billy is determined to get all of it. However, one of the neighbours seems to have had the same idea. They constructed a Haunted House to hide all of their candy so that only the truly worthy can get them. Little Billy managed to get his hands on the floor plan of house, and realized that this was no ordinary haunted house: it seems to be full of fake walls. Being his only imaginary friend who can program, help Little Billy get as much candy as possible as quickly as possible.
+		</p>
+		<p> 
+			The input file <strong>DATA5.txt</strong> will contain 5 test cases. The first line of each test case is an integer 3 &lt;= N &lt;= 10, the number of rows and columns in the floor plan, followed by <strong>N</strong> lines (each <strong>N</strong> characters long), describing the floor plan.
+		</p>
+		<ul>
+			<li>. - empty space</li>
+			<li># - unpassable wall</li>
+			<li>B - Billy's start location</li>
+			<li>* - piece of candy</li>
+			<li>a-f (low case letters) fake walls</li>
+		</ul>
+		<p>
+			Fake walls are unlockable only if Billy has already collected at least as much pieces of candy as the order of the letter. That is, door "a" requires at least 1 pieces of candy. "b" = 2. "f" = 6.
+		</p>
+		<p>
+			The output file <strong>OUT5.txt</strong> will contain 5 lines of output, each a pair of non-negative integers <strong>C</strong> and <strong>S</strong>. <strong>C</strong> is the maximum number of candy pieces that Billy can collect. <strong>S</strong> is the minumum number of steps to do so.
+		</p>
+
+		<div id="sample_data"> 
+		    <div class="sample_in"> 
+		        Sample Input (first 2 shown):
+		        <pre> 
+3
+B.*
+##b
+..*
+5
+B...*
+####a
+.**..
+#c#..
+#*#..
+		        </pre> 
+		    </div> 
+		    <div class="sample_out"> 
+		        Sample Output (first 2 shown):
+		        <pre> 
+1 2
+4 11
+		        </pre> 
+		    </div> 
+		    <div style="clear: both;"></div> 
+		</div>
+
+		<p>
+			<em>Sample explanation:</em> In in the first case, Billy collects the first piece on the second step, but that's not enough to make it through the wall "b". In the second case, Billy is able to collect all 4 pieces of candy.
+		</p>
+	</div></body></html>
