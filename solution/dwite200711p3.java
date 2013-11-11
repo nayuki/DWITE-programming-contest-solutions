@@ -14,13 +14,13 @@ import java.util.Queue;
 public final class dwite200711p3 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		DwiteRunner.run("DATA3.txt", "OUT3.txt", new dwite200711p3());
+		new dwite200711p3().run("DATA3.txt", "OUT3.txt");
 	}
 	
 	
 	private static int[][] DIRECTIONS = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
 	
-	public void run() {
+	protected void run() {
 		int height = io.readIntLine();
 		int width  = io.readIntLine();
 		char[][] grid = io.readGridAndPad(width, height, '#');

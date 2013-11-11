@@ -10,7 +10,7 @@
 public final class dwite201001p5 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		DwiteRunner.run("DATA5.txt", "OUT5.txt", new dwite201001p5());
+		new dwite201001p5().run("DATA5.txt", "OUT5.txt");
 	}
 	
 	
@@ -21,7 +21,7 @@ public final class dwite201001p5 extends DwiteSolution {
 	private int[][] distance;
 	
 	
-	public void run() {
+	protected void run() {
 		grid = io.readGridAndPad(WIDTH, HEIGHT, '#');
 		
 		for (int i = 0; i < 5; i++) {

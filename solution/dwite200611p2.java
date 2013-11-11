@@ -13,14 +13,14 @@ import java.util.List;
 public final class dwite200611p2 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		DwiteRunner.run("DATA21.txt", "OUT21.txt", new dwite200611p2());
+		new dwite200611p2().run("DATA21.txt", "OUT21.txt");
 	}
 	
 	
 	private List<Integer> winningNumbers;
 	
 	
-	public void run() {
+	protected void run() {
 		winningNumbers = readNumbers(io);
 		super.run();
 	}

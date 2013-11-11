@@ -12,11 +12,11 @@ import java.util.StringTokenizer;
 public final class dwite200801p5 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		DwiteRunner.run("DATA5.txt", "OUT5.txt", new dwite200801p5());
+		new dwite200801p5().run("DATA5.txt", "OUT5.txt");
 	}
 	
 	
-	public void run() {
+	protected void run() {
 		String[][] formulas = new String[5][5];  // First index is the letter, second index is the number
 		for (int i = 0; i < 5; i++) {
 			for (int j = 0; j < 5; j++)

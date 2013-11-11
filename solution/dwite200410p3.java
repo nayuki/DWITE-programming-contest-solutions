@@ -14,11 +14,11 @@ import java.util.List;
 public final class dwite200410p3 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		DwiteRunner.run("DATA3", "OUT3", new dwite200410p3());
+		new dwite200410p3().run("DATA3", "OUT3");
 	}
 	
 	
-	public void run() {
+	protected void run() {
 		// Read input
 		List<Student> students = new ArrayList<Student>();
 		int n = io.readIntLine();

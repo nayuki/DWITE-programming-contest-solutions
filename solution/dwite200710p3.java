@@ -10,7 +10,7 @@
 public final class dwite200710p3 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		DwiteRunner.run("DATA3.txt", "OUT3.txt", new dwite200710p3());
+		new dwite200710p3().run("DATA3.txt", "OUT3.txt");
 	}
 	
 	
@@ -18,7 +18,7 @@ public final class dwite200710p3 extends DwiteSolution {
 	private static final String QWERTY = "-=qwertyuiop[]asdfghjkl;'zxcvbnm,./_+QWERTYUIOP{}ASDFGHJKL:\"ZXCVBNM<>?";
 	
 	
-	public void run() {
+	protected void run() {
 		String str = io.readLine();
 		for (int i = 0; i < str.length(); i++) {
 			char c = str.charAt(i);

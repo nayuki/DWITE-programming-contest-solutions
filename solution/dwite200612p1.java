@@ -10,7 +10,7 @@
 public final class dwite200612p1 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		DwiteRunner.run("DATA11.txt", "OUT11.txt", new dwite200612p1());
+		new dwite200612p1().run("DATA11.txt", "OUT11.txt");
 	}
 	
 	

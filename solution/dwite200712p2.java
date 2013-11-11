@@ -13,7 +13,7 @@ import java.util.regex.Pattern;
 public final class dwite200712p2 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		DwiteRunner.run("DATA2.txt", "OUT2.txt", new dwite200712p2());
+		new dwite200712p2().run("DATA2.txt", "OUT2.txt");
 	}
 	
 	

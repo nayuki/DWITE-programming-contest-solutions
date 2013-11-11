@@ -12,7 +12,7 @@ import java.math.BigInteger;
 public final class dwite200612p4 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		DwiteRunner.run("DATA41.txt", "OUT41.txt", new dwite200612p4());
+		new dwite200612p4().run("DATA41.txt", "OUT41.txt");
 	}
 	
 	

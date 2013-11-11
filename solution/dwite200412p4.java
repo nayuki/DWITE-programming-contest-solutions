@@ -12,7 +12,7 @@ import java.util.Arrays;
 public final class dwite200412p4 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		DwiteRunner.run("DATA41.txt", "OUT41.txt", new dwite200412p4());
+		new dwite200412p4().run("DATA41.txt", "OUT41.txt");
 	}
 	
 	

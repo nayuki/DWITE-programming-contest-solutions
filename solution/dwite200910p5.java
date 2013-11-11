@@ -13,7 +13,7 @@ import java.util.List;
 public final class dwite200910p5 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		DwiteRunner.run("DATA5.txt", "OUT5.txt", new dwite200910p5());
+		new dwite200910p5().run("DATA5.txt", "OUT5.txt");
 	}
 	
 	

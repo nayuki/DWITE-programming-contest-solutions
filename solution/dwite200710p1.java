@@ -10,11 +10,11 @@
 public final class dwite200710p1 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		DwiteRunner.run("DATA1.txt", "OUT1.txt", new dwite200710p1());
+		new dwite200710p1().run("DATA1.txt", "OUT1.txt");
 	}
 	
 	
-	public void run() {
+	protected void run() {
 		int n = io.readIntLine();
 		if (n < 2)
 			io.println("not");

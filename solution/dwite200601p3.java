@@ -16,11 +16,11 @@ import java.util.List;
 public final class dwite200601p3 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		DwiteRunner.run("DATA31.txt", "OUT31.txt", new dwite200601p3());
+		new dwite200601p3().run("DATA31.txt", "OUT31.txt");
 	}
 	
 	
-	public void run() {
+	protected void run() {
 		// Read input
 		int n = io.readIntLine();
 		Collection<Player> players = new ArrayList<Player>();

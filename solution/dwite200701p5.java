@@ -16,7 +16,7 @@ import java.util.Set;
 public final class dwite200701p5 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		DwiteRunner.run("DATA51.txt", "OUT51.txt", new dwite200701p5());
+		new dwite200701p5().run("DATA51.txt", "OUT51.txt");
 	}
 	
 	

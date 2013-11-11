@@ -14,7 +14,7 @@ import java.util.List;
 public final class dwite200611p4 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		DwiteRunner.run("DATA41.txt", "OUT41.txt", new dwite200611p4());
+		new dwite200611p4().run("DATA41.txt", "OUT41.txt");
 	}
 	
 	
@@ -23,7 +23,7 @@ public final class dwite200611p4 extends DwiteSolution {
 	
 	
 	@SuppressWarnings("unchecked")
-	public void run() {
+	protected void run() {
 		// Read grid
 		int[][] money = new int[HEIGHT][WIDTH];
 		for (int y = 0; y < HEIGHT; y++) {

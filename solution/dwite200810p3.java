@@ -13,14 +13,14 @@ import java.util.Queue;
 public final class dwite200810p3 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		DwiteRunner.run("DATA3.txt", "OUT3.txt", new dwite200810p3());
+		new dwite200810p3().run("DATA3.txt", "OUT3.txt");
 	}
 	
 	
 	private char[][] grid;
 	private int[][] points;  // For letters A to L
 	
-	public void run() {
+	protected void run() {
 		// Read grid and find points
 		grid = io.readGridAndPad(19, 10, '#');
 		points = new int[12][];

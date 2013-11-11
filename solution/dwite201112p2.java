@@ -14,7 +14,7 @@ import java.util.List;
 public final class dwite201112p2 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		DwiteRunner.run("DATA2.txt", "OUT2.txt", new dwite201112p2());
+		new dwite201112p2().run("DATA2.txt", "OUT2.txt");
 	}
 	
 	

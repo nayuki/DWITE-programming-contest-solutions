@@ -33,7 +33,7 @@ public class DwiteTestUtils {
 		StringWriter out0 = new StringWriter();
 		PrintWriter out = new PrintWriter(out0, true);
 		
-		DwiteRunner.run(new DwiteIo(in, out), (DwiteSolution)clazz.newInstance());
+		((DwiteSolution)clazz.newInstance()).run(new DwiteIo(in, out));
 		
 		return out0.getBuffer().toString();
 	}

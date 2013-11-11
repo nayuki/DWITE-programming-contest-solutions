@@ -16,7 +16,7 @@ import java.util.Stack;
 public final class dwite200902p5 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		DwiteRunner.run("DATA5.txt", "OUT5.txt", new dwite200902p5());
+		new dwite200902p5().run("DATA5.txt", "OUT5.txt");
 	}
 	
 	

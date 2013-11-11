@@ -12,7 +12,7 @@ import java.util.Stack;
 public final class dwite200711p4 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		DwiteRunner.run("DATA4.txt", "OUT4.txt", new dwite200711p4());
+		new dwite200711p4().run("DATA4.txt", "OUT4.txt");
 	}
 	
 	

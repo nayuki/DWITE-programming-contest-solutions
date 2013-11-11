@@ -10,14 +10,14 @@
 public final class dwite200510p4 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		DwiteRunner.run("DATA41.txt", "OUT41.txt", new dwite200510p4());
+		new dwite200510p4().run("DATA41.txt", "OUT41.txt");
 	}
 	
 	
 	private char[][] grid;
 	
 	
-	public void run() {
+	protected void run() {
 		grid = io.readGridAndPad(30, 16, ' ');  // Read grid
 		calculateNeighboringMines();  // Process grid
 		super.run();  // Process queries

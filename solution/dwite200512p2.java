@@ -13,7 +13,7 @@ import java.util.Queue;
 public final class dwite200512p2 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		DwiteRunner.run("DATA21.txt", "OUT21.txt", new dwite200512p2());
+		new dwite200512p2().run("DATA21.txt", "OUT21.txt");
 	}
 	
 	

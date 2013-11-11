@@ -13,7 +13,7 @@ import java.util.Map;
 public final class dwite200512p5 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		DwiteRunner.run("DATA51.txt", "OUT51.txt", new dwite200512p5());
+		new dwite200512p5().run("DATA51.txt", "OUT51.txt");
 	}
 	
 	

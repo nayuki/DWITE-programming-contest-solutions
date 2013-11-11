@@ -10,11 +10,11 @@
 public final class dwite200710p2 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		DwiteRunner.run("DATA2.txt", "OUT2.txt", new dwite200710p2());
+		new dwite200710p2().run("DATA2.txt", "OUT2.txt");
 	}
 	
 	
-	public void run() {
+	protected void run() {
 		double base   = io.readDoubleLine();
 		double height = io.readDoubleLine();
 		io.println((int)Math.ceil(base * base * height / 3));

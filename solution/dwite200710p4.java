@@ -12,13 +12,13 @@ import java.util.Arrays;
 public final class dwite200710p4 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		DwiteRunner.run("DATA4.txt", "OUT4.txt", new dwite200710p4());
+		new dwite200710p4().run("DATA4.txt", "OUT4.txt");
 	}
 	
 	
 	private static final int INFINITY = Integer.MAX_VALUE - 1;
 	
-	public void run() {
+	protected void run() {
 		int height = io.readIntLine();
 		int numBlocks = io.readIntLine();
 		int[] minBlocks = new int[height + 1];

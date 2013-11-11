@@ -15,14 +15,14 @@ import java.util.TreeSet;
 public final class dwite200501p2 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		DwiteRunner.run("DATA21.txt", "OUT21.txt", new dwite200501p2());
+		new dwite200501p2().run("DATA21.txt", "OUT21.txt");
 	}
 	
 	
 	private char[][] grid;
 	
 	
-	public void run() {
+	protected void run() {
 		// Read input
 		io.tokenizeLine();
 		int h = io.readIntToken();

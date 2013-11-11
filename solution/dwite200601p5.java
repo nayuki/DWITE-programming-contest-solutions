@@ -17,14 +17,14 @@ import java.util.Queue;
 public final class dwite200601p5 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		DwiteRunner.run("DATA51.txt", "OUT51.txt", new dwite200601p5());
+		new dwite200601p5().run("DATA51.txt", "OUT51.txt");
 	}
 	
 	
 	private Graph graph;
 	
 	
-	public void run() {
+	protected void run() {
 		// Read input (the graph)
 		int n = io.readIntLine();
 		graph = new Graph();

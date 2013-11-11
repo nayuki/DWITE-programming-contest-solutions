@@ -10,13 +10,13 @@
 public final class dwite200810p1 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		DwiteRunner.run("DATA1.txt", "OUT1.txt", new dwite200810p1());
+		new dwite200810p1().run("DATA1.txt", "OUT1.txt");
 	}
 	
 	
 	private static final int MAX_HEIGHT = 5;
 	
-	public void run() {
+	protected void run() {
 		int[] sizes = new int[5];
 		for (int i = 0; i < sizes.length; i++)
 			sizes[i] = io.readIntLine();

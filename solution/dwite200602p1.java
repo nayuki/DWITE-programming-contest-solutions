@@ -10,7 +10,7 @@
 public final class dwite200602p1 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		DwiteRunner.run("DATA11.txt", "OUT11.txt", new dwite200602p1());
+		new dwite200602p1().run("DATA11.txt", "OUT11.txt");
 	}
 	
 	
@@ -18,7 +18,7 @@ public final class dwite200602p1 extends DwiteSolution {
 	private int[] py;
 	
 	
-	public void run() {
+	protected void run() {
 		// Read the points
 		int n = io.readIntLine();
 		px = new int[n];

@@ -10,7 +10,7 @@
 public final class dwite200911p5 extends DwiteSolution {
 	
 	public static void main(String[] args) {
-		DwiteRunner.run("DATA5.txt", "OUT5.txt", new dwite200911p5());
+		new dwite200911p5().run("DATA5.txt", "OUT5.txt");
 	}
 	
 	
@@ -22,7 +22,7 @@ public final class dwite200911p5 extends DwiteSolution {
 	private char[][] tempGrid;
 	
 	
-	public void run() {
+	protected void run() {
 		height = io.readIntLine();
 		width  = io.readIntLine();
 		grid = io.readGridAndPad(width, height, '#');
