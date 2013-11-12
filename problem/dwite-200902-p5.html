@@ -15,7 +15,7 @@
 		<div id="problem_title">Nash in Traffic</div>
 		
 		<p>
-			Nash had organized his friends to attend a Computer Science related conference, at some interesting location, but now they must all return back to their home (presumably at a less interesting location). Everybody is driving on their own, and there are enough people in the group such that having everybody take the same route would cause congestion and slow everyone down. Luckily there are multiple routes, so that the traffic could be split between the network of roads, ensuring that everybody gets back home equally fast.
+			John Forbes Nash Jr. had organized his friends to attend a computer science related conference at some interesting location, but now they must all return back to their home (presumably at a less interesting location). Everybody is driving on their own, and there are enough people in the group such that having everybody take the same route would cause congestion and slow everyone down. Luckily there are multiple routes so that the traffic could be split between the network of roads, ensuring that everybody gets back home equally fast.
 		</p>
 
     <p>
@@ -23,16 +23,16 @@
     </p>
 
 		<p>
-			The input file <strong>DATA5.txt</strong> will contain 5 sets of input. First line will contain an integer, 2 &lt;= p &lt;= 1000 number of people on a trip. The second line will say how many lines of input are to follow; 1 &lt;= n &lt;= 10. The next n lines describe roads available.
+			The input file <strong>DATA5.txt</strong> will contain 5 sets of input. The first line will contain an integer, 2 &lt;= p &lt;= 1000 denoting the number of people on a trip. The second line will say how many lines of input are to follow, 1 &lt;= n &lt;= 10. The next n lines describe the roads available.
 		</p>
 		<p>
-		  Each road's description is in the <strong>AB expression</strong> format. The flow is directional from node A to node B (can't backtrack or drive in reverse), and the <em>expression</em> describes the amount of time it will take to complete this segment. Some roads, which are prone to congestion of traffic, might have a variable <strong>x</strong> in their <em>expression</em> -- which stands for the number of people who choose to take this particular route.
+		  Each road's description is in the format <strong>AB expression</strong>. The flow is directional from node A to node B (can't backtrack or drive in reverse), and the <em>expression</em> describes the amount of time it will take to complete this segment. Some roads, which are prone to congestion of traffic, might have a variable <strong>x</strong> in their <em>expression</em>, which stands for the number of people who choose to take this particular route.
 		</p>
 		<p>
-		  <em>For example:</em> <strong>AB 1+x/100</strong> -- this route will take 1.01 if one person takes it, and 2.0 if 100 people do. There will be no roads that will take negative time to move across. Supported operations are +, -, *, /. There will be no brackets in expressions. Remember that Multiplication and Division come before Addition and Subtraction.
+		  <em>For example:</em> <strong>AB 1+x/100</strong> -- this route will take 1.01 amount of time if one person takes it, and 2.0 if 100 people do. There will be no roads that will take negative time to move across. Supported operations are +, -, *, /. There will be no brackets in expressions. Remember that multiplication and division come before addition and subtraction (order of operations).
 		</p>
 		<p>
-			The output file <strong>OUT5.txt</strong> will contain 5 lines of output -- an optimal time it would take to get everyone from A to Z. <em>Round your answers to the nearest integer.</em>
+			The output file <strong>OUT5.txt</strong> will contain 5 lines of output -- the optimal time it would take to get everyone from A to Z. <em>Round your answers to the nearest integer.</em>
 		</p>
 
 		<div id="sample_data">
@@ -62,14 +62,14 @@ CZ 1+x/100
 		</div>
 		
 		<p>
-		  <em>Explanation of the sample:</em> In the first case, there is only one path to be taken A-&gt;B-&gt;Z, so the time is 2 + (1+100/50) = 5. In the second case, there are two choices: A-&gt;B-&gt;Z and A-&gt;C-&gt;Z. The optimal strategy is to split the group 150:50 to get 1.5 + (1 + 150/100) = 4 or 2.5 + (1 + 50/100) = 4 drive time. To help you better visualize the second sample case, here's a diagram of it:
+		  <em>Explanation of the sample inputs:</em> In the first case, there is only one path to be taken A-&gt;B-&gt;Z, so the time is 2 + (1+100/50) = 5. In the second case, there are two choices: A-&gt;B-&gt;Z and A-&gt;C-&gt;Z. The optimal strategy is to split the group 150:50 to get 1.5 + (1 + 150/100) = 4 or 2.5 + (1 + 50/100) = 4 drive time. To help you better visualize the second sample case, here's a diagram of it:
 		</p>
 		<img src="dwite-200902-p5.png" alt="sample input rendered as a directional graph"/>
 		<p>
 		  <em>Remember to round your output to integer values.</em>
 		</p>
 		<p>
-		  <em>Hint:</em> everybody gets to Z <em>at the same time</em>.
+		  <em>Hint:</em> Everybody gets to Z <em>at the same time</em>.
 		</p>
 
 	</div></body></html>

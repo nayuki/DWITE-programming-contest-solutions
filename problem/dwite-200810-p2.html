@@ -15,16 +15,16 @@
 		<div id="problem_title">Simple Checksum</div>
 		
 		<p>
-			A checksum is a type of a simple error detection scheme, meant to catch incorrectly entered data, such as typos. Creditcards, for example, use <strong>Luhn algorithm</strong> to generate account numbers. Alternatively a checksum number could be a digit appended to the end of data that is being validated.
+			A checksum is a type of simple error detection scheme, meant to catch incorrectly entered data such as typos. Credit cards, for example, use the <strong>Luhn algorithm</strong> to generate account numbers. Alternatively, a checksum could be a digit appended to the end of a number that needs to be later validated.
 		</p>
 		<p>
-			A super-simple scheme used to validate <strong>6 digit</strong> student numbers is as follows:
+			A super-simple scheme used to validate <strong>6-digit</strong> student numbers is as follows:
 		</p>
 			<ul>
-			<li>Break the number up into 6 digits</li>
-			<li>Add up all the digits together to get a new number</li>
-			<li>Repeat the process until the result is only a single digit</li>
-			<li>Match the resulting digit to the capital letter of alphabet, in that position</li>
+			<li>Break the number up into 6 digits.</li>
+			<li>Add up all the digits together to get a new number.</li>
+			<li>Repeat the process until the result is only a single digit.</li>
+			<li>Match the resulting digit to the capital letter of alphabet, in that position.</li>
 			</ul>
 		<p>
 			<em>Example</em>
@@ -37,10 +37,10 @@
 		</pre>
 
 		<p>
-			The input file <strong>DATA2.txt</strong> will contain 5 lines, 6-digit positive integers, followed by a space and a capital letter. Numbers will not have leading zeros, and thus digits will never add up to 0.
+			The input file <strong>DATA2.txt</strong> will contain 5 lines, each being a 6-digit positive integer followed by a space and a capital letter. Numbers will not have leading zeros, and thus digits will never add up to 0.
 		</p>
 		<p>
-			The output file <strong>OUT2.txt</strong> will contain 5 lines, stating <strong>match</strong> or <strong>error</strong>, depending if the number generates the same checksum letter as supplied, or not.
+			The output file <strong>OUT2.txt</strong> will contain 5 lines, stating <strong>match</strong> or <strong>error</strong>, depending if the number generates the same checksum letter as supplied or not.
 		</p>
 		<div id="sample_data">
 		    <div class="sample_in">
