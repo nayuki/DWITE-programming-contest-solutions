@@ -6,7 +6,8 @@
  * https://github.com/nayuki/DWITE-programming-contest-solutions
  */
 
-import java.util.*;
+import java.util.Map;
+import java.util.TreeMap;
 
 
 public final class dwite201201p2 extends DwiteSolution {

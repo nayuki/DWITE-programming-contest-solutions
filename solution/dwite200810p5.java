@@ -35,13 +35,13 @@ public final class dwite200810p5 extends DwiteSolution {
 			items[i] = new Item(lines[0].length, j, Arrays.copyOf(lines, j));
 		}
 		
-		for (int i = (filled + 24) / 25; i < 30; i++) {  // Try an increasing number of boxes
+		for (int i = (filled + 24) / 25; i <= 10; i++) {  // Try an increasing number of boxes
 			if (fitsInBoxes(items, 0, new boolean[i][5][5])) {
 				io.println(i);
 				return;
 			}
 		}
-		throw new AssertionError();
+		throw new IllegalArgumentException();
 	}
 	
 	

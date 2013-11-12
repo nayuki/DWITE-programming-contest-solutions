@@ -40,7 +40,7 @@ public final class dwite201107p3 extends DwiteSolution {
 				distSqr(x2, y2, x0, y0),
 			};
 			Arrays.sort(sides);
-			if (!(sides[0] == 0 || sqr(sides[2] - sides[0] - sides[1]) == sides[0] * sides[1] * 4))  // Exclude degenerate triangles
+			if ((x1 - x0) * (y2 - y0) != (x2 - x0) * (y1 - y0))  // Exclude degenerate (zero-area) triangles
 				triangles.add(Arrays.asList(sides));
 		}}}}}}
 		io.println(triangles.size());
