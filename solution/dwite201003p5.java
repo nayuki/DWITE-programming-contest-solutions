@@ -15,41 +15,19 @@ public final class dwite201003p5 extends DwiteSolution {
 	
 	
 	protected void runOnce() {
-		int n = io.readIntLine();
-		
-		int[] a = new int[4];
-		while (true) {
-			// Check hash
-			if (hash(a) == n) {
-				char[] c = new char[4];
-				for (int i = 0; i < 4; i++)
-					c[i] = (char)(a[i] + 'A');
-				io.println(new String(c));
-				break;
+		int hash = io.readIntLine();
+		for (char a = 'A'; a <= 'Z'; a++) {
+		for (char b = 'A'; b <= 'Z'; b++) {
+		for (char c = 'A'; c <= 'Z'; c++) {
+		for (char d = 'A'; d <= 'Z'; d++) {
+			int k = a * 1000000 + b * 10000 + c * 100 + d;
+			int m = a * 11 + b * 101 + c * 1009 + d * 10007;
+			if (k % m == hash) {
+				io.println(new String(new char[]{a, b, c, d}));
+				return;
 			}
-			
-			// Increment
-			int i = a.length - 1;
-			while (i >= 0 && a[i] == 25) {
-				a[i] = 0;
-				i--;
-			}
-			if (i == -1)
-				throw new IllegalArgumentException("No match");
-			a[i]++;
-		}
-	}
-	
-	
-	private static int hash(int[] a) {
-		int[] n = new int[4];
-		for (int i = 0; i < 4; i++)
-			n[i] = a[i] + 'A';
-		
-		int k = n[0] * 1000000 + n[1] * 10000 + n[2] * 100 + n[3];
-		int m = n[0] * 11 + n[1] * 101 + n[2] * 1009 + n[3] * 10007;
-		
-		return k % m;
+		}}}}
+		throw new IllegalArgumentException("No match");
 	}
 	
 }
