@@ -62,7 +62,7 @@ public final class dwite201112p5 extends DwiteSolution {
 			toReversePolishNotation(in, out);  // Left subformula
 			expect(in, ' ');
 			char op = (char)in.read();
-			expect(in, ' ');			
+			expect(in, ' ');
 			toReversePolishNotation(in, out);  // Right subformula
 			expect(in, ')');
 			switch (op) {
