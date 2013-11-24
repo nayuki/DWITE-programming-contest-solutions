@@ -15,6 +15,7 @@ public final class dwite201211p5 extends DwiteSolution {
 	
 	
 	protected void runOnce() {
+		// Read input
 		io.tokenizeLine();
 		int cars = io.readIntToken();
 		int range = io.readIntToken();
@@ -22,23 +23,52 @@ public final class dwite201211p5 extends DwiteSolution {
 		for (int i = 0; i < heights.length; i++)
 			heights[i] = io.readIntLine();
 		
-		// minCover[i] is the triple (minimum number of guards, index of last guard, height of last guard) for covering cars 0 to i (inclusive)
-		int[][] minCover = new int[cars][3];
-		for (int i = 0; i < minCover.length; i++) {
-			// Put a guard here
-			minCover[i][0] = 1;
-			minCover[i][1] = i;
-			minCover[i][2] = heights[i];
-			int j;
-			for (j = 1; j <= range && i - j >= 0 && heights[i - j] <= heights[i]; j++);
-			if (i - j >= 0)
-				minCover[i][0] += minCover[i - j][0];
+		// minCover[i] is the minimum number of guards to cover cars 0 to i (inclusive) such that there is a guard on car i
+		int[] minCover = new int[cars];
+		for (int i = 0; i < cars; i++) {
+			// Find the minimum number of guards to cover cars 0 to i-1 (inclusive)
+			int min = Integer.MAX_VALUE / 2;
 			
-			// See if the previous solution was better
-			if (i > 0 && minCover[i - 1][0] < minCover[i][0] && i - minCover[i - 1][1] <= range && minCover[i - 1][2] >= heights[i])
-				minCover[i] = minCover[i - 1].clone();
+			// Try all possible positions for previous guard
+			middle:
+			for (int j = 1; j <= range * 2 + 1 && i - j >= 0; j++) {
+				for (int k = 1; k < j; k++) {
+					if (!canSee(heights, i - j, i - k) && !canSee(heights, i, i - k))
+						continue middle;
+				}
+				min = Math.min(minCover[i - j], min);
+			}
+			
+			if (i <= range && canSee(heights, i, 0))
+				min = 0;
+			minCover[i] = min + 1;
 		}
-		io.println(minCover[minCover.length - 1][0]);
+		
+		// Find optimal placement of last guard
+		int min = minCover[cars - 1];
+		for (int j = 1; j <= range && cars - 1 - j >= 0; j++) {
+			if (canSee(heights, cars - 1 - j, cars - 1))
+				min = Math.min(minCover[cars - 1 - j], min);
+		}
+		
+		io.println(min);
+	}
+	
+	
+	private static boolean canSee(int[] heights, int guard, int car) {
+		// Recall that the problem says the guard can't see past a taller car
+		if (car < guard) {
+			for (int i = guard - 1; i > car; i--) {
+				if (heights[i] > heights[guard])
+					return false;
+			}
+		} else if (guard < car) {
+			for (int i = guard + 1; i < car; i++) {
+				if (heights[i] > heights[guard])
+					return false;
+			}
+		}
+		return true;
 	}
 	
 }
