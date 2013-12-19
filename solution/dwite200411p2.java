@@ -15,9 +15,9 @@ public final class dwite200411p2 extends DwiteSolution {
 	
 	
 	protected void runOnce() {
-		int n = io.readIntLine();  // The total number of lots
-		int s = io.readIntLine();  // The size of a lot to choose
-		int csqrt = DwiteAlgorithm.sqrt(n) - DwiteAlgorithm.sqrt(s) + 1;  // The number of choices along one dimension
+		int n = io.readIntLine();  // Total number of lots
+		int s = io.readIntLine();  // Size of a lot to choose
+		int csqrt = DwiteAlgorithm.sqrt(n) - DwiteAlgorithm.sqrt(s) + 1;  // Number of choices along one dimension
 		io.println(csqrt * csqrt);
 	}
 	

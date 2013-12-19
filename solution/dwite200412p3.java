@@ -22,7 +22,7 @@ public final class dwite200412p3 extends DwiteSolution {
 		
 		// Compute and write output
 		double refldist = separation / Math.tan(Math.toRadians(angle));  // Horizontal distance between reflections
-		io.println((int)Math.floor(length / refldist + 0.5));
+		io.println((int)(length / refldist + 0.5));
 	}
 	
 }

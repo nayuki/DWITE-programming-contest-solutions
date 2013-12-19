@@ -20,16 +20,7 @@ public final class dwite200410p1 extends DwiteSolution {
 		double y1 = io.readDoubleToken();
 		double x2 = io.readDoubleToken();
 		double y2 = io.readDoubleToken();
-		io.printf("%.3f%n", 3.14159 * distanceSquared(x1, y1, x2, y2));
-	}
-	
-	
-	private static double distanceSquared(double x0, double y0, double x1, double y1) {
-		return magnitudeSquared(x0 - x1, y0 - y1);
-	}
-	
-	private static double magnitudeSquared(double x, double y) {
-		return x * x + y * y;
+		io.printf("%.3f%n", 3.14159 * ((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2)));
 	}
 	
 }

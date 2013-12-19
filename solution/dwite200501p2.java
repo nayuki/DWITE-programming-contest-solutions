@@ -6,10 +6,7 @@
  * https://github.com/nayuki/DWITE-programming-contest-solutions
  */
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.SortedSet;
-import java.util.TreeSet;
+import java.util.Arrays;
 
 
 public final class dwite200501p2 extends DwiteSolution {
@@ -19,40 +16,35 @@ public final class dwite200501p2 extends DwiteSolution {
 	}
 	
 	
-	private char[][] grid;
-	
-	
 	protected void run() {
 		// Read input
 		io.tokenizeLine();
 		int h = io.readIntToken();
 		int w = io.readIntToken();
-		grid = new char[h + 2][w + 2];  // Padded
-		Map<Character,Point> queries = new HashMap<Character,Point>();
+		char[][] grid = io.readGridAndPad(w, h, '.');
+		
+		// Find and process queries
+		int[] queriedMines = new int[5];
+		Arrays.fill(queriedMines, -1);
 		for (int y = 0; y < h; y++) {
-			String line = io.readLine();
 			for (int x = 0; x < w; x++) {
-				char c = line.charAt(x);
-				if (c >= 'a' && c <= 'z')
-					queries.put(c, new Point(x, y));
-				else if (c != '.' && c != '*')
-					throw new AssertionError("Invalid cell");
-				grid[y + 1][x + 1] = c;
+				char c = grid[y + 1][x + 1];
+				if (c >= 'a' && c - 'a' < queriedMines.length) {
+					if (queriedMines[c - 'a'] != -1)
+						throw new IllegalArgumentException();
+					queriedMines[c - 'a'] = countNeighborMines(grid, x, y);
+				}
 			}
 		}
 		
-		// Process queries and write output
-		SortedSet<Character> querykeys = new TreeSet<Character>(queries.keySet());
-		for (Character key : querykeys) {
-			Point p = queries.get(key);
-			int mines = countNeighborMines(p.x, p.y);
-			io.printf("%c-%d%n", key, mines);
-		}
+		// Write output
+		for (int i = 0; i < queriedMines.length; i++)
+			io.printf("%c-%d%n", (char)('a' + i), queriedMines[i]);
 	}
 	
 	
-	// Uses the Moore neighbourhood
-	private int countNeighborMines(int x, int y) {
+	// Uses the Moore/8-cell neighbourhood
+	private static int countNeighborMines(char[][] grid, int x, int y) {
 		int count = 0;
 		for (int dy = -1; dy <= 1; dy++) {
 			for (int dx = -1; dx <= 1; dx++) {
@@ -61,26 +53,6 @@ public final class dwite200501p2 extends DwiteSolution {
 			}
 		}
 		return count;
-	}
-	
-	
-	
-	private static class Point {
-		
-		public final int x;
-		public final int y;
-		
-		
-		public Point(int x, int y) {
-			this.x = x;
-			this.y = y;
-		}
-		
-		
-		public String toString() {
-			return String.format("(%d, %d)", x, y);
-		}
-		
 	}
 	
 }

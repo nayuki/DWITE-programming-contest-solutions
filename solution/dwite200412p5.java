@@ -14,7 +14,7 @@ public final class dwite200412p5 extends DwiteSolution {
 	}
 	
 	
-	private static final String[] provinces = {
+	private static final String[] PROVINCES = {
 		"British Columbia", "Alberta", "Saskatchewan", "Manitoba", "Ontario",
 		"Quebec", "Nova Scotia", "Newfoundland", "New Brunswick", "Prince Edward Island"
 	};
@@ -25,19 +25,19 @@ public final class dwite200412p5 extends DwiteSolution {
 		String line = normalize(io.readLine());
 		
 		// Find province at lowest index
-		int minindex = -1;
-		String minprovince = null;
-		for (String prov : provinces) {
+		int minIndex = -1;
+		String minProvince = null;
+		for (String prov : PROVINCES) {
 			int index = line.indexOf(normalize(prov));
-			if (index != -1 && (minindex == -1 || index < minindex)) {
-				minindex = index;
-				minprovince = prov;
+			if (index != -1 && (minIndex == -1 || index < minIndex)) {
+				minIndex = index;
+				minProvince = prov;
 			}
 		}
 		
 		// Write output
-		if (minindex != -1)
-			io.println(minprovince);
+		if (minIndex != -1)
+			io.println(minProvince);
 		else
 			io.println("NO PROVINCE FOUND");
 	}

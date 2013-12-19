@@ -6,8 +6,7 @@
  * https://github.com/nayuki/DWITE-programming-contest-solutions
  */
 
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Arrays;
 
 
 public final class dwite200501p1 extends DwiteSolution {
@@ -20,19 +19,19 @@ public final class dwite200501p1 extends DwiteSolution {
 	protected void run() {
 		// Read input
 		int n = io.readIntLine();
-		ArrayList<Golfer> golfers = new ArrayList<Golfer>();
+		Golfer[] golfers = new Golfer[n];
 		for (int i = 0; i < n; i++) {
 			String name = io.readLine();
 			int score = 0;
 			for (int j = 0; j < 9; j++)
 				score += io.readIntLine();
-			golfers.add(new Golfer(name, score));
+			golfers[i] = new Golfer(name, score);
 		}
 		
 		// Sort ascending and write the output
-		Collections.sort(golfers);
+		Arrays.sort(golfers);
 		for (int i = 0; i < 5; i++) {
-			Golfer golfer = golfers.get(i);
+			Golfer golfer = golfers[i];
 			io.printf("%s %d%n", golfer.name, golfer.score);
 		}
 	}
@@ -53,7 +52,7 @@ public final class dwite200501p1 extends DwiteSolution {
 		
 		public int compareTo(Golfer g) {
 			if (score != g.score)
-				return score - g.score;
+				return Integer.compare(score, g.score);
 			else
 				return name.compareTo(g.name);
 		}

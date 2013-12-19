@@ -16,25 +16,17 @@ public final class dwite200410p2 extends DwiteSolution {
 	
 	protected void runOnce() {
 		String line = io.readLine();
-		int hour = Integer.parseInt(line.substring(0, 2));
-		int minute = Integer.parseInt(line.substring(3, 5));
 		
-		String ap = getAmPm(hour);
-		hour = to12Hour(hour);
-		io.printf("%d:%02d %s%n", hour, minute, ap);
-	}
-	
-	
-	private static String getAmPm(int hour) {
-		if      ( 0 <= hour && hour < 12) return "AM";
-		else if (12 <= hour && hour < 24) return "PM";
-		else throw new IllegalArgumentException("Invalid 24-hour clock hour");
-	}
-	
-	
-	// Convert hour from [0, 24) to [1, 12] branchlessly using modular arithmetic magic
-	private static int to12Hour(int hour) {
-		return (hour + 11) % 12 + 1;
+		int hour = Integer.parseInt(line.substring(0, 2));
+		String ap;
+		if      ( 0 <= hour && hour < 12) ap = "AM";
+		else if (12 <= hour && hour < 24) ap = "PM";
+		else throw new IllegalArgumentException();
+		
+		// Convert hour from [0, 24) to [1, 12] branchlessly using modular arithmetic magic
+		hour = (hour + 11) % 12 + 1;
+		
+		io.printf("%d%s %s%n", hour, line.substring(2), ap);
 	}
 	
 }

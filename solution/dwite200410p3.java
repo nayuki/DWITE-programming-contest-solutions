@@ -6,9 +6,8 @@
  * https://github.com/nayuki/DWITE-programming-contest-solutions
  */
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.math.BigDecimal;
+import java.util.Arrays;
 
 
 public final class dwite200410p3 extends DwiteSolution {
@@ -20,22 +19,20 @@ public final class dwite200410p3 extends DwiteSolution {
 	
 	protected void run() {
 		// Read input
-		List<Student> students = new ArrayList<Student>();
 		int n = io.readIntLine();
+		Student[] students = new Student[n];
 		for (int i = 0; i < n; i++) {
 			io.tokenizeLine();
 			String name = io.readToken();
-			double height = io.readDoubleToken();
+			String height = io.readToken();
 			String unit = io.readToken();
-			students.add(new Student(name, height, unit));
+			students[i] = new Student(name, height, unit);
 		}
 		
 		// Sort by height and write names to output
-		Collections.sort(students);
-		for (int i = 0; i < 5; i++)
-			io.println(students.get(i).name);
-		
-		io.close();
+		Arrays.sort(students);
+		for (int i = 0; i < 5 && i < students.length; i++)
+			io.println(students[i].name);
 	}
 	
 	
@@ -43,28 +40,27 @@ public final class dwite200410p3 extends DwiteSolution {
 	private static class Student implements Comparable<Student> {
 		
 		public final String name;
-		public final double height;  // In millimetres
+		public final BigDecimal height;  // In millimetres
 		
 		
-		public Student(String name, double height, String unit) {
+		public Student(String name, String height, String unit) {
 			this.name = name;
-			if      (unit.equals( "m")) this.height = height * 1000;
-			else if (unit.equals("dm")) this.height = height *  100;
-			else if (unit.equals("cm")) this.height = height *   10;
-			else if (unit.equals("mm")) this.height = height *    1;
+			
+			BigDecimal h = new BigDecimal(height);
+			if      (unit.equals( "m")) h = h.movePointRight(3);
+			else if (unit.equals("dm")) h = h.movePointRight(2);
+			else if (unit.equals("cm")) h = h.movePointRight(1);
+			else if (unit.equals("mm")) h = h.movePointRight(0);
 			else throw new AssertionError("Invalid unit");
+			this.height = h;
 		}
 		
 		
-		public int compareTo(Student s) {  // Compares by descending height, then by ascending name
-			if (height != s.height)
-				return Double.compare(s.height, height);
+		public int compareTo(Student other) {  // Compares by descending height, then by ascending name
+			if (other.height.compareTo(height) != 0)
+				return other.height.compareTo(height);
 			else
-				return name.compareTo(s.name);
-		}
-		
-		public String toString() {
-			return String.format("%s (%.0f mm)", name, height);
+				return name.compareTo(other.name);
 		}
 		
 	}

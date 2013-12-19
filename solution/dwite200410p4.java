@@ -22,19 +22,17 @@ public final class dwite200410p4 extends DwiteSolution {
 		// Solve knapsack problem using dynamic programming
 		boolean[] possible = new boolean[capacity + 1];
 		possible[0] = true;
+		int maxpossible = 0;
 		for (int i = 0; i < files; i++) {
 			int filesize = io.readIntToken();  // Variable s_{i+1}
-			for (int j = capacity - filesize; j >= 0; j--)
-				possible[j + filesize] |= possible[j];
-		}
-		
-		// Write the largest possible total size
-		for (int i = capacity; i >= 0; i--) {
-			if (possible[i]) {  // Guaranteed to execute before the loop ends
-				io.println(i);
-				break;
+			for (int j = capacity - filesize; j >= 0; j--) {
+				if (possible[j]) {
+					possible[j + filesize] = true;
+					maxpossible = Math.max(j + filesize, maxpossible);
+				}
 			}
 		}
+		io.println(maxpossible);
 	}
 	
 }

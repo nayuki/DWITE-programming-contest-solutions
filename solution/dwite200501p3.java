@@ -17,20 +17,18 @@ public final class dwite200501p3 extends DwiteSolution {
 	protected void runOnce() {
 		// Read input
 		int start = io.readIntLine();
-		int end = io.readIntLine();
+		int end   = io.readIntLine();
 		
 		// Compute longest run
 		int longestRun = 0;
 		int currentRun = 0;
 		for (int i = start; i <= end; i++) {
-			if (i % getDigitSum(i) == 0)
+			if (i % getDigitSum(i) == 0) {
 				currentRun++;
-			else {
 				longestRun = Math.max(currentRun, longestRun);
+			} else
 				currentRun = 0;
-			}
 		}
-		longestRun = Math.max(currentRun, longestRun);
 		
 		// Write output
 		io.println(longestRun);

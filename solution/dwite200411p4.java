@@ -18,118 +18,121 @@ public final class dwite200411p4 extends DwiteSolution {
 	
 	
 	protected void runOnce() {
-		// Parse input
-		io.tokenizeLine();  // "sum = value"
-		expectNextToken(io, "sum");
-		expectNextToken(io, "=");
+		// Parse line: "sum = value"
+		io.tokenizeLine();
+		expectNextTokens("sum", "=");
 		int sum = io.readIntToken();
+		if (io.canReadToken())
+			throw new IllegalArgumentException();
 		
-		io.tokenizeLine();  // "For i = start To finish"
-		expectNextToken(io, "For");
-		expectNextToken(io, "i");
-		expectNextToken(io, "=");
+		// Parse line: "For i = start To finish"
+		io.tokenizeLine();
+		expectNextTokens("For", "i", "=");
 		int start = io.readIntToken();
-		expectNextToken(io, "To");
+		expectNextTokens("To");
 		int finish = io.readIntToken();
+		if (io.canReadToken())
+			throw new IllegalArgumentException();
 		
-		io.tokenizeLine();  // "sum = formula"
-		expectNextToken(io, "sum");
-		expectNextToken(io, "=");
-		List<Object> formula = new ArrayList<Object>();
-		while (io.canReadToken())
-			formula.add(io.readToken());
-		parseNumbers(formula);
+		// Parse line: "sum = formula"
+		io.tokenizeLine();
+		expectNextTokens("sum", "=");
+		Formula formula = new Formula(io);
+		if (io.canReadToken())
+			throw new IllegalArgumentException();
 		
-		io.tokenizeLine();  // "Next i"
-		expectNextToken(io, "Next");
-		expectNextToken(io, "i");
+		// Parse line: "Next i"
+		io.tokenizeLine();
+		expectNextTokens("Next", "i");
+		if (io.canReadToken())
+			throw new IllegalArgumentException();
 		
 		// Execute formula
 		for (int i = start; i <= finish; i++)
-			sum = evaluate(sum, i, formula);
+			sum = formula.evaluate(sum, i);
 		
 		// Write output
 		io.println(sum);
 	}
 	
 	
-	private static void parseNumbers(List<Object> formula) {
-		for (int i = 0; i < formula.size(); i++) {
-			Object token = formula.get(i);
-			if (token instanceof String) {
-				String tok = (String)token;
+	private void expectNextTokens(String... expectedTokens) {
+		for (String expTok : expectedTokens) {
+			String actualToken = io.readToken();
+			if (!expTok.equals(actualToken))
+				throw new AssertionError(String.format("Expected \"%s\", got \"%s\"", expTok, actualToken));
+		}
+	}
+	
+	
+	
+	private static class Formula {
+		
+		private List<Object> formula;
+		
+		
+		public Formula(DwiteIo io) {
+			// Parse formula from token stream
+			formula = new ArrayList<Object>();
+			while (io.canReadToken()) {
+				String tok = io.readToken();
 				if (tok.matches("\\d+"))
-					formula.set(i, Integer.parseInt(tok));
+					formula.add(Integer.parseInt(tok));
 				else if (tok.matches("\\(-?\\d+\\)"))
-					formula.set(i, Integer.parseInt(tok.substring(1, tok.length() - 1)));
-			}
-		}
-	}
-	
-	
-	private static int evaluate(int sum, int i, List<Object> formula) {
-		// Make a copy of the formula
-		formula = new ArrayList<Object>(formula);
-		
-		// Scan for multiplication and division
-		for (int j = 0; j < formula.size(); j++) {
-			Object token = formula.get(j);
-			if (token.equals("*") || token.equals("\\")) {
-				int x = getValue(sum, i, formula.get(j - 1));
-				int y = getValue(sum, i, formula.get(j + 1));
-				int z;
-				if (token.equals("*")) z = x * y;
-				else                   z = x / y;
-				// Replace x OP y with z
-				formula.subList(j - 1, j + 2).clear();
-				formula.add(j - 1, z);
-				j -= 2;
+					formula.add(Integer.parseInt(tok.substring(1, tok.length() - 1)));
+				else
+					formula.add(tok);
 			}
 		}
 		
-		// Scan for addition and subtraction
-		for (int j = 0; j < formula.size(); j++) {
-			Object token = formula.get(j);
-			if (token.equals("+") || token.equals("-")) {
-				int x = getValue(sum, i, formula.get(j - 1));
-				int y = getValue(sum, i, formula.get(j + 1));
-				int z;
-				if (token.equals("+")) z = x + y;
-				else                   z = x - y;
-				// Replace x OP y with z
-				formula.subList(j - 1, j + 2).clear();
-				formula.add(j - 1, z);
-				j -= 2;
-			}
-		}
 		
-		if (formula.size() != 1)
-			throw new IllegalArgumentException("Invalid formula");
-		else
-			return getValue(sum, i, formula.get(0));
-	}
-	
-	
-	private static int getValue(int sum, int i, Object token) {
-		if (token instanceof Integer)
-			return (Integer)token;
-		else if (token instanceof String) {
-			String tok = (String)token;
-			if (tok.equals("i"))
-				return i;
-			else if (tok.equals("sum"))
-				return sum;
+		private int evaluate(int sum, int i) {
+			// Make a copy of the formula
+			List<Object> formula = new ArrayList<Object>(this.formula);
+			
+			// Substitute variables
+			for (int j = 0; j < formula.size(); j++) {
+				Object obj = formula.get(j);
+				if (obj.equals("sum"))
+					formula.set(j, sum);
+				else if (obj.equals("i"))
+					formula.set(j, i);
+			}
+			
+			// Scan for multiplication and division
+			for (int j = 0; j < formula.size(); j++) {
+				Object tok = formula.get(j);
+				if (tok.equals("*") || tok.equals("\\")) {
+					int x = (Integer)formula.get(j - 1);
+					int y = (Integer)formula.get(j + 1);
+					int z = tok.equals("*") ? x * y : x / y;
+					// Replace (x OP y) with z
+					formula.subList(j - 1, j + 2).clear();
+					formula.add(j - 1, z);
+					j -= 2;
+				}
+			}
+			
+			// Scan for addition and subtraction
+			for (int j = 0; j < formula.size(); j++) {
+				Object tok = formula.get(j);
+				if (tok.equals("+") || tok.equals("-")) {
+					int x = (Integer)formula.get(j - 1);
+					int y = (Integer)formula.get(j + 1);
+					int z = tok.equals("+") ? x + y : x - y;
+					// Replace (x OP y) with z
+					formula.subList(j - 1, j + 2).clear();
+					formula.add(j - 1, z);
+					j -= 2;
+				}
+			}
+			
+			if (formula.size() != 1 || !(formula.get(0) instanceof Integer))
+				throw new IllegalArgumentException("Invalid formula");
 			else
-				throw new IllegalArgumentException("Not a value: " + tok);
-		} else
-			throw new IllegalArgumentException("Not a value: " + token);
-	}
-	
-	
-	private static void expectNextToken(DwiteIo io, String expectedToken) {
-		String actualToken = io.readToken();
-		if (!expectedToken.equals(actualToken))
-			throw new AssertionError(String.format("Expected \"%s\", got \"%s\"", expectedToken, actualToken));
+				return (Integer)formula.get(0);
+		}
+		
 	}
 	
 }

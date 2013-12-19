@@ -17,16 +17,16 @@ public final class dwite200501p5 extends DwiteSolution {
 	protected void runOnce() {
 		io.tokenizeLine();
 		String xstr = io.readToken();
-		String xbase = io.readToken();
-		int x = Integer.parseInt(xstr, Integer.parseInt(xbase));
+		int xbase = io.readIntToken();
+		int x = Integer.parseInt(xstr, xbase);
 		
 		io.tokenizeLine();
 		String ystr = io.readToken();
-		String ybase = io.readToken();
-		int y = Integer.parseInt(ystr, Integer.parseInt(ybase));
+		int ybase = io.readIntToken();
+		int y = Integer.parseInt(ystr, ybase);
 		
-		String outbase = io.readLine();
-		io.println(Integer.toString(x * y, Integer.parseInt(outbase)));
+		int outbase = io.readIntLine();
+		io.println(Integer.toString(x * y, outbase));
 	}
 	
 }

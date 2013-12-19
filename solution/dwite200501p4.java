@@ -14,33 +14,13 @@ public final class dwite200501p4 extends DwiteSolution {
 	}
 	
 	
-	private static final String[] months = {
-		"JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE",
-		"JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"
-	};
-	
-	private static final String[] daysOfWeek = {
-		"SATURDAY", "SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"
-	};
-	
-	
 	protected void runOnce() {
 		io.tokenizeLine();
 		int m = getMonth(io.readToken());
 		String daystr = io.readToken();
 		int d = Integer.parseInt(daystr.substring(0, daystr.length() - 1));
 		int y = io.readIntToken();
-		io.println(daysOfWeek[getDayOfWeek(y, m, d)]);
-	}
-	
-	
-	// Returns the month number corresponding to the string, starting with January = 1.
-	private static int getMonth(String s) {
-		for (int i = 0; i < months.length; i++) {
-			if (s.equals(months[i]))
-				return i + 1;
-		}
-		throw new IllegalArgumentException("Invalid month");
+		io.println(DAYS_OF_WEEK[getDayOfWeek(y, m, d)]);
 	}
 	
 	
@@ -57,5 +37,25 @@ public final class dwite200501p4 extends DwiteSolution {
 			dow += 7;
 		return dow;
 	}
+	
+	
+	// Returns the month number corresponding to the string, starting with January = 1.
+	private static int getMonth(String s) {
+		for (int i = 0; i < MONTHS.length; i++) {
+			if (s.equals(MONTHS[i]))
+				return i + 1;
+		}
+		throw new IllegalArgumentException("Invalid month");
+	}
+	
+	
+	private static final String[] MONTHS = {
+		"JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE",
+		"JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"
+	};
+	
+	private static final String[] DAYS_OF_WEEK = {
+		"SATURDAY", "SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"
+	};
 	
 }

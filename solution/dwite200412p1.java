@@ -22,7 +22,7 @@ public final class dwite200412p1 extends DwiteSolution {
 	private static String factor(int x) {
 		for (int i = 2, end = DwiteAlgorithm.sqrt(x); i <= end; i++) {
 			if (x % i == 0)
-				return String.format("%d*%s", i, factor(x / i));  // x is composite
+				return i + "*" + factor(x / i);  // x is composite
 		}
 		return Integer.toString(x);  // x is prime
 	}

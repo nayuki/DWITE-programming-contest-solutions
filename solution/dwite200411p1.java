@@ -24,9 +24,10 @@ public final class dwite200411p1 extends DwiteSolution {
 				digits[digits.length - 1] = i;
 				if (isLuhnValid(digits)) {  // Guaranteed to execute before the loop ends
 					io.printf("INVALID %d%n", digits[digits.length - 1]);
-					break;
+					return;
 				}
 			}
+			throw new AssertionError();
 		}
 	}
 	
@@ -34,10 +35,11 @@ public final class dwite200411p1 extends DwiteSolution {
 	private static boolean isLuhnValid(int[] digits) {
 		int sum = 0;
 		for (int i = 0; i < digits.length; i++) {
-			if ((i + digits.length) % 2 == 1)
-				sum += digits[i];
+			int d = digits[digits.length - 1 - i];
+			if (i % 2 == 0)
+				sum += d;
 			else
-				sum += digits[i] / 5 + digits[i] % 5 * 2;
+				sum += d / 5 + d % 5 * 2;
 		}
 		return sum % 10 == 0;
 	}
