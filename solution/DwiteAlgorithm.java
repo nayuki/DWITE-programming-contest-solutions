@@ -75,6 +75,13 @@ public final class DwiteAlgorithm {
 	}
 	
 	
+	// Von Neumann neighborhood directions (4 cells: cardinal directions only)
+	public static final int[][] FOUR_DIRECTIONS = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
+	
+	// Moore neighborhood directions (8 cells: cardinal directions and diagonals)
+	public static final int[][] EIGHT_DIRECTIONS = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}, {-1, -1}, {1, -1}, {-1, 1}, {1, 1}};
+	
+	
 	
 	private DwiteAlgorithm() {}
 	

@@ -17,8 +17,6 @@ public final class dwite200710p5 extends DwiteSolution {
 	}
 	
 	
-	private static int[][] DIRECTIONS = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
-	
 	protected void run() {
 		int height = io.readIntLine();
 		int width  = io.readIntLine();
@@ -54,7 +52,7 @@ public final class dwite200710p5 extends DwiteSolution {
 		queue.add(new int[]{exitX, exitY});
 		while (!queue.isEmpty()) {
 			int[] point = queue.remove();
-			for (int[] dir : DIRECTIONS) {
+			for (int[] dir : DwiteAlgorithm.FOUR_DIRECTIONS) {
 				int x = point[0] + dir[0];
 				int y = point[1] + dir[1];
 				int d = distance[point[1]][point[0]] + 1;
@@ -68,7 +66,7 @@ public final class dwite200710p5 extends DwiteSolution {
 		// Simulate the chase
 		for (int i = 1; ; i++) {
 			// Move human once
-			for (int[] dir : DIRECTIONS) {
+			for (int[] dir : DwiteAlgorithm.FOUR_DIRECTIONS) {
 				int x = humanX + dir[0];
 				int y = humanY + dir[1];
 				if (distance[y][x] < distance[humanY][humanX]) {
@@ -84,7 +82,7 @@ public final class dwite200710p5 extends DwiteSolution {
 			
 			// Move velociraptor twice
 			for (int j = 0; j < 2; j++) {
-				for (int[] dir : DIRECTIONS) {
+				for (int[] dir : DwiteAlgorithm.FOUR_DIRECTIONS) {
 					int x = raptorX + dir[0];
 					int y = raptorY + dir[1];
 					if (distance[y][x] < distance[raptorY][raptorX]) {

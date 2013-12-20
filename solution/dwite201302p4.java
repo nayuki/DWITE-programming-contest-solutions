@@ -14,7 +14,6 @@ public final class dwite201302p4 extends DwiteSolution {
 	}
 	
 	
-	private static int[][] AXES_DIRECTIONS = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
 	private static int[][] DIAGONAL_DIRECTIONS = {{-1, -1}, {1, -1}, {-1, 1}, {1, 1}};
 	
 	protected void runOnce() {
@@ -33,7 +32,7 @@ public final class dwite201302p4 extends DwiteSolution {
 					continue;
 				int neighbors = 0;
 				int axesNeighbors = 0;
-				for (int[] dir : AXES_DIRECTIONS) {
+				for (int[] dir : DwiteAlgorithm.FOUR_DIRECTIONS) {
 					int u = x + dir[0];
 					int v = y + dir[1];
 					if (u >= 0 && u < size && v >= 0 && v < size && grid[v][u] == '#') {

@@ -51,11 +51,9 @@ public final class dwite200510p2 extends DwiteSolution {
 	}
 	
 	
-	private static int[][] DIRECTIONS = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}, {-1, -1}, {1, -1}, {-1, 1}, {1, 1}};
-	
 	private int countLiveNeighbors(int x, int y) {
 		int count = 0;
-		for (int[] dir : DIRECTIONS) {
+		for (int[] dir : DwiteAlgorithm.EIGHT_DIRECTIONS) {
 			if (grid[y + dir[1]][x + dir[0]] == 'X')
 				count++;
 		}

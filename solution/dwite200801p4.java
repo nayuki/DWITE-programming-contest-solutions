@@ -17,8 +17,6 @@ public final class dwite200801p4 extends DwiteSolution {
 	}
 	
 	
-	private static int[][] DIRECTIONS = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}, {-1, -1}, {1, -1}, {-1, 1}, {1, 1}};
-	
 	protected void runOnce() {
 		char[][] grid = io.readGridAndPad(10, 10, '#');
 		int[][] distance = DwiteAlgorithm.newIntGrid(grid.length, grid[0].length, Integer.MAX_VALUE);
@@ -44,7 +42,7 @@ public final class dwite200801p4 extends DwiteSolution {
 		boolean done = false;
 		while (!queue.isEmpty() && !done) {
 			int[] point = queue.remove();
-			for (int[] dir : DIRECTIONS) {
+			for (int[] dir : DwiteAlgorithm.EIGHT_DIRECTIONS) {
 				int x = point[0] + dir[0];
 				int y = point[1] + dir[1];
 				int d = distance[point[1]][point[0]] + 1;

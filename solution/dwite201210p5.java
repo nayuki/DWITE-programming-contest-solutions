@@ -20,8 +20,6 @@ public final class dwite201210p5 extends DwiteSolution {
 	}
 	
 	
-	private static int[][] DIRECTIONS = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
-	
 	protected void runOnce() {
 		// Read input
 		int size = io.readIntLine();
@@ -65,7 +63,7 @@ public final class dwite201210p5 extends DwiteSolution {
 			BitSet candies = visit.candies;
 			int steps = visited[visit.y][visit.x].get(candies);
 			best = Math.max(candies.cardinality() << 8 | (0xFF - steps), best);
-			for (int[] dir : DIRECTIONS) {
+			for (int[] dir : DwiteAlgorithm.FOUR_DIRECTIONS) {
 				candies = visit.candies;
 				int x = visit.x + dir[0];
 				int y = visit.y + dir[1];

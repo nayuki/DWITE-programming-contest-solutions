@@ -48,8 +48,6 @@ public final class dwite200810p3 extends DwiteSolution {
 	}
 	
 	
-	private static int[][] DIRECTIONS = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
-	
 	private int distance(int[] start, int[] end) {
 		char[][] tempGrid = grid.clone();
 		for (int i = 0; i < tempGrid.length; i++)
@@ -66,7 +64,7 @@ public final class dwite200810p3 extends DwiteSolution {
 			if (point[0] == end[0] && point[1] == end[1])
 				return distance[point[1]][point[0]];
 			
-			for (int[] dir : DIRECTIONS) {
+			for (int[] dir : DwiteAlgorithm.FOUR_DIRECTIONS) {
 				int x = point[0] + dir[0];
 				int y = point[1] + dir[1];
 				int d = distance[point[1]][point[0]] + 1;

@@ -19,8 +19,6 @@ public final class dwite200802p4 extends DwiteSolution {
 	}
 	
 	
-	private static int[][] DIRECTIONS = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}, {-1, -1}, {1, -1}, {-1, 1}, {1, 1}};
-	
 	protected void runOnce() {
 		// Read input and pad with a space on all edges
 		List<String> lines = new ArrayList<String>();
@@ -59,7 +57,7 @@ public final class dwite200802p4 extends DwiteSolution {
 		queue.add(new int[]{startX, startY});
 		while (!queue.isEmpty()) {
 			int[] point = queue.remove();
-			for (int[] dir : DIRECTIONS) {
+			for (int[] dir : DwiteAlgorithm.EIGHT_DIRECTIONS) {
 				int x = point[0] + dir[0];
 				int y = point[1] + dir[1];
 				int d = distance[point[1]][point[0]] + 1;

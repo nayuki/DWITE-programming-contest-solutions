@@ -50,8 +50,6 @@ public final class dwite200510p4 extends DwiteSolution {
 	}
 	
 	
-	private static int[][] DIRECTIONS = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}, {-1, -1}, {1, -1}, {-1, 1}, {1, 1}};
-	
 	private int reveal(int x, int y, boolean[][] visited) {
 		if (visited[y][x] || grid[y][x] == ' ')
 			return 0;
@@ -61,7 +59,7 @@ public final class dwite200510p4 extends DwiteSolution {
 		visited[y][x] = true;
 		int result = 1;
 		if (grid[y][x] == '0') {
-			for (int[] dir : DIRECTIONS)
+			for (int[] dir : DwiteAlgorithm.EIGHT_DIRECTIONS)
 				result += reveal(x + dir[0], y + dir[1], visited);
 		}
 		return result;
@@ -70,7 +68,7 @@ public final class dwite200510p4 extends DwiteSolution {
 	
 	private int getMineNeighborCount(int x, int y) {
 		int count = 0;
-		for (int[] dir : DIRECTIONS) {
+		for (int[] dir : DwiteAlgorithm.EIGHT_DIRECTIONS) {
 			if (grid[y + dir[1]][x + dir[0]] == 'X')
 				count++;
 		}

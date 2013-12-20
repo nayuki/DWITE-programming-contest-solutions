@@ -42,8 +42,6 @@ public final class dwite200502p2 extends DwiteSolution {
 	}
 	
 	
-	private static int[][] DIRECTIONS = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}, {-1, -1}, {1, -1}, {-1, 1}, {1, 1}};
-	
 	private static Object[] markSnake(char[][] grid, int x, int y) {
 		boolean coiled = false;
 		int count = 0;
@@ -56,7 +54,7 @@ public final class dwite200502p2 extends DwiteSolution {
 			int[] point = queue.remove();
 			count++;
 			int neighbors = 0;
-			for (int[] dir : DIRECTIONS) {
+			for (int[] dir : DwiteAlgorithm.EIGHT_DIRECTIONS) {
 				x = point[0] + dir[0];
 				y = point[1] + dir[1];
 				if (grid[y][x] != '.') {

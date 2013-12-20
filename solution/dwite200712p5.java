@@ -17,8 +17,6 @@ public final class dwite200712p5 extends DwiteSolution {
 	}
 	
 	
-	private static int[][] DIRECTIONS = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
-	
 	private char[][] grid;
 	
 	protected void run() {
@@ -39,7 +37,7 @@ public final class dwite200712p5 extends DwiteSolution {
 			queue.add(point);
 			while (!queue.isEmpty()) {
 				point = queue.remove();
-				for (int[] dir : DIRECTIONS) {
+				for (int[] dir : DwiteAlgorithm.FOUR_DIRECTIONS) {
 					int nextX = point[0] + dir[0];
 					int nextY = point[1] + dir[1];
 					char c = tempGrid[nextY][nextX];
