@@ -25,53 +25,39 @@ public final class dwite200510p2 extends DwiteSolution {
 		grid = io.readGridAndPad(width, height, '.');
 		
 		// Compute and write output
-		for (int i = 0; i <= 100; i++) {
-			if (isBreakpoint(i))
-				io.println(countTotalAlive());
-			nextGeneration();
+		for (int i = 0; i < 100; i++) {
+			int alive = nextGeneration();
+			if (isBreakpoint(i + 1))
+				io.println(alive);
 		}
 	}
 	
 	
-	private void nextGeneration() {
+	private int nextGeneration() {
+		int alive = 0;
 		char[][] newGrid = new char[grid.length][grid[0].length];
 		for (int y = 1; y < grid.length - 1; y++) {
 			for (int x = 1; x < grid[0].length - 1; x++) {
 				int liveneigh = countLiveNeighbors(x, y);
-				if (grid[y][x] == '.' && liveneigh == 3)  // Birth
+				if (liveneigh == 3 || grid[y][x] == 'X' && liveneigh == 2) {
 					newGrid[y][x] = 'X';
-				else if (grid[y][x] == 'X' && (liveneigh < 2 || liveneigh > 3))  // Death
+					alive++;
+				} else
 					newGrid[y][x] = '.';
-				else  // Unchanged
-					newGrid[y][x] = grid[y][x];
 			}
 		}
-		for (int y = 1; y < grid.length - 1; y++)
-			System.arraycopy(newGrid[y], 1, grid[y], 1, grid[y].length - 2);
+		grid = newGrid;
+		return alive;
 	}
 	
+	
+	private static int[][] DIRECTIONS = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}, {-1, -1}, {1, -1}, {-1, 1}, {1, 1}};
 	
 	private int countLiveNeighbors(int x, int y) {
 		int count = 0;
-		if (grid[y - 1][x - 1] == 'X') count++;
-		if (grid[y - 1][x + 0] == 'X') count++;
-		if (grid[y - 1][x + 1] == 'X') count++;
-		if (grid[y + 0][x - 1] == 'X') count++;
-		if (grid[y + 0][x + 1] == 'X') count++;
-		if (grid[y + 1][x - 1] == 'X') count++;
-		if (grid[y + 1][x + 0] == 'X') count++;
-		if (grid[y + 1][x + 1] == 'X') count++;
-		return count;
-	}
-	
-	
-	private int countTotalAlive() {
-		int count = 0;
-		for (int y = 1; y < grid.length - 1; y++) {
-			for (int x = 1; x < grid[0].length - 1; x++) {
-				if (grid[y][x] == 'X')
-					count++;
-			}
+		for (int[] dir : DIRECTIONS) {
+			if (grid[y + dir[1]][x + dir[0]] == 'X')
+				count++;
 		}
 		return count;
 	}

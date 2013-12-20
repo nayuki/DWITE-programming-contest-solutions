@@ -1,3 +1,6 @@
+import java.util.ArrayDeque;
+import java.util.Queue;
+
 /* 
  * DWITE - February 2005 - Problem 2: Snakes
  * Solution by Nayuki Minase
@@ -14,84 +17,61 @@ public final class dwite200502p2 extends DwiteSolution {
 	}
 	
 	
-	private char[][] grid;
-	
-	
 	protected void runOnce() {
 		// Read input
 		io.tokenizeLine();
 		int height = io.readIntToken();
 		int width = io.readIntToken();
-		grid = io.readGridAndPad(width, height, '.');
+		char[][] grid = io.readGridAndPad(width, height, '.');
 		
 		// Find the largest snakes
 		int maxcoiled = 0;
 		int maxuncoiled = 0;
 		for (int y = 1; y <= height; y++) {
 			for (int x = 1; x <= width; x++) {
-				int temp = markSnakeAndGetLength(x, y);
-				if (isCurrentSnakeCoiled())
-					maxcoiled = Math.max(temp, maxcoiled);
-				else
-					maxuncoiled = Math.max(temp, maxuncoiled);
-				clearCurrentSnake();
+				if (grid[y][x] == 'X') {
+					Object[] temp = markSnake(grid, x, y);
+					if ((Boolean)temp[0])
+						maxcoiled = Math.max((Integer)temp[1], maxcoiled);
+					else
+						maxuncoiled = Math.max((Integer)temp[1], maxuncoiled);
+				}
 			}
 		}
-		
-		// Write output
 		io.printf("%d %d%n", maxcoiled, maxuncoiled);
 	}
 	
 	
-	private boolean isCurrentSnakeCoiled() {
-		for (int y = 1; y < grid.length - 1; y++) {
-			for (int x = 1; x < grid[y].length - 1; x++) {
-				if (grid[y][x] == 'O' && countCurrentNeighbors(x, y) >= 3)
-					return true;
-			}
-		}
-		return false;
-	}
+	private static int[][] DIRECTIONS = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}, {-1, -1}, {1, -1}, {-1, 1}, {1, 1}};
 	
-	
-	private int markSnakeAndGetLength(int x, int y) {
-		if (grid[y][x] != 'X')
-			return 0;
-		int count = 1;
-		grid[y][x] = 'O';
-		count += markSnakeAndGetLength(x - 1, y - 1);
-		count += markSnakeAndGetLength(x - 1, y + 0);
-		count += markSnakeAndGetLength(x - 1, y + 1);
-		count += markSnakeAndGetLength(x + 0, y - 1);
-		count += markSnakeAndGetLength(x + 0, y + 1);
-		count += markSnakeAndGetLength(x + 1, y - 1);
-		count += markSnakeAndGetLength(x + 1, y + 0);
-		count += markSnakeAndGetLength(x + 1, y + 1);
-		return count;
-	}
-	
-	
-	private int countCurrentNeighbors(int x, int y) {
+	private static Object[] markSnake(char[][] grid, int x, int y) {
+		boolean coiled = false;
 		int count = 0;
-		if (grid[y - 1][x - 1] == 'O') count++;
-		if (grid[y - 1][x + 0] == 'O') count++;
-		if (grid[y - 1][x + 1] == 'O') count++;
-		if (grid[y + 0][x - 1] == 'O') count++;
-		if (grid[y + 0][x + 1] == 'O') count++;
-		if (grid[y + 1][x - 1] == 'O') count++;
-		if (grid[y + 1][x + 0] == 'O') count++;
-		if (grid[y + 1][x + 1] == 'O') count++;
-		return count;
-	}
-	
-	
-	private void clearCurrentSnake() {
-		for (int y = 1; y < grid.length - 1; y++) {
-			for (int x = 1; x < grid[y].length - 1; x++) {
-				if (grid[y][x] == 'O')
-					grid[y][x] = '.';
+		
+		// Breadth-first search
+		Queue<int[]> queue = new ArrayDeque<int[]>();
+		grid[y][x] = 'O';
+		queue.add(new int[]{x, y});
+		while (!queue.isEmpty()) {
+			int[] point = queue.remove();
+			count++;
+			int neighbors = 0;
+			for (int[] dir : DIRECTIONS) {
+				x = point[0] + dir[0];
+				y = point[1] + dir[1];
+				if (grid[y][x] != '.') {
+					neighbors++;
+					if (grid[y][x] == 'X') {
+						grid[y][x] = 'O';
+						queue.add(new int[]{x, y});
+					}
+				}
 			}
+			if (neighbors >= 3)
+				coiled = true;
 		}
+		
+		return new Object[]{coiled, count};
 	}
 	
 }

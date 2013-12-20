@@ -17,24 +17,33 @@ public final class dwite200510p5 extends DwiteSolution {
 	protected void runOnce() {
 		// Read input
 		io.tokenizeLine();
-		int d1 = io.readIntToken();
-		int d2 = io.readIntToken();
+		int numDigits = io.readIntToken();
+		int divisor = io.readIntToken();
 		
 		// Compute
-		int[] digits = new int[d1];
-		int divisible = 0;
-		for (int i = 0, end = factorial(d1); i < end; i++) {
-			for (int j = 0; j < d1; j++)
+		int[] digits = new int[numDigits];
+		int count = 0;
+		for (int i = 0; i < FACTORIAL[numDigits]; i++) {
+			for (int j = 0; j < numDigits; j++)
 				digits[j] = j + 1;
 			permute(digits, i);
-			if (toNumber(digits) % d2 == 0)
-				divisible++;
+			if (toNumber(digits) % divisor == 0)
+				count++;
 		}
-		
-		// Write output
-		io.println(divisible);
+		io.println(count);
 	}
 	
+	
+	private static void permute(int[] array, int perm) {
+		// A modification of the Knuth shuffle
+		for (int i = array.length - 1; i >= 0; i--) {
+			int j = perm % (i + 1);
+			int temp = array[i];
+			array[i] = array[j];
+			array[j] = temp;
+			perm /= i + 1;
+		}
+	}
 	
 	
 	private static int toNumber(int[] digits) {
@@ -45,22 +54,6 @@ public final class dwite200510p5 extends DwiteSolution {
 	}
 	
 	
-	private static void permute(int[] array, int perm) {
-		// A modification of the Knuth shuffle
-		for (int i = array.length - 1; i >= 0; i--) {
-			int temp = array[i];
-			array[i] = array[perm % (i + 1)];
-			array[perm % (i + 1)] = temp;
-			perm /= i + 1;
-		}
-	}
-	
-	
-	private static int factorial(int x) {
-		int prod = 1;
-		for (int i = 1; i <= x; i++)
-			prod *= i;
-		return prod;
-	}
+	private static final int[] FACTORIAL = {1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880};
 	
 }

@@ -18,22 +18,18 @@ public final class dwite200510p1 extends DwiteSolution {
 	
 	protected void runOnce() {
 		// Read input
-		int[] r1 = DwiteAlgorithm.toDigits(io.readLine());
+		int[] r1 = DwiteAlgorithm.toDigits(io.readLine());  // Base-10 digits in big-endian
 		int d1 = io.readIntLine();
 		int d2 = io.readIntLine();
 		
 		// Find the nearest next suitable odometer reading
 		int n1 = countOccurrences(r1, d1);
-		int[] r2 = r1.clone();
-		//r2 = solveSlow(n1, d2, r2);
-		r2 = solveFast(n1, d2, r2);
+//		int[] r2 = solveSlow(n1, d2, r2);
+		int[] r2 = solveFast(r1, n1, d2);
 		
 		// Compute distance from initial reading to target reading
-		BigInteger diff = toNumber(r2).subtract(toNumber(r1));
-		if (diff.compareTo(BigInteger.ZERO) < 0)
-			diff = diff.add(BigInteger.valueOf(10).pow(r1.length));
-		
-		// Write output
+		BigInteger diff = new BigInteger(toString(r2)).subtract(new BigInteger(toString(r1)));
+		diff = diff.mod(BigInteger.TEN.pow(r1.length));
 		io.printf("%s %d%n", toString(r2), diff);
 	}
 	
@@ -46,14 +42,15 @@ public final class dwite200510p1 extends DwiteSolution {
 	}
 	
 	
-	private static int[] solveFast(int n1, int d2, int[] r2) {
+	private static int[] solveFast(int[] r1, int n1, int d2) {
+		int[] r2 = r1.clone();
 		while (true) {
 			int n2 = countOccurrences(r2, d2);
 			if (n2 == n1)  // Done!
 				break;
 			else if (n2 < n1) {
 				// Try to set a lower-order non-d2 digit to d2
-				for (int i = r2.length-1; i >= 0; i--) {
+				for (int i = r2.length - 1; i >= 0; i--) {
 					if (r2[i] < d2) {
 						// Set digit directly to d2. n2 will be incremented.
 						r2[i] = d2;
@@ -67,8 +64,8 @@ public final class dwite200510p1 extends DwiteSolution {
 					}
 				}
 			} else {  // n2 > n1
-				// Increment a lower-order d2. n2 will be decremented.
-				for (int i = r2.length-1; i >= 0; i--) {
+				// Increment a lower-order d2. n2 will be decremented or stay the same.
+				for (int i = r2.length - 1; i >= 0; i--) {
 					if (r2[i] == d2) {
 						increment(r2, i);
 						break;
@@ -80,47 +77,36 @@ public final class dwite200510p1 extends DwiteSolution {
 	}
 	
 	
-	private static int countOccurrences(int[] digits, int digit) {
+	private static void increment(int[] digits, int index) {
+		while (true) {
+			if (index < 0)
+				return;
+			else if (digits[index] != 9)
+				break;
+			else {
+				digits[index] = 0;
+				index--;
+			}
+		}
+		digits[index]++;
+	}
+	
+	
+	private static int countOccurrences(int[] digits, int val) {
 		int count = 0;
 		for (int i = 0; i < digits.length; i++) {
-			if (digits[i] == digit)
+			if (digits[i] == val)
 				count++;
 		}
 		return count;
 	}
 	
 	
-	private static void increment(int[] digits, int index) {
-		if (index < 0)
-			return;
-		digits[index]++;
-		while (digits[index] == 10) {
-			digits[index] = 0;
-			if (index - 1 >= 0)
-				digits[index - 1]++;
-			else
-				break;
-			index--;
-		}
-	}
-	
-	
-	private static BigInteger toNumber(int[] digits) {
-		final BigInteger TEN = BigInteger.valueOf(10);
-		BigInteger sum = BigInteger.ZERO;
-		for (int i = 0; i < digits.length; i++) {
-			sum = sum.multiply(TEN);
-			sum = sum.add(BigInteger.valueOf(digits[i]));
-		}
-		return sum;
-	}
-	
-	
 	private static String toString(int[] digits) {
-		StringBuilder sb = new StringBuilder();
+		char[] temp = new char[digits.length];
 		for (int i = 0; i < digits.length; i++)
-			sb.append((char)('0' + digits[i]));
-		return sb.toString();
+			temp[i] = (char)('0' + digits[i]);
+		return new String(temp);
 	}
 	
 }

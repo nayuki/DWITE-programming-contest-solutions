@@ -19,7 +19,15 @@ public final class dwite200510p4 extends DwiteSolution {
 	
 	protected void run() {
 		grid = io.readGridAndPad(30, 16, ' ');  // Read grid
-		calculateNeighboringMines();  // Process grid
+		
+		// Calculate neighboring mines
+		for (int y = 1; y < grid.length - 1; y++) {
+			for (int x = 1; x < grid[0].length - 1; x++) {
+				if (grid[y][x] == '.')
+					grid[y][x] = (char)(getMineNeighborCount(x, y) + '0');
+			}
+		}
+		
 		super.run();  // Process queries
 	}
 	
@@ -27,7 +35,7 @@ public final class dwite200510p4 extends DwiteSolution {
 	protected void runOnce() {
 		// Read input
 		io.tokenizeLine();
-		int y = io.readIntToken();
+		int y = io.readIntToken();  // 1-based index, perfect for the padded grid
 		int x = io.readIntToken();
 		
 		// Make query and write output
@@ -42,45 +50,30 @@ public final class dwite200510p4 extends DwiteSolution {
 	}
 	
 	
+	private static int[][] DIRECTIONS = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}, {-1, -1}, {1, -1}, {-1, 1}, {1, 1}};
+	
 	private int reveal(int x, int y, boolean[][] visited) {
 		if (visited[y][x] || grid[y][x] == ' ')
 			return 0;
+		if (grid[y][x] == 'X')
+			throw new IllegalArgumentException();
+		
 		visited[y][x] = true;
 		int result = 1;
 		if (grid[y][x] == '0') {
-			result += reveal(x - 1, y - 1, visited);
-			result += reveal(x + 0, y - 1, visited);
-			result += reveal(x + 1, y - 1, visited);
-			result += reveal(x - 1, y + 0, visited);
-			result += reveal(x + 1, y + 0, visited);
-			result += reveal(x - 1, y + 1, visited);
-			result += reveal(x + 0, y + 1, visited);
-			result += reveal(x + 1, y + 1, visited);
+			for (int[] dir : DIRECTIONS)
+				result += reveal(x + dir[0], y + dir[1], visited);
 		}
 		return result;
 	}
 	
 	
-	private void calculateNeighboringMines() {
-		for (int y = 1; y < grid.length - 1; y++) {
-			for (int x = 1; x < grid[0].length - 1; x++) {
-				if (grid[y][x] == '.')
-					grid[y][x] = (char)(getMineNeighborCount(x, y) + '0');
-			}
-		}
-	}
-	
-	
 	private int getMineNeighborCount(int x, int y) {
 		int count = 0;
-		if (grid[y - 1][x - 1] == 'X') count++;
-		if (grid[y - 1][x + 0] == 'X') count++;
-		if (grid[y - 1][x + 1] == 'X') count++;
-		if (grid[y + 0][x - 1] == 'X') count++;
-		if (grid[y + 0][x + 1] == 'X') count++;
-		if (grid[y + 1][x - 1] == 'X') count++;
-		if (grid[y + 1][x + 0] == 'X') count++;
-		if (grid[y + 1][x + 1] == 'X') count++;
+		for (int[] dir : DIRECTIONS) {
+			if (grid[y + dir[1]][x + dir[0]] == 'X')
+				count++;
+		}
 		return count;
 	}
 	
