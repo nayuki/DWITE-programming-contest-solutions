@@ -1,8 +1,8 @@
 /* 
  * DWITE - February 2013 - Problem 4: Fencing Problems
- * Solution by Nayuki Minase
+ * Solution by Project Nayuki
  * 
- * http://nayuki.eigenstate.org/page/dwite-programming-contest-solutions
+ * http://www.nayuki.io/page/dwite-programming-contest-solutions
  * https://github.com/nayuki/DWITE-programming-contest-solutions
  */
 

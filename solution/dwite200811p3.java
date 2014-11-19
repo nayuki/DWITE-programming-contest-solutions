@@ -1,8 +1,8 @@
 /* 
  * DWITE - November 2008 - Problem 3: My drink is made of cubes
- * Solution by Nayuki Minase
+ * Solution by Project Nayuki
  * 
- * http://nayuki.eigenstate.org/page/dwite-programming-contest-solutions
+ * http://www.nayuki.io/page/dwite-programming-contest-solutions
  * https://github.com/nayuki/DWITE-programming-contest-solutions
  */
 
