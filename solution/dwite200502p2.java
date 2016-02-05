@@ -5,7 +5,7 @@ import java.util.Queue;
  * DWITE - February 2005 - Problem 2: Snakes
  * Solution by Project Nayuki
  * 
- * http://www.nayuki.io/page/dwite-programming-contest-solutions
+ * https://www.nayuki.io/page/dwite-programming-contest-solutions
  * https://github.com/nayuki/DWITE-programming-contest-solutions
  */
 

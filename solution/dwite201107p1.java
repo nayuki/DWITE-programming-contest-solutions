@@ -2,7 +2,7 @@
  * DWITE - July 2011 - Problem 1: Root of a string
  * Solution by Project Nayuki
  * 
- * http://www.nayuki.io/page/dwite-programming-contest-solutions
+ * https://www.nayuki.io/page/dwite-programming-contest-solutions
  * https://github.com/nayuki/DWITE-programming-contest-solutions
  */
 

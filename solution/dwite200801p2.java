@@ -2,7 +2,7 @@
  * DWITE - January 2008 - Problem 2: And the winner is...
  * Solution by Project Nayuki
  * 
- * http://www.nayuki.io/page/dwite-programming-contest-solutions
+ * https://www.nayuki.io/page/dwite-programming-contest-solutions
  * https://github.com/nayuki/DWITE-programming-contest-solutions
  */
 

@@ -2,7 +2,7 @@
  * DWITE - November 2005 - Problem 5: Base64 Encoding
  * Solution by Project Nayuki
  * 
- * http://www.nayuki.io/page/dwite-programming-contest-solutions
+ * https://www.nayuki.io/page/dwite-programming-contest-solutions
  * https://github.com/nayuki/DWITE-programming-contest-solutions
  */
 

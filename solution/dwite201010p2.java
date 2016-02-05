@@ -2,7 +2,7 @@
  * DWITE - October 2010 - Problem 2: Robot Vacuum Prototype
  * Solution by Project Nayuki
  * 
- * http://www.nayuki.io/page/dwite-programming-contest-solutions
+ * https://www.nayuki.io/page/dwite-programming-contest-solutions
  * https://github.com/nayuki/DWITE-programming-contest-solutions
  */
 

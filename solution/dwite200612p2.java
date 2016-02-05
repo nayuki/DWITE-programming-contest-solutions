@@ -2,7 +2,7 @@
  * DWITE - December 2006 - Problem 2: Ulam Spiral Walkway
  * Solution by Project Nayuki
  * 
- * http://www.nayuki.io/page/dwite-programming-contest-solutions
+ * https://www.nayuki.io/page/dwite-programming-contest-solutions
  * https://github.com/nayuki/DWITE-programming-contest-solutions
  */
 
