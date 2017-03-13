@@ -6,15 +6,13 @@
  * https://github.com/nayuki/DWITE-programming-contest-solutions
  */
 
-import static org.junit.Assert.fail;
-
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.io.StringWriter;
-
+import org.junit.Assert;
 
 
 public final class DwiteTestUtils {
@@ -31,7 +29,7 @@ public final class DwiteTestUtils {
 			System.out.println(expectedOutput);
 			System.out.println("Actual output:");
 			System.out.println(actualOutput);
-			fail("Output mismatch in " + clazz.getName());
+			Assert.fail("Output mismatch in " + clazz.getName());
 		}
 	}
 	
