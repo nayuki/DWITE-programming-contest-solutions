@@ -1,6 +1,7 @@
 /* 
- * DWITE - November 2011 - Problem 3: Anonymous Shopping
- * Solution by Project Nayuki
+ * DWITE programming contest solutions
+ * November 2011 - Problem 3: "Anonymous Shopping"
+ * Copyright (c) Project Nayuki. All rights reserved.
  * 
  * https://www.nayuki.io/page/dwite-programming-contest-solutions
  * https://github.com/nayuki/DWITE-programming-contest-solutions

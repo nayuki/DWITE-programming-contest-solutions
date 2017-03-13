@@ -2,8 +2,9 @@ import java.util.ArrayDeque;
 import java.util.Queue;
 
 /* 
- * DWITE - February 2005 - Problem 2: Snakes
- * Solution by Project Nayuki
+ * DWITE programming contest solutions
+ * February 2005 - Problem 2: "Snakes"
+ * Copyright (c) Project Nayuki. All rights reserved.
  * 
  * https://www.nayuki.io/page/dwite-programming-contest-solutions
  * https://github.com/nayuki/DWITE-programming-contest-solutions

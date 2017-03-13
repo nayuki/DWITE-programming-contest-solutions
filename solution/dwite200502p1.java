@@ -1,6 +1,7 @@
 /* 
- * DWITE - February 2005 - Problem 1: Bretschneider's Formula
- * Solution by Project Nayuki
+ * DWITE programming contest solutions
+ * February 2005 - Problem 1: "Bretschneider's Formula"
+ * Copyright (c) Project Nayuki. All rights reserved.
  * 
  * https://www.nayuki.io/page/dwite-programming-contest-solutions
  * https://github.com/nayuki/DWITE-programming-contest-solutions

@@ -1,6 +1,7 @@
 /* 
- * DWITE - October 2006 - Problem 1: Pete's Printing Press
- * Solution by Project Nayuki
+ * DWITE programming contest solutions
+ * October 2006 - Problem 1: "Pete's Printing Press"
+ * Copyright (c) Project Nayuki. All rights reserved.
  * 
  * https://www.nayuki.io/page/dwite-programming-contest-solutions
  * https://github.com/nayuki/DWITE-programming-contest-solutions

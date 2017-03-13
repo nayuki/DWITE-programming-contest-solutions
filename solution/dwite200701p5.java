@@ -1,6 +1,7 @@
 /* 
- * DWITE - January 2007 - Problem 5: Dutch Solitaire
- * Solution by Project Nayuki
+ * DWITE programming contest solutions
+ * January 2007 - Problem 5: "Dutch Solitaire"
+ * Copyright (c) Project Nayuki. All rights reserved.
  * 
  * https://www.nayuki.io/page/dwite-programming-contest-solutions
  * https://github.com/nayuki/DWITE-programming-contest-solutions

@@ -1,6 +1,7 @@
 /* 
- * DWITE - November 2008 - Problem 2: My favourite digit
- * Solution by Project Nayuki
+ * DWITE programming contest solutions
+ * November 2008 - Problem 2: "My favourite digit"
+ * Copyright (c) Project Nayuki. All rights reserved.
  * 
  * https://www.nayuki.io/page/dwite-programming-contest-solutions
  * https://github.com/nayuki/DWITE-programming-contest-solutions

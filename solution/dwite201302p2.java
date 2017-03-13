@@ -1,6 +1,7 @@
 /* 
- * DWITE - February 2013 - Problem 2: Copycat SMS
- * Solution by Project Nayuki
+ * DWITE programming contest solutions
+ * February 2013 - Problem 2: "Copycat SMS"
+ * Copyright (c) Project Nayuki. All rights reserved.
  * 
  * https://www.nayuki.io/page/dwite-programming-contest-solutions
  * https://github.com/nayuki/DWITE-programming-contest-solutions

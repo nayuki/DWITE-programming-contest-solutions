@@ -1,6 +1,7 @@
 /* 
- * DWITE - February 2006 - Problem 2: Floppy Disk 3 1/2-inch High Density
- * Solution by Project Nayuki
+ * DWITE programming contest solutions
+ * February 2006 - Problem 2: "Floppy Disk 3 1/2-inch High Density"
+ * Copyright (c) Project Nayuki. All rights reserved.
  * 
  * https://www.nayuki.io/page/dwite-programming-contest-solutions
  * https://github.com/nayuki/DWITE-programming-contest-solutions

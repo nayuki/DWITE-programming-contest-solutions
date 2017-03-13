@@ -1,6 +1,7 @@
 /* 
- * DWITE - October 2006 - Problem 3: Basketball Statistics II
- * Solution by Project Nayuki
+ * DWITE programming contest solutions
+ * October 2006 - Problem 3: "Basketball Statistics II"
+ * Copyright (c) Project Nayuki. All rights reserved.
  * 
  * https://www.nayuki.io/page/dwite-programming-contest-solutions
  * https://github.com/nayuki/DWITE-programming-contest-solutions

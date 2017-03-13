@@ -1,6 +1,7 @@
 /* 
- * DWITE - February 2008 - Problem 5: Tetris!
- * Solution by Project Nayuki
+ * DWITE programming contest solutions
+ * February 2008 - Problem 5: "Tetris!"
+ * Copyright (c) Project Nayuki. All rights reserved.
  * 
  * https://www.nayuki.io/page/dwite-programming-contest-solutions
  * https://github.com/nayuki/DWITE-programming-contest-solutions

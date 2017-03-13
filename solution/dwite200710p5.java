@@ -1,6 +1,7 @@
 /* 
- * DWITE - October 2007 - Problem 5: Velociraptor Maze
- * Solution by Project Nayuki
+ * DWITE programming contest solutions
+ * October 2007 - Problem 5: "Velociraptor Maze"
+ * Copyright (c) Project Nayuki. All rights reserved.
  * 
  * https://www.nayuki.io/page/dwite-programming-contest-solutions
  * https://github.com/nayuki/DWITE-programming-contest-solutions

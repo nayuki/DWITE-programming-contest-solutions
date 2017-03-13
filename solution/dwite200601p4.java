@@ -1,6 +1,7 @@
 /* 
- * DWITE - January 2006 - Problem 4: Equivalent Amounts
- * Solution by Project Nayuki
+ * DWITE programming contest solutions
+ * January 2006 - Problem 4: "Equivalent Amounts"
+ * Copyright (c) Project Nayuki. All rights reserved.
  * 
  * https://www.nayuki.io/page/dwite-programming-contest-solutions
  * https://github.com/nayuki/DWITE-programming-contest-solutions

@@ -1,6 +1,7 @@
 /* 
- * DWITE - October 2009 - Problem 3: That Missing Number
- * Solution by Project Nayuki
+ * DWITE programming contest solutions
+ * October 2009 - Problem 3: "That Missing Number"
+ * Copyright (c) Project Nayuki. All rights reserved.
  * 
  * https://www.nayuki.io/page/dwite-programming-contest-solutions
  * https://github.com/nayuki/DWITE-programming-contest-solutions

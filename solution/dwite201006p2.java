@@ -1,6 +1,7 @@
 /* 
- * DWITE - June 2010 - Problem 2: Sum of Primes
- * Solution by Project Nayuki
+ * DWITE programming contest solutions
+ * June 2010 - Problem 2: "Sum of Primes"
+ * Copyright (c) Project Nayuki. All rights reserved.
  * 
  * https://www.nayuki.io/page/dwite-programming-contest-solutions
  * https://github.com/nayuki/DWITE-programming-contest-solutions

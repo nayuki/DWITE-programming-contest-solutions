@@ -1,6 +1,7 @@
 /* 
- * DWITE - January 2009 - Problem 2: Tic Tac Win
- * Solution by Project Nayuki
+ * DWITE programming contest solutions
+ * January 2009 - Problem 2: "Tic Tac Win"
+ * Copyright (c) Project Nayuki. All rights reserved.
  * 
  * https://www.nayuki.io/page/dwite-programming-contest-solutions
  * https://github.com/nayuki/DWITE-programming-contest-solutions

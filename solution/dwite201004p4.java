@@ -1,6 +1,7 @@
 /* 
- * DWITE - April 2010 - Problem 4: Time for Change
- * Solution by Project Nayuki
+ * DWITE programming contest solutions
+ * April 2010 - Problem 4: "Time for Change"
+ * Copyright (c) Project Nayuki. All rights reserved.
  * 
  * https://www.nayuki.io/page/dwite-programming-contest-solutions
  * https://github.com/nayuki/DWITE-programming-contest-solutions

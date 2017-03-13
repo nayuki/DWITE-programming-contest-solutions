@@ -1,6 +1,7 @@
 /* 
- * DWITE - March 2010 - Problem 3: Summary Diff
- * Solution by Project Nayuki
+ * DWITE programming contest solutions
+ * March 2010 - Problem 3: "Summary Diff"
+ * Copyright (c) Project Nayuki. All rights reserved.
  * 
  * https://www.nayuki.io/page/dwite-programming-contest-solutions
  * https://github.com/nayuki/DWITE-programming-contest-solutions

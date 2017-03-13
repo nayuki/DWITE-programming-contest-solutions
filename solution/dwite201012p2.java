@@ -1,6 +1,7 @@
 /* 
- * DWITE - December 2010 - Problem 2: Unit rectangles
- * Solution by Project Nayuki
+ * DWITE programming contest solutions
+ * December 2010 - Problem 2: "Unit rectangles"
+ * Copyright (c) Project Nayuki. All rights reserved.
  * 
  * https://www.nayuki.io/page/dwite-programming-contest-solutions
  * https://github.com/nayuki/DWITE-programming-contest-solutions

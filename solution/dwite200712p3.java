@@ -1,6 +1,7 @@
 /* 
- * DWITE - December 2007 - Problem 3: Playlist
- * Solution by Project Nayuki
+ * DWITE programming contest solutions
+ * December 2007 - Problem 3: "Playlist"
+ * Copyright (c) Project Nayuki. All rights reserved.
  * 
  * https://www.nayuki.io/page/dwite-programming-contest-solutions
  * https://github.com/nayuki/DWITE-programming-contest-solutions

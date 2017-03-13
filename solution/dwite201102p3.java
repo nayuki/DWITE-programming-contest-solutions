@@ -1,6 +1,7 @@
 /* 
- * DWITE - February 2011 - Problem 3: Balancing Act
- * Solution by Project Nayuki
+ * DWITE programming contest solutions
+ * February 2011 - Problem 3: "Balancing Act"
+ * Copyright (c) Project Nayuki. All rights reserved.
  * 
  * https://www.nayuki.io/page/dwite-programming-contest-solutions
  * https://github.com/nayuki/DWITE-programming-contest-solutions

@@ -1,6 +1,7 @@
 /* 
- * DWITE - December 2005 - Problem 5: How Many Sums
- * Solution by Project Nayuki
+ * DWITE programming contest solutions
+ * December 2005 - Problem 5: "How Many Sums"
+ * Copyright (c) Project Nayuki. All rights reserved.
  * 
  * https://www.nayuki.io/page/dwite-programming-contest-solutions
  * https://github.com/nayuki/DWITE-programming-contest-solutions

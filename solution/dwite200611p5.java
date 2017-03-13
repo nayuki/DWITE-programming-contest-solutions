@@ -1,6 +1,7 @@
 /* 
- * DWITE - November 2006 - Problem 5: Goldbach's Weak Conjecture
- * Solution by Project Nayuki
+ * DWITE programming contest solutions
+ * November 2006 - Problem 5: "Goldbach's Weak Conjecture"
+ * Copyright (c) Project Nayuki. All rights reserved.
  * 
  * https://www.nayuki.io/page/dwite-programming-contest-solutions
  * https://github.com/nayuki/DWITE-programming-contest-solutions
