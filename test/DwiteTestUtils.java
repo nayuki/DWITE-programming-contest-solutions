@@ -1,3 +1,11 @@
+/* 
+ * DWITE programming contest solutions
+ * Copyright (c) Project Nayuki. All rights reserved.
+ * 
+ * https://www.nayuki.io/page/dwite-programming-contest-solutions
+ * https://github.com/nayuki/DWITE-programming-contest-solutions
+ */
+
 import static org.junit.Assert.fail;
 
 import java.io.BufferedReader;

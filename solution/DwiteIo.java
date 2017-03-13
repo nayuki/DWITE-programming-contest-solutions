@@ -1,3 +1,11 @@
+/* 
+ * DWITE programming contest solutions
+ * Copyright (c) Project Nayuki. All rights reserved.
+ * 
+ * https://www.nayuki.io/page/dwite-programming-contest-solutions
+ * https://github.com/nayuki/DWITE-programming-contest-solutions
+ */
+
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

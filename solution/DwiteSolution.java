@@ -1,3 +1,12 @@
+/* 
+ * DWITE programming contest solutions
+ * Copyright (c) Project Nayuki. All rights reserved.
+ * 
+ * https://www.nayuki.io/page/dwite-programming-contest-solutions
+ * https://github.com/nayuki/DWITE-programming-contest-solutions
+ */
+
+
 public abstract class DwiteSolution {
 	
 	// The I/O object, presented as a field for convenience.
