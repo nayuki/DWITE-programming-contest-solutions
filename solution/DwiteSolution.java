@@ -7,6 +7,9 @@
  */
 
 
+/* 
+ * Superclass of all DWITE solution implementations. Provides an I/O object and defines run methods.
+ */
 public abstract class DwiteSolution {
 	
 	// The I/O object, presented as a field for convenience.
@@ -14,7 +17,7 @@ public abstract class DwiteSolution {
 	
 	
 	
-	// The constructor with nothing to initalize.
+	// The constructor with nothing to initialize.
 	public DwiteSolution() {}
 	
 	
@@ -31,11 +34,9 @@ public abstract class DwiteSolution {
 	}
 	
 	
-	/* 
-	 * For each DWITE solution, at least one of run() or runOnce() needs to be overridden.
-	 * By default, run() calls runOnce() 5 times. But if run() is overridden,
-	 * then runOnce() does not necessarily need to be overridden or even used.
-	 */
+	// Each subclass must override either run() or runOnce().
+	// If run() is overridden, then runOnce() is ignored.
+	// Otherwise runOnce() is overridden, and it will be called 5 times.
 	
 	protected void run() {
 		for (int i = 0; i < 5; i++)

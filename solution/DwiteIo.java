@@ -16,7 +16,12 @@ import java.io.PrintWriter;
 import java.util.StringTokenizer;
 
 
+/* 
+ * A convenience input and output stream tailored toward DWITE usage.
+ */
 public final class DwiteIo {
+	
+	/*---- Fields ----*/
 	
 	private BufferedReader input;
 	
@@ -25,6 +30,8 @@ public final class DwiteIo {
 	private StringTokenizer tokenizer;
 	
 	
+	
+	/*---- Constructors ----*/
 	
 	public DwiteIo(String inFile, String outFile) {
 		try {
@@ -44,7 +51,7 @@ public final class DwiteIo {
 	
 	
 	
-	// Reads
+	/*---- Read methods ----*/
 	
 	public String readLine() {
 		try {
@@ -110,7 +117,8 @@ public final class DwiteIo {
 	}
 	
 	
-	// Writes
+	
+	/*---- Write methods ----*/
 	
 	public void print(int x) {
 		output.print(x);
@@ -146,7 +154,8 @@ public final class DwiteIo {
 	}
 	
 	
-	// Miscellaneous
+	
+	/*---- Miscellaneous methods ----*/
 	
 	public void close() {
 		try {
