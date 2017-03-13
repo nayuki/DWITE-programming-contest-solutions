@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.nio.charset.StandardCharsets;
 import org.junit.Assert;
 
 
@@ -42,7 +43,7 @@ public final class DwiteTestUtils {
 	// Runs the given DWITE solution class on the given input file,
 	// and returns the actual program output as a string.
 	private static String run(Class<? extends DwiteSolution> clazz, String infile) throws Exception {
-		BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(infile), "US-ASCII"));
+		BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(infile), StandardCharsets.US_ASCII));
 		StringWriter out0 = new StringWriter();
 		PrintWriter out = new PrintWriter(out0, true);
 		
@@ -55,7 +56,7 @@ public final class DwiteTestUtils {
 	// Reads the text file at the given path, converts all line separators to the
 	// native one, adds a trailing line separator if missing, and returns the full text.
 	private static String readLines(String file) throws IOException {
-		BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(file), "US-ASCII"));
+		BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(file), StandardCharsets.US_ASCII));
 		
 		StringBuilder sb = new StringBuilder();
 		while (true) {
