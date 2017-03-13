@@ -46,7 +46,7 @@ public final class dwite201004p5 extends DwiteSolution {
 	
 	
 	
-	private static class Edge {
+	private static final class Edge {
 		
 		public final String from;
 		public final String to;

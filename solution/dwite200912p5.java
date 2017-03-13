@@ -88,7 +88,7 @@ public final class dwite200912p5 extends DwiteSolution {
 	
 	
 	
-	private static class Node {
+	private static final class Node {
 		
 		public int color;
 		

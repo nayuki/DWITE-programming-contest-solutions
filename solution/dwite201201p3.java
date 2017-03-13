@@ -67,7 +67,7 @@ public final class dwite201201p3 extends DwiteSolution {
 	
 	
 	
-	private static class Edge {
+	private static final class Edge {
 		
 		public final int id;
 		public final int target;

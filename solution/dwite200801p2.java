@@ -31,7 +31,7 @@ public final class dwite200801p2 extends DwiteSolution {
 	
 	
 	
-	private static class HighScore implements Comparable<HighScore> {
+	private static final class HighScore implements Comparable<HighScore> {
 		
 		public final int score;
 		public final String name;

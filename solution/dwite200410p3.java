@@ -37,7 +37,7 @@ public final class dwite200410p3 extends DwiteSolution {
 	
 	
 	
-	private static class Student implements Comparable<Student> {
+	private static final class Student implements Comparable<Student> {
 		
 		public final String name;
 		public final BigDecimal height;  // In millimetres

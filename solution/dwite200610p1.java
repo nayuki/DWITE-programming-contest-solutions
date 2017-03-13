@@ -79,7 +79,7 @@ public final class dwite200610p1 extends DwiteSolution {
 	
 	
 	
-	private static class PrintConfig {
+	private static final class PrintConfig {
 		
 		/*
 		 * 0 for [1, 99]

@@ -66,7 +66,7 @@ public final class dwite200411p4 extends DwiteSolution {
 	
 	
 	
-	private static class Formula {
+	private static final class Formula {
 		
 		private List<Object> formula;
 		

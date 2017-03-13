@@ -64,7 +64,7 @@ public final class dwite200910p5 extends DwiteSolution {
 	
 	
 	
-	private static class Node {
+	private static final class Node {
 		
 		public final List<Node> outEdges;
 		public boolean visited;

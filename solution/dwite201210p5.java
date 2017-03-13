@@ -85,7 +85,7 @@ public final class dwite201210p5 extends DwiteSolution {
 	
 	
 	
-	private static class Visit {
+	private static final class Visit {
 		
 		public final int x;
 		public final int y;

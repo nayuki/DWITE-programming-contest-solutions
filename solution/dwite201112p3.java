@@ -68,7 +68,7 @@ public final class dwite201112p3 extends DwiteSolution {
 	
 	
 	
-	private static class Deal {
+	private static final class Deal {
 		
 		public final int discount;
 		

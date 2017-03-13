@@ -9,7 +9,7 @@ import java.io.StringWriter;
 
 
 
-public class DwiteTestUtils {
+public final class DwiteTestUtils {
 	
 	private static final String NEW_LINE = System.getProperty("line.separator");
 	

@@ -52,7 +52,7 @@ public final class dwite201110p3 extends DwiteSolution {
 	
 	
 	
-	private static class Vector {
+	private static final class Vector {
 		
 		public final double x;
 		public final double y;

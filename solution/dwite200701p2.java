@@ -65,7 +65,7 @@ private char[][] grid;
 	
 	
 	
-	private static class Point {
+	private static final class Point {
 		
 		public final int x;
 		public final int y;

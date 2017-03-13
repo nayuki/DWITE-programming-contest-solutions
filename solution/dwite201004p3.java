@@ -53,7 +53,7 @@ public final class dwite201004p3 extends DwiteSolution {
 	
 	
 	
-	private static class Bill {
+	private static final class Bill {
 		
 		public final String payer;
 		public final int value;

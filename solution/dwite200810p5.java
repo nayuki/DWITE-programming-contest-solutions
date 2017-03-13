@@ -70,7 +70,7 @@ public final class dwite200810p5 extends DwiteSolution {
 	
 	
 	
-	private static class Item {
+	private static final class Item {
 		
 		public int width;
 		public int height;

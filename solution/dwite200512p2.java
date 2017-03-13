@@ -94,7 +94,7 @@ public final class dwite200512p2 extends DwiteSolution {
 	
 	
 	
-	private static class Point {
+	private static final class Point {
 		
 		public final int x;
 		public final int y;

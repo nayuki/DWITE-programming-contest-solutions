@@ -77,7 +77,7 @@ public final class dwite200601p5 extends DwiteSolution {
 	
 	
 	
-	private static class Graph {
+	private static final class Graph {
 		
 		private Collection<Node> nodes;
 		private Map<String,Node> nodeByName;
@@ -108,7 +108,7 @@ public final class dwite200601p5 extends DwiteSolution {
 	
 	
 	
-	private static class Node implements Comparable<Node> {
+	private static final class Node implements Comparable<Node> {
 		
 		public final String name;
 		
@@ -146,7 +146,7 @@ public final class dwite200601p5 extends DwiteSolution {
 	
 	
 	
-	private static class Edge {
+	private static final class Edge {
 		
 		public final Node destination;
 		public final int distance;

@@ -65,7 +65,7 @@ public final class dwite200411p3 extends DwiteSolution {
 	
 	
 	
-	private static class Polynomial {
+	private static final class Polynomial {
 		
 		private final List<Integer> coefficients;  // From degree 0 upward
 		

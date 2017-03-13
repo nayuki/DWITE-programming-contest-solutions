@@ -96,7 +96,7 @@ public final class dwite200711p5 extends DwiteSolution {
 	
 	
 	
-	private static class Node {
+	private static final class Node {
 		
 		public Node parent;
 		public int rank;

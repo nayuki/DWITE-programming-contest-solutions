@@ -38,7 +38,7 @@ public final class dwite200501p1 extends DwiteSolution {
 	
 	
 	
-	private static class Golfer implements Comparable<Golfer> {
+	private static final class Golfer implements Comparable<Golfer> {
 		
 		public final String name;
 		public final int score;

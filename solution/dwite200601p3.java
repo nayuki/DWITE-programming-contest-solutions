@@ -45,7 +45,7 @@ public final class dwite200601p3 extends DwiteSolution {
 	
 	
 	
-	private static class Player {
+	private static final class Player {
 		
 		private final int playerNumber;
 		private final String firstName;
@@ -74,7 +74,7 @@ public final class dwite200601p3 extends DwiteSolution {
 	
 	
 	
-	private static class PlayerComparator implements Comparator<Player> {
+	private static final class PlayerComparator implements Comparator<Player> {
 		
 		private int statIndexToCompare;
 		

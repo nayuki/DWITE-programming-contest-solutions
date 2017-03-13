@@ -72,7 +72,7 @@ public final class dwite200902p5 extends DwiteSolution {
 	
 	
 	
-	private static class Node {
+	private static final class Node {
 		
 		public Set<Edge> outEdges;
 		
@@ -87,7 +87,7 @@ public final class dwite200902p5 extends DwiteSolution {
 	
 	
 	
-	private static class Edge {
+	private static final class Edge {
 		
 		public final Node target;
 		

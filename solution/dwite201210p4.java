@@ -71,7 +71,7 @@ public final class dwite201210p4 extends DwiteSolution {
 	
 	
 	
-	private static class Node {
+	private static final class Node {
 		
 		public final Node left;
 		public final Node right;
