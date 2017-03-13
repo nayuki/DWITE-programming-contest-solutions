@@ -20,7 +20,7 @@ public final class DwiteTestUtils {
 	private static final String NEW_LINE = System.getProperty("line.separator");
 	
 	
-	public static void test(Class<?> clazz, String infile, String outfile) throws Exception {
+	public static void test(Class<? extends DwiteSolution> clazz, String infile, String outfile) throws Exception {
 		String expectedOutput = readLines(outfile);
 		String actualOutput = run(clazz, infile);
 		
@@ -34,12 +34,12 @@ public final class DwiteTestUtils {
 	}
 	
 	
-	private static String run(Class<?> clazz, String infile) throws Exception {
+	private static String run(Class<? extends DwiteSolution> clazz, String infile) throws Exception {
 		BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(infile), "US-ASCII"));
 		StringWriter out0 = new StringWriter();
 		PrintWriter out = new PrintWriter(out0, true);
 		
-		((DwiteSolution)clazz.newInstance()).run(new DwiteIo(in, out));
+		clazz.newInstance().run(new DwiteIo(in, out));
 		
 		return out0.getBuffer().toString();
 	}
