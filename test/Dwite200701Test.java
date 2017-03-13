@@ -1,7 +1,7 @@
 import org.junit.Test;
 
 
-public class Dwite200701Test {
+public final class Dwite200701Test {
 	
 	@Test
 	public void testProblem1() throws Exception {
