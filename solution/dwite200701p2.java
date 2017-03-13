@@ -52,14 +52,11 @@ private char[][] grid;
 	}
 	
 	
-	// Uses the Moore neighbourhood
 	private int countNeighborMines(int x, int y) {
 		int count = 0;
-		for (int dy = -1; dy <= 1; dy++) {
-			for (int dx = -1; dx <= 1; dx++) {
-				if ((dx != 0 || dy != 0) && grid[y + 1 + dy][x + 1 + dx] == '*')
-					count++;
-			}
+		for (int[] dxy : DwiteAlgorithm.EIGHT_DIRECTIONS) {
+			if (grid[y + 1 + dxy[1]][x + 1 + dxy[0]] == '*')
+				count++;
 		}
 		return count;
 	}

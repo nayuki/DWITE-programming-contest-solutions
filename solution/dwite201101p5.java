@@ -32,10 +32,11 @@ public final class dwite201101p5 extends DwiteSolution {
 			double[][] newProb = new double[SIZE][SIZE];
 			for (int y = 1; y < SIZE - 1; y++) {
 				for (int x = 1; x < SIZE - 1; x++) {
-					newProb[y][x] =   prob[y - 1][x    ] * s / 100.0
-					                + prob[y + 1][x    ] * n / 100.0
-					                + prob[y    ][x - 1] * e / 100.0
-					                + prob[y    ][x + 1] * w / 100.0;
+					newProb[y][x] = 0.01 * (
+						prob[y - 1][x    ] * s +
+						prob[y + 1][x    ] * n +
+						prob[y    ][x - 1] * e +
+						prob[y    ][x + 1] * w);
 				}
 			}
 			prob = newProb;

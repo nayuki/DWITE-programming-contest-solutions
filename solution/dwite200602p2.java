@@ -31,11 +31,12 @@ public final class dwite200602p2 extends DwiteSolution {
 		
 		// Write the largest possible total size
 		for (int i = CAPACITY; i >= 0; i--) {
-			if (possible[i]) {  // Guaranteed to execute before the loop ends
+			if (possible[i]) {
 				io.println(CAPACITY - i);
-				break;
+				return;
 			}
 		}
+		throw new AssertionError();
 	}
 	
 }

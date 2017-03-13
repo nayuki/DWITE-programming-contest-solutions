@@ -37,7 +37,7 @@ public final class dwite201201p4 extends DwiteSolution {
 		// Note that for weight <= 2, all positions are necessarily losing.
 		for (int weight = 0; weight <= n; weight++) {
 			for (int i = 0; i < verdict.length; i++) {
-				if (weight(i) == weight) {
+				if (Integer.bitCount(i) == weight) {
 					// Check if it's a losing position
 					boolean nonincreasing = true;
 					boolean nondecreasing = true;
@@ -73,17 +73,6 @@ public final class dwite201201p4 extends DwiteSolution {
 			case 2:  io.print("A");  break;
 			default:  throw new AssertionError();
 		}
-	}
-	
-	
-	// Hamming weight - the number of bits in x that are set to 1
-	private static int weight(int x) {
-		int count = 0;
-		while (x != 0) {
-			count++;
-			x &= x - 1;
-		}
-		return count;
 	}
 	
 }
