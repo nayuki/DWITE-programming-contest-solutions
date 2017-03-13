@@ -43,10 +43,11 @@ public final class DwiteTestUtils {
 	// and returns the actual program output as a string.
 	private static String run(Class<? extends DwiteSolution> clazz, String infile) throws Exception {
 		StringWriter out0 = new StringWriter();
-		BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(infile), StandardCharsets.US_ASCII));
-		PrintWriter out = new PrintWriter(out0, true);
-		clazz.newInstance().run(new DwiteIo(in, out));
-		in.close();
+		try (BufferedReader in = new BufferedReader(new InputStreamReader(
+				new FileInputStream(infile), StandardCharsets.US_ASCII))) {
+			PrintWriter out = new PrintWriter(out0, true);
+			clazz.newInstance().run(new DwiteIo(in, out));
+		}
 		return out0.getBuffer().toString();
 	}
 	
@@ -55,14 +56,15 @@ public final class DwiteTestUtils {
 	// native one, adds a trailing line separator if missing, and returns the full text.
 	private static String readLines(String file) throws IOException {
 		StringBuilder sb = new StringBuilder();
-		BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(file), StandardCharsets.US_ASCII));
-		while (true) {
-			String line = in.readLine();
-			if (line == null)
-				break;
-			sb.append(line).append(NEW_LINE);
+		try (BufferedReader in = new BufferedReader(new InputStreamReader(
+				new FileInputStream(file), StandardCharsets.US_ASCII))) {
+			while (true) {
+				String line = in.readLine();
+				if (line == null)
+					break;
+				sb.append(line).append(NEW_LINE);
+			}
 		}
-		in.close();
 		return sb.toString();
 	}
 	
