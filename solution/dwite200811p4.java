@@ -16,7 +16,7 @@ public final class dwite200811p4 extends DwiteSolution {
 	
 	
 	protected void runOnce() {
-		// best[i] represents the maximum total rating achieveable using at most i amount of space
+		// best[i] represents the maximum total rating achievable using at most i amount of space
 		int capacity = io.readIntLine();
 		int[] best = new int[capacity + 1];
 		

@@ -16,7 +16,7 @@ public final class dwite201102p1 extends DwiteSolution {
 	
 	
 	protected void runOnce() {
-		// Read word and letter colours
+		// Read word and letter colors
 		io.tokenizeLine();
 		char[] word = io.readToken().toCharArray();
 		String colours = io.readToken();
@@ -29,7 +29,7 @@ public final class dwite201102p1 extends DwiteSolution {
 			if (lightColour.length() != 1)
 				throw new IllegalArgumentException();
 			
-			// Eliminate letters of the current colour
+			// Eliminate letters of the current color
 			for (int i = 0; i < word.length; i++) {
 				if (colours.charAt(i) == lightColour.charAt(0))
 					word[i] = '_';
