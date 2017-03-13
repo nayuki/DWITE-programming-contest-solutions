@@ -14,6 +14,7 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 import org.junit.Assert;
 
 
@@ -21,9 +22,6 @@ import org.junit.Assert;
  * Shared utility functions for DWITE test suites.
  */
 public final class DwiteTestUtils {
-	
-	private static final String NEW_LINE = System.getProperty("line.separator");
-	
 	
 	// Runs the given DWITE solution class on the given input file,
 	// and checks the actual output against the given expected output file.
@@ -56,16 +54,10 @@ public final class DwiteTestUtils {
 	// Reads the text file at the given path, converts all line separators to the
 	// native one, adds a trailing line separator if missing, and returns the full text.
 	private static String readLines(File input) throws IOException {
+		String newline = System.getProperty("line.separator");
 		StringBuilder sb = new StringBuilder();
-		try (BufferedReader in = new BufferedReader(new InputStreamReader(
-				new FileInputStream(input), StandardCharsets.US_ASCII))) {
-			while (true) {
-				String line = in.readLine();
-				if (line == null)
-					break;
-				sb.append(line).append(NEW_LINE);
-			}
-		}
+		for (String line : Files.readAllLines(input.toPath()))
+			sb.append(line).append(newline);
 		return sb.toString();
 	}
 	
