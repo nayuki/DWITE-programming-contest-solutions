@@ -48,6 +48,7 @@ public final class DwiteTestUtils {
 		PrintWriter out = new PrintWriter(out0, true);
 		
 		clazz.newInstance().run(new DwiteIo(in, out));
+		in.close();
 		
 		return out0.getBuffer().toString();
 	}
