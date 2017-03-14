@@ -54,7 +54,7 @@ public final class dwite200601p5 extends DwiteSolution {
 		graph.clearDistances();
 		src.distance = 0;
 		Queue<Node> queue = new PriorityQueue<>();
-		queue.offer(src);
+		queue.add(src);
 		while (true) {
 			Node node = queue.poll();
 			if (node == null)
@@ -66,7 +66,7 @@ public final class dwite200601p5 extends DwiteSolution {
 					int newdist = node.distance + edge.distance;
 					if (newdist < edge.destination.distance) {
 						edge.destination.distance = newdist;
-						queue.offer(edge.destination);
+						queue.add(edge.destination);
 					}
 				}
 			}

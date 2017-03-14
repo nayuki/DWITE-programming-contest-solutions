@@ -71,7 +71,7 @@ public final class dwite200512p2 extends DwiteSolution {
 	
 	private int findShortestPathBfs(int startx, int starty) {
 		Queue<Point> queue = new LinkedList<>();
-		queue.offer(new Point(startx, starty, 0));
+		queue.add(new Point(startx, starty, 0));
 		while (true) {
 			Point cell = queue.poll();
 			if (cell == null)
@@ -85,10 +85,10 @@ public final class dwite200512p2 extends DwiteSolution {
 				continue;
 			else {
 				grid[y][x] = '#';
-				queue.offer(new Point(x - 1, y + 0, dist + 1));
-				queue.offer(new Point(x + 1, y + 0, dist + 1));
-				queue.offer(new Point(x + 0, y - 1, dist + 1));
-				queue.offer(new Point(x + 0, y + 1, dist + 1));
+				queue.add(new Point(x - 1, y + 0, dist + 1));
+				queue.add(new Point(x + 1, y + 0, dist + 1));
+				queue.add(new Point(x + 0, y - 1, dist + 1));
+				queue.add(new Point(x + 0, y + 1, dist + 1));
 			}
 		}
 	}
