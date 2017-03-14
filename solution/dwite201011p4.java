@@ -26,7 +26,7 @@ public final class dwite201011p4 extends DwiteSolution {
 			throw new IllegalArgumentException();
 
 		io.print("0.");
-		Map<Integer,Integer> stateToIndex = new HashMap<Integer,Integer>();
+		Map<Integer,Integer> stateToIndex = new HashMap<>();
 		StringBuilder sb = new StringBuilder();
 		while (true) {
 			if (n == 0) {

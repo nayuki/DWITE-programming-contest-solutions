@@ -34,7 +34,7 @@ public final class dwite200711p3 extends DwiteSolution {
 					// Breadth-first search
 					int room = -1;
 					int area = 1;
-					Queue<int[]> queue = new ArrayDeque<int[]>();
+					Queue<int[]> queue = new ArrayDeque<>();
 					if (c >= '1' && c <= '5')
 						room = c - '1';
 					grid[y][x] = '#';

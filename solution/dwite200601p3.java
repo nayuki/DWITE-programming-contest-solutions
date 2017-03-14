@@ -24,13 +24,13 @@ public final class dwite200601p3 extends DwiteSolution {
 	protected void run() {
 		// Read input
 		int n = io.readIntLine();
-		Collection<Player> players = new ArrayList<Player>();
+		Collection<Player> players = new ArrayList<>();
 		for (int i = 0; i < n; i++) {
 			io.tokenizeLine();
 			int playernum = io.readIntToken();
 			String lastname = io.readToken();
 			String firstname = io.readToken();
-			List<Integer> stats = new ArrayList<Integer>();
+			List<Integer> stats = new ArrayList<>();
 			while (io.canReadToken())
 				stats.add(io.readIntToken());
 			players.add(new Player(playernum, firstname, lastname, stats));

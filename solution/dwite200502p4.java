@@ -20,7 +20,7 @@ public final class dwite200502p4 extends DwiteSolution {
 	
 	protected void runOnce() {
 		// Read the input of matrix dimensions
-		List<Integer> dimensions = new ArrayList<Integer>();
+		List<Integer> dimensions = new ArrayList<>();
 		io.tokenizeLine();
 		while (true) {
 			int temp = io.readIntToken();

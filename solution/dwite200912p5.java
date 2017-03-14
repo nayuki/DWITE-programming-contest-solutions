@@ -27,9 +27,9 @@ public final class dwite200912p5 extends DwiteSolution {
 	
 	protected void runOnce() {
 		int n = io.readIntLine();
-		List<Node> tempNodes = new ArrayList<Node>();
-		List<Node[]> tempEdges = new ArrayList<Node[]>();
-		Map<Integer,Node> numberToNode = new HashMap<Integer,Node>();
+		List<Node> tempNodes = new ArrayList<>();
+		List<Node[]> tempEdges = new ArrayList<>();
+		Map<Integer,Node> numberToNode = new HashMap<>();
 		for (int i = 0; i < n; i++) {
 			io.tokenizeLine();
 			int node0 = io.readIntToken();

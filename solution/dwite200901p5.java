@@ -41,10 +41,10 @@ public final class dwite200901p5 extends DwiteSolution {
 		}
 		
 		// Simplified breadth-first search
-		Set<Integer> reachable = new HashSet<Integer>();
+		Set<Integer> reachable = new HashSet<>();
 		reachable.add(startX * 10 + startY);
 		for (int i = 0; i + 1 < grid.length; i++) {
-			Set<Integer> newReachable = new HashSet<Integer>();
+			Set<Integer> newReachable = new HashSet<>();
 			for (int point : reachable) {
 				for (int[] dir : DIRECTIONS) {
 					int x = point / 10 + dir[0];

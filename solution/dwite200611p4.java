@@ -41,7 +41,7 @@ public final class dwite200611p4 extends DwiteSolution {
 				if (y == HEIGHT - 1 && x == 0)  // Bottom left, the starting cell
 					maxmoney[y][x].add(money[y][x]);
 				else {
-					List<Integer> temp = new ArrayList<Integer>();
+					List<Integer> temp = new ArrayList<>();
 					if (x >= 1) temp.addAll(maxmoney[y][x - 1]);
 					if (y < HEIGHT - 1) temp.addAll(maxmoney[y + 1][x]);
 					

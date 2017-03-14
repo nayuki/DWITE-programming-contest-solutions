@@ -34,9 +34,9 @@ public final class dwite201003p3 extends DwiteSolution {
 				diff += Math.abs(file0.get(name) - file1.get(name));
 		}
 		
-		Set<String> union = new HashSet<String>(file0.keySet());
+		Set<String> union = new HashSet<>(file0.keySet());
 		union.addAll(file1.keySet());
-		Set<String> intersection = new HashSet<String>(file0.keySet());
+		Set<String> intersection = new HashSet<>(file0.keySet());
 		intersection.retainAll(file1.keySet());
 		int sizeDiff = union.size() - intersection.size();
 		
@@ -45,7 +45,7 @@ public final class dwite201003p3 extends DwiteSolution {
 	
 	
 	private Map<String,Integer> readFile(int n) {
-		Map<String,Integer> result = new HashMap<String,Integer>();
+		Map<String,Integer> result = new HashMap<>();
 		for (int i = 0; i < n; i++) {
 			io.tokenizeLine();
 			String name = io.readToken();

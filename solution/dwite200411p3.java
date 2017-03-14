@@ -24,7 +24,7 @@ public final class dwite200411p3 extends DwiteSolution {
 		Polynomial poly = new Polynomial(io);
 		
 		// Find factors
-		ArrayList<Integer> output = new ArrayList<Integer>();
+		ArrayList<Integer> output = new ArrayList<>();
 		int a0 = poly.getCoefficient(poly.getDegree());
 		while (true) {
 			int[] root = findRoot(poly);
@@ -106,7 +106,7 @@ public final class dwite200411p3 extends DwiteSolution {
 		
 		// Returns a new polynomial representing this polynomial divided by (cx - d), or null if it's not divisible.
 		public Polynomial divide(int c, int d) {
-			List<Integer> coefs = new ArrayList<Integer>();
+			List<Integer> coefs = new ArrayList<>();
 			int remainder = 0;
 			for (int i = getDegree(); i >= 1; i--) {
 				remainder += getCoefficient(i);

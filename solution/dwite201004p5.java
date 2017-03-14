@@ -22,8 +22,8 @@ public final class dwite201004p5 extends DwiteSolution {
 	
 	protected void runOnce() {
 		int n = io.readIntLine();
-		Map<String,Integer> costs = new HashMap<String,Integer>();
-		List<Edge> edges = new ArrayList<Edge>();
+		Map<String,Integer> costs = new HashMap<>();
+		List<Edge> edges = new ArrayList<>();
 		for (int i = 0; i < n; i++) {
 			io.tokenizeLine();
 			String from = io.readToken();

@@ -23,7 +23,7 @@ public final class dwite200512p5 extends DwiteSolution {
 		int n = Integer.parseInt(io.readLine());
 		io.tokenizeLine();
 		// 'instances' maps a number to the number of instances of it available
-		Map<Integer,Integer> instances = new HashMap<Integer,Integer>();
+		Map<Integer,Integer> instances = new HashMap<>();
 		for (int i = 0; i < n; i++) {
 			int x = io.readIntToken();
 			if (!instances.containsKey(x))

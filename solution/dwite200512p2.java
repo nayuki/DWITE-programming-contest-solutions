@@ -70,7 +70,7 @@ public final class dwite200512p2 extends DwiteSolution {
 	
 	
 	private int findShortestPathBfs(int startx, int starty) {
-		Queue<Point> queue = new LinkedList<Point>();
+		Queue<Point> queue = new LinkedList<>();
 		queue.offer(new Point(startx, starty, 0));
 		while (true) {
 			Point cell = queue.poll();

@@ -33,7 +33,7 @@ public final class dwite200902p4 extends DwiteSolution {
 		}
 		
 		// Find port points
-		List<int[]> points = new ArrayList<int[]>();
+		List<int[]> points = new ArrayList<>();
 		for (int y = 0; y < grid.length; y++) {
 			for (int x = 0; x < grid[y].length; x++) {
 				if (grid[y][x] == '#')

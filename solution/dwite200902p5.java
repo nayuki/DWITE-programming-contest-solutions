@@ -102,8 +102,8 @@ public final class dwite200902p5 extends DwiteSolution {
 			flow = 0;
 			
 			// Convert to reverse Polish notation
-			List<Object> ops = new ArrayList<Object>();
-			Stack<Character> operators = new Stack<Character>();
+			List<Object> ops = new ArrayList<>();
+			Stack<Character> operators = new Stack<>();
 			while (expr.length() > 0) {
 				int i = 0;
 				while (i < expr.length() && expr.substring(i, i + 1).matches("[0-9.]"))
@@ -147,7 +147,7 @@ public final class dwite200902p5 extends DwiteSolution {
 		
 		
 		public double getNextCarTravelTime() {
-			Stack<Double> stack = new Stack<Double>();
+			Stack<Double> stack = new Stack<>();
 			for (Object op : travelTimeExpression) {
 				if (op instanceof Double)
 					stack.push((Double)op);

@@ -26,8 +26,8 @@ public final class dwite201102p2 extends DwiteSolution {
 		int rooks = io.readIntToken();
 		
 		// We only need to keep track of which rows and which columns have rooks
-		Set<Integer> rookRows = new HashSet<Integer>();
-		Set<Integer> rookCols = new HashSet<Integer>();
+		Set<Integer> rookRows = new HashSet<>();
+		Set<Integer> rookCols = new HashSet<>();
 		for (int i = 0; i < rooks; i++) {
 			io.tokenizeLine();
 			rookRows.add(io.readIntToken());

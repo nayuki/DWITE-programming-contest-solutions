@@ -46,7 +46,7 @@ public final class dwite201210p5 extends DwiteSolution {
 		}
 		
 		// Find starting point
-		Queue<Visit> queue = new ArrayDeque<Visit>();
+		Queue<Visit> queue = new ArrayDeque<>();
 		for (int y = 0; y < grid.length; y++) {
 			for (int x = 0; x < grid[y].length; x++) {
 				if (grid[y][x] == 'B') {

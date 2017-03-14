@@ -20,7 +20,7 @@ public final class dwite200811p3 extends DwiteSolution {
 	
 	protected void runOnce() {
 		int volume = io.readIntLine();
-		List<Integer> factors = new ArrayList<Integer>();
+		List<Integer> factors = new ArrayList<>();
 		for (int i = 1; i <= volume; i++) {
 			if (volume % i == 0)
 				factors.add(i);

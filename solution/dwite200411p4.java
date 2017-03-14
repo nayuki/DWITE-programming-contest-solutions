@@ -89,7 +89,7 @@ public final class dwite200411p4 extends DwiteSolution {
 		
 		private int evaluate(int sum, int i) {
 			// Make a copy of the formula
-			List<Object> formula = new ArrayList<Object>(this.formula);
+			List<Object> formula = new ArrayList<>(this.formula);
 			
 			// Substitute variables
 			for (int j = 0; j < formula.size(); j++) {

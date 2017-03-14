@@ -54,7 +54,7 @@ public final class dwite200812p5 extends DwiteSolution {
 			for (int[] row : layer)
 				Arrays.fill(row, Integer.MAX_VALUE);
 		}
-		Queue<int[]> queue = new ArrayDeque<int[]>();
+		Queue<int[]> queue = new ArrayDeque<>();
 		grid[startZ][startY][startX] = '#';
 		distance[startZ][startY][startX] = 0;
 		queue.add(new int[]{startX, startY, startZ});

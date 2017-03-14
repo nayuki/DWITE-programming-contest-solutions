@@ -26,16 +26,16 @@ public final class dwite200701p5 extends DwiteSolution {
 		io.tokenizeLine();
 		io.readToken();  // Discard N, the number of candies
 		int piles = io.readIntToken();
-		List<Integer> state = new ArrayList<Integer>();
+		List<Integer> state = new ArrayList<>();
 		for (int i = 0; i < piles; i++)
 			state.add(io.readIntToken());
 		
 		// Compute and write output
 		Collections.sort(state, Collections.reverseOrder());
-		Set<List<Integer>> paststates = new HashSet<List<Integer>>();
+		Set<List<Integer>> paststates = new HashSet<>();
 		paststates.add(state);
 		for (int i = 0; i < 100; i++) {
-			List<Integer> nextstate = new ArrayList<Integer>();
+			List<Integer> nextstate = new ArrayList<>();
 			int newpile = 0;
 			for (int candies : state) {  // Note: All elements of 'state' are positive
 				newpile++;

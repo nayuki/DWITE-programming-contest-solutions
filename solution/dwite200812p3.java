@@ -18,7 +18,7 @@ public final class dwite200812p3 extends DwiteSolution {
 	}
 	
 	
-	private static Map<String,Integer> ouncesByUnit = new HashMap<String,Integer>();
+	private static Map<String,Integer> ouncesByUnit = new HashMap<>();
 	
 	static {
 		ouncesByUnit.put("oz"  ,   1);

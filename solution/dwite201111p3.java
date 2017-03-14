@@ -21,7 +21,7 @@ public final class dwite201111p3 extends DwiteSolution {
 	
 	
 	protected void runOnce() {
-		Map<String,Set<String>> personalInfoToDrinks = new HashMap<String,Set<String>>();
+		Map<String,Set<String>> personalInfoToDrinks = new HashMap<>();
 		io.tokenizeLine();
 		int n = io.readIntToken();
 		int m = io.readIntToken();
@@ -41,7 +41,7 @@ public final class dwite201111p3 extends DwiteSolution {
 			io.tokenizeLine();
 			io.readToken();  // Discard name
 			String personalInfo = io.readToken();
-			Set<String> drinks = get(personalInfoToDrinks, personalInfo, new HashSet<String>());
+			Set<String> drinks = get(personalInfoToDrinks, personalInfo, new HashSet<>());
 			if (drinks.size() == 1)
 				count++;
 		}

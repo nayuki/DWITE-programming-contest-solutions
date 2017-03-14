@@ -35,10 +35,10 @@ public final class dwite200901p3 extends DwiteSolution {
 		}
 		
 		// Compute friend sets
-		Set<Integer> invite = new TreeSet<Integer>();
+		Set<Integer> invite = new TreeSet<>();
 		getFriends(1, 1, invite);
 		invite.remove(1);
-		Set<Integer> uninvite = new TreeSet<Integer>();
+		Set<Integer> uninvite = new TreeSet<>();
 		getFriends(2, 2, uninvite);
 		invite.removeAll(uninvite);
 		

@@ -21,8 +21,8 @@ public final class dwite201004p3 extends DwiteSolution {
 	
 	
 	protected void runOnce() {
-		List<Bill> bills = new ArrayList<Bill>();
-		Map<String,Integer> amendments = new HashMap<String,Integer>();
+		List<Bill> bills = new ArrayList<>();
+		Map<String,Integer> amendments = new HashMap<>();
 		
 		// Read bills
 		int n = io.readIntLine();

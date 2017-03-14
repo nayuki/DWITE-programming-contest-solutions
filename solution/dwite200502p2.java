@@ -48,7 +48,7 @@ public final class dwite200502p2 extends DwiteSolution {
 		int count = 0;
 		
 		// Breadth-first search
-		Queue<int[]> queue = new ArrayDeque<int[]>();
+		Queue<int[]> queue = new ArrayDeque<>();
 		grid[y][x] = 'O';
 		queue.add(new int[]{x, y});
 		while (!queue.isEmpty()) {

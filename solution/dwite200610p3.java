@@ -22,7 +22,7 @@ public final class dwite200610p3 extends DwiteSolution {
 	protected void run() {
 		// Read input
 		int n = io.readIntLine();
-		List<Player> players = new ArrayList<Player>();
+		List<Player> players = new ArrayList<>();
 		for (int i = 0; i < n; i++) {
 			String name = io.readLine();
 			int foulshots = io.readIntLine();

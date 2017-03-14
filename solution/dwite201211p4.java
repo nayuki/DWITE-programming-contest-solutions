@@ -25,7 +25,7 @@ public final class dwite201211p4 extends DwiteSolution {
 		for (int i = 0; i < ranks.length; i++)
 			ranks[i] = io.readIntToken();
 		
-		List<Integer> indexes = new ArrayList<Integer>();
+		List<Integer> indexes = new ArrayList<>();
 		for (int i = ranks.length - 1; i >= 0; i--) {
 			int rank = ranks[i];
 			if (rank < 0 || rank > indexes.size()) {

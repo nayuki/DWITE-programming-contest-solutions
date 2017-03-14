@@ -53,7 +53,7 @@ public final class dwite200601p5 extends DwiteSolution {
 		// Compute shortest path distance using Dijkstra's algorithm
 		graph.clearDistances();
 		src.distance = 0;
-		Queue<Node> queue = new PriorityQueue<Node>();
+		Queue<Node> queue = new PriorityQueue<>();
 		queue.offer(src);
 		while (true) {
 			Node node = queue.poll();

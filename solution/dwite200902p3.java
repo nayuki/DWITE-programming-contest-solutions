@@ -18,7 +18,7 @@ public final class dwite200902p3 extends DwiteSolution {
 	
 	
 	protected void runOnce() {
-		Stack<String> curDir = new Stack<String>();
+		Stack<String> curDir = new Stack<>();
 		for (String part : tokenizePath(io.readLine(), true))
 			curDir.push(part);
 		for (String part : tokenizePath(io.readLine(), false)) {

@@ -61,7 +61,7 @@ public final class dwite200611p2 extends DwiteSolution {
 	
 	
 	private static List<Integer> readNumbers(DwiteIo io) {
-		List<Integer> result = new ArrayList<Integer>();
+		List<Integer> result = new ArrayList<>();
 		io.tokenizeLine();
 		while (io.canReadToken())
 			result.add(io.readIntToken());

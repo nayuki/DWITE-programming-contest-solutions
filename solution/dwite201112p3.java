@@ -47,7 +47,7 @@ public final class dwite201112p3 extends DwiteSolution {
 			
 			// Try to apply the current deal, deals[dealStartIndex]
 			Deal deal = deals[dealStartIndex];
-			List<String> tempOrder = new ArrayList<String>(orderItems);
+			List<String> tempOrder = new ArrayList<>(orderItems);
 			List<String> dealItems = deal.items;
 			for (String item : dealItems) {
 				if (!tempOrder.remove(item))
@@ -61,7 +61,7 @@ public final class dwite201112p3 extends DwiteSolution {
 	
 	private List<String> readItems() {
 		int numItems = io.readIntToken();
-		List<String> result = new ArrayList<String>();
+		List<String> result = new ArrayList<>();
 		for (int j = 0; j < numItems; j++)
 			result.add(io.readToken());
 		return result;

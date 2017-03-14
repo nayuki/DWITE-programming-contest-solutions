@@ -30,11 +30,11 @@ public final class dwite201112p4 extends DwiteSolution {
 	private static int distance(char[][] grid, char from, char to) {
 		// Breadth-first search by keeping track of only 3 layers
 		int dist = 0;
-		Set<Point> prevLayer = new HashSet<Point>();
-		Set<Point> currLayer = new HashSet<Point>();
+		Set<Point> prevLayer = new HashSet<>();
+		Set<Point> currLayer = new HashSet<>();
 		currLayer.add(find(grid, from));
 		while (!currLayer.isEmpty()) {
-			Set<Point> nextLayer = new HashSet<Point>();
+			Set<Point> nextLayer = new HashSet<>();
 			for (Point p : currLayer) {
 				if (grid[p.y][p.x] == to)
 					return dist;

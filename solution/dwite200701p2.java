@@ -29,7 +29,7 @@ private char[][] grid;
 		int h = io.readIntToken();
 		int w = io.readIntToken();
 		grid = new char[h + 2][w + 2];  // Padded
-		Map<Character,Point> queries = new HashMap<Character,Point>();
+		Map<Character,Point> queries = new HashMap<>();
 		for (int y = 0; y < h; y++) {
 			String line = io.readLine();
 			for (int x = 0; x < w; x++) {
@@ -43,7 +43,7 @@ private char[][] grid;
 		}
 		
 		// Process queries and write output
-		SortedSet<Character> querykeys = new TreeSet<Character>(queries.keySet());
+		SortedSet<Character> querykeys = new TreeSet<>(queries.keySet());
 		for (Character key : querykeys) {
 			Point p = queries.get(key);
 			int mines = countNeighborMines(p.x, p.y);

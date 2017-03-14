@@ -35,7 +35,7 @@ public final class dwite201201p2 extends DwiteSolution {
 	
 	protected void runOnce() {
 		int n = io.readIntLine();
-		Map<Integer,Integer> factors = new TreeMap<Integer,Integer>();
+		Map<Integer,Integer> factors = new TreeMap<>();
 		for (int i = 1; i <= n; i++) {
 			int temp = i;
 			while (temp != 1) {

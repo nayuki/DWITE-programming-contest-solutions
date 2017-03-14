@@ -41,7 +41,7 @@ public final class dwite201111p4 extends DwiteSolution {
 
 		// Always explore the next eligible node that has the fewest children
 		int maxLen = 0;
-		Queue<Integer> queue = new PriorityQueue<Integer>(1, new Comparator<Integer>() {
+		Queue<Integer> queue = new PriorityQueue<>(1, new Comparator<Integer>() {
 			public int compare(Integer x, Integer y) {
 				return ((Integer)neighbors[x].size()).compareTo(neighbors[y].size());
 			}

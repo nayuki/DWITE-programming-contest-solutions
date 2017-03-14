@@ -22,7 +22,7 @@ public final class dwite200802p4 extends DwiteSolution {
 	
 	protected void runOnce() {
 		// Read input and pad with a space on all edges
-		List<String> lines = new ArrayList<String>();
+		List<String> lines = new ArrayList<>();
 		lines.add("          ");
 		while (true) {
 			String line = io.readLine();
@@ -52,7 +52,7 @@ public final class dwite200802p4 extends DwiteSolution {
 		
 		// Breadth-first search
 		int[][] distance = DwiteAlgorithm.newIntGrid(grid.length, grid[0].length, Integer.MAX_VALUE);
-		Queue<int[]> queue = new ArrayDeque<int[]>();
+		Queue<int[]> queue = new ArrayDeque<>();
 		grid[startY][startX] = ' ';
 		distance[startY][startX] = 0;
 		queue.add(new int[]{startX, startY});

@@ -19,7 +19,7 @@ public final class dwite201210p3 extends DwiteSolution {
 	
 	
 	protected void runOnce() {
-		Set<String> seen = new HashSet<String>();
+		Set<String> seen = new HashSet<>();
 		boolean isOutputEmpty = true;
 		int n = io.readIntLine();
 		for (int i = 0; i < n; i++) {

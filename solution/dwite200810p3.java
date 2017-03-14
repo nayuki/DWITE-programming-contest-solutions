@@ -56,7 +56,7 @@ public final class dwite200810p3 extends DwiteSolution {
 		
 		// Breadth-first search
 		int[][] distance = DwiteAlgorithm.newIntGrid(grid.length, grid[0].length, Integer.MAX_VALUE);
-		Queue<int[]> queue = new ArrayDeque<int[]>();
+		Queue<int[]> queue = new ArrayDeque<>();
 		tempGrid[start[1]][start[0]] = '#';
 		distance[start[1]][start[0]] = 0;
 		queue.add(new int[]{start[0], start[1]});

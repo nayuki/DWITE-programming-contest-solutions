@@ -33,7 +33,7 @@ public final class dwite200712p5 extends DwiteSolution {
 			// Breadth-first search
 			int[] point = find((char)('1' + i));
 			int area = 1;
-			Queue<int[]> queue = new ArrayDeque<int[]>();
+			Queue<int[]> queue = new ArrayDeque<>();
 			tempGrid[point[1]][point[0]] = '#';
 			queue.add(point);
 			while (!queue.isEmpty()) {

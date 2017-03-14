@@ -20,7 +20,7 @@ public final class dwite201012p5 extends DwiteSolution {
 	
 	protected void runOnce() {
 		int n = io.readIntLine();
-		List<String> dict = new ArrayList<String>();
+		List<String> dict = new ArrayList<>();
 		for (int i = 0; i < n; i++)
 			dict.add(io.readLine());
 		

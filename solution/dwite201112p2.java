@@ -21,7 +21,7 @@ public final class dwite201112p2 extends DwiteSolution {
 	
 	protected void runOnce() {
 		int n = io.readIntLine();
-		List<BigInteger> ponds = new ArrayList<BigInteger>();
+		List<BigInteger> ponds = new ArrayList<>();
 		io.tokenizeLine();
 		for (int i = 0; i < n; i++)
 			ponds.add(new BigInteger(io.readToken()));

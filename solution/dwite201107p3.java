@@ -28,7 +28,7 @@ public final class dwite201107p3 extends DwiteSolution {
 		int d = io.readIntToken();
 		
 		// Triangles are similar iff they have the same multiset of side lengths
-		Set<List<Integer>> triangles = new HashSet<List<Integer>>();
+		Set<List<Integer>> triangles = new HashSet<>();
 		for (int x0 = a; x0 <= c; x0++) {
 		for (int x1 = a; x1 <= c; x1++) {
 		for (int x2 = a; x2 <= c; x2++) {

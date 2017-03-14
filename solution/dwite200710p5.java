@@ -48,7 +48,7 @@ public final class dwite200710p5 extends DwiteSolution {
 		}
 		
 		// Breadth-first search on all non-wall cells
-		Queue<int[]> queue = new ArrayDeque<int[]>();
+		Queue<int[]> queue = new ArrayDeque<>();
 		distance[exitY][exitX] = 0;
 		queue.add(new int[]{exitX, exitY});
 		while (!queue.isEmpty()) {

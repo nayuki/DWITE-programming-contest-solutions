@@ -19,7 +19,7 @@ public final class dwite200711p4 extends DwiteSolution {
 	
 	protected void runOnce() {
 		String line = io.readLine();
-		Stack<Character> stack = new Stack<Character>();
+		Stack<Character> stack = new Stack<>();
 		for (int i = 0; i < line.length(); i++) {
 			char c = line.charAt(i);
 			switch (c) {
