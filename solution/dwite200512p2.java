@@ -7,7 +7,7 @@
  * https://github.com/nayuki/DWITE-programming-contest-solutions
  */
 
-import java.util.LinkedList;
+import java.util.ArrayDeque;
 import java.util.Queue;
 
 
@@ -70,7 +70,7 @@ public final class dwite200512p2 extends DwiteSolution {
 	
 	
 	private int findShortestPathBfs(int startx, int starty) {
-		Queue<Point> queue = new LinkedList<>();
+		Queue<Point> queue = new ArrayDeque<>();
 		queue.add(new Point(startx, starty, 0));
 		while (!queue.isEmpty()) {
 			Point cell = queue.remove();

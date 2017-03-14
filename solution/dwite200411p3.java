@@ -24,7 +24,7 @@ public final class dwite200411p3 extends DwiteSolution {
 		Polynomial poly = new Polynomial(io);
 		
 		// Find factors
-		ArrayList<Integer> output = new ArrayList<>();
+		List<Integer> output = new ArrayList<>();
 		int a0 = poly.getCoefficient(poly.getDegree());
 		while (true) {
 			int[] root = findRoot(poly);

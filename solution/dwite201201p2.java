@@ -7,7 +7,7 @@
  * https://github.com/nayuki/DWITE-programming-contest-solutions
  */
 
-import java.util.Map;
+import java.util.SortedMap;
 import java.util.TreeMap;
 
 
@@ -35,7 +35,7 @@ public final class dwite201201p2 extends DwiteSolution {
 	
 	protected void runOnce() {
 		int n = io.readIntLine();
-		Map<Integer,Integer> factors = new TreeMap<>();
+		SortedMap<Integer,Integer> factors = new TreeMap<>();
 		for (int i = 1; i <= n; i++) {
 			int temp = i;
 			while (temp != 1) {
