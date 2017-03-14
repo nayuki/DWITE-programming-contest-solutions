@@ -55,13 +55,12 @@ public final class dwite200601p5 extends DwiteSolution {
 		src.distance = 0;
 		Queue<Node> queue = new PriorityQueue<>();
 		queue.add(src);
-		while (true) {
-			Node node = queue.poll();
-			if (node == null)
-				throw new AssertionError("No path exists");
-			else if (node == dest)
-				break;
-			else {
+		while (!queue.isEmpty()) {
+			Node node = queue.remove();
+			if (node == dest) {
+				io.println(dest.distance);
+				return;
+			} else {
 				for (Edge edge : node.edges) {
 					int newdist = node.distance + edge.distance;
 					if (newdist < edge.destination.distance) {
@@ -71,9 +70,7 @@ public final class dwite200601p5 extends DwiteSolution {
 				}
 			}
 		}
-		
-		// Write output
-		io.println(dest.distance);
+		throw new AssertionError("No path exists");
 	}
 	
 	

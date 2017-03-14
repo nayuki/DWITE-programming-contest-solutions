@@ -72,10 +72,8 @@ public final class dwite200512p2 extends DwiteSolution {
 	private int findShortestPathBfs(int startx, int starty) {
 		Queue<Point> queue = new LinkedList<>();
 		queue.add(new Point(startx, starty, 0));
-		while (true) {
-			Point cell = queue.poll();
-			if (cell == null)
-				throw new AssertionError("No path exists");
+		while (!queue.isEmpty()) {
+			Point cell = queue.remove();
 			int x = cell.x;
 			int y = cell.y;
 			int dist = cell.distance;
@@ -91,6 +89,7 @@ public final class dwite200512p2 extends DwiteSolution {
 				queue.add(new Point(x + 0, y + 1, dist + 1));
 			}
 		}
+		throw new AssertionError("No path exists");
 	}
 	
 	
