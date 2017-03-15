@@ -20,7 +20,7 @@ public final class dwite200912p3 extends DwiteSolution {
 		int sum = 0;
 		for (int i = 0; i < 256; i++) {
 			if (toBinaryString(i, 8).indexOf(pattern) == -1)
-				sum += hammingWeight(i);
+				sum += Integer.bitCount(i);
 		}
 		io.println(sum);
 	}
@@ -31,16 +31,6 @@ public final class dwite200912p3 extends DwiteSolution {
 		while (s.length() < digits)
 			s = "0" + s;
 		return s;
-	}
-	
-	
-	private static int hammingWeight(int x) {
-		int sum = 0;
-		while (x != 0) {
-			sum += x & 1;
-			x >>>= 1;
-		}
-		return sum;
 	}
 	
 }

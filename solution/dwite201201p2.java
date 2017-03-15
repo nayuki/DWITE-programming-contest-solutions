@@ -7,9 +7,6 @@
  * https://github.com/nayuki/DWITE-programming-contest-solutions
  */
 
-import java.util.SortedMap;
-import java.util.TreeMap;
-
 
 public final class dwite201201p2 extends DwiteSolution {
 	
@@ -18,44 +15,35 @@ public final class dwite201201p2 extends DwiteSolution {
 	}
 	
 	
-	private static int[] smallestPrimeFactor = new int[10001];
-	
-	static {
-		// Modified sieve of Eratosthenes
-		for (int i = 2; i < smallestPrimeFactor.length; i++) {
-			if (smallestPrimeFactor[i] == 0) {  // i is prime
-				for (int j = i; j < smallestPrimeFactor.length; j += i) {
-					if (smallestPrimeFactor[j] == 0)
-						smallestPrimeFactor[j] = i;
-				}
-			}
+	protected void runOnce() {
+		int n = io.readIntLine();
+		boolean head = true;
+		for (int i = 2; i <= n; i++) {
+			if (!isPrime(i))
+				continue;
+			if (head) head = false;
+			else io.print(" * ");
+			io.print(i + "^" + countFactors(n, i));
 		}
+		io.println();
 	}
 	
 	
-	protected void runOnce() {
-		int n = io.readIntLine();
-		SortedMap<Integer,Integer> factors = new TreeMap<>();
-		for (int i = 1; i <= n; i++) {
-			int temp = i;
-			while (temp != 1) {
-				int p = smallestPrimeFactor[temp];
-				if (!factors.containsKey(p))
-					factors.put(p, 0);
-				factors.put(p, factors.get(p) + 1);
-				temp /= p;
-			}
+	// Returns the number of times that the prime factor p occurs in n!.
+	private static int countFactors(int n, int p) {
+		int result = 0;
+		for (; n >= p; n /= p)
+			result += n / p;
+		return result;
+	}
+	
+	
+	private static boolean isPrime(int n) {
+		for (int i = 2, end = DwiteAlgorithm.sqrt(n); i <= end; i++) {
+			if (n % i == 0)
+				return false;
 		}
-		
-		boolean head = true;
-		for (int p : factors.keySet()) {
-			if (head)
-				head = false;
-			else
-				io.print(" * ");
-			io.print(p + "^" + factors.get(p));
-		}
-		io.println();
+		return true;
 	}
 	
 }

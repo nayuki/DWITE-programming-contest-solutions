@@ -20,7 +20,7 @@ public final class dwite201112p1 extends DwiteSolution {
 		
 		int bestDiff = 0;
 		String bestName = null;
-		for (int i = 0 ; i < 4; i++) {
+		for (int i = 0; i < 4; i++) {
 			io.tokenizeLine();
 			String name = io.readToken();
 			int w = io.readIntToken();

@@ -44,7 +44,7 @@ public final class dwite200901p3 extends DwiteSolution {
 		invite.removeAll(uninvite);
 		
 		// Format output
-		if (invite.size() == 0)
+		if (invite.isEmpty())
 			io.println("none");
 		else {
 			boolean head = true;
