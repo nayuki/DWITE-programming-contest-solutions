@@ -16,7 +16,6 @@ public final class dwite200611p5 extends DwiteSolution {
 	
 	
 	private static boolean[] isPrime;
-	
 	static {
 		isPrime = DwiteAlgorithm.sievePrimes(999999);
 		isPrime[2] = false;  // For the purposes of this problem

@@ -15,10 +15,8 @@ public final class dwite201001p4 extends DwiteSolution {
 	}
 	
 	
-	private static String[] dictionary;
-	
+	private static String[] dictionary = new String[50000];
 	static {
-		dictionary = new String[50000];
 		for (int i = 0; i < dictionary.length; i++)
 			dictionary[i] = Integer.toString(i * digitSum(i) % 99999);
 	}

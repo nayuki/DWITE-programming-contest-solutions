@@ -21,7 +21,6 @@ public final class dwite200412p4 extends DwiteSolution {
 	
 	private static int[] primes;  // 2, 3, 5, 7, 11, 13, 17, 19, ...
 	
-	
 	static {
 		isPrime = DwiteAlgorithm.sievePrimes(99999);
 		primes = new int[isPrime.length];

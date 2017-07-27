@@ -28,10 +28,8 @@ public final class dwite200601p4 extends DwiteSolution {
 	 * 1 tablespoon =  3 teaspoons    =    3 teaspoons
 	 * 1 teaspoon   = ~5 millilitres  =    1 teaspoon
 	 */
-	private static final Map<String,Integer> teaspoonsByUnit;
-	
+	private static final Map<String,Integer> teaspoonsByUnit = new HashMap<>();
 	static {
-		teaspoonsByUnit = new HashMap<>();
 		teaspoonsByUnit.put("TEASPOONS"  ,    1);
 		teaspoonsByUnit.put("TABLESPOONS",    3);
 		teaspoonsByUnit.put("CUPS"       ,   48);

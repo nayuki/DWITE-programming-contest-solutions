@@ -18,10 +18,8 @@ public final class dwite200601p2 extends DwiteSolution {
 	}
 	
 	
-	private static final Map<Character,Integer> valueByLetter;
-	
+	private static final Map<Character,Integer> valueByLetter = new HashMap<>();
 	static {
-		valueByLetter = new HashMap<>();
 		valueByLetter.put('A',  1);
 		valueByLetter.put('B',  3);
 		valueByLetter.put('C',  3);

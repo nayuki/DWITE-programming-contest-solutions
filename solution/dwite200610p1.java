@@ -18,11 +18,8 @@ public final class dwite200610p1 extends DwiteSolution {
 	}
 	
 	
-	private static final Map<PrintConfig,Double> unitCostByConfig;
-	
+	private static final Map<PrintConfig,Double> unitCostByConfig = new HashMap<>();
 	static {
-		unitCostByConfig = new HashMap<>();
-		
 		addConfig(    1, "8.5\"x11\"", "B&W", 0.08);
 		addConfig(  100, "8.5\"x11\"", "B&W", 0.06);
 		addConfig(  500, "8.5\"x11\"", "B&W", 0.05);

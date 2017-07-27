@@ -16,10 +16,8 @@ public final class dwite201012p3 extends DwiteSolution {
 	
 	
 	// tilings[i] is the number of ways to tile an (i*2) x 3 rectangle with dominoes, allowing tilings that can be split vertically
-	private static long[] tilings;
-	
+	private static long[] tilings = new long[16];
 	static {
-		tilings = new long[16];
 		for (int i = 0; i < tilings.length; i++) {
 			tilings[i] = countTilingsWithoutSplits(i * 2);
 			
