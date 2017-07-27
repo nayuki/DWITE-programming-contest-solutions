@@ -43,7 +43,7 @@ public final class dwite201111p4 extends DwiteSolution {
 		int maxLen = 0;
 		Queue<Integer> queue = new PriorityQueue<>(1, new Comparator<Integer>() {
 			public int compare(Integer x, Integer y) {
-				return ((Integer)neighbors[x].size()).compareTo(neighbors[y].size());
+				return Integer.compare(neighbors[x].size(), neighbors[y].size());
 			}
 		});
 		queue.add(0);

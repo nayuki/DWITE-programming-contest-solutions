@@ -127,12 +127,7 @@ public final class dwite200601p5 extends DwiteSolution {
 		
 		
 		public int compareTo(Node other) {
-			if (distance < other.distance)
-				return -1;
-			else if (distance > other.distance)
-				return  1;
-			else
-				return  0;
+			return Integer.compare(distance, other.distance);
 		}
 		
 		
