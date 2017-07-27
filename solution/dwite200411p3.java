@@ -80,7 +80,7 @@ public final class dwite200411p3 extends DwiteSolution {
 		public Polynomial(DwiteIo io) {
 			io.tokenizeLine();
 			int degree = io.readIntToken();
-			coefficients = new ArrayList<Integer>();
+			coefficients = new ArrayList<>();
 			for (int i = 0; i < degree + 1; i++)
 				coefficients.add(io.readIntToken());
 			Collections.reverse(coefficients);

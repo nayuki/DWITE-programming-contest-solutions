@@ -22,7 +22,7 @@ public final class dwite201111p5 extends DwiteSolution {
 	
 	
 	protected void runOnce() {
-		nameToNodeId = new HashMap<String,Integer>();
+		nameToNodeId = new HashMap<>();
 		DisjointSets ds = new DisjointSets(100000);
 		boolean[] hasPortals = new boolean[100000];
 		

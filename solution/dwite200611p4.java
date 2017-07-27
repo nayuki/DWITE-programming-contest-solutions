@@ -37,7 +37,7 @@ public final class dwite200611p4 extends DwiteSolution {
 		List<Integer>[][] maxmoney = new List[HEIGHT][WIDTH];
 		for (int y = HEIGHT - 1; y >= 0; y--) {
 			for (int x = 0; x < WIDTH; x++) {
-				maxmoney[y][x] = new ArrayList<Integer>();
+				maxmoney[y][x] = new ArrayList<>();
 				if (y == HEIGHT - 1 && x == 0)  // Bottom left, the starting cell
 					maxmoney[y][x].add(money[y][x]);
 				else {

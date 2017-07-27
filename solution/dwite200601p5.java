@@ -82,8 +82,8 @@ public final class dwite200601p5 extends DwiteSolution {
 		
 		
 		public Graph() {
-			nodes = new ArrayList<Node>();
-			nodeByName = new HashMap<String,Node>();
+			nodes = new ArrayList<>();
+			nodeByName = new HashMap<>();
 		}
 		
 		
@@ -116,7 +116,7 @@ public final class dwite200601p5 extends DwiteSolution {
 		
 		public Node(String name) {
 			this.name = name;
-			edges = new ArrayList<Edge>();
+			edges = new ArrayList<>();
 			distance = -1;
 		}
 		

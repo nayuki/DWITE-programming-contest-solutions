@@ -33,7 +33,7 @@ public final class dwite201201p3 extends DwiteSolution {
 		neighbors = new List[nodes];
 		visited = new boolean[nodes];
 		for (int i = 0; i < neighbors.length; i++)
-			neighbors[i] = new ArrayList<Edge>();
+			neighbors[i] = new ArrayList<>();
 		for (int i = 0; i < edges; i++) {
 			io.tokenizeLine();
 			int a = io.readIntToken() - 1;

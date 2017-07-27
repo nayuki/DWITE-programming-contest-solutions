@@ -42,7 +42,7 @@ public final class dwite201210p5 extends DwiteSolution {
 		Map<BitSet,Integer>[][] visited = new Map[grid.length][grid[0].length];
 		for (int y = 0; y < visited.length; y++) {
 			for (int x = 0; x < visited[y].length; x++)
-				visited[y][x] = new HashMap<BitSet,Integer>();
+				visited[y][x] = new HashMap<>();
 		}
 		
 		// Find starting point

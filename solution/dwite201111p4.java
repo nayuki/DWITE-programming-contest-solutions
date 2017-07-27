@@ -26,7 +26,7 @@ public final class dwite201111p4 extends DwiteSolution {
 		int n = io.readIntLine();
 		final List<Integer>[] neighbors = new List[n];
 		for (int i = 0; i < n; i++)
-			neighbors[i] = new ArrayList<Integer>();
+			neighbors[i] = new ArrayList<>();
 		
 		for (int i = 0; i < n - 1; i++) {
 			io.tokenizeLine();

@@ -72,7 +72,7 @@ public final class dwite200910p5 extends DwiteSolution {
 		
 		
 		public Node() {
-			outEdges = new ArrayList<Node>();
+			outEdges = new ArrayList<>();
 			visited = false;
 		}
 		

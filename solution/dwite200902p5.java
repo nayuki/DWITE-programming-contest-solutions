@@ -81,7 +81,7 @@ public final class dwite200902p5 extends DwiteSolution {
 		
 		
 		public Node() {
-			outEdges = new HashSet<Edge>();
+			outEdges = new HashSet<>();
 		}
 		
 	}

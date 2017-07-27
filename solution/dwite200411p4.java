@@ -74,7 +74,7 @@ public final class dwite200411p4 extends DwiteSolution {
 		
 		public Formula(DwiteIo io) {
 			// Parse formula from token stream
-			formula = new ArrayList<Object>();
+			formula = new ArrayList<>();
 			while (io.canReadToken()) {
 				String tok = io.readToken();
 				if (tok.matches("\\d+"))

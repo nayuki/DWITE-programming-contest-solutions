@@ -31,7 +31,7 @@ public final class dwite200601p4 extends DwiteSolution {
 	private static final Map<String,Integer> teaspoonsByUnit;
 	
 	static {
-		teaspoonsByUnit = new HashMap<String,Integer>();
+		teaspoonsByUnit = new HashMap<>();
 		teaspoonsByUnit.put("TEASPOONS"  ,    1);
 		teaspoonsByUnit.put("TABLESPOONS",    3);
 		teaspoonsByUnit.put("CUPS"       ,   48);
