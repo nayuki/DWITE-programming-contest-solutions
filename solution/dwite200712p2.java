@@ -18,7 +18,8 @@ public final class dwite200712p2 extends DwiteSolution {
 	}
 	
 	
-	private static final Pattern TEXT_PATTERN = Pattern.compile("'([^']*)'|\"([^\"]*)\"|/\\*(.*?)\\*/|//(.*)");
+	private static final Pattern TEXT_PATTERN =
+		Pattern.compile("'([^']*)'|\"([^\"]*)\"|/\\*(.*?)\\*/|//(.*)");
 	
 	protected void runOnce() {
 		String line = io.readLine();

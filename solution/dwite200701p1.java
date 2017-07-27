@@ -22,7 +22,8 @@ public final class dwite200701p1 extends DwiteSolution {
 		double watervolume = io.readDoubleLine();
 		
 		// Compute and write output
-		double waterHeight = Math.cbrt(watervolume / (Math.PI * coneRadius * coneRadius * coneHeight / 3)) * coneHeight;
+		double waterHeight = Math.cbrt(watervolume /
+			(Math.PI * coneRadius * coneRadius * coneHeight / 3)) * coneHeight;
 		io.printf("%.2f%n", waterHeight);
 	}
 	

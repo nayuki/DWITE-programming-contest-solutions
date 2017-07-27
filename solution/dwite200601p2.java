@@ -49,7 +49,8 @@ public final class dwite200601p2 extends DwiteSolution {
 	}
 	
 	
-	// 0 = normal, 1 = pink, 2 = red, 3 = light blue, 4 = dark blue, 5-9 = same meaning but to be scored and cleared
+	// 0 = normal, 1 = pink, 2 = red, 3 = light blue, 4 = dark blue,
+	// 5-9 = same meaning but to be scored and cleared
 	private int[][] boardvalue = {
 		{2, 0, 0, 3, 0, 0, 0, 2, 0, 0, 0, 3, 0, 0, 2},
 		{0, 1, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0, 1, 0},

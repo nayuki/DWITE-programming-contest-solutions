@@ -20,7 +20,8 @@ public final class dwite200602p3 extends DwiteSolution {
 		if (line.length() != 12)
 			throw new AssertionError("Invalid length for UPC digit sequence");
 		int sum = getUpcSumWithoutCheckDigit(DwiteAlgorithm.toDigits(line));
-		io.printf("%s%d%n", line.substring(0, 11), (10 - sum) % 10);  // Calculate the correct check digit using modular arithmetic magic
+		// Calculate the correct check digit using modular arithmetic magic
+		io.printf("%s%d%n", line.substring(0, 11), (10 - sum) % 10);
 	}
 	
 	
