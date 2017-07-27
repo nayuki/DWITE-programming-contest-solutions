@@ -41,8 +41,8 @@ public final class dwite200802p5 extends DwiteSolution {
 				int pieceX = x - offX;
 				int pieceY = y - offY;
 				complete &= board[y][x] == '#' ||
-					pieceY >= 0 && pieceY < piece.length &&
-					pieceX >= 0 && pieceX < piece[pieceY].length &&
+					0 <= pieceY && pieceY < piece.length &&
+					0 <= pieceX && pieceX < piece[pieceY].length &&
 					piece[pieceY][pieceX] == '#';
 			}
 			if (complete)

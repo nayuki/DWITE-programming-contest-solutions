@@ -41,7 +41,7 @@ public final class dwite201111p3 extends DwiteSolution {
 			io.tokenizeLine();
 			io.readToken();  // Discard name
 			String personalInfo = io.readToken();
-			Set<String> drinks = get(personalInfoToDrinks, personalInfo, new HashSet<>());
+			Set<String> drinks = get(personalInfoToDrinks, personalInfo, new HashSet<String>());
 			if (drinks.size() == 1)
 				count++;
 		}

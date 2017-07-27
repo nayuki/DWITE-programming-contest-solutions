@@ -46,22 +46,23 @@ public final class dwite200410p3 extends DwiteSolution {
 		
 		public Student(String name, String height, String unit) {
 			this.name = name;
-			
-			BigDecimal h = new BigDecimal(height);
-			if      (unit.equals( "m")) h = h.movePointRight(3);
-			else if (unit.equals("dm")) h = h.movePointRight(2);
-			else if (unit.equals("cm")) h = h.movePointRight(1);
-			else if (unit.equals("mm")) h = h.movePointRight(0);
-			else throw new AssertionError("Invalid unit");
-			this.height = h;
+			int scale;
+			switch (unit) {
+				case  "m":  scale = 3;  break;
+				case "dm":  scale = 2;  break;
+				case "cm":  scale = 1;  break;
+				case "mm":  scale = 0;  break;
+				default:  throw new AssertionError("Invalid unit");
+			}
+			this.height = new BigDecimal(height).movePointRight(scale);
 		}
 		
 		
-		public int compareTo(Student other) {  // Compares by descending height, then by ascending name
+		public int compareTo(Student other) {
 			if (other.height.compareTo(height) != 0)
-				return other.height.compareTo(height);
+				return other.height.compareTo(height);  // Descending
 			else
-				return name.compareTo(other.name);
+				return name.compareTo(other.name);  // Ascending
 		}
 		
 	}

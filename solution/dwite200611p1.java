@@ -23,7 +23,7 @@ public final class dwite200611p1 extends DwiteSolution {
 	}
 	
 	
-	private static String[][] REPLACEMENTS = {
+	private static final String[][] REPLACEMENTS = {
 		{"4"     , "A"},
 		{"8"     , "B"},
 		{"("     , "C"},

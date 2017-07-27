@@ -27,10 +27,8 @@ public final class dwite200602p3 extends DwiteSolution {
 	
 	private static int getUpcSumWithoutCheckDigit(int[] digits) {
 		int sum = 0;
-		for (int i = 0; i < digits.length - 1; i++) {
-			if (i % 2 == 0) sum += digits[i] * 3;
-			else            sum += digits[i] * 1;
-		}
+		for (int i = 0; i < digits.length - 1; i++)
+			sum += digits[i] * (i % 2 == 0 ? 3 : 1);
 		return sum % 10;
 	}
 	

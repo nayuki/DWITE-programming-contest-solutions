@@ -36,9 +36,10 @@ public final class dwite201111p5 extends DwiteSolution {
 				ds.union(nodeA, nodeB);
 				hasPortals[nodeA] = true;
 				hasPortals[nodeB] = true;
-			} else if (command.equals("q"))
-				io.println(ds.find(nodeA) == ds.find(nodeB) && hasPortals[nodeA] ? "connected" : "not connected");
-			else
+			} else if (command.equals("q")) {
+				boolean con = ds.find(nodeA) == ds.find(nodeB) && hasPortals[nodeA];
+				io.println(con ? "connected" : "not connected");
+			} else
 				throw new IllegalArgumentException();
 		}
 	}
