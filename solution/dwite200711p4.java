@@ -46,6 +46,8 @@ public final class dwite200711p4 extends DwiteSolution {
 						return;
 					}
 					break;
+				default:
+					break;
 			}
 		}
 		if (stack.isEmpty())

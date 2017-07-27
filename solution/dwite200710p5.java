@@ -43,6 +43,8 @@ public final class dwite200710p5 extends DwiteSolution {
 						raptorX = x;
 						raptorY = y;
 						break;
+					default:
+						break;
 				}
 			}
 		}
