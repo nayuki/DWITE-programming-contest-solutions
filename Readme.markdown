@@ -1,7 +1,7 @@
 DWITE programming contest solutions
 ===================================
 
-DWITE is an online programming contest primarily for Canadian high school students. Their official web site is [http://dwite.ca/](http://dwite.ca/).
+DWITE is an online programming contest primarily for Canadian high school students. Their official web site is [http://dwite.org/](http://dwite.org/).
 
 This project package contains:
 
