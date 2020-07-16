@@ -45,7 +45,7 @@ public final class DwiteTestUtils {
 		try (BufferedReader in = new BufferedReader(new InputStreamReader(
 				new FileInputStream(input), StandardCharsets.US_ASCII))) {
 			PrintWriter out = new PrintWriter(out0, true);
-			clazz.newInstance().run(new DwiteIo(in, out));
+			clazz.getDeclaredConstructor().newInstance().run(new DwiteIo(in, out));
 		}
 		return out0.getBuffer().toString();
 	}

@@ -109,7 +109,7 @@ public final class dwite200902p5 extends DwiteSolution {
 				while (i < expr.length() && expr.substring(i, i + 1).matches("[0-9.]"))
 					i++;
 				if (i > 0) {
-					ops.add(new Double(expr.substring(0, i)));
+					ops.add(Double.valueOf(expr.substring(0, i)));
 					expr = expr.substring(i);
 				} else {
 					char c = expr.charAt(0);

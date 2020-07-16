@@ -90,7 +90,7 @@ public final class dwite201110p3 extends DwiteSolution {
 		}
 		
 		public int hashCode() {
-			return new Double(x).hashCode() + new Double(y).hashCode();
+			return Double.valueOf(x).hashCode() + Double.valueOf(y).hashCode();
 		}
 		
 	}
