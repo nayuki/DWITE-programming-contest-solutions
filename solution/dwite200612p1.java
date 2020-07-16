@@ -16,26 +16,24 @@ public final class dwite200612p1 extends DwiteSolution {
 	
 	
 	protected void runOnce() {
-		int capacity = io.readIntLine();  // Capacity of storage box
-		int bags = io.readIntLine();
+		int capacity = io.readIntLine();  // Variable S
+		int numBags = io.readIntLine();  // Variable B
 		io.tokenizeLine();
 		
 		// Solve knapsack problem using dynamic programming
 		boolean[] possible = new boolean[capacity + 1];
 		possible[0] = true;
-		for (int i = 0; i < bags; i++) {
-			int marbles = io.readIntToken();
-			for (int j = capacity - marbles; j >= 0; j--)
-				possible[j + marbles] |= possible[j];
-		}
-		
-		// Write the largest possible total size
-		for (int i = capacity; i >= 0; i--) {
-			if (possible[i]) {  // Guaranteed to execute before the loop ends
-				io.println(i);
-				break;
+		int answer = 0;
+		for (int i = 0; i < numBags; i++) {
+			int marbles = io.readIntToken();  // Variable N_{i+1}
+			for (int j = capacity; j >= marbles; j--) {
+				if (possible[j - marbles]) {
+					possible[j] = true;
+					answer = Math.max(j, answer);
+				}
 			}
 		}
+		io.println(answer);
 	}
 	
 }

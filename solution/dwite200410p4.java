@@ -18,22 +18,22 @@ public final class dwite200410p4 extends DwiteSolution {
 	protected void runOnce() {
 		io.tokenizeLine();
 		int capacity = io.readIntToken();  // Variable A
-		int files    = io.readIntToken();  // Variable n
+		int numFiles = io.readIntToken();  // Variable n
 		
 		// Solve knapsack problem using dynamic programming
 		boolean[] possible = new boolean[capacity + 1];
 		possible[0] = true;
-		int maxpossible = 0;
-		for (int i = 0; i < files; i++) {
-			int filesize = io.readIntToken();  // Variable s_{i+1}
-			for (int j = capacity - filesize; j >= 0; j--) {
-				if (possible[j]) {
-					possible[j + filesize] = true;
-					maxpossible = Math.max(j + filesize, maxpossible);
+		int answer = 0;
+		for (int i = 0; i < numFiles; i++) {
+			int fileSize = io.readIntToken();  // Variable s_{i+1}
+			for (int j = capacity; j >= fileSize; j--) {
+				if (possible[j - fileSize]) {
+					possible[j] = true;
+					answer = Math.max(j, answer);
 				}
 			}
 		}
-		io.println(maxpossible);
+		io.println(answer);
 	}
 	
 }
