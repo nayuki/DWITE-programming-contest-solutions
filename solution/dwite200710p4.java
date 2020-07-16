@@ -17,23 +17,23 @@ public final class dwite200710p4 extends DwiteSolution {
 	}
 	
 	
-	private static final int INFINITY = Integer.MAX_VALUE - 1;
-	
 	protected void run() {
-		int height = io.readIntLine();
-		int numBlocks = io.readIntLine();
+		int height = io.readIntLine();  // Variable H
+		int numBlocks = io.readIntLine();  // Variable S
+		
+		// Solve knapsack problem using dynamic programming
 		int[] minBlocks = new int[height + 1];
-		Arrays.fill(minBlocks, INFINITY);
+		Arrays.fill(minBlocks, IMPOSSIBLE);
 		minBlocks[0] = 0;
 		for (int i = 0; i < numBlocks; i++) {
-			int blockHeight = io.readIntLine();
-			for (int j = height; j >= blockHeight; j--)
-				minBlocks[j] = Math.min(minBlocks[j - blockHeight] + 1, minBlocks[j]);
+			int block = io.readIntLine();  // Variable N
+			for (int j = height; j >= block; j--)
+				minBlocks[j] = Math.min(minBlocks[j - block] + 1, minBlocks[j]);
 		}
-		if (minBlocks[height] != INFINITY)
-			io.println(minBlocks[height]);
-		else
-			io.println(0);
+		io.println(minBlocks[height] != IMPOSSIBLE ? minBlocks[height] : 0);
 	}
+	
+	
+	private static final int IMPOSSIBLE = 999999;  // Must be greater than all legal values
 	
 }

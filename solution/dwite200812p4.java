@@ -18,18 +18,24 @@ public final class dwite200812p4 extends DwiteSolution {
 	
 	
 	protected void runOnce() {
-		int amount = io.readIntLine();
-		int[] minCoins = new int[amount + 1];
-		Arrays.fill(minCoins, Integer.MAX_VALUE - 1);
-		minCoins[0] = 0;
+		int amount = io.readIntLine();  // Variable m
+		int numCoins = io.readIntLine();  // Variable n
 		
-		int coins = io.readIntLine();
-		for (int i = 0; i < coins; i++) {
-			int coin = io.readIntLine();
+		// Solve knapsack problem using dynamic programming
+		int[] minCoins = new int[amount + 1];
+		Arrays.fill(minCoins, IMPOSSIBLE);
+		minCoins[0] = 0;
+		for (int i = 0; i < numCoins; i++) {
+			int coin = io.readIntLine();  // Variable c
 			for (int j = coin; j <= amount; j++)
 				minCoins[j] = Math.min(minCoins[j - coin] + 1, minCoins[j]);
 		}
+		if (minCoins[amount] == IMPOSSIBLE)
+			throw new AssertionError();
 		io.println(minCoins[amount]);
 	}
+	
+	
+	private static final int IMPOSSIBLE = 999999;  // Must be greater than all legal values
 	
 }
