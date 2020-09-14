@@ -18,5 +18,3 @@ sum = -16
 For i = 10 To 60
  sum = 48 - sum + sum \ i - sum * (-2)
 Next i
-
-
