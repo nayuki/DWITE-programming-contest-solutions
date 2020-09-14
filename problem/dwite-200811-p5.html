@@ -20,16 +20,14 @@
 		<p>The output file <strong>OUT5.txt</strong> will contain 5 lines, the integer number of points of interest submerged under water.</p>
 		<p><em>Technical details:</em> Water originates at the top left of the map. Each unit of water occupies one cell on the map. Water normally falls down. If there's ground below, it will move to the right. Once in place (can no longer flow), it could be treated as solid ground, as far as the movement of other units of water is concerned.</p>
 		<p><em>Step-by-step diagram:</em> 2 units of water, C=4 × R=3 layout. Asterisk (*) represents a moving unit of water. The second unit of water reaches A at the bottom. Even though A at the top was passed by water, it remains un-submerged at the end, so it's not counted towards the output sum.
-		  <pre>
-*.A. .*A. ..A. *.A. .*A. ..*. ..A* .... ..A. 
+		  <pre>*.A. .*A. ..A. *.A. .*A. ..*. ..A* .... ..A. 
 #.#. #.#. #*#. #*#. #*#. #*#. #*#. #*#* #*#. 
 ###A ###A ###A ###A ###A ###A ###A ###A ###* 
 		  </pre></p>
 		<div id="sample_data">
 		    <div class="sample_in">
 		        Sample Input (first 3 shown):
-		        <pre>
-2
+		        <pre>2
 4
 3
 ..A.
@@ -53,8 +51,7 @@
 		    </div>
 		    <div class="sample_out">
 		        Sample Output:
-		        <pre>
-1
+		        <pre>1
 1
 2
 		        </pre>
