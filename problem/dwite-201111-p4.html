@@ -15,12 +15,8 @@
 		</div>
 		<div id="problem_title">Bear Trees</div>
 		
-		<p>
-			Gary is a bear. He lives in a system of caves consisting of <strong>N</strong> caverns numbered from 0 through N – 1. These caverns are connected by bidirectional tunnels, such that there is exactly one path between each pair of tunnels. (You might also know this kind of structure as a <em>"tree"</em>, so you’ll know that there are necessarily N – 1 tunnels.)
-		</p>
-		<p>
-			Gary would like to explore this system of caves, using the following method:
-		</p>
+		<p>Gary is a bear. He lives in a system of caves consisting of <strong>N</strong> caverns numbered from 0 through N – 1. These caverns are connected by bidirectional tunnels, such that there is exactly one path between each pair of tunnels. (You might also know this kind of structure as a <em>"tree"</em>, so you’ll know that there are necessarily N – 1 tunnels.)</p>
+		<p>Gary would like to explore this system of caves, using the following method:</p>
 		<ol>
 			<li>Put cavern 0 (his home) on a "to explore" list.</li>
 			<li>Choose one cavern <strong>C</strong> from the list.</li>
@@ -28,15 +24,10 @@
 			<li>Explore <strong>C</strong>: Add all caverns adjacent to <strong>C</strong> that have never been on the list.</li>
 			<li>Repeat steps 2 to 3 while the list contains at least one cavern.</li>
 		</ol>
-		<p>
-			There are many ways to explore a system of caves. However, bears are forgetful. You would like to find a way to explore the cave such that <strong>the maximum length of the list is minimized</strong>. For example, given the following tree:
-		</p>
+		<p>There are many ways to explore a system of caves. However, bears are forgetful. You would like to find a way to explore the cave such that <strong>the maximum length of the list is minimized</strong>. For example, given the following tree:</p>
 		<img src="dwite-201111-p4.png" />
-		<p>
-			Here is one possible way to explore the tree, where the maximum length of the list is 4:
-		</p>
-		<p>
-		<ul>
+		<p>Here is one possible way to explore the tree, where the maximum length of the list is 4:</p>
+		<p><ul>
 			<li>Explore 0, list = {1, 2, 3}</li>
 			<li>Explore 2, list = {1, 3, 4, 5}</li>
 			<li>Explore 1, list = {3, 4, 5}</li>
@@ -44,18 +35,11 @@
 			<li>Explore 4, list = {5, 6}</li>
 			<li>Explore 6, list = {5}</li>
 			<li>Explore 5, list = {}</li>
-		</ul>
-		</p>
-		<p>
-			However, exploring in a different order, Gary can make it such that he never has to remember more than 3 elements; indeed, it is easy to see that 3 is optimal. Gary has retained you to find this minimum list length, given a system of caves.
-		</p>
+		</ul></p>
+		<p>However, exploring in a different order, Gary can make it such that he never has to remember more than 3 elements; indeed, it is easy to see that 3 is optimal. Gary has retained you to find this minimum list length, given a system of caves.</p>
 		
-		<p>
-			The input file <strong>DATA5.txt</strong> will contain 5 test cases. Each test case will begin with one line, containing the number of caverns 1 &lt;= <strong>N</strong> &lt;= 1000. <strong>N – 1</strong> lines will follow, each consisting of two distinct space-separated integers <strong>x</strong> and <strong>y</strong>, denoting a tunnel between caverns <strong>x</strong> and <strong>y</strong>. Of course, no tunnel will be described more than once, and 0 &lt;= <strong>x, y</strong> &lt; <strong>N</strong>.
-		</p>
-		<p>
-			The output file <strong>OUT5.txt</strong> will contain 5 lines of output, the minimum list length for each cave system.
-		</p>
+		<p>The input file <strong>DATA5.txt</strong> will contain 5 test cases. Each test case will begin with one line, containing the number of caverns 1 &lt;= <strong>N</strong> &lt;= 1000. <strong>N – 1</strong> lines will follow, each consisting of two distinct space-separated integers <strong>x</strong> and <strong>y</strong>, denoting a tunnel between caverns <strong>x</strong> and <strong>y</strong>. Of course, no tunnel will be described more than once, and 0 &lt;= <strong>x, y</strong> &lt; <strong>N</strong>.</p>
+		<p>The output file <strong>OUT5.txt</strong> will contain 5 lines of output, the minimum list length for each cave system.</p>
 
 		<div id="sample_data">
 		    <div class="sample_in">

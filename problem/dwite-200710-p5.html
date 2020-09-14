@@ -14,18 +14,10 @@
 </div>
 <div id="problem_title">Velociraptor Maze</div>
 
-<p>
-A <del>common</del> problem is being chased through a maze by a hungry velociraptor. There is no time to think as to how one came to be in such a situation. A program is required to calculate the survival time of a human character.
-</p>
-<p>
-The maze consists of hallways and has no open areas. There are no loops in the maze - that is, there is always only one possible path between any two points. There is just one exit, one human, and one velociraptor present in the maze. The only possible chance of survival is to make it to the exit before the velociraptor does. The velociraptor will also run towards the exit, covering twice as much ground "per turn" as the human figure.
-</p>
-<p>
-Note: <em>The velociraptor has no intelligence, but it knows its way to the exit. It will attack only when it occupies the same "square" as a human. In a case when the velociraptor is between a human and the exit, both will continue running until they meet at the exit location.</em>
-</p>
-<p>
-The input file <strong>DATA5.txt</strong> will contain two lines with one integer value each, R,C; 0 &lt; R, C &lt;= 10, representing the number of <em>rows</em> and <em>columns</em> that make up the maze. This is followed by R lines showing the maze layout, where:
-</p>
+<p>A <del>common</del> problem is being chased through a maze by a hungry velociraptor. There is no time to think as to how one came to be in such a situation. A program is required to calculate the survival time of a human character.</p>
+<p>The maze consists of hallways and has no open areas. There are no loops in the maze - that is, there is always only one possible path between any two points. There is just one exit, one human, and one velociraptor present in the maze. The only possible chance of survival is to make it to the exit before the velociraptor does. The velociraptor will also run towards the exit, covering twice as much ground "per turn" as the human figure.</p>
+<p>Note: <em>The velociraptor has no intelligence, but it knows its way to the exit. It will attack only when it occupies the same "square" as a human. In a case when the velociraptor is between a human and the exit, both will continue running until they meet at the exit location.</em></p>
+<p>The input file <strong>DATA5.txt</strong> will contain two lines with one integer value each, R,C; 0 &lt; R, C &lt;= 10, representing the number of <em>rows</em> and <em>columns</em> that make up the maze. This is followed by R lines showing the maze layout, where:</p>
 <ul>
 <li># - wall</li>
 <li>. - open path</li>
@@ -33,21 +25,11 @@ The input file <strong>DATA5.txt</strong> will contain two lines with one intege
 <li>H - human</li>
 <li>V - velociraptor</li>
 </ul>
-<p>
-The output file <strong>OUT5.txt</strong> will contain a single line for the result.
-</p>
-<p>
-In an event that the velociraptor catches up with the human on the way to the exit, output a single integer representing the number of steps the human took before the event. The human has an advantage, so this will always be at least one, even if the velociraptor is right behind (or ahead).
-</p>
-<p>
-In an event that the velociraptor makes it to the exit first, it will wait there. It will "catch up" right after the human figure steps onto the exit square.
-</p>
-<p>
-In an event that the human and the velociraptor make it to the exit at the same time, the human still gets caught. Output the number of steps.
-</p>
-<p>
-If in a given turn the human finds himself at the exit square, but the velociraptor does not, output "escape". Lower case, no quotes.
-</p>
+<p>The output file <strong>OUT5.txt</strong> will contain a single line for the result.</p>
+<p>In an event that the velociraptor catches up with the human on the way to the exit, output a single integer representing the number of steps the human took before the event. The human has an advantage, so this will always be at least one, even if the velociraptor is right behind (or ahead).</p>
+<p>In an event that the velociraptor makes it to the exit first, it will wait there. It will "catch up" right after the human figure steps onto the exit square.</p>
+<p>In an event that the human and the velociraptor make it to the exit at the same time, the human still gets caught. Output the number of steps.</p>
+<p>If in a given turn the human finds himself at the exit square, but the velociraptor does not, output "escape". Lower case, no quotes.</p>
 
 
 <div id="sample_data">

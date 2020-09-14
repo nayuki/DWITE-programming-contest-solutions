@@ -15,17 +15,13 @@
 		</div>
 		<div id="problem_title">Autocomplete</div>
 		
-		<p>
-			Have you came across those online forms where you'd begin to type in a word, and it will give you suggestions as to how to end it? That's <strong>autocomplete</strong>. It matches a beginning of the word against the dictionary of known (or relevant) words, and makes suggestions. Since the dictionary that I want you guys to have will be too big for an input file, you'd have to make your own.
-		</p>
+		<p>Have you came across those online forms where you'd begin to type in a word, and it will give you suggestions as to how to end it? That's <strong>autocomplete</strong>. It matches a beginning of the word against the dictionary of known (or relevant) words, and makes suggestions. Since the dictionary that I want you guys to have will be too big for an input file, you'd have to make your own.</p>
 		<ul>
 		  <li>Start with an array of 50,000 integers, from 0 to 49,000.</li>
 		  <li>For each element, multiply it by the sum of its digits, and take modulo 99999</li>
 		  <li>This is your dictionary</li>
 		</ul>
-		<p>
-		  It's important that we are working with the same "words" here, so to check that you are doing this right, here's an example: If the original seed is 12345, then the resulting word is (12345 * 15) % 99999 = 85176. Here are some extra checks, at various indexes of my dictionary:
-		</p>
+		<p>It's important that we are working with the same "words" here, so to check that you are doing this right, here's an example: If the original seed is 12345, then the resulting word is (12345 * 15) % 99999 = 85176. Here are some extra checks, at various indexes of my dictionary:</p>
 		<ul>
 		  <li>dictionary[0] == 0</li>
 		  <li>dictionary[9] == 81</li>
@@ -34,18 +30,10 @@
 		  <li>dictionary[49999] == 99979</li>
 		</ul>
 
-		<p>
-			The input file <strong>DATA4.txt</strong> will contain 5 lines, integers 0 &lt;= N &lt;= 49999, prefixes of words being entered.
-		</p>
-		<p>
-			The output file <strong>OUT4.txt</strong> will contain 5 integer results, number of possible matches in the dictionary; that is number of words that have the input as a prefix (begin with that sequence) or are that word in full.
-		</p>
-		<p>
-			<em>Note1:</em> words in the dictionary are not guaranteed to be unique. For example, 99990 appears in the dictionary 3 times. All 3 of them would count towards the answer.
-		</p>
-		<p>
-		  <em>Note2:</em> be aware of the performance constrains. The judge will time out if you take too long.
-		</p>
+		<p>The input file <strong>DATA4.txt</strong> will contain 5 lines, integers 0 &lt;= N &lt;= 49999, prefixes of words being entered.</p>
+		<p>The output file <strong>OUT4.txt</strong> will contain 5 integer results, number of possible matches in the dictionary; that is number of words that have the input as a prefix (begin with that sequence) or are that word in full.</p>
+		<p><em>Note1:</em> words in the dictionary are not guaranteed to be unique. For example, 99990 appears in the dictionary 3 times. All 3 of them would count towards the answer.</p>
+		<p><em>Note2:</em> be aware of the performance constrains. The judge will time out if you take too long.</p>
 		<div id="sample_data">
 		    <div class="sample_in">
 		        Sample Input:

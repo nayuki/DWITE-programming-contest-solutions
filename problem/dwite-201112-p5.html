@@ -15,13 +15,9 @@
 		</div>
 		<div id="problem_title">Tautology</div>
 		
-		<p>
-			<img src="dwite-201112-p5.png" alt="XKCD Tautology Club"/>
-			<a href="http://xkcd.com/703/">http://xkcd.com/703/</a>
-		</p>
-		<p>
-			We define a propositional formula as follows:
-		</p>
+		<p><img src="dwite-201112-p5.png" alt="XKCD Tautology Club"/>
+			<a href="http://xkcd.com/703/">http://xkcd.com/703/</a></p>
+		<p>We define a propositional formula as follows:</p>
 		<ul>
 			<li>{a,b,...j} are atomic propositions, representing either true or false.</li>
 			<li>If A and B are propositional formulae, then so are:
@@ -31,14 +27,9 @@
 					<li>~A -- ~ is boolean "not"</li>
 				</ul>
 		</ul>
-		<p>
-			For example, ((a v b) ^ (~c v a)) is a propositional formula. A <strong>tautology</strong> is a propositional formula that equates to <strong>true</strong> for <strong>all possible</strong> value assignments to the atomic propositions. Our previous example ((a v b) ^ (~c v a)) is not a tautology because for the assignments a = false, b = false, and c = true, the formula evaluates to a false. However, (a v ~a) is a tautology because no matter what, the atomic proposition is this equates to true; (true or not-true) == true, (false or not-false) == true.
-		<p>
-			The input file <strong>DATA5.txt</strong> will contain 5 test cases, each three lines long (not more than 255 characters per line) with a propositional formula per line.
-		</p>
-		<p>
-			The output file <strong>OUT5.txt</strong> will contain 5 lines of output, each three characters long: <strong>Y</strong> for <strong>tautology</strong>, <strong>N</strong> for <strong>not tautology</strong>.
-		</p>
+		<p>For example, ((a v b) ^ (~c v a)) is a propositional formula. A <strong>tautology</strong> is a propositional formula that equates to <strong>true</strong> for <strong>all possible</strong> value assignments to the atomic propositions. Our previous example ((a v b) ^ (~c v a)) is not a tautology because for the assignments a = false, b = false, and c = true, the formula evaluates to a false. However, (a v ~a) is a tautology because no matter what, the atomic proposition is this equates to true; (true or not-true) == true, (false or not-false) == true.
+		<p>The input file <strong>DATA5.txt</strong> will contain 5 test cases, each three lines long (not more than 255 characters per line) with a propositional formula per line.</p>
+		<p>The output file <strong>OUT5.txt</strong> will contain 5 lines of output, each three characters long: <strong>Y</strong> for <strong>tautology</strong>, <strong>N</strong> for <strong>not tautology</strong>.</p>
 
 		<div id="sample_data">
 		    <div class="sample_in">

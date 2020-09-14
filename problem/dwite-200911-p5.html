@@ -15,12 +15,8 @@
 		</div>
 		<div id="problem_title">Portals Redux</div>
 
-<p>
-Having returned to the crazy house from <a href="dwite-200712-p5.html" title="First Portals DWITE question">December 2007</a>, this time we just want to know how well we can move between the rooms connected by Portals.
-</p>
-<p>
-The input file <strong>DATA5.txt</strong> will contain two lines with one integer value each, R,C; 0 &lt; R, C &lt;= 20, representing the number of <em>Rows</em> and <em>Columns</em> that make up the floor plan. Followed by R lines, showing the floor plan layout, where:
-</p>
+<p>Having returned to the crazy house from <a href="dwite-200712-p5.html" title="First Portals DWITE question">December 2007</a>, this time we just want to know how well we can move between the rooms connected by Portals.</p>
+<p>The input file <strong>DATA5.txt</strong> will contain two lines with one integer value each, R,C; 0 &lt; R, C &lt;= 20, representing the number of <em>Rows</em> and <em>Columns</em> that make up the floor plan. Followed by R lines, showing the floor plan layout, where:</p>
 <ul>
 <li># - wall</li>
 <li>. - open space</li>
@@ -29,17 +25,10 @@ The input file <strong>DATA5.txt</strong> will contain two lines with one intege
 </ul>
 <p>Lower case letters mark entrance nodes, while corresponding capital
 letters mark exit nodes. That is, one can enter at point j and exit at
-point J. There will be no more than 10 portals in the floor plan.
-</p>
-<p>
-	The goal is to figure out which of the points are reachable, when starting out from each of the 5 marked points.
-</p>
-<p>
-The output file <strong>OUT5.txt</strong> will contain 5 lines. The first line corresponds to starting from point 1, second line from point 2, etc. The line will begin with the corresponding <em>start node</em> and a colon, followed by a set of integers, separated by a single space, in ascending order -- other points of interest reachable from the starting point. If no other point is reachable, the output line is just the <em>"n:"</em>, with <em>no trailing spaces</em>.
-</p>
-<p>
-	<em>Note:</em> Portals could create loops. In the sample below, room 1 leads to room 2, and room 2 has a path back to room 1. Please take care to avoid infinite loops, as those take a long time to execute.
-</p>
+point J. There will be no more than 10 portals in the floor plan.</p>
+<p>The goal is to figure out which of the points are reachable, when starting out from each of the 5 marked points.</p>
+<p>The output file <strong>OUT5.txt</strong> will contain 5 lines. The first line corresponds to starting from point 1, second line from point 2, etc. The line will begin with the corresponding <em>start node</em> and a colon, followed by a set of integers, separated by a single space, in ascending order -- other points of interest reachable from the starting point. If no other point is reachable, the output line is just the <em>"n:"</em>, with <em>no trailing spaces</em>.</p>
+<p><em>Note:</em> Portals could create loops. In the sample below, room 1 leads to room 2, and room 2 has a path back to room 1. Please take care to avoid infinite loops, as those take a long time to execute.</p>
 
 <div id="sample_data">
     <div class="sample_in">
