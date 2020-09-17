@@ -1,49 +1,46 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<link rel="Stylesheet" href="stylish.css" type="text/css">
-
-</head>
-<body>
-<div id="content">
-<div id="title">DWITE Online Computer Programming Contest</div>
-<div id="problem_meta">
-	<div id="date">November 2007</div>
-	<div id="problem_number">Problem 4</div>
-</div>
-<div id="problem_title">All Is Balanced</div>
-
-<p>Parentheses are important characters in programming -- they define the order of operations and organize information. That is, as long as they are properly balanced. Parentheses are <em>balanced</em> when the opening and closing brackets match with one another, and are themselves nested within balanced parentheses.</p>
-<p>This is perhaps best illustrated in examples.</p>
-<ul>
-<li>( ) - balanced: opening is matched with a closing</li>
-<li>( ( ) - not balanced: one of the opening brackets has no match</li>
-<li>( [ ) ] - not balanced: the contents inside of ( ) are not balanced</li>
-</ul>
-<p>The input file <strong>DATA4.txt</strong> will contain 5 lines, each no more than 255 characters long. Valid characters are any of the three parenthesis types: <strong>()</strong>, <strong>[]</strong>, <strong>{}</strong>, and any alphanumeric characters: <strong>a-z0-9</strong>.</p>
-<p>The output file <strong>OUT4.txt</strong> will contain 5 lines, each stating either <em>"balanced"</em> or <em>"not balanced"</em> for the supplied expressions. Use the exact string output, all lower case, without quotes.</p>
-<p>All of the characters but the parentheses could effectively be ignored. Keep in mind the different types of parentheses -- an opening bracket needs to be matched with a closing bracket of the same type.</p>
-
-<div id="sample_data">
-    <div class="sample_in">
-        Sample Input:
-        <pre>abc
+	<head>
+		<meta charset="UTF-8">
+		<link rel="Stylesheet" href="stylish.css" type="text/css">
+	</head>
+	<body>
+		<div id="content">
+			<div id="title">DWITE Online Computer Programming Contest</div>
+			<div id="problem_meta">
+				<div id="date">November 2007</div>
+				<div id="problem_number">Problem 4</div>
+			</div>
+			<div id="problem_title">All Is Balanced</div>
+			<p>Parentheses are important characters in programming -- they define the order of operations and organize information. That is, as long as they are properly balanced. Parentheses are <em>balanced</em> when the opening and closing brackets match with one another, and are themselves nested within balanced parentheses.</p>
+			<p>This is perhaps best illustrated in examples.</p>
+			<ul>
+				<li>( ) - balanced: opening is matched with a closing</li>
+				<li>( ( ) - not balanced: one of the opening brackets has no match</li>
+				<li>( [ ) ] - not balanced: the contents inside of ( ) are not balanced</li>
+			</ul>
+			<p>The input file <strong>DATA4.txt</strong> will contain 5 lines, each no more than 255 characters long. Valid characters are any of the three parenthesis types: <strong>()</strong>, <strong>[]</strong>, <strong>{}</strong>, and any alphanumeric characters: <strong>a-z0-9</strong>.</p>
+			<p>The output file <strong>OUT4.txt</strong> will contain 5 lines, each stating either <em>"balanced"</em> or <em>"not balanced"</em> for the supplied expressions. Use the exact string output, all lower case, without quotes.</p>
+			<p>All of the characters but the parentheses could effectively be ignored. Keep in mind the different types of parentheses -- an opening bracket needs to be matched with a closing bracket of the same type.</p>
+			<div id="sample_data">
+				<div class="sample_in">
+					Sample Input:
+					<pre>abc
 ([{a}b]c)
 )(
 ([)]
 {abc]</pre>
-    </div>
-    <div class="sample_out">
-        Sample Output:
-        <pre>balanced
+				</div>
+				<div class="sample_out">
+					Sample Output:
+					<pre>balanced
 balanced
 not balanced
 not balanced
 not balanced</pre>
-    </div>
-    <div style="clear:both;"></div>
-</div>
-</div>
-</body>
+				</div>
+				<div style="clear:both;"></div>
+			</div>
+		</div>
+	</body>
 </html>

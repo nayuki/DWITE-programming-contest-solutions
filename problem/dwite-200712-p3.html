@@ -1,27 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<link rel="Stylesheet" href="stylish.css" type="text/css">
-
-</head>
-<body>
-<div id="content">
-<div id="title">DWITE Online Computer Programming Contest</div>
-<div id="problem_meta">
-	<div id="date">December 2007</div>
-	<div id="problem_number">Problem 3</div>
-</div>
-<div id="problem_title">Playlist</div>
-
-<p>There's a library full of legally purchased music and a shiny new MP3 player that needs to be filled with the best possible playlist. Every song comes with a rating from 0 to 5 (inclusive) and takes up a certain amount of space. The <em>best</em> playlist is defined as the one with the highest total of rating points that still fits into the allowable space.</p>
-<p>The input file <strong>DATA3.txt</strong> will contain five data sets. The first line will contain the space available in the player, a positive integer. The second line will specify the size of the music library, 1 &lt;= N &lt;= 100. This is followed by N lines in the form <strong>title rating space</strong>. The title will be a unique single string (no spaces). Rating is an integer from 0 to 5. Space is an integer, 1 &lt;= S &lt;= 30000. This is followed by the next data set.</p>
-<p>The output file <strong>OUT3.txt</strong> will contain five lines, each containing an integer -- the max sum of ratings that can fit on the player.</p>
-
-<div id="sample_data">
-    <div class="sample_in">
-        Sample Input (only 1 dataset shown):
-        <pre>100
+	<head>
+		<meta charset="UTF-8">
+		<link rel="Stylesheet" href="stylish.css" type="text/css">
+	</head>
+	<body>
+		<div id="content">
+			<div id="title">DWITE Online Computer Programming Contest</div>
+			<div id="problem_meta">
+				<div id="date">December 2007</div>
+				<div id="problem_number">Problem 3</div>
+			</div>
+			<div id="problem_title">Playlist</div>
+			<p>There's a library full of legally purchased music and a shiny new MP3 player that needs to be filled with the best possible playlist. Every song comes with a rating from 0 to 5 (inclusive) and takes up a certain amount of space. The <em>best</em> playlist is defined as the one with the highest total of rating points that still fits into the allowable space.</p>
+			<p>The input file <strong>DATA3.txt</strong> will contain five data sets. The first line will contain the space available in the player, a positive integer. The second line will specify the size of the music library, 1 &lt;= N &lt;= 100. This is followed by N lines in the form <strong>title rating space</strong>. The title will be a unique single string (no spaces). Rating is an integer from 0 to 5. Space is an integer, 1 &lt;= S &lt;= 30000. This is followed by the next data set.</p>
+			<p>The output file <strong>OUT3.txt</strong> will contain five lines, each containing an integer -- the max sum of ratings that can fit on the player.</p>
+			<div id="sample_data">
+				<div class="sample_in">
+					Sample Input (only 1 dataset shown):
+					<pre>100
 6
 song_one 5 25
 song_two 5 25
@@ -29,13 +26,13 @@ song_three 5 51
 song_four 4 50
 song_five 3 25
 song_six 3 25</pre>
-    </div>
-    <div class="sample_out">
-        Sample Output (only first dataset shown):
-        <pre>16</pre>
-    </div>
-    <div style="clear:both;"></div>
-</div>
-</div>
-</body>
+				</div>
+				<div class="sample_out">
+					Sample Output (only first dataset shown):
+					<pre>16</pre>
+				</div>
+				<div style="clear:both;"></div>
+			</div>
+		</div>
+	</body>
 </html>
