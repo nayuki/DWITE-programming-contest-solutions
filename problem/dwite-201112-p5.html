@@ -25,6 +25,7 @@
 					<li>(A v B) -- v is boolean "or"</li>
 					<li>~A -- ~ is boolean "not"</li>
 				</ul>
+			</li>
 		</ul>
 		<p>For example, ((a v b) ^ (~c v a)) is a propositional formula. A <strong>tautology</strong> is a propositional formula that equates to <strong>true</strong> for <strong>all possible</strong> value assignments to the atomic propositions. Our previous example ((a v b) ^ (~c v a)) is not a tautology because for the assignments a = false, b = false, and c = true, the formula evaluates to a false. However, (a v ~a) is a tautology because no matter what, the atomic proposition is this equates to true; (true or not-true) == true, (false or not-false) == true.</p>
 		<p>The input file <strong>DATA5.txt</strong> will contain 5 test cases, each three lines long (not more than 255 characters per line) with a propositional formula per line.</p>
