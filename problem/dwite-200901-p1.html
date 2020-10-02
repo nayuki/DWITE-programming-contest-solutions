@@ -7,40 +7,36 @@
 	</head>
 	<body>
 		<div id="content">
-		<div id="title">DWITE Online Computer Programming Contest</div>
-		<div id="problem_meta">
-			<div id="date">January 2009</div>
-			<div id="problem_number">Problem 1</div>
-		</div>
-		<div id="problem_title">Four player Pong with no players</div>
-		
-		<p>This <em>"game"</em> has been simplified so much that all the players left. Incidentally, with no paddles left on the screen, it makes it even more simple, as there is nothing to bounce off. The only objective left now is to figure out where the ball will hit the edge of the playfield.</p>
-
-    <p>The playfield is a rectangle of the size 100 wide by 50 high. The lower left corner is at (0,0) and the upper right is at (100,50). The ball is the size of a single pixel, and the score counts as that pixel lands on the edge. The ball starts out at the center at (50,25), and its velocity will be provided in the input file.</p>
-
-		<p>The input file <strong>DATA1.txt</strong> will contain 5 sets of input, 2 lines each. The first line will be an integer value -10 &lt;= H &lt;= 10, the horizontal component of the velocity. The second line will be an integer value -10 &lt;= V &lt;= 10, the vertical component of the velocity. There will be no 0,0 input, and thus there will always be a solution.</p>
-		<p>The output file <strong>OUT1.txt</strong> will contain 5 lines, the location where the ball hits the edge, in the <strong>x,y</strong> format.</p>
-		<p><em>Note:</em> If one was to simulate the game using a loop, the integer values in all of the cases will land exactly on an edge during one of the steps.</p>
-		<p><em>Another note:</em> Some might want to draw to screen while developing or debugging their code -- this could be helpful to get a better idea of what's going on, but please remember to comment out any graphical code before submitting a solution.</p>
-		<div id="sample_data">
-		    <div class="sample_in">
-		        Sample Input (3 of 5 shown):
-		        <pre>5
+			<div id="title">DWITE Online Computer Programming Contest</div>
+			<div id="problem_meta">
+				<div id="date">January 2009</div>
+				<div id="problem_number">Problem 1</div>
+			</div>
+			<div id="problem_title">Four player Pong with no players</div>
+			<p>This <em>"game"</em> has been simplified so much that all the players left. Incidentally, with no paddles left on the screen, it makes it even more simple, as there is nothing to bounce off. The only objective left now is to figure out where the ball will hit the edge of the playfield.</p>
+			<p>The playfield is a rectangle of the size 100 wide by 50 high. The lower left corner is at (0,0) and the upper right is at (100,50). The ball is the size of a single pixel, and the score counts as that pixel lands on the edge. The ball starts out at the center at (50,25), and its velocity will be provided in the input file.</p>
+			<p>The input file <strong>DATA1.txt</strong> will contain 5 sets of input, 2 lines each. The first line will be an integer value -10 &lt;= H &lt;= 10, the horizontal component of the velocity. The second line will be an integer value -10 &lt;= V &lt;= 10, the vertical component of the velocity. There will be no 0,0 input, and thus there will always be a solution.</p>
+			<p>The output file <strong>OUT1.txt</strong> will contain 5 lines, the location where the ball hits the edge, in the <strong>x,y</strong> format.</p>
+			<p><em>Note:</em> If one was to simulate the game using a loop, the integer values in all of the cases will land exactly on an edge during one of the steps.</p>
+			<p><em>Another note:</em> Some might want to draw to screen while developing or debugging their code -- this could be helpful to get a better idea of what's going on, but please remember to comment out any graphical code before submitting a solution.</p>
+			<div id="sample_data">
+				<div class="sample_in">
+					Sample Input (3 of 5 shown):
+					<pre>5
 0
 0
 -5
 5
 5</pre>
-		    </div>
-		    <div class="sample_out">
-		        Sample Output (3 of 5 shown):
-		        <pre>100,25
+				</div>
+				<div class="sample_out">
+					Sample Output (3 of 5 shown):
+					<pre>100,25
 50,0
 75,50</pre>
-		    </div>
-		    <div style="clear: both;"></div>
-		</div>
-
+				</div>
+				<div style="clear: both;"></div>
+			</div>
 		</div>
 	</body>
 </html>
