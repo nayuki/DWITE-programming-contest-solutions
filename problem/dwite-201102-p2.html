@@ -7,45 +7,39 @@
 	</head>
 	<body>
 		<div id="content">
-		<div id="title">DWITE Online Computer Programming Contest</div>
-		<div id="problem_meta">
-			<div id="date">February 2011</div>
-			<div id="problem_number">Problem 2</div>
-		</div>
-		<div id="problem_title">Safe from Rooks</div>
-		
-		<p>In chess, a rook is a piece that can move to any other square on the row or column it is on. So, we say that it threatens all the squares on the row and column it is on (because it can threaten to capture any of the opponent's piece on these squares; if there are multiple pieces in a row, the threat upon the further piece is known as <em>skewer</em> or an <em>x-ray attack</em> /chess-trivia). Given the positions of rooks on a chess board, whose dimensions aren't necessarily 8 by 8, determine the number of squares that <strong>are not</strong> threatened by rooks.</p>
-
-		<p>The input file <strong>DATA2.txt</strong> will contain 5 test cases. The first line of each test case contains three numbers, <strong>R</strong>, <strong>C</strong> and <strong>Ro</strong> (1 &lt;= <strong>R, C</strong> &lt;= 31000, 1 &lt;= <strong>Ro</strong> &lt;= 20) representing the number of rows and the number of columns on our chess board (where the rows are numbered bottom up, and the columns are numbered left to right) and the number of rooks on the board respectively. The next <strong>Ro</strong> lines each contain two numbers <strong>X</strong> and <strong>Y</strong> (1 &lt;= X &lt;= R, 1 &lt;= Y &lt;= C) representing the position of a rook on the board.</p>
-		<p>The output file <strong>OUT2.txt</strong> should contain 5 lines, where each line represents the number of squares on the chessboard that <strong>are not</strong> being threatened by rooks.</p>
-		<div id="sample_data">
-		    <div class="sample_in">
-		        Sample Input (first two cases shown):
-		        <pre>3 3 1
+			<div id="title">DWITE Online Computer Programming Contest</div>
+			<div id="problem_meta">
+				<div id="date">February 2011</div>
+				<div id="problem_number">Problem 2</div>
+			</div>
+			<div id="problem_title">Safe from Rooks</div>
+			<p>In chess, a rook is a piece that can move to any other square on the row or column it is on. So, we say that it threatens all the squares on the row and column it is on (because it can threaten to capture any of the opponent's piece on these squares; if there are multiple pieces in a row, the threat upon the further piece is known as <em>skewer</em> or an <em>x-ray attack</em> /chess-trivia). Given the positions of rooks on a chess board, whose dimensions aren't necessarily 8 by 8, determine the number of squares that <strong>are not</strong> threatened by rooks.</p>
+			<p>The input file <strong>DATA2.txt</strong> will contain 5 test cases. The first line of each test case contains three numbers, <strong>R</strong>, <strong>C</strong> and <strong>Ro</strong> (1 &lt;= <strong>R, C</strong> &lt;= 31000, 1 &lt;= <strong>Ro</strong> &lt;= 20) representing the number of rows and the number of columns on our chess board (where the rows are numbered bottom up, and the columns are numbered left to right) and the number of rooks on the board respectively. The next <strong>Ro</strong> lines each contain two numbers <strong>X</strong> and <strong>Y</strong> (1 &lt;= X &lt;= R, 1 &lt;= Y &lt;= C) representing the position of a rook on the board.</p>
+			<p>The output file <strong>OUT2.txt</strong> should contain 5 lines, where each line represents the number of squares on the chessboard that <strong>are not</strong> being threatened by rooks.</p>
+			<div id="sample_data">
+				<div class="sample_in">
+					Sample Input (first two cases shown):
+					<pre>3 3 1
 2 2
 8 8 3
 1 1
 5 5
 8 8</pre>
-		    </div>
-		    <div class="sample_out">
-		        Sample Output (first two cases shown):
-		        <pre>4
+				</div>
+				<div class="sample_out">
+					Sample Output (first two cases shown):
+					<pre>4
 25</pre>
-		    </div>
-		    <div style="float:left;
-                border: 1px solid #ccc;
-                margin:0.5em;
-                padding:0.2em;">
-          Explanation of first case:
-          <pre>.X.
+				</div>
+				<div style="float:left; border:1px solid #ccc; margin:0.5em; padding:0.2em">
+					Explanation of first case:
+					<pre>.X.
 XRX
 .X.</pre>
-          There is only a single Rook in the very centre at (2,2). It does not threaten squares marked by . periods.
-        </div>
-		    <div style="clear: both;"></div>
-		</div>
-
+					There is only a single Rook in the very centre at (2,2). It does not threaten squares marked by . periods.
+				</div>
+				<div style="clear: both;"></div>
+			</div>
 		</div>
 	</body>
 </html>

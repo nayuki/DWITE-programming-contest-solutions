@@ -7,40 +7,37 @@
 	</head>
 	<body>
 		<div id="content">
-		<div id="title">DWITE Online Computer Programming Contest</div>
-		<div id="problem_meta">
-			<div id="date">May 2010</div>
-			<div id="problem_number">Problem 1</div>
-		</div>
-		<div id="problem_title">Binary Equipment</div>
-		
-		<p>In some games the character equipment is fairly basic -- one either has a particular type of item equipped, or not (<em>"a shield is equipped"</em>). A single bit is enough to hold this information, but memory is allocated and accessed in larger chunks. A single character, 1 byte in size, holds enough space for any configuration of 8 such binary equips (8 bits in a 1 byte).</p>
-
-		<p>The input file <strong>DATA1.txt</strong> will contain 5 lines, each an integer 0 &lt;= EQUIPPED &lt;= 255, single space delimiter, and an integer 0 &lt;= ITEM &lt;= 7. ITEM is the position of the bit, where 0 is the <em>least significant bit</em> and 7 is the <em>most significant bit.</em></p>
-		<p>The output file <strong>OUT1.txt</strong> will contain 5 lines of output, corresponding to each case of input. 1 if the item is present, 0 if item is not.</p>
-		<p><em>Reminder of how binary digits work:</em> it's all sums of powers of 2.</p>
-		<p>255 = 2<sup>7</sup> + 2<sup>6</sup> + 2<sup>5</sup> + 2<sup>4</sup> + 2<sup>3</sup> + 2<sup>2</sup> + 2<sup>1</sup> + 2<sup>0</sup> = 11111111</p>
-		<p>Where ITEM 7 is represented by 2<sup>7</sup>; and ITEM 0 together with ITEM 1 are 2<sup>0</sup> + 2<sup>1</sup> = 00000011 = 3</p>
-		<div id="sample_data">
-		    <div class="sample_in">
-		        Sample Input:
-		        <pre>0 0
+			<div id="title">DWITE Online Computer Programming Contest</div>
+			<div id="problem_meta">
+				<div id="date">May 2010</div>
+				<div id="problem_number">Problem 1</div>
+			</div>
+			<div id="problem_title">Binary Equipment</div>
+			<p>In some games the character equipment is fairly basic -- one either has a particular type of item equipped, or not (<em>"a shield is equipped"</em>). A single bit is enough to hold this information, but memory is allocated and accessed in larger chunks. A single character, 1 byte in size, holds enough space for any configuration of 8 such binary equips (8 bits in a 1 byte).</p>
+			<p>The input file <strong>DATA1.txt</strong> will contain 5 lines, each an integer 0 &lt;= EQUIPPED &lt;= 255, single space delimiter, and an integer 0 &lt;= ITEM &lt;= 7. ITEM is the position of the bit, where 0 is the <em>least significant bit</em> and 7 is the <em>most significant bit.</em></p>
+			<p>The output file <strong>OUT1.txt</strong> will contain 5 lines of output, corresponding to each case of input. 1 if the item is present, 0 if item is not.</p>
+			<p><em>Reminder of how binary digits work:</em> it's all sums of powers of 2.</p>
+			<p>255 = 2<sup>7</sup> + 2<sup>6</sup> + 2<sup>5</sup> + 2<sup>4</sup> + 2<sup>3</sup> + 2<sup>2</sup> + 2<sup>1</sup> + 2<sup>0</sup> = 11111111</p>
+			<p>Where ITEM 7 is represented by 2<sup>7</sup>; and ITEM 0 together with ITEM 1 are 2<sup>0</sup> + 2<sup>1</sup> = 00000011 = 3</p>
+			<div id="sample_data">
+				<div class="sample_in">
+					Sample Input:
+					<pre>0 0
 1 0
 1 1
 2 1
 255 7</pre>
-		    </div>
-		    <div class="sample_out">
-		        Sample Output:
-		        <pre>0
+				</div>
+				<div class="sample_out">
+					Sample Output:
+					<pre>0
 1
 0
 1
 1</pre>
-		    </div>
-		    <div style="clear: both;"></div>
-		</div>
-
+				</div>
+				<div style="clear: both;"></div>
+			</div>
 		</div>
 	</body>
 </html>

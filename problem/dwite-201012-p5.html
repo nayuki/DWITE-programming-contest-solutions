@@ -7,31 +7,25 @@
 	</head>
 	<body>
 		<div id="content">
-		<div id="title">DWITE Online Computer Programming Contest</div>
-		<div id="problem_meta">
-			<div id="date">December 2010</div>
-			<div id="problem_number">Problem 5</div>
-		</div>
-		<div id="problem_title">E-Searching</div>
-		
-		<p>Looking up words in a dictionary can be painstaking. That's why we've come up with an online
-      dictionary that makes it really easy to search for words. To make life easier for the user, you can
-      insert the following characters to broaden your search:</p>
-		<ul>
-		  <li>? - matches any single character</li>
-		  <li>* - matches any series of 0 or more characters</li>
-		</ul>
-		<p>For example, the search D??? matches all four letter words with prefix 'D' (e.g. DIRT, DUST,
-      DUNK, etc...). Given a dictionary of words and a few search queries, give the list of words
-      returned by each query.</p>
-
-		<p>The input file <strong>DATA5.txt</strong> will contain 5 test cases. The first line of each test case contains an integer 1 &lt;= N &lt;= 1000, the number of words in the dictionary. The next N lines each contain a unique word, consisting of only capital letters, up to 256 characters in length. The next 5 lines are test queries, consisting of capital letters, ? and *.</p>
-		<p>The output file <strong>OUT5.txt</strong> will contain 5 lines per test case, 25 in total. Each line is a comma separated (with a space) list of all matches found in the dictionary. The results in the list appear in the same order as they do in the supplied dictionary. If no match is found output <strong>NO MATCH</strong></p>
-		<p><em>Refer to the sample output for formatting.</em></p>
-		<div id="sample_data">
-		    <div class="sample_in">
-		        Sample Input (only first shown):
-		        <pre>6
+			<div id="title">DWITE Online Computer Programming Contest</div>
+			<div id="problem_meta">
+				<div id="date">December 2010</div>
+				<div id="problem_number">Problem 5</div>
+			</div>
+			<div id="problem_title">E-Searching</div>
+			<p>Looking up words in a dictionary can be painstaking. That's why we've come up with an online dictionary that makes it really easy to search for words. To make life easier for the user, you can insert the following characters to broaden your search:</p>
+			<ul>
+				<li>? - matches any single character</li>
+				<li>* - matches any series of 0 or more characters</li>
+			</ul>
+			<p>For example, the search D??? matches all four letter words with prefix 'D' (e.g. DIRT, DUST, DUNK, etc...). Given a dictionary of words and a few search queries, give the list of words returned by each query.</p>
+			<p>The input file <strong>DATA5.txt</strong> will contain 5 test cases. The first line of each test case contains an integer 1 &lt;= N &lt;= 1000, the number of words in the dictionary. The next N lines each contain a unique word, consisting of only capital letters, up to 256 characters in length. The next 5 lines are test queries, consisting of capital letters, ? and *.</p>
+			<p>The output file <strong>OUT5.txt</strong> will contain 5 lines per test case, 25 in total. Each line is a comma separated (with a space) list of all matches found in the dictionary. The results in the list appear in the same order as they do in the supplied dictionary. If no match is found output <strong>NO MATCH</strong></p>
+			<p><em>Refer to the sample output for formatting.</em></p>
+			<div id="sample_data">
+				<div class="sample_in">
+					Sample Input (only first shown):
+					<pre>6
 BELLS
 TELLS
 FALLS
@@ -43,18 +37,17 @@ SELLS
 D?LLS
 D?LL*
 *LL*</pre>
-		    </div>
-		    <div class="sample_out">
-		        Sample Output (only first shown):
-		        <pre>NO MATCH
+				</div>
+				<div class="sample_out">
+					Sample Output (only first shown):
+					<pre>NO MATCH
 BELLS, TELLS
 DOLLS, DULLS
 DOLLS, DULLS, DOLLIES
 BELLS, TELLS, FALLS, DOLLS, DULLS, DOLLIES</pre>
-		    </div>
-		    <div style="clear: both;"></div>
-		</div>
-
+				</div>
+				<div style="clear: both;"></div>
+			</div>
 		</div>
 	</body>
 </html>
