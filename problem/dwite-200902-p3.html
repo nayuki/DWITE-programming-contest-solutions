@@ -21,16 +21,16 @@
 			<p>You may assume that all directories exist and that the given paths are valid. For those unfamiliar with traversing directory structures on a computer, the key points are:</p>
 			<ul>
 				<li>./ -- current directory</li>
-				<li>../ -- directory that's a step above</li>
+				<li>../ -- directory that’s a step above</li>
 				<li>any_word/ -- directory a step below</li>
 			</ul>
 			<p><em>Example:</em> If the working directory is <strong>/one/two/</strong>, it means that there is a root directory <strong>/</strong> which contains a directory <strong>one/</strong> which, in turn, contains another directory <strong>two/</strong>. If we were to change directories as follows:</p>
 			<ul>
-				<li><strong>./</strong> -- we'd stay where we are: <strong>/one/two/</strong></li>
-				<li><strong>././</strong> -- we'd continue to stay in <strong>/one/two/</strong></li>
+				<li><strong>./</strong> -- we’d stay where we are: <strong>/one/two/</strong></li>
+				<li><strong>././</strong> -- we’d continue to stay in <strong>/one/two/</strong></li>
 				<li><strong>../</strong> -- move one above: <strong>/one/</strong></li>
 				<li><strong>../../</strong> -- move two above: <strong>/</strong></li>
-				<li><strong>../../../</strong> -- move three above. One can't move higher than root, so the result will stay at <strong>/</strong></li>
+				<li><strong>../../../</strong> -- move three above. One can’t move higher than root, so the result will stay at <strong>/</strong></li>
 				<li><strong>../three/./</strong> -- move up one, change directory to "three", and stay there: <strong>/one/three/</strong></li>
 			</ul>
 			<p><em>Sanity check:</em> the first and last character of your output will <strong>always</strong> be a forward slash (/).</p>

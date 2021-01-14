@@ -13,17 +13,17 @@
 				<div id="problem_number">Problem 3</div>
 			</div>
 			<div id="problem_title">Bitstrings</div>
-			<p>A 'bitstring' is a string consisting of 0s and 1s. However, you're only looking for bitstrings with the following properties:</p>
+			<p>A ‘bitstring’ is a string consisting of 0s and 1s. However, you’re only looking for bitstrings with the following properties:</p>
 			<ul>
-				<li>There are no two consecutive 1's in the bitstring.</li>
-				<li>Every run of 0's is of even length (i.e. every block of 0's has an even number of 0's in it).</li>
+				<li>There are no two consecutive 1’s in the bitstring.</li>
+				<li>Every run of 0’s is of even length (i.e. every block of 0’s has an even number of 0’s in it).</li>
 			</ul>
 			<p>1001 is an example of such a bitstring, but 10001 is not. Luckily, your computer science (or combinatorics) teacher shares a formula for figuring out how many such bitstrings exist for any given length <strong>N</strong>:</p>
 			<ul>
 				<li>s(0) = 1, s(1) = 1, s(2) = 1.</li>
 				<li>s(n) = s(n-2) + s(n-3) for all n > 2.</li>
 			</ul>
-			<p>That is, there is only 1 string of size 0 (empty string matches both rules), only 1 string of size 1 ("1"), and only 1 string of size 2 ("00"). For size 3, you'd need to calculate the sum of s(3-2) and s(3-3), which are known from the results above.</p>
+			<p>That is, there is only 1 string of size 0 (empty string matches both rules), only 1 string of size 1 ("1"), and only 1 string of size 2 ("00"). For size 3, you’d need to calculate the sum of s(3-2) and s(3-3), which are known from the results above.</p>
 			<p>The input file <strong>DATA3.txt</strong> will contain 5 test cases, each being a line with a single integer 1 &lt;= <strong>N</strong> &lt;= 75, the length of the bitstring.</p>
 			<p>The output file <strong>OUT3.txt</strong> will contain 5 lines of output, each being the number of different bitstrings of the corresponding length <strong>N</strong> with the described properties.</p>
 			<div id="sample_data">
