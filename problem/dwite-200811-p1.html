@@ -6,12 +6,16 @@
 		<link rel="Stylesheet" href="stylish.css" type="text/css">
 	</head>
 	<body>
-		<h1>DWITE Online Computer Programming Contest</h1>
-		<div>
-			<div>November 2008</div>
-			<div>Problem 1</div>
-		</div>
-		<h2>My shiny digital key</h2>
+		<header>
+			<h1>DWITE Online Computer Programming Contest</h1>
+			<div>
+				<h2>My shiny digital key</h2>
+				<div>
+					<div>November 2008</div>
+					<div>Problem 1</div>
+				</div>
+			</div>
+		</header>
 		<p>A house key is essentially a physical realization of a digital key where different heights of teeth represent different digits. If one could read this digital equivalent (let’s say from a 1:1 scale photograph), then the physical key itself is not needed to create a copy. Let’s imagine that we are not lock-picking our way into some place we shouldn’t be at, but instead are running a legitimate locksmith business, maintaining a machine that cuts new copies of keys. We need to write some software that will scan the image of a key and extract the heights of the teeth.</p>
 		<p>The input file <strong>DATA1.txt</strong> will contain 5 sets of input. Each line is 5 characters long, and there are 7 lines per set. There is an additional whitespace line separating each set. Dot (.) will be the empty space character in the "image", and number signs (#) are part of the key. Each set of #’s is contiguous, but there could be a line of input with no #’s at all.</p>
 		<p>The output file <strong>OUT1.txt</strong> will contain 5 lines, each being a 7 digit number where each digit matches the height of the tooth on the corresponding line in the key. The topmost line of input is the leftmost digit in the output. There are no spaces between the digits, and each digit is in the 0-5 range.</p>

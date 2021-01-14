@@ -38,26 +38,34 @@
 		font-family: "Lucida Grande","Verdana",sans-serif;
 	}
 	
-	h1 {
+	header > h1 {
 		font-size: 2.2em;
 		font-family: "Helvetica","Arial",sans-serif;
 		font-weight: inherit;
 	}
 	
-	h1 + div {
-		float: right;
+	header > div {
+		padding-bottom: 0.75em;
+		display: flex;
+		flex-direction: row;
+		align-items: flex-end;
+		column-gap: 1.5em;
 	}
 	
-	h1 + div > div:nth-child(2) {
-		font-weight: bold;
-	}
-	
-	h2 {
+	header > div > h2 {
+		margin-top: 0.5em;
+		flex-grow: 1;
 		font-family: "Helvetica","Arial",sans-serif;
 		font-size: 1.5em;
 		font-weight: bold;
-		padding-top: 0.5em;
-		padding-bottom: 0.5em;
+	}
+	
+	header > div > div {
+		flex-shrink: 0;
+	}
+	
+	header > div > div > div:nth-child(2) {
+		font-weight: bold;
 	}
 	
 	p {
