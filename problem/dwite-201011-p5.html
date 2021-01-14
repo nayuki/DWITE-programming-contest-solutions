@@ -6,22 +6,21 @@
 		<link rel="Stylesheet" href="stylish.css" type="text/css">
 	</head>
 	<body>
-		<div id="content">
-			<div id="title">DWITE Online Computer Programming Contest</div>
-			<div id="problem_meta">
-				<div id="date">November 2010</div>
-				<div id="problem_number">Problem 5</div>
-			</div>
-			<div id="problem_title">Cogwheels</div>
-			<p>A cogwheel is a toothed wheel, ideal for connecting with other cogwheels and assembling machinery. A rotating cogwheel will spin all of the directly connected cogwheels in an opposite direction. However, too many cogwheels can lock up. For example, three cogwheels that are all connected will not be able to move, as some cogwheels will try to spin against each other.</p>
-			<p>The input file <strong>DATA5.txt</strong> will contain 5 test cases. The first line of a test case will contain two integers 3 ≤ N, M ≤ 100 separated by a single space. N is the number of unique cogwheels in the system; the system has M connections. The following M lines have a pair of integers separated by a single space, that describe a connection between the cogs.</p>
-			<p><em>Assume that cog 1 is pushed in a clockwise direction and this is the only source of power.</em></p>
-			<p>The output file <strong>OUT5.txt</strong> will contain 5 lines, describing the directions of rotation of cogs identified by 2 and 3. Print A for clockwise, B for counter-clockwise, and L if a cog is locked. For example, if cog 2 is rotating clockwise and cog 3 is rotating counter-clockwise, then the output is <strong>AB</strong>. If both are locked, then the output is <strong>LL</strong></p>
-			<p><em>Note:</em> there will always be at least cogs 1, 2, 3; and both 2 and 3 will always have a path to cog 1.</p>
-			<div id="sample_data">
-				<div class="sample_in">
-					Sample Input (first 2 shown):
-					<pre>3 3
+		<div id="title">DWITE Online Computer Programming Contest</div>
+		<div id="problem_meta">
+			<div id="date">November 2010</div>
+			<div id="problem_number">Problem 5</div>
+		</div>
+		<div id="problem_title">Cogwheels</div>
+		<p>A cogwheel is a toothed wheel, ideal for connecting with other cogwheels and assembling machinery. A rotating cogwheel will spin all of the directly connected cogwheels in an opposite direction. However, too many cogwheels can lock up. For example, three cogwheels that are all connected will not be able to move, as some cogwheels will try to spin against each other.</p>
+		<p>The input file <strong>DATA5.txt</strong> will contain 5 test cases. The first line of a test case will contain two integers 3 ≤ N, M ≤ 100 separated by a single space. N is the number of unique cogwheels in the system; the system has M connections. The following M lines have a pair of integers separated by a single space, that describe a connection between the cogs.</p>
+		<p><em>Assume that cog 1 is pushed in a clockwise direction and this is the only source of power.</em></p>
+		<p>The output file <strong>OUT5.txt</strong> will contain 5 lines, describing the directions of rotation of cogs identified by 2 and 3. Print A for clockwise, B for counter-clockwise, and L if a cog is locked. For example, if cog 2 is rotating clockwise and cog 3 is rotating counter-clockwise, then the output is <strong>AB</strong>. If both are locked, then the output is <strong>LL</strong></p>
+		<p><em>Note:</em> there will always be at least cogs 1, 2, 3; and both 2 and 3 will always have a path to cog 1.</p>
+		<div id="sample_data">
+			<div class="sample_in">
+				Sample Input (first 2 shown):
+				<pre>3 3
 1 2
 2 3
 3 1
@@ -30,14 +29,13 @@
 2 3
 3 4
 4 1</pre>
-				</div>
-				<div class="sample_out">
-					Sample Output (first 2 shown):
-					<pre>LL
-BA</pre>
-				</div>
-				<div style="clear: both;"></div>
 			</div>
+			<div class="sample_out">
+				Sample Output (first 2 shown):
+				<pre>LL
+BA</pre>
+			</div>
+			<div style="clear: both;"></div>
 		</div>
 	</body>
 </html>

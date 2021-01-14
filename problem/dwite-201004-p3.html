@@ -6,22 +6,21 @@
 		<link rel="Stylesheet" href="stylish.css" type="text/css">
 	</head>
 	<body>
-		<div id="content">
-			<div id="title">DWITE Online Computer Programming Contest</div>
-			<div id="problem_meta">
-				<div id="date">April 2010</div>
-				<div id="problem_number">Problem 3</div>
-			</div>
-			<div id="problem_title">Bill Amendments</div>
-			<p>Having just found a bug in billing software, you’ve realized that some customers have been charged an excess amount. While some may not notice or care regarding small increases in charges, the extra money is just not worth the sacrifice in reputation of the company. The decided solution is to subtract the excess amount from the existing outstanding bills.</p>
-			<p>The input file <strong>DATA3.txt</strong> will contain 5 sets of input. Each set starts with an integer 1 ≤ N ≤ 50 on the first line; followed by N lines of <em>"current bills"</em> in the form of <em>payerID value</em>; followed by integer 1 ≤ M ≤ 50; followed by M lines of amendments, also in the form of <em>payerID value</em>, where the amendment value is a positive integer that needs to be subtracted out of current bills. Bill values are also positive integers.</p>
-			<p>A particular payerID might have multiple current bills. A particular payerID might also have multiple amendments to be processed. If the amendment value is greater than the first bill in the list, take the full amount out of it (setting the bill value to 0) and continue with the following bills in order. All bill values are positive. A payerID will always have been billed enough for at least the full amendment amount, but possibly across multiple bills.</p>
-			<p>The output file <strong>OUT3.txt</strong> will contain 5 sets of output – adjusted new bills, in the same order as the input sets.</p>
-			<p><em>Note:</em> the order of bills and amendments is not guaranteed. Some payerIDs might not have any amendments.</p>
-			<div id="sample_data">
-				<div class="sample_in">
-					Sample Input (first three sets shown):
-					<pre>3
+		<div id="title">DWITE Online Computer Programming Contest</div>
+		<div id="problem_meta">
+			<div id="date">April 2010</div>
+			<div id="problem_number">Problem 3</div>
+		</div>
+		<div id="problem_title">Bill Amendments</div>
+		<p>Having just found a bug in billing software, you’ve realized that some customers have been charged an excess amount. While some may not notice or care regarding small increases in charges, the extra money is just not worth the sacrifice in reputation of the company. The decided solution is to subtract the excess amount from the existing outstanding bills.</p>
+		<p>The input file <strong>DATA3.txt</strong> will contain 5 sets of input. Each set starts with an integer 1 ≤ N ≤ 50 on the first line; followed by N lines of <em>"current bills"</em> in the form of <em>payerID value</em>; followed by integer 1 ≤ M ≤ 50; followed by M lines of amendments, also in the form of <em>payerID value</em>, where the amendment value is a positive integer that needs to be subtracted out of current bills. Bill values are also positive integers.</p>
+		<p>A particular payerID might have multiple current bills. A particular payerID might also have multiple amendments to be processed. If the amendment value is greater than the first bill in the list, take the full amount out of it (setting the bill value to 0) and continue with the following bills in order. All bill values are positive. A payerID will always have been billed enough for at least the full amendment amount, but possibly across multiple bills.</p>
+		<p>The output file <strong>OUT3.txt</strong> will contain 5 sets of output – adjusted new bills, in the same order as the input sets.</p>
+		<p><em>Note:</em> the order of bills and amendments is not guaranteed. Some payerIDs might not have any amendments.</p>
+		<div id="sample_data">
+			<div class="sample_in">
+				Sample Input (first three sets shown):
+				<pre>3
 set1_one 10
 set1_one 10
 set1_two 10
@@ -38,17 +37,16 @@ set3_one 20
 2
 set3_one 5
 set3_one 10</pre>
-				</div>
-				<div class="sample_out">
-					Sample Output (first three sets shown):
-					<pre>set1_one 0
+			</div>
+			<div class="sample_out">
+				Sample Output (first three sets shown):
+				<pre>set1_one 0
 set1_one 5
 set1_two 5
 set2_one 0
 set3_one 5</pre>
-				</div>
-				<div style="clear: both;"></div>
 			</div>
+			<div style="clear: both;"></div>
 		</div>
 	</body>
 </html>

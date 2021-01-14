@@ -6,28 +6,27 @@
 		<link rel="Stylesheet" href="stylish.css" type="text/css">
 	</head>
 	<body>
-		<div id="content">
-			<div id="title">DWITE Online Computer Programming Contest</div>
-			<div id="problem_meta">
-				<div id="date">February 2008</div>
-				<div id="problem_number">Problem 4</div>
-			</div>
-			<div id="problem_title">Train ride</div>
-			<p>You are trying to navigate a complicated train system to arrive at your destination in the quickest time possible. Given a system’s schematic with start and end points, calculate the shortest length possible.</p>
-			<p>The schematic will be made up of a number of characters:</p>
-			<ul>
-				<li>S - start point</li>
-				<li>E - end point</li>
-				<li>just about any other character - path connecting the stations</li>
-			</ul>
-			<p>It doesn’t really matter what character represents the path. Consider the schematic to be a 2D array where every character with the exception of space and x is a valid path point. <strong>Diagonal moves are allowed.</strong> So every point has 8 possible connection points, and that connection is made if both characters are valid.</p>
-			<p>The input file <strong>DATA4.txt</strong> will contain 5 sets of data – N lines per set, 10 characters in per line, and each set being separated by a line of ‘x’ characters. 1 ≤ N ≤ 5. Each set represents a system schematic as described above.</p>
-			<p>The output file <strong>OUT4.txt</strong> will contain 5 lines – the minimum travel length between S and E points.</p>
-			<p><em>Note:</em> The dataset will contain a lot of whitespace, instead of typical dots. Make sure you can handle this data properly.</p>
-			<div id="sample_data">
-				<div class="sample_in">
-					Sample Input (only first two sets shown):
-					<pre> .-       
+		<div id="title">DWITE Online Computer Programming Contest</div>
+		<div id="problem_meta">
+			<div id="date">February 2008</div>
+			<div id="problem_number">Problem 4</div>
+		</div>
+		<div id="problem_title">Train ride</div>
+		<p>You are trying to navigate a complicated train system to arrive at your destination in the quickest time possible. Given a system’s schematic with start and end points, calculate the shortest length possible.</p>
+		<p>The schematic will be made up of a number of characters:</p>
+		<ul>
+			<li>S - start point</li>
+			<li>E - end point</li>
+			<li>just about any other character - path connecting the stations</li>
+		</ul>
+		<p>It doesn’t really matter what character represents the path. Consider the schematic to be a 2D array where every character with the exception of space and x is a valid path point. <strong>Diagonal moves are allowed.</strong> So every point has 8 possible connection points, and that connection is made if both characters are valid.</p>
+		<p>The input file <strong>DATA4.txt</strong> will contain 5 sets of data – N lines per set, 10 characters in per line, and each set being separated by a line of ‘x’ characters. 1 ≤ N ≤ 5. Each set represents a system schematic as described above.</p>
+		<p>The output file <strong>OUT4.txt</strong> will contain 5 lines – the minimum travel length between S and E points.</p>
+		<p><em>Note:</em> The dataset will contain a lot of whitespace, instead of typical dots. Make sure you can handle this data properly.</p>
+		<div id="sample_data">
+			<div class="sample_in">
+				Sample Input (only first two sets shown):
+				<pre> .-       
 S   .-E   
  `-o      
 xxxxxxxxxx
@@ -37,14 +36,13 @@ xxxxxxxxxx
   |     | 
   `-----` 
 xxxxxxxxxx</pre>
-				</div>
-				<div class="sample_out">
-					Sample Output (only first two sets shown):
-					<pre>6
-	3</pre>
-				</div>
-				<div style="clear:both;"></div>
 			</div>
+			<div class="sample_out">
+				Sample Output (only first two sets shown):
+				<pre>6
+	3</pre>
+			</div>
+			<div style="clear:both;"></div>
 		</div>
 	</body>
 </html>

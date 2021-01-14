@@ -6,41 +6,40 @@
 		<link rel="Stylesheet" href="stylish.css" type="text/css">
 	</head>
 	<body>
-		<div id="content">
-			<div id="title">DWITE</div>
-			<div id="problem_meta">
-				<div id="date">November 2011</div>
-				<div id="problem_number">Problem 4</div>
-			</div>
-			<div id="problem_title">Bear Trees</div>
-			<p>Gary is a bear. He lives in a system of caves consisting of <strong>N</strong> caverns numbered from 0 through N – 1. These caverns are connected by bidirectional tunnels, such that there is exactly one path between each pair of tunnels. (You might also know this kind of structure as a <em>"tree"</em>, so you’ll know that there are necessarily N – 1 tunnels.)</p>
-			<p>Gary would like to explore this system of caves, using the following method:</p>
-			<ol>
-				<li>Put cavern 0 (his home) on a "to explore" list.</li>
-				<li>Choose one cavern <strong>C</strong> from the list.</li>
-				<li>Remove <strong>C</strong> from the list.</li>
-				<li>Explore <strong>C</strong>: Add all caverns adjacent to <strong>C</strong> that have never been on the list.</li>
-				<li>Repeat steps 2 to 3 while the list contains at least one cavern.</li>
-			</ol>
-			<p>There are many ways to explore a system of caves. However, bears are forgetful. You would like to find a way to explore the cave such that <strong>the maximum length of the list is minimized</strong>. For example, given the following tree:</p>
-			<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXwAAAEyCAMAAADOa5vkAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAABGdBTUEAALGPC/xhBQAAAQtQTFRF////9/f38PDw7+/v6enp6Ojo5+fn4eHh4ODg39/f2dnZ19fX0NDQz8/PycnJx8fHw8PDv7+/vb29t7e3srKyr6+vp6enoqKin5+fmpqal5eXlpaWkJCQj4+PjIyMi4uLh4eHg4ODf39/fX19fHx8enp6eHh4cHBwbW1taGhoZWVlYWFhYGBgXl5eWlpaWFhYUFBQTk5OTU1NSkpKSEhIQUFBQEBAPj4+Ozs7ODg4NTU1NDQ0MjIyMDAwKCgoJycnJSUlISEhICAgHR0dGhoaGRkZGBgYFhYWFRUVFBQUExMTEhISEREREBAQDw8PDg4ODQ0NDAwMCwsLCQkJCAgIBwcHBQUFBAQEAAAAtgfzzAAAAAFzUkdCAK7OHOkAAA7dSURBVHgB7MEBAQAAAICQ/q/uCAIAAAAAgNm73/bWjaUA4LPZIKMoQqx9JByDVFcEqwKDhOsuCJC46F7Mn4Na2mtgvv8nwXZO+pwce2OrGVluPL8XfdHHfpqupdHManf2/VAS2NnJca5XiLrBtdahDefCrFA3c19ZsCWUSupq5gA7AzmrEwUvOdMqt4F1LaynAg7w60QC65JTmYc4rH1g3VGFA2YyD6ErbKIlvCqZC+gES1I4ZpwL6AALEzjOz4EeGy3hFNMZUGNOIeEkWQC0mKhsOI0oXCDFZlM4lVcAJWbVAk6W+0CIJSGczi2BDnMLAS2kE2DkEZ+jfg9qu9vPmzGnArNu4w6LYzhs8BA93MA+pYEIKzw4LEXEAewTKwk0WGMYyiEuDg8+lC6QYGINhy3QMwz+cgQkmF3DQQEGA8Pgz8dAghkenze4ANPgxzF0xVUbFlyLIINDIhwaB3+SQgecaYlY6o0VYj6x4J0zv50aYArGwQ8ToOZs12a58DM/XZWhhHfOMFsQYBpFj4iPQ8N8BCkrqfZXJbpJHYqrfOA+4CdR9w9cEVchHCKTKoD3DeGAm+FGgBjcwj6tgJBdxhIM7CyXV1lkAQzOUWSp0oFX+NqGd0yrVwb/FvaJRgCZyVIee3mj4P2apO2TUzJxKuAIuRxdXYlrQPu8DbJrXzFReGDW6aSmpwWcwC6s65rQN1MaWiAZVLUUvHJkJ/fPf8tNZ9e9SJZ+sex4DqcSpQPvlKgtOFnpkv9Xr3t99HhO8FG6++3K3p6ZU+nOEg+5ErxaaEeWNpxCaI/8buPVQk4hSZfn0ydNSfiet6YIOCqeAZXWE0RKw/s1XsrWe+boX6BFOwPz7Os70mJuF+QyBBrmNYdD3Ble344kuwjAzC1G3edXQ4yGG7fmxdTvlsyMyYw1J6wxzXn7EIft64L3QhWZDfvkX9RjoLWy2g5+kMF7F9RftjeS429/+l4AMTSsD02jKBhcQbpjoJK6nIVKWSCUGsd/9z8/IqI6zxucIe7cG79yBdxpovUK11rP469xKz3P8tybwWDgLXDB25GeiAY3VudbMwEfEAfc+OHJHLcU0KocMBkeHvxJCtfHN8Yd+gUrHgDcGMJOHMP1EWvcqIGOeQkE4uPj5w9c3hWQ4ZZ3jvc3EW6kd7wD9WcBbs2AlLWCgwaDG/OOVY47tEGffoELxx361SCFB1dp3EXcsWuCj18B2UncSf8UTsD9xZa45QCpP/souMvPyXEnBkpT/CmmWttyBXGnAkIpIv5g9bBgjeOOyHHrHwWcxCotIMJxRxa48/u0/VKt62MhZdyxK3wSphPurnScxi0bKLgr3FkHIJY+HDVN4bpNcGsKBEYN7jQKAGQew+tElsAGx50C3m68xp3ahZ04E8cXE5HguDPFJ6UNnwSlAqNJ6QILaeJOik+0hJ85emkYYb9KJQCzKeKOyPHJF6FmVKYu7PF17gDbKnDLokjvMTkQXup09PlHg6zJFbDPg/WEJL2HA+zJstE6iTcyrZsskMBexh1Nkt4bSKXCeCNQChhR3NlL71n3cceQ3rfHHNzSBOl9e6zCLUmQ3rfGYtwavyG9nwtgb4k7y1+e3s+AvS3urGXrNSL4ZALszHHHbXBn7cMbMLd93IHRGncaD96E1bixFi/3DflHXv7u1A68DZvh1p+/3DGXr83zMDE+KS14I+bhxo//ENrwORFkq1gadhTtLCUwgrjz/bf2qb2oxZLTe0Lyn0vX3IXdhRdkyek9nSNtjZ0i4PSeSPuG3iKbdZTeszCXcMQ0F5zeG3Tfc3qccXpv0n3P6dmU03uT7ntO53779J4RtbAXxR9xet9bq2v33zm9J2VVEk72Xfv0nlF1c3X/k9P7/k43+Mv/4/S++wvfwP6R03s6tQ2t/PaPgRFxKroTcBjJWN4/RFFwC9wHsIdztCLcGXBTqB6ODV2kw+EC8cE0x8A6bMg1AIA7xKjTXcvMLcFggBh1+sRlo+UrrV89AO4/2schWreIKXdo6WnwH3Fxa7xZWKdh5xHxruNj5JhXmMb+nkvcfk6KfjCPPaeaHRdZN/jJgIus809qvjr4lQOMxmzaPlAxIkq3b5PMqKws7jndm3TSfiaOEXFLPrm2P/Mx+VoHRj+e9Bc+S0Jutt4bq7Dbn4XCiLiF6C3oMD9vv3+FUYnj9vtXGJX5DI7xtYROsL/Sov1+RUZClP/7G5t7rffXyrr5RoLBpA6gI0yscGP9r1MBB4yq1IJucY+vUs7qRMFLTlguHegMs9a45QNYoW7mvrJgSyg1q6rEhQ6x5PN+snKc6xWibnCt9dSBTjEXd1z4nJLAziDHrRzY+Xm4tbaBnV+JWwmw8/Nxq7GAnZ2ocCsE1tcZWSsBrKeJBRwD66u+KoH1ObHAzi7tv77iiQXW18RCBuz8Rri1tuD68MQCTyysLGB91VchXBOeWGBydb31FU8s8MTCCNj5Zdc7scATCzyxkAI7P/8aJxZ4YoEFF19fOWoUx3GolOSJhbOyxvm60ss4jhOtmzodvcOJhVrAJQr0au4L+Jk9WTZzB94Lq7nciQVVZgq+JMfdb8/giQVnqV3TxqRYvKOJBQ8ujl+OwETE2uIV4YQMR18aeIXLEwuEDIe+GtiFD3TcWOsVbqy0nrnQARlkusAtrT8dJa8vtL5aBnCMWAZAY5TWZayUBRuWUtOyThVQ2iVpWaA82FIqyJrlxOpvYoGgo4nQHhAYlcuJ/eVY6XIEZOSsSkf7P/hvcSuGCzNJqXsDGbl66cIB7i7VoiDCeipgn/iqWV/gxIJaCuLeQCYiLZW5yEgFSc/ARMJh8psfMITLImqL+gxTA7mcwCsmBMf8+toBM6v6k4trKkx9eq+BU6pjFbbb8XHyIot/hQ0OCY4NGR1/ZNjFCN5insAx8fzXezjmL782nUJ2fWvNpvShs/8Ln+DSl6VNcCQ8RRu6dHLxaaaBWEn4JcRSgQFVMzlPC9o/pXta0Tcgbn+5EZzJY5UW7U3YPbkSBPc2aTfc0u362eXnl31W1yCIougO9olGQHu5T/dDEXyrdC+5g/89bkVUBygoTfhLEXxJ6QsO+QPEh1u4u6cK+qVLeRETfCf3oWfm44cCfKQ7Zaf9AdbLEbSVBQSH851bI+GABQ4pi5TZlD79NWfA9J/viFjDIYgfol3koUl3KofilGbSKzkLLvWEwAE+WdA8rJwKDvsQfTCdikSSN9wEUfRwd7FN2cXaMPjBDQwR7wn+bOPpXncpYmT8BsGZVzcL3Lo31DcXGvNvn9a2IA4pYr4hP/IQFxjRVEGygQMecHE3eMSF+WjEi8x2EIfGwZ9NadLZYXQbmQbfKygC2+4SujMcLqzVpeb5j5juLs1b83VM8bw1Dr79O91KqQ8HzwHADeLwUjP9+dhQ4KYRYkRzyaystoMP2NL8cFwbGO9fSCcXO7czxI0AaOZ2EFoP/n9gOzPYN3x18OP4gmc1BwPzrGb3g//f2E7yqxx8+CeC+fzLDDt3lx527CX+ded1een29cC93/3z7iIfuGK2RvzY9Ttc8zxZx6nmAqNdsn+RRwsHK9z46av2VzFRkbVz21mRNURMU8ThBRZZrsYnH7tetzOdtR38OKY4yh8+4MbQ9HP1Ryb47OPXHa9Ys+v2TwmiF7iDgTnF7s2kwWfpH3a+VrN0aX8tgqnWv/WhJ16JzwqvxV/ulIL+9Eea37iR0Ib4/dcC+mBl+Gw1Nv/PEq53cUuKCSfK8iP4AWsfzk5MG3w2k+aKg3SlV+5f2Av0f8EN7cJ5jSp8tnTgmdA+HCMMFxfB0BCk4O0qVv973EnkeQvaZy/vOpmH8Dqpx2BA/MrUz7te8Ct+g5804VkL2ifrWMBLyVy8fu169Guh+1ouGP5Ngc+q0RkL2p3cgj1jrcBEhNqGN5nOCFIdonTALqzPB2PpnKmg3amUYYl1bsNBfmUKjvSBZ7Sk3H1hrhRFvMZniey+oD0a5vw6cWCPX+Q2mNEWx+YRJPvdsmAv5W7CMxW0FrwirF6eCyvH2Tr34DiiPSeycLqObfEMnnmtQ7+XaN3sPq916LQvaI+wQ73SOok3Ml0080AAEbd0j1/3LrxFkorjH4HPTFqEfuHPV8Vz7zNHqcR8Yq65oD3KUiqMNwLlASX7WDXht7zu22/llcsQXpCzU0N/UOVja++saO22KGh7JfPp611nJLTRfiuvc2CrqZ3js9XktSZctvHfG4xqgoyK0Kz2zU/7GRCwy7kFh1lp5RweQHxWKsNVo13zHRHCIY6hoO2RnRcKDlAkKdXOuD54i8u4nsBnDKE/t9vGS3HoSSMNBW3PPF3GDrzgTEvtUc4d1tkXeYIIsr0+caax2vvpvNJt96QxF7T9c+OqTsZKCQBQapxU1cwlbzO1zmOlnKe8JM7XWSDB5EjoH2sJR6iX1bVbmAvaC2CHc63XiKj1PHSgC36sdfWUkcc+HGcK/Z4W7WpDmbYt3pgh9NuF1W4qNjQWtOz4LMyL0C8Kt1V1rdoUtMyYIK7GrV5PZkH7gpaZ3/UVntItXlnI6fptBS17EbV/58LJvvk30oKWQ/93cDrxkbKg5dDf2NDCVz8RFrQc+r+FNsSarqDl0P/jGFr5lqygZX/wXxJaGf89EGGGPNOLoii47W5bOzMvgotw57azndXMPJSLYDAIEIM2C7cYYaeaG8So/fIJRrLm/w7R63K/CxNrOMgbfljgY5tHNCPbSoYb6b1pKTwRHnzjlZ8iBob9wHQ47BikiLddhh22FmASIQ74gdsR887qm+ENwO0C8YZTzbMXWQPE9BERP3CR1UMXrgA3FkOKVris/WaL28EtAJB1WGckYxlkQIVlQes4RYWN5711x2aitnqLOixMqH4qRrB/leCXYvR9IGRlAaOvcvs5eI7J0qbPjBhtazNPC2Ddh31jbwN6LMzE8dvDBdaJoLBaH7PMztSyI1xKYJ2xzD0FQBUJsE4ZegqAnWsPWMfEtE5H+xvdz7MFiMnJspkHCp5INcmbLIBzYXKcacSV1mtsdOrD2THrqWcH+//24JgAAAAAYEj/1nsXAhwAAAAAAAAAEPC9qiw87rROAAAAAElFTkSuQmCC">
-			<p>Here is one possible way to explore the tree, where the maximum length of the list is 4:</p>
-			<ul>
-				<li>Explore 0, list = {1, 2, 3}</li>
-				<li>Explore 2, list = {1, 3, 4, 5}</li>
-				<li>Explore 1, list = {3, 4, 5}</li>
-				<li>Explore 3, list = {4, 5, 6}</li>
-				<li>Explore 4, list = {5, 6}</li>
-				<li>Explore 6, list = {5}</li>
-				<li>Explore 5, list = {}</li>
-			</ul>
-			<p>However, exploring in a different order, Gary can make it such that he never has to remember more than 3 elements; indeed, it is easy to see that 3 is optimal. Gary has retained you to find this minimum list length, given a system of caves.</p>
-			<p>The input file <strong>DATA5.txt</strong> will contain 5 test cases. Each test case will begin with one line, containing the number of caverns 1 ≤ <strong>N</strong> ≤ 1000. <strong>N – 1</strong> lines will follow, each consisting of two distinct space-separated integers <strong>x</strong> and <strong>y</strong>, denoting a tunnel between caverns <strong>x</strong> and <strong>y</strong>. Of course, no tunnel will be described more than once, and 0 ≤ <strong>x, y</strong> &lt; <strong>N</strong>.</p>
-			<p>The output file <strong>OUT5.txt</strong> will contain 5 lines of output, the minimum list length for each cave system.</p>
-			<div id="sample_data">
-				<div class="sample_in">
-					Sample Input (2 cases shown):
-					<pre>7
+		<div id="title">DWITE</div>
+		<div id="problem_meta">
+			<div id="date">November 2011</div>
+			<div id="problem_number">Problem 4</div>
+		</div>
+		<div id="problem_title">Bear Trees</div>
+		<p>Gary is a bear. He lives in a system of caves consisting of <strong>N</strong> caverns numbered from 0 through N – 1. These caverns are connected by bidirectional tunnels, such that there is exactly one path between each pair of tunnels. (You might also know this kind of structure as a <em>"tree"</em>, so you’ll know that there are necessarily N – 1 tunnels.)</p>
+		<p>Gary would like to explore this system of caves, using the following method:</p>
+		<ol>
+			<li>Put cavern 0 (his home) on a "to explore" list.</li>
+			<li>Choose one cavern <strong>C</strong> from the list.</li>
+			<li>Remove <strong>C</strong> from the list.</li>
+			<li>Explore <strong>C</strong>: Add all caverns adjacent to <strong>C</strong> that have never been on the list.</li>
+			<li>Repeat steps 2 to 3 while the list contains at least one cavern.</li>
+		</ol>
+		<p>There are many ways to explore a system of caves. However, bears are forgetful. You would like to find a way to explore the cave such that <strong>the maximum length of the list is minimized</strong>. For example, given the following tree:</p>
+		<img src="data:image/png;base64,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">
+		<p>Here is one possible way to explore the tree, where the maximum length of the list is 4:</p>
+		<ul>
+			<li>Explore 0, list = {1, 2, 3}</li>
+			<li>Explore 2, list = {1, 3, 4, 5}</li>
+			<li>Explore 1, list = {3, 4, 5}</li>
+			<li>Explore 3, list = {4, 5, 6}</li>
+			<li>Explore 4, list = {5, 6}</li>
+			<li>Explore 6, list = {5}</li>
+			<li>Explore 5, list = {}</li>
+		</ul>
+		<p>However, exploring in a different order, Gary can make it such that he never has to remember more than 3 elements; indeed, it is easy to see that 3 is optimal. Gary has retained you to find this minimum list length, given a system of caves.</p>
+		<p>The input file <strong>DATA5.txt</strong> will contain 5 test cases. Each test case will begin with one line, containing the number of caverns 1 ≤ <strong>N</strong> ≤ 1000. <strong>N – 1</strong> lines will follow, each consisting of two distinct space-separated integers <strong>x</strong> and <strong>y</strong>, denoting a tunnel between caverns <strong>x</strong> and <strong>y</strong>. Of course, no tunnel will be described more than once, and 0 ≤ <strong>x, y</strong> &lt; <strong>N</strong>.</p>
+		<p>The output file <strong>OUT5.txt</strong> will contain 5 lines of output, the minimum list length for each cave system.</p>
+		<div id="sample_data">
+			<div class="sample_in">
+				Sample Input (2 cases shown):
+				<pre>7
 0 1
 0 2
 0 3
@@ -51,14 +50,13 @@
 0 1
 1 2
 2 3</pre>
-				</div>
-				<div class="sample_out">
-					Sample Output (2 cases shown):
-					<pre>3
-1</pre>
-				</div>
-				<div style="clear: both;"></div>
 			</div>
+			<div class="sample_out">
+				Sample Output (2 cases shown):
+				<pre>3
+1</pre>
+			</div>
+			<div style="clear: both;"></div>
 		</div>
 	</body>
 </html>

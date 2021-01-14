@@ -6,28 +6,27 @@
 		<link rel="Stylesheet" href="stylish.css" type="text/css">
 	</head>
 	<body>
-		<div id="content">
-			<div id="title">DWITE Online Computer Programming Contest</div>
-			<div id="problem_meta">
-				<div id="date">December 2007</div>
-				<div id="problem_number">Problem 5</div>
-			</div>
-			<div id="problem_title">Portals</div>
-			<p>In an experiment gone horribly wrong, a number of portals have gotten installed in a house. The portals come in a directional variety – that is, one entrance and one exit node. Calculating the areas of rooms has suddenly became a lot trickier.</p>
-			<p>The input file <strong>DATA5.txt</strong> will contain two lines with one integer value each, R,C; 0 &lt; R, C ≤ 40, representing the number of <em>rows</em> and <em>columns</em> that make up the floor plan. Followed by R lines, showing the floor plan layout, where:</p>
-			<ul>
-				<li># - wall</li>
-				<li>. - open space</li>
-				<li>{a-j, A-J} - marking entrance and exit nodes of portals</li>
-				<li>{1..5} - integers 1 to 5, marking rooms of interest</li>
-			</ul>
-			<p>Lower case letters mark entrance nodes, while corresponding capital letters mark exit nodes. That is, one can enter at point j and exit at point J. There will be no more than 10 portals in the floor plan.</p>
-			<p>The output file <strong>OUT5.txt</strong> will contain 5 lines. Each line will have an integer representing the area of a room of interest. First line should contain the area of room 1, second line of room 2, etc.</p>
-			<p>The area of the room is defined as 1 + number of adjacent open spaces. Portals, and areas of rooms they lead to, also add to the total area. The integer marker could appear anywhere inside the room. A portal could lead from one room of interest to another (it’s possible for the sum of the areas of room to be greater than the size of the house). If the portal exits within the same room, the area should not be counted twice.</p>
-			<div id="sample_data">
-				<div class="sample_in">
-					Sample Input:
-					<pre>10
+		<div id="title">DWITE Online Computer Programming Contest</div>
+		<div id="problem_meta">
+			<div id="date">December 2007</div>
+			<div id="problem_number">Problem 5</div>
+		</div>
+		<div id="problem_title">Portals</div>
+		<p>In an experiment gone horribly wrong, a number of portals have gotten installed in a house. The portals come in a directional variety – that is, one entrance and one exit node. Calculating the areas of rooms has suddenly became a lot trickier.</p>
+		<p>The input file <strong>DATA5.txt</strong> will contain two lines with one integer value each, R,C; 0 &lt; R, C ≤ 40, representing the number of <em>rows</em> and <em>columns</em> that make up the floor plan. Followed by R lines, showing the floor plan layout, where:</p>
+		<ul>
+			<li># - wall</li>
+			<li>. - open space</li>
+			<li>{a-j, A-J} - marking entrance and exit nodes of portals</li>
+			<li>{1..5} - integers 1 to 5, marking rooms of interest</li>
+		</ul>
+		<p>Lower case letters mark entrance nodes, while corresponding capital letters mark exit nodes. That is, one can enter at point j and exit at point J. There will be no more than 10 portals in the floor plan.</p>
+		<p>The output file <strong>OUT5.txt</strong> will contain 5 lines. Each line will have an integer representing the area of a room of interest. First line should contain the area of room 1, second line of room 2, etc.</p>
+		<p>The area of the room is defined as 1 + number of adjacent open spaces. Portals, and areas of rooms they lead to, also add to the total area. The integer marker could appear anywhere inside the room. A portal could lead from one room of interest to another (it’s possible for the sum of the areas of room to be greater than the size of the house). If the portal exits within the same room, the area should not be counted twice.</p>
+		<div id="sample_data">
+			<div class="sample_in">
+				Sample Input:
+				<pre>10
 11
 1.#.2...#A.
 ..#.a...#..
@@ -39,19 +38,18 @@
 .d...D...#.
 ##########.
 ..........5</pre>
-				</div>
-				<div class="sample_out">
-					Sample Output:
-					<pre>4
+			</div>
+			<div class="sample_out">
+				Sample Output:
+				<pre>4
 14
 18
 18
 14</pre>
-				</div>
-				<div style="clear:both;"></div>
 			</div>
-			<br>
-			<p><em>Note:</em> The cake is a lie.</p>
+			<div style="clear:both;"></div>
 		</div>
+		<br>
+		<p><em>Note:</em> The cake is a lie.</p>
 	</body>
 </html>

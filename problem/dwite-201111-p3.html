@@ -6,24 +6,23 @@
 		<link rel="Stylesheet" href="stylish.css" type="text/css">
 	</head>
 	<body>
-		<div id="content">
-			<div id="title">DWITE</div>
-			<div id="problem_meta">
-				<div id="date">November 2011</div>
-				<div id="problem_number">Problem 3</div>
-			</div>
-			<div id="problem_title">Anonymous Shopping</div>
-			<p>A serious battle in the <em>Pepsi vs. Coke</em> debate is breaking out in your school. Being a fan of a healthy fruit juice beverage instead, you would prefer to not get involved. Careful to keep your beverage preferences hidden, you’ve always paid in cash at the store, but eventually the loyalty card program had you tempted with a delicious store discount in exchange for just your date of birth, gender, and area code (no big deal, right?). It has then dawned to you that the same information can be easily found in school records (and your Facebook’s profile), linking it back to your name. How likely is that you’ll be identified?<sup>1</sup>.</p>
-			<p>The input file <strong>DATA3.txt</strong> will contain 5 test cases. Each test case starts with two integers, 1 ≤ <strong>N, M</strong> ≤ 100, separated by a space. Followed by <strong>N</strong> entries of store records, and <strong>M</strong> entries of school records.</p>
-			<p>Store’s record is in the form of: <strong>store_id YYYYMMDDGZIP drink</strong>, where drink is a single word describing drink preference determined for the associated loyalty card member.</p>
-			<p>School’s record is in the form of: <strong>name YYYYMMDDGZIP</strong>. Name can be treated as a single word.</p>
-			<p>The output file <strong>OUT3.txt</strong> will contain 5 lines of output, the number of people out of a set <strong>M</strong>, whose drink preference can be deduced from the information available. It can be assumed that every match does belong to some entry from list <strong>M</strong> (i.e. there is only a single school in the area). It can also be assumed that names are unique.</p>
-			<p><em>Sample input notes:</em> in first sample, both Dan and Tony are uniquely identified, while AJ and Cyril don’t have matching records. So the answer is 2. In the second case, Dan matches two different records (there is someone else with the same DOB, Gender, and area code), but since both records are "Coke", the drink preference can be deduced. Tony also matches two records, but his preference can’t be figured out based on available data. So the answer is just 1.</p>
-			<p><sup>1</sup>: for those in U.S., date of birth, gender, and zip code uniquely identify 87% of the population. <a href="https://www.eff.org/deeplinks/2009/09/what-information-personally-identifiable">https://www.eff.org/deeplinks/2009/09/what-information-personally-identifiable</a></p>
-			<div id="sample_data">
-				<div class="sample_in">
-					Sample Input (first 2 shown):
-					<pre>2 4
+		<div id="title">DWITE</div>
+		<div id="problem_meta">
+			<div id="date">November 2011</div>
+			<div id="problem_number">Problem 3</div>
+		</div>
+		<div id="problem_title">Anonymous Shopping</div>
+		<p>A serious battle in the <em>Pepsi vs. Coke</em> debate is breaking out in your school. Being a fan of a healthy fruit juice beverage instead, you would prefer to not get involved. Careful to keep your beverage preferences hidden, you’ve always paid in cash at the store, but eventually the loyalty card program had you tempted with a delicious store discount in exchange for just your date of birth, gender, and area code (no big deal, right?). It has then dawned to you that the same information can be easily found in school records (and your Facebook’s profile), linking it back to your name. How likely is that you’ll be identified?<sup>1</sup>.</p>
+		<p>The input file <strong>DATA3.txt</strong> will contain 5 test cases. Each test case starts with two integers, 1 ≤ <strong>N, M</strong> ≤ 100, separated by a space. Followed by <strong>N</strong> entries of store records, and <strong>M</strong> entries of school records.</p>
+		<p>Store’s record is in the form of: <strong>store_id YYYYMMDDGZIP drink</strong>, where drink is a single word describing drink preference determined for the associated loyalty card member.</p>
+		<p>School’s record is in the form of: <strong>name YYYYMMDDGZIP</strong>. Name can be treated as a single word.</p>
+		<p>The output file <strong>OUT3.txt</strong> will contain 5 lines of output, the number of people out of a set <strong>M</strong>, whose drink preference can be deduced from the information available. It can be assumed that every match does belong to some entry from list <strong>M</strong> (i.e. there is only a single school in the area). It can also be assumed that names are unique.</p>
+		<p><em>Sample input notes:</em> in first sample, both Dan and Tony are uniquely identified, while AJ and Cyril don’t have matching records. So the answer is 2. In the second case, Dan matches two different records (there is someone else with the same DOB, Gender, and area code), but since both records are "Coke", the drink preference can be deduced. Tony also matches two records, but his preference can’t be figured out based on available data. So the answer is just 1.</p>
+		<p><sup>1</sup>: for those in U.S., date of birth, gender, and zip code uniquely identify 87% of the population. <a href="https://www.eff.org/deeplinks/2009/09/what-information-personally-identifiable">https://www.eff.org/deeplinks/2009/09/what-information-personally-identifiable</a></p>
+		<div id="sample_data">
+			<div class="sample_in">
+				Sample Input (first 2 shown):
+				<pre>2 4
 1 19860101M123 Coke
 2 19860202M123 Pepsi
 Dan 19860101M123
@@ -37,14 +36,13 @@ Cyril 19930404M123
 4 19860202M123 Pepsi
 Dan 19860101M123
 Tony 19860202M123</pre>
-				</div>
-				<div class="sample_out">
-					Sample Output:
-					<pre>2
-1</pre>
-				</div>
-				<div style="clear: both;"></div>
 			</div>
+			<div class="sample_out">
+				Sample Output:
+				<pre>2
+1</pre>
+			</div>
+			<div style="clear: both;"></div>
 		</div>
 	</body>
 </html>

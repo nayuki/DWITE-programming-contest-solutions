@@ -6,40 +6,38 @@
 		<link rel="Stylesheet" href="stylish.css" type="text/css">
 	</head>
 	<body>
-		<div id="content">
-			<div id="title">DWITE Online Computer Programming Contest</div>
-			<div id="problem_meta">
-				<div id="date">May 2010</div>
-				<div id="problem_number">Problem 5</div>
-			</div>
-			<div id="problem_title">Snapper Chain</div>
-			<p><strong>This problem is from a Qualification Round of Google Code Jam.</strong></p>
-			<p>The <em>Snapper</em> is a clever little device that, on one side, plugs its input plug into an output socket, and, on the other side, exposes an output socket for plugging in a light or other device.</p>
-			<p>When a Snapper is in the ON state and is receiving power from its input plug, then the device connected to its output socket is receiving power as well. When you snap your fingers – making a clicking sound – any Snapper receiving power at the time of the snap toggles between the ON and OFF states.</p>
-			<p>In hopes of destroying the universe by means of a singularity, I have purchased <strong>N</strong> Snapper devices and chained them together by plugging the first one into a power socket, the second one into the first one, and so on. The light is plugged into the <strong>N</strong>th Snapper.</p>
-			<p>Initially, all the Snappers are in the OFF state, so only the first one is receiving power from the socket, and the light is off. I snap my fingers once, which toggles the first Snapper into the ON state and gives power to the second one. I snap my fingers again, which toggles both Snappers and then promptly cuts power off from the second one, leaving it in the ON state, but with no power. I snap my fingers the third time, which toggles the first Snapper again and gives power to the second one. Now both Snappers are in the ON state, and if my light is plugged into the second Snapper it will be on.</p>
-			<p>I keep doing this for hours. Will the light be on or off after I have snapped my fingers <strong>K</strong> times? The light is on if and only if it’s receiving power from the Snapper it’s plugged into.</p>
-			<p>The input file <strong>DATA5.txt</strong> will contain 5 lines, integers 1 ≤ N ≤ 30, and 1 ≤ K ≤ 10<sup>8</sup>, separated by a single space.</p>
-			<p>The output file <strong>OUT5.txt</strong> will contain 5 lines, either "ON" or "OFF" for each corresponding case (without quotations).</p>
-			<div id="sample_data">
-				<div class="sample_in">
-					Sample Input:
-					<pre>1 0
+		<div id="title">DWITE Online Computer Programming Contest</div>
+		<div id="problem_meta">
+			<div id="date">May 2010</div>
+			<div id="problem_number">Problem 5</div>
+		</div>
+		<div id="problem_title">Snapper Chain</div>
+		<p><strong>This problem is from a Qualification Round of Google Code Jam.</strong></p>
+		<p>The <em>Snapper</em> is a clever little device that, on one side, plugs its input plug into an output socket, and, on the other side, exposes an output socket for plugging in a light or other device.</p>
+		<p>When a Snapper is in the ON state and is receiving power from its input plug, then the device connected to its output socket is receiving power as well. When you snap your fingers – making a clicking sound – any Snapper receiving power at the time of the snap toggles between the ON and OFF states.</p>
+		<p>In hopes of destroying the universe by means of a singularity, I have purchased <strong>N</strong> Snapper devices and chained them together by plugging the first one into a power socket, the second one into the first one, and so on. The light is plugged into the <strong>N</strong>th Snapper.</p>
+		<p>Initially, all the Snappers are in the OFF state, so only the first one is receiving power from the socket, and the light is off. I snap my fingers once, which toggles the first Snapper into the ON state and gives power to the second one. I snap my fingers again, which toggles both Snappers and then promptly cuts power off from the second one, leaving it in the ON state, but with no power. I snap my fingers the third time, which toggles the first Snapper again and gives power to the second one. Now both Snappers are in the ON state, and if my light is plugged into the second Snapper it will be on.</p>
+		<p>I keep doing this for hours. Will the light be on or off after I have snapped my fingers <strong>K</strong> times? The light is on if and only if it’s receiving power from the Snapper it’s plugged into.</p>
+		<p>The input file <strong>DATA5.txt</strong> will contain 5 lines, integers 1 ≤ N ≤ 30, and 1 ≤ K ≤ 10<sup>8</sup>, separated by a single space.</p>
+		<p>The output file <strong>OUT5.txt</strong> will contain 5 lines, either "ON" or "OFF" for each corresponding case (without quotations).</p>
+		<div id="sample_data">
+			<div class="sample_in">
+				Sample Input:
+				<pre>1 0
 1 1
 4 0
 4 47
 30 100000000</pre>
-				</div>
-				<div class="sample_out">
-					Sample Output:
-					<pre>OFF
+			</div>
+			<div class="sample_out">
+				Sample Output:
+				<pre>OFF
 ON
 OFF
 ON
 OFF</pre>
-				</div>
-				<div style="clear: both;"></div>
 			</div>
+			<div style="clear: both;"></div>
 		</div>
 	</body>
 </html>

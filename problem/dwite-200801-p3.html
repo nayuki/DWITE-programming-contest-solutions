@@ -6,37 +6,35 @@
 		<link rel="Stylesheet" href="stylish.css" type="text/css">
 	</head>
 	<body>
-		<div id="content">
-			<div id="title">DWITE Online Computer Programming Contest</div>
-			<div id="problem_meta">
-				<div id="date">January 2008</div>
-				<div id="problem_number">Problem 3</div>
-			</div>
-			<div id="problem_title">Don’t follow my links</div>
-			<p>There’s a lot of spam on the internet – blog comments, forum posts, etc., all done for the purpose of planting enough links and influencing search engines such as Google to think that a certain page is more important than it should be. One of the solutions is to mark untrusted links with a <strong>rel="nofollow"</strong> attribute, telling spiders to ignore the link. A sample link might look like this:</p>
-			<pre>&lt;a href="http://compsci.ca/" title="Computer Science Canada" rel="nofollow">sample link&lt;/a></pre>
-			<p>The goal is to write a program that will find all the links in a text file and insert the <strong>nofollow</strong> attributes properly. <strong>rel=""</strong> should be inserted as the last property of the link, unless it already exists. The <strong>nofollow</strong> value should be inserted last in the rel= string, unless it already exists. Rel could have multiple values, space separated. Refer to the sample input for examples.</p>
-			<p>The input file <strong>DATA3.txt</strong> will contain five lines of text, each containing one link in the form <strong>&lt;a*>*&lt;/a></strong>. Links might be surrounded by filler text. Each line will be no more than 255 characters long.</p>
-			<p>The output file <strong>OUT3.txt</strong> will contain five lines – just the parsed links.</p>
-			<div id="sample_data">
-				<div class="sample_in">
-					Sample Input:
-					<pre>This is a &lt;a>sample link&lt;/a>.
+		<div id="title">DWITE Online Computer Programming Contest</div>
+		<div id="problem_meta">
+			<div id="date">January 2008</div>
+			<div id="problem_number">Problem 3</div>
+		</div>
+		<div id="problem_title">Don’t follow my links</div>
+		<p>There’s a lot of spam on the internet – blog comments, forum posts, etc., all done for the purpose of planting enough links and influencing search engines such as Google to think that a certain page is more important than it should be. One of the solutions is to mark untrusted links with a <strong>rel="nofollow"</strong> attribute, telling spiders to ignore the link. A sample link might look like this:</p>
+		<pre>&lt;a href="http://compsci.ca/" title="Computer Science Canada" rel="nofollow">sample link&lt;/a></pre>
+		<p>The goal is to write a program that will find all the links in a text file and insert the <strong>nofollow</strong> attributes properly. <strong>rel=""</strong> should be inserted as the last property of the link, unless it already exists. The <strong>nofollow</strong> value should be inserted last in the rel= string, unless it already exists. Rel could have multiple values, space separated. Refer to the sample input for examples.</p>
+		<p>The input file <strong>DATA3.txt</strong> will contain five lines of text, each containing one link in the form <strong>&lt;a*>*&lt;/a></strong>. Links might be surrounded by filler text. Each line will be no more than 255 characters long.</p>
+		<p>The output file <strong>OUT3.txt</strong> will contain five lines – just the parsed links.</p>
+		<div id="sample_data">
+			<div class="sample_in">
+				Sample Input:
+				<pre>This is a &lt;a>sample link&lt;/a>.
 &lt;a rel="" href="http://dwite.ca/">link with rel&lt;/a>
 &lt;a href="http://compsci.ca/" rel="nofollow">link with no follow&lt;/a>
 &lt;a href="http://compsci.ca/blog" rel="external">more rels&lt;/a>
 text &lt;a href="http://compsci.ca/v3/viewforum.php?f=131" title="">link&lt;/a> more text</pre>
-				</div>
-				<div class="sample_out">
-					Sample Output:
-					<pre>&lt;a rel="nofollow">sample link&lt;/a>
+			</div>
+			<div class="sample_out">
+				Sample Output:
+				<pre>&lt;a rel="nofollow">sample link&lt;/a>
 &lt;a rel="nofollow" href="http://dwite.ca/">link with rel&lt;/a>
 &lt;a href="http://compsci.ca/" rel="nofollow">link with no follow&lt;/a>
 &lt;a href="http://compsci.ca/blog" rel="external nofollow">more rels&lt;/a>
 &lt;a href="http://compsci.ca/v3/viewforum.php?f=131" title="" rel="nofollow">link&lt;/a></pre>
-				</div>
-				<div style="clear:both;"></div>
 			</div>
+			<div style="clear:both;"></div>
 		</div>
 	</body>
 </html>

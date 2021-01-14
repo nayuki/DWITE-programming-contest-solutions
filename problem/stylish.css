@@ -24,20 +24,16 @@
 	}
 	
 	html {
-		height: 100%;
+		margin: 0 auto;
+		padding: 1em;
+		width: calc(800px - 2em);
+		overflow-y: scroll;
 	}
 	
 	body {
 		background: #FFFFFF none repeat scroll 0%;
 		color: #222;
-		height: 100%;
-		margin: 0pt auto;
-		width: 800px;
-	}
-	
-	#content {
 		border: thin solid #333;
-		margin: 1em;
 		padding: 1em;
 		font-family: "Lucida Grande","Verdana",sans-serif;
 	}
