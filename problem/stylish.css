@@ -44,11 +44,11 @@
 		font-weight: inherit;
 	}
 	
-	#problem_meta {
+	h1 + div {
 		float: right;
 	}
 	
-	#problem_number {
+	h1 + div > div:nth-child(2) {
 		font-weight: bold;
 	}
 	
