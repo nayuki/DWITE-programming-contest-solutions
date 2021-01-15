@@ -16,15 +16,15 @@
 				</div>
 			</div>
 		</header>
-		<p>Comets have recently passed through your region of space, leaving behind a trail of dust. You would like to get a rough idea of the extent of this pollution, by finding the two most distant dust particles. Here, we define distance as the sum of differences between the x, y, and z coordinates. For example, the distance between two particles at (1, 4, 9) and (4, 4, 4) is 3 + 0 + 5 = 8.</p>
-		<p>There are N comets, and we describe each comet with 11 numbers: (A, B, C), (D, E, F), (G, H, I), and (U, V). A comet’s position at time t is given by (At<sup>2</sup> + Bt + C, Dt<sup>2</sup> + Et + F, Gt<sup>2</sup> + Ht + I). A comet leaves behind a particle of dust at every integer time t between U and V, inclusive.</p>
+		<p>Comets have recently passed through your region of space, leaving behind a trail of dust. You would like to get a rough idea of the extent of this pollution, by finding the two most distant dust particles. Here, we define distance as the sum of differences between the <var>x</var>, <var>y</var>, and <var>z</var> coordinates. For example, the distance between two particles at (1, 4, 9) and (4, 4, 4) is 3 + 0 + 5 = 8.</p>
+		<p>There are <var>N</var> comets, and we describe each comet with 11 numbers: (<var>A</var>, <var>B</var>, <var>C</var>), (<var>D</var>, <var>E</var>, <var>F</var>), (<var>G</var>, <var>H</var>, <var>I</var>), and (<var>U</var>, <var>V</var>). A comet’s position at time <var>t</var> is given by (<var>A</var><var>t</var><sup>2</sup> + <var>B</var><var>t</var> + <var>C</var>, <var>D</var><var>t</var><sup>2</sup> + <var>E</var><var>t</var> + <var>F</var>, <var>G</var><var>t</var><sup>2</sup> + <var>H</var><var>t</var> + <var>I</var>). A comet leaves behind a particle of dust at every integer time <var>t</var> between <var>U</var> and <var>V</var>, inclusive.</p>
 		<p>For example, consider a comet described by (1, 0, 0), (0, −2, 1), (0, 0, 6), and (1, 5). It leaves behind 5 dust particles, at (1, −1,  6), (4, −3, 6), (9, −5, 6), (16, −7, 6), and (25, −9, 6). The first and last points are the most distant pair, with distance 24 + 8 + 0 = 32.</p>
 		<p>Pay close attention to the bounds. You may assume that there will be fewer than 100000 dust particles, and that all positions will fit within a signed 32-bit integer.</p>
-		<p>1 ≤ <strong>N</strong> ≤ 100</p>
-		<p>−500 ≤ <strong>A, D, G, U, V</strong> ≤ 500</p>
-		<p>−100000 ≤ <strong>B, C, E, F, H, I</strong> ≤ 100000</p>
-		<p><strong>U</strong> ≤ <strong>V</strong></p>
-		<p>The input file <strong>DATA5.txt</strong> will contain 5 test cases. Each will begin with a single integer N. N lines will follow, each containing 11 integers, in the order described above.</p>
+		<p>1 ≤ <var>N</var> ≤ 100</p>
+		<p>−500 ≤ <var>A</var>, <var>D</var>, <var>G</var>, <var>U</var>, <var>V</var> ≤ 500</p>
+		<p>−100000 ≤ <var>B</var>, <var>C</var>, <var>E</var>, <var>F</var>, <var>H</var>, <var>I</var> ≤ 100000</p>
+		<p><var>U</var> ≤ <var>V</var></p>
+		<p>The input file <strong>DATA5.txt</strong> will contain 5 test cases. Each will begin with a single integer <var>N</var>. <var>N</var> lines will follow, each containing 11 integers, in the order described above.</p>
 		<p>The output file <strong>OUT5.txt</strong> will contain 5 lines of output, one integer for each test case: the distance between the most distant pair of dust particles. There will be at least 2 dust particles.</p>
 		<div id="sample_data">
 			<div class="sample_in">

@@ -17,11 +17,11 @@
 			</div>
 		</header>
 		<p>In secure authentication, one does not necessary need to provide their password, they just need to prove that they know their own password. The subtle difference allows one to store just an encoded hash of a password. That way the actual (plaintext) password is never stored, making the system more secure, as the real password is never written down and can’t be stolen, should a system be compromised...</p>
-		<p>The input file <strong>DATA5.txt</strong> will contain 5 lines, integers 0 ≤ N ≤ 1,000,000 the hash stored in place of the password</p>
+		<p>The input file <strong>DATA5.txt</strong> will contain 5 lines, integers 0 ≤ <var>N</var> ≤ 1,000,000 the hash stored in place of the password</p>
 		<p>The output file <strong>OUT5.txt</strong> will contain 5 lines, each a 4 character long password that generate the corresponding input hashes.</p>
 		<p>Assume that all passwords are four characters long and are made up of capital letters only.</p>
-		<p>A hash is calculated as follows. Given a password P, made up of four letters a1, a2, a3, a4; each letter is turned into its ASCII value, where A = 65 and Z = 90 – n1, n2, n3, n4. Let k = n1*10<sup>6</sup> + n2*10<sup>4</sup> + n3*10<sup>2</sup> + n4. Let m = n1*11 + n2*101 + n3*1009 + n4*10007. Then hash(P) = k mod m</p>
-		<p><em>For example:</em> given a password P = "TONY", there are four letters a1 = T, a2 = O, a3 = N, a4 = Y; and mapped to ASCII n1 = 84, n2 = 79, n3 = 78, n4 = 89. Then k = 84797889. And m = 84*11 + 79*101 + 78*1009 + 89*10007 = 978228. So hash(TONY) = 84797889 % 978228 = 670281</p>
+		<p>A hash is calculated as follows. Given a password <var>P</var>, made up of four letters <var>a</var>1, <var>a</var>2, <var>a</var>3, <var>a</var>4; each letter is turned into its ASCII value, where A = 65 and Z = 90 – <var>n</var>1, <var>n</var>2, <var>n</var>3, <var>n</var>4. Let <var>k</var> = <var>n</var>1*10<sup>6</sup> + <var>n</var>2*10<sup>4</sup> + <var>n</var>3*10<sup>2</sup> + <var>n</var>4. Let <var>m</var> = <var>n</var>1*11 + <var>n</var>2*101 + <var>n</var>3*1009 + <var>n</var>4*10007. Then hash(<var>P</var>) = <var>k</var> mod <var>m</var></p>
+		<p><em>For example:</em> given a password <var>P</var> = "TONY", there are four letters <var>a</var>1 = T, <var>a</var>2 = O, <var>a</var>3 = N, <var>a</var>4 = Y; and mapped to ASCII <var>n</var>1 = 84, <var>n</var>2 = 79, <var>n</var>3 = 78, <var>n</var>4 = 89. Then <var>k</var> = 84797889. And <var>m</var> = 84*11 + 79*101 + 78*1009 + 89*10007 = 978228. So hash(TONY) = 84797889 % 978228 = 670281</p>
 		<p><em>Note:</em> Be aware of time constrains. Also, there are cases where multiple passwords result in the same hash. Those hashes are not a part of the test cases.</p>
 		<div id="sample_data">
 			<div class="sample_in">

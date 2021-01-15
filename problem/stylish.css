@@ -3,6 +3,10 @@ p {
 	margin-bottom: 1.0em;
 }
 
+var {
+	font-style: italic;
+}
+
 #sample_data {
 	border: 1px solid #999;
 }

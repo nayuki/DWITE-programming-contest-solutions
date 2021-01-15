@@ -16,13 +16,13 @@
 				</div>
 			</div>
 		</header>
-		<p>Gary is a bear. He lives in a system of caves consisting of <strong>N</strong> caverns numbered from 0 through N – 1. These caverns are connected by bidirectional tunnels, such that there is exactly one path between each pair of tunnels. (You might also know this kind of structure as a <em>"tree"</em>, so you’ll know that there are necessarily N – 1 tunnels.)</p>
+		<p>Gary is a bear. He lives in a system of caves consisting of <var>N</var> caverns numbered from 0 through <var>N</var> – 1. These caverns are connected by bidirectional tunnels, such that there is exactly one path between each pair of tunnels. (You might also know this kind of structure as a <em>"tree"</em>, so you’ll know that there are necessarily <var>N</var> – 1 tunnels.)</p>
 		<p>Gary would like to explore this system of caves, using the following method:</p>
 		<ol>
 			<li>Put cavern 0 (his home) on a "to explore" list.</li>
-			<li>Choose one cavern <strong>C</strong> from the list.</li>
-			<li>Remove <strong>C</strong> from the list.</li>
-			<li>Explore <strong>C</strong>: Add all caverns adjacent to <strong>C</strong> that have never been on the list.</li>
+			<li>Choose one cavern <var>C</var> from the list.</li>
+			<li>Remove <var>C</var> from the list.</li>
+			<li>Explore <var>C</var>: Add all caverns adjacent to <var>C</var> that have never been on the list.</li>
 			<li>Repeat steps 2 to 3 while the list contains at least one cavern.</li>
 		</ol>
 		<p>There are many ways to explore a system of caves. However, bears are forgetful. You would like to find a way to explore the cave such that <strong>the maximum length of the list is minimized</strong>. For example, given the following tree:</p>
@@ -38,7 +38,7 @@
 			<li>Explore 5, list = {}</li>
 		</ul>
 		<p>However, exploring in a different order, Gary can make it such that he never has to remember more than 3 elements; indeed, it is easy to see that 3 is optimal. Gary has retained you to find this minimum list length, given a system of caves.</p>
-		<p>The input file <strong>DATA5.txt</strong> will contain 5 test cases. Each test case will begin with one line, containing the number of caverns 1 ≤ <strong>N</strong> ≤ 1000. <strong>N – 1</strong> lines will follow, each consisting of two distinct space-separated integers <strong>x</strong> and <strong>y</strong>, denoting a tunnel between caverns <strong>x</strong> and <strong>y</strong>. Of course, no tunnel will be described more than once, and 0 ≤ <strong>x, y</strong> &lt; <strong>N</strong>.</p>
+		<p>The input file <strong>DATA5.txt</strong> will contain 5 test cases. Each test case will begin with one line, containing the number of caverns 1 ≤ <var>N</var> ≤ 1000. <var>N</var> – 1 lines will follow, each consisting of two distinct space-separated integers <var>x</var> and <var>y</var>, denoting a tunnel between caverns <var>x</var> and <var>y</var>. Of course, no tunnel will be described more than once, and 0 ≤ <var>x</var>, <var>y</var> &lt; <var>N</var>.</p>
 		<p>The output file <strong>OUT5.txt</strong> will contain 5 lines of output, the minimum list length for each cave system.</p>
 		<div id="sample_data">
 			<div class="sample_in">
