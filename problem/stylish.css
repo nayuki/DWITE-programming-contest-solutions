@@ -38,7 +38,7 @@ p {
 	body {
 		background: #FFFFFF none repeat scroll 0%;
 		color: #222;
-		border: thin solid #333;
+		box-shadow: 0 0 0.7em #D0D0D0;
 		padding: 1em;
 		font-family: "Lucida Grande","Verdana",sans-serif;
 	}
