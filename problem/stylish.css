@@ -40,8 +40,11 @@ var {
 	
 	html {
 		margin: 0 auto;
-		padding: 1em;
-		width: calc(800px - 2em);
+		padding-top: 0.8em;
+		padding-bottom: 2.0em;
+		padding-left: 1.0em;
+		padding-right: 1.0em;
+		width: 50em;
 		overflow-y: scroll;
 	}
 	
@@ -49,7 +52,10 @@ var {
 		background: #FFFFFF none repeat scroll 0%;
 		color: #222;
 		box-shadow: 0 0 0.7em #D0D0D0;
-		padding: 1em;
+		padding-top: 0.5em;
+		padding-bottom: 1.5em;
+		padding-left: 2.0em;
+		padding-right: 2.0em;
 		font-family: "Lucida Grande","Verdana",sans-serif;
 	}
 	
