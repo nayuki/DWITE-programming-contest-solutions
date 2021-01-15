@@ -88,6 +88,10 @@ var {
 		margin-left: 2em;
 	}
 	
+	ol {
+		margin-left: 2em;
+	}
+	
 	blockquote {
 		margin-left: 2em;
 		color: #666;
