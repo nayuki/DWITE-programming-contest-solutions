@@ -24,9 +24,9 @@
 		<p>1001 is an example of such a bitstring, but 10001 is not. Luckily, your computer science (or combinatorics) teacher shares a formula for figuring out how many such bitstrings exist for any given length <var>N</var>:</p>
 		<ul>
 			<li><var>s</var>(0) = 1, <var>s</var>(1) = 1, <var>s</var>(2) = 1.</li>
-			<li><var>s</var>(<var>n</var>) = <var>s</var>(<var>n</var>-2) + s(<var>n</var>-3) for all <var>n</var> > 2.</li>
+			<li><var>s</var>(<var>n</var>) = <var>s</var>(<var>n</var>−2) + s(<var>n</var>−3) for all <var>n</var> > 2.</li>
 		</ul>
-		<p>That is, there is only 1 string of size 0 (empty string matches both rules), only 1 string of size 1 ("1"), and only 1 string of size 2 ("00"). For size 3, you’d need to calculate the sum of <var>s</var>(3-2) and <var>s</var>(3-3), which are known from the results above.</p>
+		<p>That is, there is only 1 string of size 0 (empty string matches both rules), only 1 string of size 1 ("1"), and only 1 string of size 2 ("00"). For size 3, you’d need to calculate the sum of <var>s</var>(3−2) and <var>s</var>(3−3), which are known from the results above.</p>
 		<p>The input file <strong>DATA3.txt</strong> will contain 5 test cases, each being a line with a single integer 1 ≤ <var>N</var> ≤ 75, the length of the bitstring.</p>
 		<p>The output file <strong>OUT3.txt</strong> will contain 5 lines of output, each being the number of different bitstrings of the corresponding length <var>N</var> with the described properties.</p>
 		<div id="sample_data">
