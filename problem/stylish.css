@@ -52,21 +52,29 @@ var {
 		background: #FFFFFF none repeat scroll 0%;
 		color: #222;
 		box-shadow: 0 0 0.7em #D0D0D0;
-		padding-top: 0.5em;
+		padding-top: 1.0em;
 		padding-bottom: 1.5em;
 		padding-left: 2.0em;
 		padding-right: 2.0em;
 		font-family: "Lucida Grande","Verdana",sans-serif;
 	}
 	
+	header {
+		margin-bottom: 1.5em;
+		padding-bottom: 1.0em;
+		border-bottom: 0.15em solid #D2DDFF;
+	}
+	
 	header > h1 {
-		font-size: 2.2em;
+		margin-bottom: 0.7rem;
+		font-size: 130%;
 		font-family: "Helvetica","Arial",sans-serif;
-		font-weight: inherit;
+		font-weight: bold;
+		text-align: center;
+		color: #F96233;
 	}
 	
 	header > div {
-		padding-bottom: 0.75em;
 		display: flex;
 		flex-direction: row;
 		align-items: flex-end;
@@ -74,15 +82,15 @@ var {
 	}
 	
 	header > div > h2 {
-		margin-top: 0.5em;
 		flex-grow: 1;
 		font-family: "Helvetica","Arial",sans-serif;
-		font-size: 1.5em;
+		font-size: 170%;
 		font-weight: bold;
 	}
 	
 	header > div > div {
 		flex-shrink: 0;
+		text-align: right;
 	}
 	
 	header > div > div > div:nth-child(2) {
