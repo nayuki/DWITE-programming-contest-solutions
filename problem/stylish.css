@@ -1,3 +1,8 @@
+p {
+	margin-top: 1.0em;
+	margin-bottom: 1.0em;
+}
+
 #sample_data {
 	border: 1px solid #999;
 }
@@ -66,10 +71,6 @@
 	
 	header > div > div > div:nth-child(2) {
 		font-weight: bold;
-	}
-	
-	p {
-		margin: 0.5em;
 	}
 	
 	ul {
