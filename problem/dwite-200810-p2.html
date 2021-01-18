@@ -16,21 +16,23 @@
 				</div>
 			</div>
 		</header>
-		<p>A checksum is a type of simple error detection scheme, meant to catch incorrectly entered data such as typos. Credit cards, for example, use the <strong>Luhn algorithm</strong> to generate account numbers. Alternatively, a checksum could be a digit appended to the end of a number that needs to be later validated.</p>
-		<p>A super-simple scheme used to validate <strong>6-digit</strong> student numbers is as follows:</p>
-		<ul>
+		<p>A <strong>checksum</strong> is a type of simple error detection scheme, meant to catch incorrectly entered data such as typos. Credit cards, for example, use the <em>Luhn algorithm</em> to generate account numbers. Alternatively, a checksum could be a digit appended to the end of a number that needs to be later validated.</p>
+		<p>A super-simple scheme used to validate <em>6-digit</em> student numbers is as follows:</p>
+		<ol>
 			<li>Break the number up into 6 digits.</li>
 			<li>Add up all the digits together to get a new number.</li>
 			<li>Repeat the process until the result is only a single digit.</li>
-			<li>Match the resulting digit to the capital letter of alphabet, in that position.</li>
-		</ul>
-		<p><em>Example</em></p>
-		<pre>123456
-1+2+3+4+5+6 = 21
-2+1 = 3
-3 = C</pre>
+			<li>Convert the resulting digit to a capital letter, where A = 1, B = 2, etc.</li>
+		</ol>
+		<p><em>Example</em>:</p>
+		<ol>
+			<li>123456</li>
+			<li>1 + 2 + 3 + 4 + 5 + 6 = 21</li>
+			<li>2 + 1 = 3</li>
+			<li>3 = C</li>
+		</ol>
 		<p>The input file <strong>DATA2.txt</strong> will contain 5 lines, each being a 6-digit positive integer followed by a space and a capital letter. Numbers will not have leading zeros, and thus digits will never add up to 0.</p>
-		<p>The output file <strong>OUT2.txt</strong> will contain 5 lines, stating <strong>match</strong> or <strong>error</strong>, depending if the number generates the same checksum letter as supplied or not.</p>
+		<p>The output file <strong>OUT2.txt</strong> will contain 5 lines, stating <strong>match</strong> or <strong>error</strong>, depending on if the number generates the same checksum letter as supplied or not.</p>
 		<div id="sample_data">
 			<div class="sample_in">
 				Sample Input:
