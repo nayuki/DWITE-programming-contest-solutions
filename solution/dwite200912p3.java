@@ -19,7 +19,7 @@ public final class dwite200912p3 extends DwiteSolution {
 		String pattern = io.readLine();
 		int sum = 0;
 		for (int i = 0; i < 256; i++) {
-			if (toBinaryString(i, 8).indexOf(pattern) == -1)
+			if (!toBinaryString(i, 8).contains(pattern))
 				sum += Integer.bitCount(i);
 		}
 		io.println(sum);

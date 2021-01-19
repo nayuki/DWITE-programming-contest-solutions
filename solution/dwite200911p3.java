@@ -18,7 +18,7 @@ public final class dwite200911p3 extends DwiteSolution {
 	protected void runOnce() {
 		String pattern = io.readLine();
 		for (int i = 0; i < 16; i++) {
-			if (toBinaryString(i, 4).indexOf(pattern) == -1)
+			if (!toBinaryString(i, 4).contains(pattern))
 				io.println(toBinaryString(i, 4));
 		}
 	}
