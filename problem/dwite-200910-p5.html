@@ -16,10 +16,10 @@
 				</div>
 			</div>
 		</header>
-		<p>Given a directional graph (think of it as a map of one way streets), cycles (a loop) are often involved in various problems. We know that one (and only one) cycle exists, and we want to find its length.</p>
-		<p>The input file <strong>DATA5.txt</strong> will contain 5 sets of input. The first line will contain a single integer, 1 ≤ <var>N</var> ≤ 100, the number of pairs describing the graph. This is followed by <var>N</var> lines, each having two integers separated by a space. Each of the integers refers to a node, with a directional path from first to second. Node IDs are between 1 and 100, inclusive. <strong>The first node in the list is guaranteed to have a path to the cycle.</strong></p>
-		<p><em>For example:</em> If the graph is described by 4 pairs: 1 2, 2 3, 3 1, 4 5; Then it describes a disjoint graph – a cycle of length 3 and another pair of nodes. Since it’s guaranteed that starting at Node 1 will lead to a cycle, it shouldn’t matter that it’s not connected to 4 or 5.</p>
-		<p><em>Note:</em> a node could link to itself (1 → 1) and that will form a cycle of size 1.</p>
+		<p>Given a directional graph (think of it as a map of one-way streets), cycles (a loop) are often involved in various problems. We know that one (and only one) cycle exists, and we want to find its length.</p>
+		<p>The input file <strong>DATA5.txt</strong> will contain 5 sets of input. The first line will contain a single integer, 1 ≤ <var>N</var> ≤ 100, the number of pairs describing the graph. This is followed by <var>N</var> lines, each having two integers separated by a space. Each of the integers refers to a node, and the pair describes a directional path from the first node to the second. Node IDs are between 1 and 100, inclusive. <em>The first node in the list is guaranteed to have a path to the cycle.</em></p>
+		<p><em>For example:</em> If the graph is described by 4 pairs: 1 2, 2 3, 3 1, 4 5; then it describes a disjoint graph – a cycle of length 3 and another pair of nodes. Since it’s guaranteed that starting at node 1 will lead to a cycle, it shouldn’t matter that it’s not connected to 4 or 5.</p>
+		<p><em>Note:</em> A node could link to itself (1 → 1) and that will form a cycle of size 1.</p>
 		<svg style="width:25em" version="1.1" viewBox="-40 -40 11080 4080">
 			<g stroke="#000000" stroke-width="80" fill="#FFFFFF">
 				<circle cx="700" cy="700" r="700"/>

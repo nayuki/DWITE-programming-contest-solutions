@@ -18,8 +18,8 @@
 		</header>
 		<p>Let’s try to break out from the confines of the over-simplified 2D problems and add some depth to the otherwise typical maze problems.</p>
 		<p>The input file <strong>DATA5.txt</strong> will contain 5 sets of data. Each set starts out with a single integer 2 ≤ <var>n</var> ≤ 5 followed by <var>n</var>×<var>n</var> lines, describing a cube space. Pound sign (#) denotes solid space; period (.) denotes free space; capital “A” denotes the start; capital “B” denotes the end.</p>
-		<p>The output file <strong>OUT5.txt</strong> will contain 5 lines, each being the <strong>shortest</strong> distance between A and B in the input maze.</p>
-		<p>The maze traversal is done only though free space, in any of the 6 axial directions. There are no diagonal movements.</p>
+		<p>The output file <strong>OUT5.txt</strong> will contain 5 lines, each being the <em>shortest</em> distance between A and B in the input maze.</p>
+		<p>The maze traversal is done only through free space, in any of the 6 axial directions. There are no diagonal movements.</p>
 		<p><em>Sample input explanation, first set:</em> A 2×2×2 empty cube, with A and B in two opposite corners. There are 6 different ways to get from A to B in 3 steps. There are also 3 different ways to get from A to B in 7 steps (without backtracking), but since we are looking for the <em>shortest</em> distance, the latter is of less interest.</p>
 		<p><em>Sample input explanation, second set:</em> Also a 2×2×2 cube, but filled space forces only a single path to be available. Think of the path this way, starting at A: right, up one layer, down. Also 3 steps.</p>
 		<p><em>Sample input explanation, third set:</em> A 3×3×3 cube. A and B are on empty layers, but they are separated by a mostly filled layer, with a single opening in its bottom-right corner.</p>
