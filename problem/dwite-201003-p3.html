@@ -16,12 +16,12 @@
 				</div>
 			</div>
 		</header>
-		<p>Sometimes, when the files are different, we want have a summary of how far off they are. In a case of well formatted data, we might also want to know by how much the values differ. A practical example would be comparing some kind of a usage report against the expected values.</p>
-		<p>The input file <strong>DATA3.txt</strong> will contain 5 sets of input. Each set starts with a line having an integer 0 ≤ <var>N</var> ≤ 5 and another line with an integer 0 ≤ <var>M</var> ≤ 5. Followed by <var>N</var>+<var>M</var> lines with the contents of the two files. There will be break line containing three hyphens “---” after each set.</p>
-		<p>Each line inside a “file” to be compared is a string-integer pair separated by a single space. The string is a 3 character word (lower case alpha characters), the integer is a non-negative integer less than 100.</p>
+		<p>Sometimes when the files are different, we want to have a summary of how far off they are. In the case of well-formatted data, we might also want to know by how much the values differ. A practical example would be comparing some kind of a usage report against the expected values.</p>
+		<p>The input file <strong>DATA3.txt</strong> will contain 5 sets of input. Each set starts with a line having an integer 0 ≤ <var>N</var> ≤ 5 and another line with an integer 0 ≤ <var>M</var> ≤ 5. These are followed by <var>N</var>+<var>M</var> lines with the contents of the two files. There will be a break line containing three hyphens “---” after each set.</p>
+		<p>Each line inside a “file” to be compared is a string-integer pair separated by a single space. The string is a 3 character word (lower case alpha characters), and the integer is non-negative and less than 100.</p>
 		<p>Each “file” is in a sorted order according to the leading string. The string keys in each file are unique.</p>
-		<p>The output file <strong>OUT3.txt</strong> will contain 5 lines of output, contain a pair of integer sums, separated by a space. The first integer is the total number of lines missing between two files. The second integer is a sum of the absolute differences in the values of the lines where string keys match.</p>
-		<p><em>Notes on the sample below:</em> in the first case both files have just a single line. The keys are the same, so zero lines are missing, but the values differ by one. In the second case the first file is missing a line with “baz” while the second file is also missing a line with “foo”, so there is a total of two missing lines. The remaining lines have their values differ by one.</p>
+		<p>The output file <strong>OUT3.txt</strong> will contain 5 lines of output, each containing a pair of integer sums separated by a space. The first integer is the total number of lines missing between two files. The second integer is a sum of the absolute differences in the values of the lines where string keys match.</p>
+		<p><em>Notes on the sample below:</em> In the first case both files have just a single line. The keys are the same, so zero lines are missing, but the values differ by one. In the second case the first file is missing a line with “baz” while the second file is also missing a line with “foo”, so there is a total of two missing lines. The remaining lines have their values differ by one.</p>
 		<div id="sample_data">
 			<div class="sample_in">
 				Sample Input (first two shown):
