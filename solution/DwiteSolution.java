@@ -24,7 +24,9 @@ public abstract class DwiteSolution {
 	
 	// Entry point
 	public void run(String inFilename, String outFilename) {
-		run(new DwiteIo(inFilename, outFilename));
+		try (DwiteIo io = new DwiteIo(inFilename, outFilename)) {
+			run(io);
+		}
 	}
 	
 	// Entry point

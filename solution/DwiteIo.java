@@ -19,7 +19,7 @@ import java.util.StringTokenizer;
 /* 
  * A convenience input and output stream tailored toward DWITE usage.
  */
-public final class DwiteIo {
+public final class DwiteIo implements AutoCloseable {
 	
 	/*---- Fields ----*/
 	
