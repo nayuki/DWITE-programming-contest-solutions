@@ -1,6 +1,6 @@
 /* 
  * DWITE programming contest solutions
- * January 2012 - Problem 4: "Lego Ladder"
+ * January 2012 - Problem 4: "LEGO Ladder"
  * Copyright (c) Project Nayuki. All rights reserved.
  * 
  * https://www.nayuki.io/page/dwite-programming-contest-solutions

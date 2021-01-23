@@ -1,6 +1,6 @@
 /* 
  * DWITE programming contest solutions
- * October 2008 - Problem 4: "What is this Roman Numeral"
+ * October 2008 - Problem 4: "What is this Roman Numeral?"
  * Copyright (c) Project Nayuki. All rights reserved.
  * 
  * https://www.nayuki.io/page/dwite-programming-contest-solutions

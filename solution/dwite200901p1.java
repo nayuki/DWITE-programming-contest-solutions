@@ -1,6 +1,6 @@
 /* 
  * DWITE programming contest solutions
- * January 2009 - Problem 1: "Four player Pong with no players"
+ * January 2009 - Problem 1: "Four-player Pong with no players"
  * Copyright (c) Project Nayuki. All rights reserved.
  * 
  * https://www.nayuki.io/page/dwite-programming-contest-solutions
