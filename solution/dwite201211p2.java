@@ -20,23 +20,21 @@ public final class dwite201211p2 extends DwiteSolution {
 	private static final BigInteger BASE = BigInteger.valueOf(26);
 	
 	protected void runOnce() {
+		BigInteger sum = BigInteger.ZERO;
 		io.tokenizeLine();
-		String word = io.readToken();
-		BigInteger x = BigInteger.ZERO;
-		for (int i = 0; i < word.length(); i++)
-			x = x.multiply(BASE).add(BigInteger.valueOf(word.charAt(i) - 'A'));
+		for (int i = 0; i < 2; i++) {
+			String word = io.readToken();
+			BigInteger addend = BigInteger.ZERO;
+			for (int j = 0; j < word.length(); j++)
+				addend = addend.multiply(BASE).add(BigInteger.valueOf(word.charAt(j) - 'A'));
+			sum = sum.add(addend);
+		}
 		
-		word = io.readToken();
-		BigInteger y = BigInteger.ZERO;
-		for (int i = 0; i < word.length(); i++)
-			y = y.multiply(BASE).add(BigInteger.valueOf(word.charAt(i) - 'A'));
-		
-		BigInteger sum = x.add(y);
 		String out = "";
 		do {
-			BigInteger[] temp = sum.divideAndRemainder(BASE);
-			out = (char)('A' + temp[1].intValue()) + out;
-			sum = temp[0];
+			BigInteger[] quotRem = sum.divideAndRemainder(BASE);
+			out = (char)('A' + quotRem[1].intValue()) + out;
+			sum = quotRem[0];
 		} while (sum.signum() == 1);
 		io.println(out);
 	}
