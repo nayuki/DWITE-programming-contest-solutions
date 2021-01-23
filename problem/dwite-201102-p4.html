@@ -17,17 +17,17 @@
 			</div>
 		</header>
 		<p>Over the years, many word games have been invented. However, most of them involve actually knowing the definitions of these words, and this can get kind of frustrating. So you decided to create a word game that doesn’t involve knowing what words actually mean:</p>
-		<ul>
+		<ol>
 			<li>You start out with a word.</li>
-			<li>If there is a run of length 2 or more of some letter, you can remove the whole run from the word all together (e.g. In the word ‘GREEN’, you can remove the two E’s to get ‘GRN’).</li>
+			<li>If there is a run of length 2 or more of some letter, you can remove the whole run from the word altogether. (For example, in the word “GREEN”, you can remove the two E’s to get “GRN”.)</li>
 			<li>You keep removing runs of the same letters like above until you can’t find any such runs.</li>
-			<li>If the word is now empty, then you call the word you started with ‘solvable’. If what remains isn’t empty, then the word you started with is ‘unsolvable’.</li>
-		</ul>
+			<li>If the word is now empty, then you call the word you started with “solvable”. If what remains isn’t empty, then the word you started with is “unsolvable”.</li>
+		</ol>
 		<p>You then decide to make a program to help determine whether certain given words are solvable or not.</p>
-		<p>The input file <strong>DATA4.txt</strong> will contain 5 test cases. Each test case is a single line with 5 words separated by a single space, where each of these words consist of up to 150 uppercase characters.</p>
-		<p>The output file <strong>OUT4.txt</strong> should contain 5 lines. Each line consists of some 5 letter combination of ‘S’ or ‘U’, where the <var>i</var><sup>th</sup> letter is a ‘S’ if the <var>i</var><sup>th</sup> word in the input was solvable, or a ‘U’ if the <var>i</var><sup>th</sup> word in the input was unsolvable.</p>
-		<p><em>Note:</em> there might be more than one solution to a particular word.</p>
-		<p><em>Explanation of the first test case:</em> ‘GREEN’ is clearly unsolvable, since after removing the ‘E’s you are left with the string ‘GRN’. As for ‘ABBA’, removing the ‘B’s yields ‘AA’. You can then remove the ‘A’s to get rid of the whole word (making it solvable). ‘POST’ and ‘LEMONADE’ aren’t solvable either, as there aren’t any runs to remove in the first place. ‘ROAAAOR’ is solvable, as you can remove the ‘A’s to get ‘ROOR’, and then you can remove the ‘O’s to get ‘RR’, and finally you remove the ‘R’s to get rid of the whole word.</p>
+		<p>The input file <strong>DATA4.txt</strong> will contain 5 test cases. Each test case is a single line with 5 words separated by a single space, where each of these words consists of up to 150 uppercase characters.</p>
+		<p>The output file <strong>OUT4.txt</strong> should contain 5 lines. Each line consists of some 5 letter combination of “S” or “U”, where the <var>i</var><sup>th</sup> letter is “S” if the <var>i</var><sup>th</sup> word in the input was solvable, or “U” if the <var>i</var><sup>th</sup> word in the input was unsolvable.</p>
+		<p><em>Note:</em> There might be more than one solution to a particular word.</p>
+		<p><em>Explanation of the first test case:</em> “GREEN” is clearly unsolvable, since after removing the E’s you are left with the string “GRN”. As for “ABBA”, removing the B’s yields “AA”. You can then remove the A’s to get rid of the whole word (making it solvable). “POST” and “LEMONADE” aren’t solvable either, as there aren’t any runs to remove in the first place. “ROAAAOR” is solvable, as you can remove the A’s to get “ROOR”, and then you can remove the O’s to get “RR”, and finally you remove the R’s to get rid of the whole word.</p>
 		<div id="sample_data">
 			<div class="sample_in">
 				Sample Input (only first case shown):
