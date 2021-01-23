@@ -60,11 +60,13 @@
 			</svg>
 		</center>
 		<p>Given the layout of a crossword grid, we wish to count the number of “across” words and “down” words. Now, let’s define a word:</p>
-		<p>- A word is a sequence of at least 2 adjacent white squares that lie on the same horizontal (“across”) or vertical (“down”) line.</p>
-		<p>- A word must not be contained completely within another word. That is, there must be no white squares available to extend the word in either direction.</p>
+		<ul>
+			<li>A word is a sequence of at least 2 adjacent white squares that lie on the same horizontal (“across”) or vertical (“down”) line.</li>
+			<li>A word must not be contained completely within another word. That is, there must be no white squares available to extend the word in either direction.</li>
+		</ul>
 		<p>In the example above, there are 3 “across” words (starting at numbers 1, 3, and 4) and 2 “down” clues (starting at numbers 1 and 2).</p>
-		<p>The input file <strong>DATA1.txt</strong> will contain 5 test cases. Each test case will begin with two integers, denoting <var>H</var> and <var>W</var> respectively, the height and width of the grid. Neither dimension will exceed 100. <var>H</var> lines will follow, each consisting of <var>W</var> characters, describing the layout of the grid, where ‘#’ represents a black square and ‘.’ represents a white square.</p>
-		<p>The output file <strong>OUT1.txt</strong> will contain 5 lines of output, each containing 2 space-separated integers: the number of “across” words and the number of “down” words.</p>
+		<p>The input file <strong>DATA1.txt</strong> will contain 5 test cases. Each test case will begin with two integers, <var>H</var> and <var>W</var>, respectively denoting the height and width of the grid. Neither dimension will exceed 100. <var>H</var> lines will follow, each consisting of <var>W</var> characters, describing the layout of the grid, where “#” represents a black square and “.” represents a white square.</p>
+		<p>The output file <strong>OUT1.txt</strong> will contain 5 lines of output, each containing two space-separated integers: The number of “across” words and the number of “down” words.</p>
 		<div id="sample_data">
 			<div class="sample_in">
 				Sample Input (first 2 cases):

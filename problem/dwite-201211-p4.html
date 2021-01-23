@@ -16,9 +16,9 @@
 				</div>
 			</div>
 		</header>
-		<p>Your friend is trying to convince you of his magical powers. He decides to perform the following trick to persuade you: Given a list of <var>N</var> shuffled cards, where each card has a unique number from {1, 2, ..., <var>N</var>} written on it, he’ll guess the numbers on the cards. Knowing that this is highly improbable, you call his bluff. He then continues to tell you that he still needs one more piece of information for this trick to work. For every card in the deck, he needs to know how many cards after of this card has a bigger number written on it. Being a computer science student, you claim that you can write a program to do this simple trick as well.</p>
+		<p>Your friend is trying to convince you of his magical powers. He decides to perform the following trick to persuade you: Given a list of <var>N</var> shuffled cards, where each card has a unique number from {1, 2, ..., <var>N</var>} written on it, he’ll guess the numbers on the cards. Knowing that this is highly improbable, you call his bluff. He then continues to tell you that he still needs one more piece of information for this trick to work. For every card in the deck, he needs to know how many cards after this card has a bigger number written on it. Being a computer science student, you claim that you can write a program to do this simple trick as well.</p>
 		<p>The input file <strong>DATA4.txt</strong> will contain 5 test cases. Each test case consists of 2 lines. The first line will contain an integer 1 ≤ <var>N</var> ≤ 100, the number of cards in the deck. The following line will contain <var>N</var> numbers separated by spaces, where each number represents the count of the remaining cards in the deck with a larger value than the card in the position of that number. e.g. a list that starts with “1 3 2 ...” says that there is 1 card greater than the first in the deck, 3 cards greater than the second card in the deck, 2 cards greater than the third card in the deck, etc.</p>
-		<p>The output file <strong>OUT4.txt</strong> will contain 5 lines of output. Each is a line of space-separated numbers representing the original order of the deck in the corresponding test case. If no such deck can be constructed, print <strong>IMPOSSIBLE</strong>.</p>
+		<p>The output file <strong>OUT4.txt</strong> will contain 5 lines of output. Each is a line of space-separated numbers representing the original order of the deck in the corresponding test case. If no such deck can be constructed, print <em>IMPOSSIBLE</em>.</p>
 		<div id="sample_data">
 			<div class="sample_in">
 				Sample Input (first 2 shown):
@@ -33,7 +33,7 @@
 IMPOSSIBLE</pre>
 			</div>
 		</div>
-		<p><em>Notes:</em> For the first case, going backwards from the solution: The first card has value 2, and there is only 1 card with greater value after it (3). The second card has value 1, and there is only 1 card with greater value after it (3). The last card has value of 3, and there are no cards with greater value. So the input of “1 1 0” checks out as being valid.</p>
-		<p>The second case is IMPOSSIBLE, most obviously because it expects 2 cards with greater value than the <strong>last</strong> card, but there are no more cards to match this requirement.</p>
+		<p><em>Notes:</em> For the first case, going backwards from the solution: The first card has value 2, and there is only 1 card with a greater value after it (3). The second card has value 1, and there is only 1 card with a greater value after it (3). The last card has value 3, and there are no cards with a greater value. So the input of “1 1 0” checks out as being valid.</p>
+		<p>The second case is impossible, most obviously because it expects 2 cards with a greater value than the <em>last</em> card, but there are no more cards to match this requirement.</p>
 	</body>
 </html>
