@@ -70,18 +70,12 @@ article blockquote {
 }
 
 article #sample_data {
-	border: 1px solid #999999;
-}
-
-article #sample_data::after {
-	display: block;
-	content: "";
-	clear: both;
+	display: flex;
+	flex-direction: column;
+	row-gap: 1.0em;
 }
 
 article .sample_in, article .sample_out {
-	float: left;
-	margin: 0.5em;
 	padding: 0.2em;
 	border: 1px solid #CCCCCC;
 }
@@ -133,6 +127,14 @@ article .sample_in, article .sample_out {
 	article blockquote {
 		color: #666666;
 	}
+	
+	@media (min-width:52em) {
+		article #sample_data:not(.wide) {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			column-gap: 1.0em;
+		}
+	}
 }
 
 
@@ -141,5 +143,11 @@ article .sample_in, article .sample_out {
 @media print {
 	header {
 		border-bottom: 0.15em solid #000000;
+	}
+	
+	article #sample_data:not(.wide) {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 1.0em;
 	}
 }
