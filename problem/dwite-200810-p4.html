@@ -2,31 +2,33 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>DWITE • October 2008 • What is this Roman Numeral</title>
+		<title>DWITE • October 2008 • What is this Roman Numeral?</title>
 		<link rel="Stylesheet" href="stylish.css" type="text/css">
 	</head>
 	<body>
 		<header>
 			<h1>DWITE Online Computer Programming Contest</h1>
 			<div>
-				<h2>What is this Roman Numeral</h2>
+				<h2>What is this Roman Numeral?</h2>
 				<div>
 					<div>October 2008</div>
 					<div>Problem 4</div>
 				</div>
 			</div>
 		</header>
-		<p>Although today’s use of Roman numerals is typically limited to movie titles or the pages preceding the main part of a book (and thus are typically small), let’s build a Roman-to-decimal converter anyway. Just for the <em>LOL</em>s.</p>
-		<p>The input file <strong>DATA4.txt</strong> will contain 5 lines, Roman numerals with values 1 ≤ <var>N</var> ≤ 2000.</p>
+		<p>Although today’s use of Roman numerals is typically limited to movie titles or the pages preceding the main part of a book (and thus are typically small), let’s build a Roman-to-decimal converter anyway – just for the <em>LOL</em>s.</p>
+		<p>The input file <strong>DATA4.txt</strong> will contain 5 lines, Roman numerals with decimal values 1 ≤ <var>N</var> ≤ 2000.</p>
 		<p>The output file <strong>OUT4.txt</strong> will contain 5 lines, the decimal values of the input numbers.</p>
 		<p><em>For your reference,</em> the symbols are as follows:</p>
-		<pre>I 1
-V 5
-X 10
-L 50
-C 100
-D 500
-M 1000</pre>
+		<ul>
+			<li>I: 1</li>
+			<li>V: 5</li>
+			<li>X: 10</li>
+			<li>L: 50</li>
+			<li>C: 100</li>
+			<li>D: 500</li>
+			<li>M: 1000</li>
+		</ul>
 		<p>Numbers in between the symbols are constructed by adding the symbols together (e.g. II for 2) – or by subtracting, which is done by placing a smaller symbol in front of a larger one (e.g. IV for 4).</p>
 		<p><em>Note:</em> Be cautious that the numbers are slightly more complicated than simply adding the values of symbols in order. While XI (11), XII (12), XIII (13) are simple enough, XIV (14) breaks the pattern (that is, it is not 10 + 1 + 5, but 10 + (5 − 1)).</p>
 		<div id="sample_data">
