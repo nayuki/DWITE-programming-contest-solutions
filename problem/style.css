@@ -159,6 +159,10 @@ article *:last-child {
 		color: #666666;
 	}
 	
+	article section.sample pre > span {
+		background-color: #EAEFFF;
+	}
+	
 	@media (min-width:52em) {
 		article section.sample:not(.wide) {
 			display: grid;
