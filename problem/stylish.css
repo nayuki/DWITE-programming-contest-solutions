@@ -32,9 +32,6 @@ var {
 	}
 	
 	html {
-		width: 50em;
-		margin: 0 auto;
-		padding: 0.8em 1.0em 2.0em;
 		background-color: #FFFFFF;
 		overflow-y: scroll;
 		font-family: "Lucida Grande","Verdana",sans-serif;
@@ -42,8 +39,28 @@ var {
 	}
 	
 	body {
-		padding: 1.0em 2.0em 1.5em;
-		box-shadow: 0 0 0.7em #D0D0D0;
+		padding-top: 1.0em;
+		padding-bottom: 1.5em;
+	}
+	
+	@media not (min-width:52em) {
+		body {
+			padding-left: 1.0em;
+			padding-right: 1.0em;
+		}
+	}
+	
+	@media (min-width:52em) {
+		html {
+			padding: 0.8em 1.0em 2.0em;
+		}
+		body {
+			max-width: 46em;
+			margin: 0 auto;
+			padding-left: 2.0em;
+			padding-right: 2.0em;
+			box-shadow: 0 0 0.7em #D0D0D0;
+		}
 	}
 	
 	header {
