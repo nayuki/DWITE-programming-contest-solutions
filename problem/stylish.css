@@ -1,23 +1,85 @@
-p {
+/*---- Reset ----*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+/*---- Header ----*/
+
+header {
+	margin-bottom: 1.5em;
+	padding-bottom: 1.0em;
+}
+
+header > h1 {
+	margin-bottom: 0.7rem;
+	font-family: "Helvetica","Arial",sans-serif;
+	font-size: 130%;
+	font-weight: bold;
+	text-align: center;
+}
+
+header > div {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	column-gap: 1.5em;
+}
+
+header > div > h2 {
+	flex-grow: 1;
+	font-family: "Helvetica","Arial",sans-serif;
+	font-size: 170%;
+	font-weight: bold;
+}
+
+header > div > div {
+	flex-shrink: 0;
+	text-align: right;
+}
+
+header > div > div > div:nth-child(2) {
+	font-weight: bold;
+}
+
+
+/*---- Article content ----*/
+
+article p {
 	margin-top: 1.0em;
 	margin-bottom: 1.0em;
 }
 
-var {
+article ul {
+	margin-left: 2em;
+	list-style-type: disc;
+}
+
+article ol {
+	margin-left: 2em;
+}
+
+article var {
 	font-style: italic;
 }
 
-#sample_data {
+article blockquote {
+	margin-left: 2em;
+}
+
+article #sample_data {
 	border: 1px solid #999999;
 }
 
-#sample_data::after {
+article #sample_data::after {
 	display: block;
 	content: "";
 	clear: both;
 }
 
-.sample_in, .sample_out {
+article .sample_in, article .sample_out {
 	float: left;
 	margin: 0.5em;
 	padding: 0.2em;
@@ -25,12 +87,9 @@ var {
 }
 
 
+/*---- Screen ----*/
+
 @media screen {
-	* {
-		margin: 0;
-		padding: 0;
-	}
-	
 	html {
 		background-color: #FFFFFF;
 		overflow-y: scroll;
@@ -64,54 +123,23 @@ var {
 	}
 	
 	header {
-		margin-bottom: 1.5em;
-		padding-bottom: 1.0em;
 		border-bottom: 0.15em solid #D2DDFF;
 	}
 	
 	header > h1 {
-		margin-bottom: 0.7rem;
-		font-family: "Helvetica","Arial",sans-serif;
-		font-size: 130%;
-		font-weight: bold;
-		text-align: center;
 		color: #F96233;
 	}
 	
-	header > div {
-		display: flex;
-		flex-direction: row;
-		align-items: flex-end;
-		column-gap: 1.5em;
-	}
-	
-	header > div > h2 {
-		flex-grow: 1;
-		font-family: "Helvetica","Arial",sans-serif;
-		font-size: 170%;
-		font-weight: bold;
-	}
-	
-	header > div > div {
-		flex-shrink: 0;
-		text-align: right;
-	}
-	
-	header > div > div > div:nth-child(2) {
-		font-weight: bold;
-	}
-	
-	ul {
-		margin-left: 2em;
-		list-style-type: disc;
-	}
-	
-	ol {
-		margin-left: 2em;
-	}
-	
-	blockquote {
-		margin-left: 2em;
+	article blockquote {
 		color: #666666;
+	}
+}
+
+
+/*---- Print ----*/
+
+@media print {
+	header {
+		border-bottom: 0.15em solid #000000;
 	}
 }
