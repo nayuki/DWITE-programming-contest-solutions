@@ -71,6 +71,23 @@ article var {
 	font-style: italic;
 }
 
+article img.block, article svg.block {
+	display: block;
+	max-width: 100%;
+	margin-top: 1.0em;
+	margin-bottom: 1.0em;
+}
+
+article img.block.left, article svg.block.left {
+	margin-left: 0;
+	margin-right: auto;
+}
+
+article img.block.center, article svg.block.center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
 article blockquote {
 	margin-left: 2em;
 }
