@@ -86,7 +86,7 @@ var {
 	
 	ul {
 		margin-left: 2em;
-		list-style: none;
+		list-style-type: disc;
 	}
 	
 	ol {
