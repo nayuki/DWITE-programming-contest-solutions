@@ -75,7 +75,7 @@ article section.sample {
 	row-gap: 1.0em;
 }
 
-article section.sample > div.input, article section.sample > div.output {
+article section.sample > div {
 	padding: 0.2em;
 	border: 1px solid #CCCCCC;
 }
