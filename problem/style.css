@@ -151,6 +151,10 @@ article *:last-child {
 		color: #F96233;
 	}
 	
+	article {
+		line-height: 1.35;
+	}
+	
 	article blockquote {
 		color: #666666;
 	}
@@ -170,6 +174,14 @@ article *:last-child {
 @media print {
 	header {
 		border-bottom: 0.15em solid #000000;
+	}
+	
+	article {
+		max-width: 40em;
+		margin-left: auto;
+		margin-right: auto;
+		font-family: serif;
+		line-height: 1.30;
 	}
 	
 	article section.sample:not(.wide) {
