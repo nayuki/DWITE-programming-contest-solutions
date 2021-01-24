@@ -19,9 +19,9 @@ var {
 
 .sample_in, .sample_out {
 	float: left;
-	border: 1px solid #ccc;
 	margin: 0.5em;
 	padding: 0.2em;
+	border: 1px solid #ccc;
 }
 
 
@@ -32,18 +32,18 @@ var {
 	}
 	
 	html {
+		width: 50em;
 		margin: 0 auto;
 		padding: 0.8em 1.0em 2.0em;
-		width: 50em;
+		background-color: #FFFFFF;
 		overflow-y: scroll;
+		font-family: "Lucida Grande","Verdana",sans-serif;
+		color: #222;
 	}
 	
 	body {
-		background-color: #FFFFFF;
-		color: #222;
-		box-shadow: 0 0 0.7em #D0D0D0;
 		padding: 1.0em 2.0em 1.5em;
-		font-family: "Lucida Grande","Verdana",sans-serif;
+		box-shadow: 0 0 0.7em #D0D0D0;
 	}
 	
 	header {
@@ -54,8 +54,8 @@ var {
 	
 	header > h1 {
 		margin-bottom: 0.7rem;
-		font-size: 130%;
 		font-family: "Helvetica","Arial",sans-serif;
+		font-size: 130%;
 		font-weight: bold;
 		text-align: center;
 		color: #F96233;
@@ -85,8 +85,8 @@ var {
 	}
 	
 	ul {
-		list-style: none;
 		margin-left: 2em;
+		list-style: none;
 	}
 	
 	ol {
