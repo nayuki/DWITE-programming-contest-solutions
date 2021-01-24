@@ -16,14 +16,15 @@
 				</div>
 			</div>
 		</header>
-		<p>Mountain hiking is a very adventurous yet somewhat dangerous pastime. On certain mountain ranges, the heights could vary sharply. An amateur hiker can move to an adjacent (left/right, up/down, but not diagonally) location only if the height difference with the current location is at most 1. Given the height map of a mountain range, determine the distance of the shortest viable path between the left and right edges.</p>
-		<p>The input file <strong>DATA4.txt</strong> will contain 5 test cases. Each test case consists of a 10×10 map of the digits 0 to 9, with each digit representing the height at that location. A line of hyphens ---------- follows each test case for visual separation.</p>
-		<p>The output file <strong>OUT4.txt</strong> will contain 5 lines, each being the least number of steps to cross the mountain range in that case. If the hiker can’t get across, output “IMPOSSIBLE” (without quotes) instead.</p>
-		<p><em>Notes:</em> The hiker could start at any of the leftmost positions. The steps counted are the transitions from one location to the next. Thus appearing in that very first location requires no steps.</p>
-		<div id="sample_data">
-			<div class="sample_in">
-				Sample Input (only 1st case shown):
-				<pre>9324892342
+		<article>
+			<p>Mountain hiking is a very adventurous yet somewhat dangerous pastime. On certain mountain ranges, the heights could vary sharply. An amateur hiker can move to an adjacent (left/right, up/down, but not diagonally) location only if the height difference with the current location is at most 1. Given the height map of a mountain range, determine the distance of the shortest viable path between the left and right edges.</p>
+			<p>The input file <strong>DATA4.txt</strong> will contain 5 test cases. Each test case consists of a 10×10 map of the digits 0 to 9, with each digit representing the height at that location. A line of hyphens ---------- follows each test case for visual separation.</p>
+			<p>The output file <strong>OUT4.txt</strong> will contain 5 lines, each being the least number of steps to cross the mountain range in that case. If the hiker can’t get across, output “IMPOSSIBLE” (without quotes) instead.</p>
+			<p><em>Notes:</em> The hiker could start at any of the leftmost positions. The steps counted are the transitions from one location to the next. Thus appearing in that very first location requires no steps.</p>
+			<div id="sample_data">
+				<div class="sample_in">
+					Sample Input (only 1st case shown):
+					<pre>9324892342
 1334343293
 3524523454
 2634232043
@@ -34,24 +35,25 @@
 9343221234
 2653560343
 ----------</pre>
+				</div>
+				<div class="sample_out">
+					Sample Output (only 1st case shown):
+					<pre>11</pre>
+				</div>
+				<div style="float:left; border:1px solid #ccc; margin:0.5em; padding:0.2em">
+					Explanation for the sample test case:
+					<pre style="color:#bbb">9324892342
+	1334343293
+	3524523454
+	2634232043
+	0343259235
+	2454502352
+	<strong style="color:#f00">456</strong>3589024
+	73<strong style="color:#f00">5</strong>4354256
+	93<strong style="color:#f00">43221234</strong>
+	2653560343</pre>
+				</div>
 			</div>
-			<div class="sample_out">
-				Sample Output (only 1st case shown):
-				<pre>11</pre>
-			</div>
-			<div style="float:left; border:1px solid #ccc; margin:0.5em; padding:0.2em">
-				Explanation for the sample test case:
-				<pre style="color:#bbb">9324892342
-1334343293
-3524523454
-2634232043
-0343259235
-2454502352
-<strong style="color:#f00">456</strong>3589024
-73<strong style="color:#f00">5</strong>4354256
-93<strong style="color:#f00">43221234</strong>
-2653560343</pre>
-			</div>
-		</div>
+		</article>
 	</body>
 </html>

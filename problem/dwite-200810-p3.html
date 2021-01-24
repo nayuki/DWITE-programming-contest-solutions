@@ -16,7 +16,8 @@
 				</div>
 			</div>
 		</header>
-		<pre>#########A#########
+		<article>
+			<pre>#########A#########
 #...#.........#...#
 #...#.#######.#...#
 #..B#.#FGHIJ#.#E..#
@@ -26,14 +27,14 @@
 #..C#.#.....#.#D..#
 #...#.#.....#.#...#
 #####K#######L#####</pre>
-		<p>Given this overly imaginative layout of a tiny five-room floorplan (one of which happens to be missing a door), the letters ABCDEFGHIJKL mark the points of interest. Given a daily schedule as a sequence of letters, how much would one have to walk while taking the most optimal paths?</p>
-		<p>Walking is done on periods (.) and letters. There is no diagonal movement. <em>For reference:</em> The distance between B to F is <em>6</em>. From F to J is <em>4</em>. And so the path BFJE will be <em>16</em>. If a letter is consecutively followed by itself (such as BB), the distance is <em>0</em>.</p>
-		<p>The input file <strong>DATA3.txt</strong> will contain 10 lines, a copy of the <em>same map</em> as presented above. It will be followed by 5 more lines, each being a string made up of the aforementioned capital letters (ABCDEFGHIJKL), 1 ≤ <var>N</var> &lt; 20 in length, describing the schedule.</p>
-		<p>The output file <strong>OUT3.txt</strong> will contain 5 lines – the optimal distance travelled for the plan specified.</p>
-		<div id="sample_data">
-			<div class="sample_in">
-				Sample Input:
-				<pre>#########A#########
+			<p>Given this overly imaginative layout of a tiny five-room floorplan (one of which happens to be missing a door), the letters ABCDEFGHIJKL mark the points of interest. Given a daily schedule as a sequence of letters, how much would one have to walk while taking the most optimal paths?</p>
+			<p>Walking is done on periods (.) and letters. There is no diagonal movement. <em>For reference:</em> The distance between B to F is <em>6</em>. From F to J is <em>4</em>. And so the path BFJE will be <em>16</em>. If a letter is consecutively followed by itself (such as BB), the distance is <em>0</em>.</p>
+			<p>The input file <strong>DATA3.txt</strong> will contain 10 lines, a copy of the <em>same map</em> as presented above. It will be followed by 5 more lines, each being a string made up of the aforementioned capital letters (ABCDEFGHIJKL), 1 ≤ <var>N</var> &lt; 20 in length, describing the schedule.</p>
+			<p>The output file <strong>OUT3.txt</strong> will contain 5 lines – the optimal distance travelled for the plan specified.</p>
+			<div id="sample_data">
+				<div class="sample_in">
+					Sample Input:
+					<pre>#########A#########
 #...#.........#...#
 #...#.#######.#...#
 #..B#.#FGHIJ#.#E..#
@@ -48,15 +49,16 @@ ABBB
 ABCK
 FGHIJ
 KEBK</pre>
-			</div>
-			<div class="sample_out">
-				Sample Output:
-				<pre>0
+				</div>
+				<div class="sample_out">
+					Sample Output:
+					<pre>0
 11
 25
 4
 38</pre>
+				</div>
 			</div>
-		</div>
+		</article>
 	</body>
 </html>

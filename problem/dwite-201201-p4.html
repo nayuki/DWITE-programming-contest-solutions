@@ -16,24 +16,26 @@
 				</div>
 			</div>
 		</header>
-		<p>Little Alice and Little Bob are playing with their favourite toys, LEGO blocks. They have <var>N</var> blocks of various heights, arranged in a row. They decide to play a game with their blocks.</p>
-		<p>Alice and Bob take turns removing one LEGO block from the row, with Alice going first. At the beginning of a player’s turn, if the blocks form a ladder – a sequence of either non-increasing or non-decreasing heights – that player loses. Given the heights of the initial row of blocks, determine who has the winning strategy, if they play optimally.</p>
-		<p>The input file <strong>DATA4.txt</strong> will contain 5 test cases, and each test case describes 3 games. The first line of each game contains a number <var>N</var> (1 ≤ <var>N</var> ≤ 15), the number of blocks in that game. The next line contains <var>N</var> space-separated integers representing the heights of the blocks, which will be integers from 0 to 100 inclusive.</p>
-		<p>The output file <strong>OUT4.txt</strong> will contain 5 lines, each being a string of 3 characters. The <var>i</var><sup>th</sup> character of the <var>j</var><sup>th</sup> line should represent the result of the <var>i</var><sup>th</sup> game of the <var>j</var><sup>th</sup> test case: “A” if Little Alice wins or “B” if Little Bob wins.</p>
-		<div id="sample_data">
-			<div class="sample_in">
-				Sample Input (only one case shown):
-				<pre>2
+		<article>
+			<p>Little Alice and Little Bob are playing with their favourite toys, LEGO blocks. They have <var>N</var> blocks of various heights, arranged in a row. They decide to play a game with their blocks.</p>
+			<p>Alice and Bob take turns removing one LEGO block from the row, with Alice going first. At the beginning of a player’s turn, if the blocks form a ladder – a sequence of either non-increasing or non-decreasing heights – that player loses. Given the heights of the initial row of blocks, determine who has the winning strategy, if they play optimally.</p>
+			<p>The input file <strong>DATA4.txt</strong> will contain 5 test cases, and each test case describes 3 games. The first line of each game contains a number <var>N</var> (1 ≤ <var>N</var> ≤ 15), the number of blocks in that game. The next line contains <var>N</var> space-separated integers representing the heights of the blocks, which will be integers from 0 to 100 inclusive.</p>
+			<p>The output file <strong>OUT4.txt</strong> will contain 5 lines, each being a string of 3 characters. The <var>i</var><sup>th</sup> character of the <var>j</var><sup>th</sup> line should represent the result of the <var>i</var><sup>th</sup> game of the <var>j</var><sup>th</sup> test case: “A” if Little Alice wins or “B” if Little Bob wins.</p>
+			<div id="sample_data">
+				<div class="sample_in">
+					Sample Input (only one case shown):
+					<pre>2
 2 3
 3
 0 2 2
 4
 1 2 4 3</pre>
+				</div>
+				<div class="sample_out">
+					Sample Output:
+					<pre>BBA</pre>
+				</div>
 			</div>
-			<div class="sample_out">
-				Sample Output:
-				<pre>BBA</pre>
-			</div>
-		</div>
+		</article>
 	</body>
 </html>

@@ -16,14 +16,15 @@
 				</div>
 			</div>
 		</header>
-		<p>Colour has often been added to words to make them seem more attractive or distinct (take the Google logo for example). However, taking a look at coloured words under coloured light makes the letters in the word that has the same colour as the light seem invisible. For example, say I have the word “DWITE”, and its letters are coloured blue, red, red, green, and blue, respectively. If you looked at the word under red light, you would only see “D__TE” (note the underscores representing positions where the “W” and “I” have been). Given coloured words and the light they are observed under, determine what you would see.</p>
-		<p>The input file <strong>DATA1.txt</strong> will contain 5 test cases. The first line of each test case consists of two words (strings with no spaces) <var>W</var> and <var>C</var>, representing the word and the colour of each letter of the word respectively (so the <var>i</var><sup>th</sup> letter of <var>C</var> determines the colour of the <var>i</var><sup>th</sup> letter of <var>W</var>, where the possible colours are “b” for blue, “r” for red, and “g” for green). The next line contains a string <var>L</var>, representing the colour of the light. <var>L</var> consists of either a “b”, “r”, or “g” (representing blue, red, and green), or any combination of these letters separated by “+”s.</p>
-		<p>The output file <strong>OUT1.txt</strong> should consist of 5 lines, where each line contains the given word as it appears under the given light. Invisible letters are to be represented with underscores “_”.</p>
-		<p><em>Note:</em> In the third line of output, there are 3 underscores after “Compu”. The last line of output contains 5 underscores. It is also assumed that combined colours remove letters having any individual colour component of the combination.</p>
-		<div id="sample_data">
-			<div class="sample_in">
-				Sample Input:
-				<pre>Sample rggbbr
+		<article>
+			<p>Colour has often been added to words to make them seem more attractive or distinct (take the Google logo for example). However, taking a look at coloured words under coloured light makes the letters in the word that has the same colour as the light seem invisible. For example, say I have the word “DWITE”, and its letters are coloured blue, red, red, green, and blue, respectively. If you looked at the word under red light, you would only see “D__TE” (note the underscores representing positions where the “W” and “I” have been). Given coloured words and the light they are observed under, determine what you would see.</p>
+			<p>The input file <strong>DATA1.txt</strong> will contain 5 test cases. The first line of each test case consists of two words (strings with no spaces) <var>W</var> and <var>C</var>, representing the word and the colour of each letter of the word respectively (so the <var>i</var><sup>th</sup> letter of <var>C</var> determines the colour of the <var>i</var><sup>th</sup> letter of <var>W</var>, where the possible colours are “b” for blue, “r” for red, and “g” for green). The next line contains a string <var>L</var>, representing the colour of the light. <var>L</var> consists of either a “b”, “r”, or “g” (representing blue, red, and green), or any combination of these letters separated by “+”s.</p>
+			<p>The output file <strong>OUT1.txt</strong> should consist of 5 lines, where each line contains the given word as it appears under the given light. Invisible letters are to be represented with underscores “_”.</p>
+			<p><em>Note:</em> In the third line of output, there are 3 underscores after “Compu”. The last line of output contains 5 underscores. It is also assumed that combined colours remove letters having any individual colour component of the combination.</p>
+			<div id="sample_data">
+				<div class="sample_in">
+					Sample Input:
+					<pre>Sample rggbbr
 b
 DWITE brrgb
 r
@@ -33,15 +34,16 @@ February brbrbrbr
 g
 Sweet brgbr
 r+g+b</pre>
-			</div>
-			<div class="sample_out">
-				Sample Output:
-				<pre>Sam__e
+				</div>
+				<div class="sample_out">
+					Sample Output:
+					<pre>Sam__e
 D__TE
 Compu___
 February
 _____</pre>
+				</div>
 			</div>
-		</div>
+		</article>
 	</body>
 </html>
