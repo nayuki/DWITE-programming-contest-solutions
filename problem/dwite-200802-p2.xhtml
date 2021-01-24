@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>DWITE • February 2008 • Number of factors</title>
+		<link rel="stylesheet" href="style.css" type="text/css"/>
+	</head>
+	<body>
+		<header>
+			<h1>DWITE Online Computer Programming Contest</h1>
+			<div>
+				<h2>Number of factors</h2>
+				<div>
+					<div>February 2008</div>
+					<div>Problem 2</div>
+				</div>
+			</div>
+		</header>
+		<article>
+			<p>Integer numbers are made up of <strong>factors</strong>, which are the smallest numbers that when multiplied together form the original number. Factors are always prime. 1 and the original number itself don’t count as factors. If a number has no factors, then that number is itself prime. For example, 12 is made up of three factors: 2×2×3 (even though 4×3 is 12, 4 itself has two factors: 2×2).</p>
+			<p>We care about this because factors are often involved in cryptography:</p>
+			<blockquote>
+				<p>When the numbers are very large, no efficient integer factorization algorithm is publicly known; a recent effort which factored a 200-digit number (RSA-200) took eighteen months and used over half a century of computer time.</p>
+			</blockquote>
+			<p>Though we’ll be dealing with <em>much</em> smaller numbers for now.</p>
+			<p>The input file <strong>DATA2.txt</strong> will contain 5 lines, integers 2 ≤ <var>N</var> ≤ 32.</p>
+			<p>The output file <strong>OUT2.txt</strong> will contain 5 lines – the total number of factors in the number.</p>
+			<section class="sample">
+				<div class="input">
+					Sample Input:
+					<pre>3
+4
+5
+12
+32</pre>
+				</div>
+				<div class="output">
+					Sample Output:
+					<pre>0
+2
+0
+3
+5</pre>
+				</div>
+			</section>
+		</article>
+	</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>DWITE • November 2010 • Seating Arrangement</title>
+		<link rel="stylesheet" href="style.css" type="text/css"/>
+	</head>
+	<body>
+		<header>
+			<h1>DWITE Online Computer Programming Contest</h1>
+			<div>
+				<h2>Seating Arrangement</h2>
+				<div>
+					<div>November 2010</div>
+					<div>Problem 2</div>
+				</div>
+			</div>
+		</header>
+		<article>
+			<p>It’s interesting to see where people sit when entering a room of other people that they do not know. One of the strategies is that when a person enters a room, they will sit at a location that maximizes the distance between themselves and the closest other person. If multiple seats are equally far, then the person will sit closer to the entrance of the room.</p>
+			<p>Here we will only be dealing with linear rooms. The seats are numbered from 1 to <var>N</var>, where 1 is the closest to the entrance and <var>N</var> is the furthest.</p>
+			<p>The input file <strong>DATA2.txt</strong> will contain 5 lines, each a pair of integers 1 ≤ <var>N</var> ≤ 1000 and 1 ≤ <var>P</var> ≤ <var>N</var>, separated by a single space. <var>N</var> is the number of seats in the room; <var>P</var> is the number of people entering this room.</p>
+			<p>The output file <strong>OUT2.txt</strong> will contain 5 lines, each an integer identifying the seat in which <var>P</var>th person is seating.</p>
+			<p><em>Note:</em> As the first person enters an empty room, every seat is equally far away from any other person, so they pick seat 1. For a room with 5 seats, with the entrance on the left, the seats will be filled up in the following order:</p>
+			<pre>H:*****
+H:1****
+H:1***2
+H:1*3*2
+H:143*2
+H:14352</pre>
+			<section class="sample">
+				<div class="input">
+					Sample Input (first 2 shown):
+					<pre>5 2
+5 4</pre>
+				</div>
+				<div class="output">
+					Sample Output (first 2 shown):
+					<pre>5
+2</pre>
+				</div>
+			</section>
+		</article>
+	</body>
+</html>

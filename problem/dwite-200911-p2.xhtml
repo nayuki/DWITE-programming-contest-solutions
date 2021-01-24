@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>DWITE • November 2009 • Mini DWITE</title>
+		<link rel="stylesheet" href="style.css" type="text/css"/>
+	</head>
+	<body>
+		<header>
+			<h1>DWITE Online Computer Programming Contest</h1>
+			<div>
+				<h2>Mini DWITE</h2>
+				<div>
+					<div>November 2009</div>
+					<div>Problem 2</div>
+				</div>
+			</div>
+		</header>
+		<article>
+			<p>The basic idea behind DWITE’s judge is to run your programs against the test input, and compare the result against the test output. To get a better understanding, here we’ll make a miniature judge that tests a simple addition function.</p>
+			<p>The input file <strong>DATA2.txt</strong> will contain 5 sets, each 5 lines of two non-negative integers (0 ≤ <var>n</var> ≤ 100) separated by a space, followed by 5 lines of <em>“expected”</em> output. That is, the total input is 50 lines long.</p>
+			<p>You <em>“run a solution”</em> by adding the input integers, and then checking if it matches the number in the <em>“expected output”</em> part. Add 1 point for each match, 0 for different numbers.</p>
+			<p>The output file <strong>OUT2.txt</strong> will contain 5 lines, each a score for a set.</p>
+			<p><em>Explanation of the sample input below:</em></p>
+			<ul>
+				<li>1 + 2 = 3; score point</li>
+				<li>2 + 3 = 5; score point</li>
+				<li>3 + 4 = 7; score point</li>
+				<li>4 + 5 ≠ 10; no point</li>
+				<li>5 + 6 = 11; score point</li>
+			</ul>
+			<section class="sample">
+				<div class="input">
+					Sample Input (first set shown):
+					<pre>1 2
+2 3
+3 4
+4 5
+5 6
+3
+5
+7
+10
+11</pre>
+				</div>
+				<div class="output">
+					Sample Output (first set shown):
+					<pre>4</pre>
+				</div>
+			</section>
+		</article>
+	</body>
+</html>

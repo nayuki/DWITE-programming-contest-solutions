@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>DWITE • February 2011 • New type of wordplay</title>
+		<link rel="stylesheet" href="style.css" type="text/css"/>
+	</head>
+	<body>
+		<header>
+			<h1>DWITE Online Computer Programming Contest</h1>
+			<div>
+				<h2>New type of wordplay</h2>
+				<div>
+					<div>February 2011</div>
+					<div>Problem 4</div>
+				</div>
+			</div>
+		</header>
+		<article>
+			<p>Over the years, many word games have been invented. However, most of them involve actually knowing the definitions of these words, and this can get kind of frustrating. So you decided to create a word game that doesn’t involve knowing what words actually mean:</p>
+			<ol>
+				<li>You start out with a word.</li>
+				<li>If there is a run of length 2 or more of some letter, you can remove the whole run from the word altogether. (For example, in the word “GREEN”, you can remove the two E’s to get “GRN”.)</li>
+				<li>You keep removing runs of the same letters like above until you can’t find any such runs.</li>
+				<li>If the word is now empty, then you call the word you started with “solvable”. If what remains isn’t empty, then the word you started with is “unsolvable”.</li>
+			</ol>
+			<p>You then decide to make a program to help determine whether certain given words are solvable or not.</p>
+			<p>The input file <strong>DATA4.txt</strong> will contain 5 test cases. Each test case is a single line with 5 words separated by a single space, where each of these words consists of up to 150 uppercase characters.</p>
+			<p>The output file <strong>OUT4.txt</strong> should contain 5 lines. Each line consists of some 5 letter combination of “S” or “U”, where the <var>i</var><sup>th</sup> letter is “S” if the <var>i</var><sup>th</sup> word in the input was solvable, or “U” if the <var>i</var><sup>th</sup> word in the input was unsolvable.</p>
+			<p><em>Note:</em> There might be more than one solution to a particular word.</p>
+			<p><em>Explanation of the first test case:</em> “GREEN” is clearly unsolvable, since after removing the E’s you are left with the string “GRN”. As for “ABBA”, removing the B’s yields “AA”. You can then remove the A’s to get rid of the whole word (making it solvable). “POST” and “LEMONADE” aren’t solvable either, as there aren’t any runs to remove in the first place. “ROAAAOR” is solvable, as you can remove the A’s to get “ROOR”, and then you can remove the O’s to get “RR”, and finally you remove the R’s to get rid of the whole word.</p>
+			<section class="sample">
+				<div class="input">
+					Sample Input (only first case shown):
+					<pre>GREEN ABBA POST LEMONADE ROAAAOR</pre>
+				</div>
+				<div class="output">
+					Sample Output (only first case shown):
+					<pre>USUUS</pre>
+				</div>
+			</section>
+		</article>
+	</body>
+</html>

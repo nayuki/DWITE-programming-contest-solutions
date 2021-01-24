@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>DWITE • January 2008 • Shortest path around</title>
+		<link rel="stylesheet" href="style.css" type="text/css"/>
+	</head>
+	<body>
+		<header>
+			<h1>DWITE Online Computer Programming Contest</h1>
+			<div>
+				<h2>Shortest path around</h2>
+				<div>
+					<div>January 2008</div>
+					<div>Problem 4</div>
+				</div>
+			</div>
+		</header>
+		<article>
+			<p>Sometimes an open field could be as much of a maze as narrow tunnels. Given an obstacle in an otherwise empty room, what is the shortest path around it?</p>
+			<p>The input file <strong>DATA4.txt</strong> will contain five sets of data, each a 10-by-10 character matrix. There will be a line of 10 dashes after each set to visually delimit sets of data. The character representations are as follows:</p>
+			<ul>
+				<li>. – empty space</li>
+				<li># – wall</li>
+				<li>X – one of the ends</li>
+			</ul>
+			<p>The output file <strong>OUT4.txt</strong> will contain five lines – each an integer distance between the two points marked with X.</p>
+			<p>There will always be only two X spots per set. There will always be a valid path. Valid steps are into any adjacent empty space; <em>diagonal steps are legal</em>. Refer to the sample data for examples.</p>
+			<section class="sample">
+				<div class="input">
+					Sample Input (only first two sets given):
+					<pre>..........
+..........
+..........
+....#.....
+....#.....
+X...#...X.
+....#.....
+....#.....
+..........
+..........
+----------
+..........
+..........
+........#.
+........#.
+X...#####X
+...#......
+..#.......
+..........
+..........
+..........
+----------</pre>
+				</div>
+				<div class="output">
+					Sample Output (only first two sets given):
+					<pre>8
+9</pre>
+				</div>
+			</section>
+		</article>
+	</body>
+</html>

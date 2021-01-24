@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>DWITE • December 2010 • Forest Fires</title>
+		<link rel="stylesheet" href="style.css" type="text/css"/>
+	</head>
+	<body>
+		<header>
+			<h1>DWITE Online Computer Programming Contest</h1>
+			<div>
+				<h2>Forest Fires</h2>
+				<div>
+					<div>December 2010</div>
+					<div>Problem 4</div>
+				</div>
+			</div>
+		</header>
+		<article>
+			<p>Forest fires are really dangerous, and can be started by even the smallest flame. Spreading from tree to tree, fires can engulf an entire forest in a matter of weeks. Given a map of a forest with locations of where a fire (or multiple fires) might have started, determine how long it would take the fire to consume the entire forest.</p>
+			<p>The input file <strong>DATA4.txt</strong> will contain 5 test cases, each a 10×10 map, followed by a line of 10 dashes for visual separation.</p>
+			<ul>
+				<li>. – blank space</li>
+				<li>T – a tree</li>
+				<li>F – a tree on fire</li>
+			</ul>
+			<p>Fires only spread from existing fire to adjacent trees, in 4 directions (so not diagonally). It takes 1 unit of time for the fire to spread from one location to the next. The fire spreads in all 4 directions at the same time.</p>
+			<p>The output file <strong>OUT4.txt</strong> will contain 5 lines, each stating the time it takes for the fire to consume the entire forest. If some piece of the forest survives, output −1.</p>
+			<section class="sample">
+				<div class="input">
+					Sample Input (first 2 shown):
+					<pre>..........
+..........
+..........
+..........
+..TTTTT...
+..F...F...
+..........
+..........
+..........
+..........
+----------
+..........
+..........
+..........
+...TT.TT..
+...F......
+..........
+..........
+..........
+..........
+..........
+----------</pre>
+				</div>
+				<div class="output">
+					Sample Output (first 2 shown):
+					<pre>3
+-1</pre>
+				</div>
+			</section>
+		</article>
+	</body>
+</html>

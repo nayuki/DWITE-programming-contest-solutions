@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>DWITE • February 2013 • Copycat SMS</title>
+		<link rel="stylesheet" href="style.css" type="text/css"/>
+	</head>
+	<body>
+		<header>
+			<h1>DWITE Online Computer Programming Contest</h1>
+			<div>
+				<h2>Copycat SMS</h2>
+				<div>
+					<div>February 2013</div>
+					<div>Problem 2</div>
+				</div>
+			</div>
+		</header>
+		<article>
+			<p>Having heard that you are busy with a project (something about keeping track of time when travelling), your mischievous friends thought that it might be funny to constantly send you text messages in order to distract you. However, you can write a program to retaliate this lame plan and send a copy of their messages right back! Always playing a one-up, you are also going to repeat every message twice.</p>
+			<p>While writing the program, you notice that certain words don’t have to be repeated twice completely to still contain two copies of it in the message. For example, the word <em>“amalgam”</em> can be written as <em>“amalg<strong>am</strong>algam”</em>, since it still contains two copies of the word, while saving 2 characters.</p>
+			<p>Give a word, determine what your program should output if it is to save characters in this fashion. The trivial solution of merging the entire word doesn’t count though; that is, the input of <em>easy</em> results in <em>easyeasy</em>. The input of <em>oo</em> results in <em>ooo</em> which is the shortest overlap without turning into the previously mentioned trivial case.</p>
+			<p>The input file <strong>DATA2.txt</strong> will contain 5 test cases. Each case is a line with a single string <var>S</var> with 1 ≤ length(<var>S</var>) ≤ 256, all lowercase letters, possibly containing spaces.</p>
+			<p>The output file <strong>OUT2.txt</strong> will contain 5 lines of output. Each line is a repeated (but condensed where possible) copy of the input phrase.</p>
+			<section class="sample">
+				<div class="input">
+					Sample Input:
+					<pre>amalgam
+rotor
+easy case
+a
+oo</pre>
+				</div>
+				<div class="output">
+					Sample Output:
+					<pre>amalgamalgam
+rotorotor
+easy caseasy case
+aa
+ooo</pre>
+				</div>
+			</section>
+		</article>
+	</body>
+</html>

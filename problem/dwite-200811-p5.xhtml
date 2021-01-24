@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>DWITE • November 2008 • Water damage</title>
+		<link rel="stylesheet" href="style.css" type="text/css"/>
+	</head>
+	<body>
+		<header>
+			<h1>DWITE Online Computer Programming Contest</h1>
+			<div>
+				<h2>Water damage</h2>
+				<div>
+					<div>November 2008</div>
+					<div>Problem 5</div>
+				</div>
+			</div>
+		</header>
+		<article>
+			<p>There’s a shady water dam that might break, so an insurance company wants to calculate the possible damage given a series of scenarios. Given the topography of the region and the amount of water projected to spill out, the goal is to find out how many of the targets of interest will be submerged after the water settles.</p>
+			<p>The input file <strong>DATA5.txt</strong> will contain 5 sets of input. The first line is an integer <var>W</var>, the amount of water expected. The second line is an integer <var>C</var>, the number of columns in the map. The third line is an integer <var>R</var>, the number of rows in the map. The next <var>R</var> lines describe the layout of the area. 1 ≤ <var>C</var>, <var>R</var> ≤ 10. 1 ≤ <var>W</var> ≤ 100. Dot (.) is empty space that could be flooded. Number sign (#) is land. Capital letter A is a point of interest; there will be at least one; it should be treated as empty space, but only this area counts for points. Each set is separated by a blank line.</p>
+			<p>The output file <strong>OUT5.txt</strong> will contain 5 lines, the integer number of points of interest submerged underwater.</p>
+			<p><em>Technical details:</em> Water originates at the top left of the map. Each unit of water occupies one cell on the map. Water normally falls down. If there’s ground below, it will move to the right. Once in place (can no longer flow), it could be treated as solid ground, as far as the movement of other units of water is concerned.</p>
+			<p><em>Step-by-step diagram:</em> 2 units of water, <var>C</var> × <var>R</var> = 4 × 3 layout. Asterisk (*) represents a moving unit of water. The second unit of water reaches A at the bottom. Even though A at the top was passed by water, it remains un-submerged at the end, so it’s not counted towards the output sum.</p>
+			<pre>*.A. .*A. ..A. *.A. .*A. ..*. ..A* .... ..A. 
+#.#. #.#. #*#. #*#. #*#. #*#. #*#. #*#* #*#. 
+###A ###A ###A ###A ###A ###A ###A ###A ###* </pre>
+			<section class="sample">
+				<div class="input">
+					Sample Input (first 3 shown):
+					<pre>2
+4
+3
+..A.
+#.#.
+###A
+
+4
+4
+3
+..A.
+#.#.
+###A
+
+5
+4
+3
+..A.
+#.#.
+###A</pre>
+				</div>
+				<div class="output">
+					Sample Output:
+					<pre>1
+1
+2</pre>
+				</div>
+			</section>
+		</article>
+	</body>
+</html>

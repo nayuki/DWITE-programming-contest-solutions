@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>DWITE • November 2007 • Floor Plan</title>
+		<link rel="stylesheet" href="style.css" type="text/css"/>
+	</head>
+	<body>
+		<header>
+			<h1>DWITE Online Computer Programming Contest</h1>
+			<div>
+				<h2>Floor Plan</h2>
+				<div>
+					<div>November 2007</div>
+					<div>Problem 3</div>
+				</div>
+			</div>
+		</header>
+		<article>
+			<p>A common way to value a house, among other things, is by the area of the rooms. Though, it could be less than trivial to accurately calculate the area of a room that is not in a standard shape. Given a floor plan diagram, with rooms of interest marked, their areas should be calculated.</p>
+			<p>The input file <strong>DATA3.txt</strong> will contain two lines with one integer value each, <var>R</var>, <var>C</var>; 0 &lt; <var>R</var>, <var>C</var> ≤ 40, representing the number of <em>rows</em> and <em>columns</em> that make up the floor plan. This is followed by <var>R</var> lines showing the floor plan layout, where:</p>
+			<ul>
+				<li># – wall</li>
+				<li>. – open space</li>
+				<li>{1..5} – integers 1 to 5, marking rooms of interest</li>
+			</ul>
+			<p>The output file <strong>OUT3.txt</strong> will contain 5 lines. Each line will have an integer representing the area of a room of interest. The first line should contain the area of room 1, second line for room 2, etc.</p>
+			<p>The area of the room is defined as 1 + number of reachable open spaces. The integer marker could appear anywhere inside the room.</p>
+			<section class="sample">
+				<div class="input">
+					Sample Input:
+					<pre>5
+6
+1###..
+##4#5.
+2#####
+.#.#..
+...#.3</pre>
+				</div>
+				<div class="output">
+					Sample Output:
+					<pre>1
+6
+4
+1
+4</pre>
+				</div>
+			</section>
+		</article>
+	</body>
+</html>

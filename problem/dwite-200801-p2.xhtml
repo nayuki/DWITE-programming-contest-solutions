@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>DWITE • January 2008 • And the winner is...</title>
+		<link rel="stylesheet" href="style.css" type="text/css"/>
+	</head>
+	<body>
+		<header>
+			<h1>DWITE Online Computer Programming Contest</h1>
+			<div>
+				<h2>And the winner is...</h2>
+				<div>
+					<div>January 2008</div>
+					<div>Problem 2</div>
+				</div>
+			</div>
+		</header>
+		<article>
+			<p>This one is quite straightforward. Given a list of scores and names, sort the entries from highest score to lowest, to create the high score table. The only caveat is that this must be a <strong>stable sort</strong>, meaning that when given two entries with the same score, the one that appeared earlier in the original unsorted list will always be placed higher than the other entry with the same score.</p>
+			<p>The input file <strong>DATA2.txt</strong> will contain five sets of data, where each is five lines. Each line will be in the <var>score</var> <var>name</var> format. <var>score</var> is an integer, 0 ≤ <var>s</var> ≤ 700. <var>name</var> is a standard string, possibly including spaces.</p>
+			<p>The output file <strong>OUT2.txt</strong> will contain 25 lines – five sorted sets. Only the name needs to be given per line.</p>
+			<section class="sample">
+				<div class="input">
+					Sample Input: (only first two sets shown)
+					<pre>517 Byakuei
+549 O(256)
+571 Clan 345
+584 Beat Guru #1
+609 while (true)
+1 a
+700 b
+10 d
+700 c
+10 e</pre>
+				</div>
+				<div class="output">
+					Sample Output: (only first two sets shown)
+					<pre>while (true)
+Beat Guru #1
+Clan 345
+O(256)
+Byakuei
+b
+c
+d
+e
+a</pre>
+				</div>
+			</section>
+		</article>
+	</body>
+</html>

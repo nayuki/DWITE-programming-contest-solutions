@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>DWITE • November 2008 • Big shiny tunes</title>
+		<link rel="stylesheet" href="style.css" type="text/css"/>
+	</head>
+	<body>
+		<header>
+			<h1>DWITE Online Computer Programming Contest</h1>
+			<div>
+				<h2>Big shiny tunes</h2>
+				<div>
+					<div>November 2008</div>
+					<div>Problem 4</div>
+				</div>
+			</div>
+		</header>
+		<article>
+			<p>Having acquired more (totally legitimate) music than a tiny iPod Nano can hold (it’s a first-generation 2&#xA0;<abbr title="gigabyte">GB</abbr> model, so that’s plausible) and wanting to load music in full albums only, this has posed quite a challenge for deciding on the playlists. To complicate matters further, the disk space is shared with other data, so it fluctuates from time to time. This calls for some <em>Computer Science</em>.</p>
+			<p>The input file <strong>DATA4.txt</strong> will contain 5 sets of input. The first line is the space available, an integer value 1 ≤ <var>S</var> ≤ 100. The second line is an integer <var>N</var>, the number of albums in the library, 1 ≤ <var>N</var> ≤ 20. The next <var>N</var> lines describe the albums – the space required and total utility; both are integer values, separated by a space character; 1 ≤ <var>space</var>, <var>utility</var> ≤ 1000. Each set is separated by a newline.</p>
+			<p>The output file <strong>OUT4.txt</strong> will contain 5 lines of output, each being the sum of the maximum utility that could fit given the associated input.</p>
+			<p><em>Note:</em> Each album can appear only once in the playlist, though (<var>space</var>, <var>utility</var>) values are not guaranteed to be unique.</p>
+			<section class="sample">
+				<div class="input">
+					Sample Input (first three shown):
+					<pre>100
+3
+90 1000
+50 400
+50 400
+
+100
+3
+90 1000
+50 600
+50 600
+
+100
+2
+50 500
+10 10</pre>
+				</div>
+				<div class="output">
+					Sample Output:
+					<pre>1000
+1200
+510</pre>
+				</div>
+			</section>
+		</article>
+	</body>
+</html>

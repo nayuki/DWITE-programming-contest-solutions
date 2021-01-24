@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>DWITE • February 2008 • Parity bit</title>
+		<link rel="stylesheet" href="style.css" type="text/css"/>
+	</head>
+	<body>
+		<header>
+			<h1>DWITE Online Computer Programming Contest</h1>
+			<div>
+				<h2>Parity bit</h2>
+				<div>
+					<div>February 2008</div>
+					<div>Problem 3</div>
+				</div>
+			</div>
+		</header>
+		<article>
+			<p>A <strong>parity bit</strong> is a binary digit that is added to ensure that the number of bits with value of 1 in a given set of bits is always even or odd. Parity bits are used as a simple validation code, for example to test that all the data has arrived correctly in a transmission. For this question we’ll be using an <em>even parity bit scheme</em> – that is, we want to append a bit (1 or 0) so that the total number of high bits (1) is <em>even</em>.</p>
+			<p>For example, consider the integer 13. The binary representation of 13 is 1101. The number of high bits in 1101 is 3, which is odd. To make it even, the parity bit must also be high, so 1 is added to the bit string to form 11011.</p>
+			<p>The input file <strong>DATA3.txt</strong> will contain 5 lines, integers 0 ≤ <var>N</var> ≤ 128.</p>
+			<p>The output file <strong>OUT3.txt</strong> will contain 5 lines – a single integer, 1 or 0, representing the bit that needs to be added to form an even parity.</p>
+			<section class="sample">
+				<div class="input">
+					Sample Input:
+					<pre>0
+1
+2
+3
+4</pre>
+				</div>
+				<div class="output">
+					Sample Output:
+					<pre>0
+1
+1
+0
+1</pre>
+				</div>
+			</section>
+		</article>
+	</body>
+</html>

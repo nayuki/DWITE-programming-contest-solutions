@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>DWITE • January 2011 • Binary Weight</title>
+		<link rel="stylesheet" href="style.css" type="text/css"/>
+	</head>
+	<body>
+		<header>
+			<h1>DWITE Online Computer Programming Contest</h1>
+			<div>
+				<h2>Binary Weight</h2>
+				<div>
+					<div>January 2011</div>
+					<div>Problem 3</div>
+				</div>
+			</div>
+		</header>
+		<article>
+			<p>The binary weight of a number is the amount of 1s in the number’s binary representation. For example, 43 in binary is 101011, so its binary weight is 4. Given a decimal number, we want to find the next greater decimal number that has the same binary weight. In this case, 45 (101101<sub>2</sub>) is such a number.</p>
+			<p>The input file <strong>DATA3.txt</strong> will contain 5 lines, integers 1 ≤ <var>N</var> ≤ 1,000,000,000.</p>
+			<p>The output file <strong>OUT3.txt</strong> will contain 5 lines, each corresponding to the next decimal number with the same binary weight as in the input.</p>
+			<p><em>Reminder:</em> The binary representation of a number is the sum of powers of 2, where 1 means that power is included and 0 means that it’s not. So, 43 in binary is 1×2<sup>5</sup> + 0×2<sup>4</sup> + 1×2<sup>3</sup> + 0×2<sup>2</sup> + 1×2<sup>1</sup> + 1×2<sup>0</sup>, which evaluates to 1×32 + 0×16 + 1×8 + 0×4 + 1×2 + 1×2 = 32 + 8 + 2 + 1 = 43 (101011<sub>2</sub>).</p>
+			<section class="sample">
+				<div class="input">
+					Sample Input:
+					<pre>3
+4
+10
+7
+8</pre>
+				</div>
+				<div class="output">
+					Sample Output:
+					<pre>5
+8
+12
+11
+16</pre>
+				</div>
+			</section>
+		</article>
+	</body>
+</html>

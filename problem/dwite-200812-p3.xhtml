@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>DWITE • December 2008 • Unicorns and Teaspoons</title>
+		<link rel="stylesheet" href="style.css" type="text/css"/>
+	</head>
+	<body>
+		<header>
+			<h1>DWITE Online Computer Programming Contest</h1>
+			<div>
+				<h2>Unicorns and Teaspoons</h2>
+				<div>
+					<div>December 2008</div>
+					<div>Problem 3</div>
+				</div>
+			</div>
+		</header>
+		<article>
+			<p>Google’s calculator works with some pretty weird units of measure. Have you tried searching for a value of <a href="https://www.google.com/search?q=the+answer+to+life+the+universe+and+everything+%2F+number+of+horns+on+a+unicorn">the answer to life the universe and everything / number of horns on a unicorn</a>? (<em><abbr title="By the way">Btw</abbr></em>, it’s 42.) We’ll try to work with just the <em>imperial units of volume</em> for now.</p>
+			<p>You’ll need this table of conversions:</p>
+			<table>
+				<tr>
+					<td>5 fluid ounce (oz)</td>
+					<td>1 gill (gill)</td>
+				</tr>
+				<tr>
+					<td>4 gill (gill)</td>
+					<td>1 pint (pt)</td>
+				</tr>
+				<tr>
+					<td>2 pint (pt)</td>
+					<td>1 quart (qt)</td>
+				</tr>
+				<tr>
+					<td>4 quart (qt)</td>
+					<td>1 gallon (gal)</td>
+				</tr>
+			</table>
+			<p>The input file <strong>DATA3.txt</strong> will contain 5 lines in the format of: <var>value</var> <var>unit1</var> in <var>unit2</var>, where the goal is to convert the given value from <var>unit1</var> to <var>unit2</var>. 1 ≤ <var>value</var> ≤ 1000. The possible units are the strings inside brackets in the table above.</p>
+			<p>The output file <strong>OUT3.txt</strong> will contain 5 integers, the converted values. The supplied input will always work out to be an integer answer.</p>
+			<section class="sample">
+				<div class="input">
+					Sample Input:
+					<pre>10 oz in gill
+20 oz in pt
+2 gal in oz
+1 gal in qt
+2 pt in pt</pre>
+				</div>
+				<div class="output">
+					Sample Output:
+					<pre>2
+1
+320
+4
+2</pre>
+				</div>
+			</section>
+		</article>
+	</body>
+</html>

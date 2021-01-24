@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>DWITE • January 2010 • Ice Maze</title>
+		<link rel="stylesheet" href="style.css" type="text/css"/>
+	</head>
+	<body>
+		<header>
+			<h1>DWITE Online Computer Programming Contest</h1>
+			<div>
+				<h2>Ice Maze</h2>
+				<div>
+					<div>January 2010</div>
+					<div>Problem 5</div>
+				</div>
+			</div>
+		</header>
+		<article>
+			<p>Yes, it’s a maze, but it’s one of those fancy puzzle mazes where there is no friction on the floor and one must bump into walls to stop.</p>
+			<ul>
+				<li># – wall</li>
+				<li>. – frictionless open space</li>
+				<li>A-F – points of interest (frictionless)</li>
+			</ul>
+			<p>You will start at a point of interest, and must traverse to the next point in alphabetical order. You may only travel in straight lines, and will continue to slide until there is a # wall directly in front of the path. Once stopped, you can push off in any of the four directions. Assume that the maze’s boundary is surrounded by walls.</p>
+			<p>The objective is to <em>stop</em> at the target, not simply slide through it.</p>
+			<p>For example, this travels from A to stop at B in 13 steps. Note that arrows are to illustrate the shortest path, and will not actually be in the data file.</p>
+			<pre>A>>>#
+###v#
+^>>B#
+&lt;&lt;&lt;v#
+...##</pre>
+			<p>The input file <strong>DATA5.txt</strong> will contain a single 10×10 maze as described above.</p>
+			<p>The output file <strong>OUT5.txt</strong> will contain 5 integers, the distance travelled from <em>starting</em> at a point of interest to <em>stopping</em> at the next. That is, the pairs A–B, B–C, C–D, D–E, E–F.</p>
+			<section class="sample">
+				<div class="input">
+					Sample Input:
+					<pre>A....E...B
+..........
+..........
+..........
+..........
+..........
+F.........
+#.........
+......#...
+.....D...C</pre>
+				</div>
+				<div class="output">
+					Sample Output:
+					<pre>9
+9
+16
+9
+11</pre>
+				</div>
+			</section>
+		</article>
+	</body>
+</html>
