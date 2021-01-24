@@ -69,7 +69,7 @@ article blockquote {
 	margin-left: 2em;
 }
 
-article #sample_data {
+article section.sample {
 	display: flex;
 	flex-direction: column;
 	row-gap: 1.0em;
@@ -129,7 +129,7 @@ article .sample_in, article .sample_out {
 	}
 	
 	@media (min-width:52em) {
-		article #sample_data:not(.wide) {
+		article section.sample:not(.wide) {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
 			column-gap: 1.0em;
@@ -145,7 +145,7 @@ article .sample_in, article .sample_out {
 		border-bottom: 0.15em solid #000000;
 	}
 	
-	article #sample_data:not(.wide) {
+	article section.sample:not(.wide) {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		column-gap: 1.0em;

@@ -22,7 +22,7 @@
 			<p>After the list of deals is an integer 1 ≤ <var>M</var> ≤ 10, the number of orders in the current test case, followed by <var>M</var> lines, each of the form: <var>num_items</var> <var>item1</var> <var>item2</var> ... .</p>
 			<p>The output file <strong>OUT3.txt</strong> will print the largest sum of discounts applicable to each order. A discount is applicable if every item listed on the discount description also appears in the order, and every such item had not already contributed to another discount. If there are conflicting applicable discounts (e.g. burger1+drink, burger2+drink, and the order is burger1+burger2+drink), pick the configuration that will produce the largest sum.</p>
 			<p><em>The sample’s explanation:</em> The first case doesn’t have any discounts, so it’s 0 for every line. The second case has two discounts available. For order 2-1, only “burger1+fries” is applicable, so the discount is 100. For order 2-2, both “burger1+fries” and “burger2+fries” are possible, but there is only one item of “fries”, so we should pick the larger discount; that would be 150. For order 2-3, it’s the same as previous, but now there are two sets of “fries”, so we could separate the order into two separate discounts; 100+150 = 250. <em>Ordered items don’t necessarily appear in the same order as the discount specification.</em></p>
-			<div id="sample_data">
+			<section class="sample">
 				<div class="sample_in">
 					Sample Input (first 2 cases):
 					<pre>0
@@ -43,7 +43,7 @@
 150
 250</pre>
 				</div>
-			</div>
+			</section>
 		</article>
 	</body>
 </html>
