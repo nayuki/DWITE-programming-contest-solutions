@@ -17,14 +17,7 @@ var {
 	clear: both;
 }
 
-.sample_in {
-	float: left;
-	border: 1px solid #ccc;
-	margin: 0.5em;
-	padding: 0.2em;
-}
-
-.sample_out {
+.sample_in, .sample_out {
 	float: left;
 	border: 1px solid #ccc;
 	margin: 0.5em;
@@ -34,28 +27,22 @@ var {
 
 @media screen {
 	* {
-		margin: 0pt;
-		padding: 0pt;
+		margin: 0;
+		padding: 0;
 	}
 	
 	html {
 		margin: 0 auto;
-		padding-top: 0.8em;
-		padding-bottom: 2.0em;
-		padding-left: 1.0em;
-		padding-right: 1.0em;
+		padding: 0.8em 1.0em 2.0em;
 		width: 50em;
 		overflow-y: scroll;
 	}
 	
 	body {
-		background: #FFFFFF none repeat scroll 0%;
+		background-color: #FFFFFF;
 		color: #222;
 		box-shadow: 0 0 0.7em #D0D0D0;
-		padding-top: 1.0em;
-		padding-bottom: 1.5em;
-		padding-left: 2.0em;
-		padding-right: 2.0em;
+		padding: 1.0em 2.0em 1.5em;
 		font-family: "Lucida Grande","Verdana",sans-serif;
 	}
 	
