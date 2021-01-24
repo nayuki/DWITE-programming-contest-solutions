@@ -52,13 +52,19 @@ article p {
 	margin-bottom: 1.0em;
 }
 
+article ul, article ol {
+	margin-top: 1.0em;
+	margin-bottom: 1.0em;
+	margin-left: 2.0em;
+}
+
 article ul {
-	margin-left: 2em;
 	list-style-type: disc;
 }
 
-article ol {
-	margin-left: 2em;
+article li {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
 }
 
 article var {
