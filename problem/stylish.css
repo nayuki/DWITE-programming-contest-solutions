@@ -8,7 +8,7 @@ var {
 }
 
 #sample_data {
-	border: 1px solid #999;
+	border: 1px solid #999999;
 }
 
 #sample_data::after {
@@ -21,7 +21,7 @@ var {
 	float: left;
 	margin: 0.5em;
 	padding: 0.2em;
-	border: 1px solid #ccc;
+	border: 1px solid #CCCCCC;
 }
 
 
@@ -38,7 +38,7 @@ var {
 		background-color: #FFFFFF;
 		overflow-y: scroll;
 		font-family: "Lucida Grande","Verdana",sans-serif;
-		color: #222;
+		color: #222222;
 	}
 	
 	body {
@@ -95,6 +95,6 @@ var {
 	
 	blockquote {
 		margin-left: 2em;
-		color: #666;
+		color: #666666;
 	}
 }
