@@ -88,6 +88,20 @@ article img.block.center, article svg.block.center {
 	margin-right: auto;
 }
 
+article a {
+	text-decoration: none;
+	color: #6D85CD;
+}
+
+article a:hover {
+	text-decoration: underline;
+}
+
+article abbr {
+	border: none;
+	text-decoration: none;
+}
+
 article blockquote {
 	margin-left: 2em;
 }
@@ -99,11 +113,15 @@ article section.sample {
 }
 
 article section.sample > div {
-	padding: 0.2em;
-	border: 1px solid #CCCCCC;
+	padding: 0.2em 0.7em 0.4em;
+	border: 0.08em solid #CCCCCC;
 }
 
-article *:last-child {
+article section.sample pre {
+	margin-top: 0.3em;
+}
+
+article > *:last-child {
 	margin-bottom: 0em;
 }
 
@@ -160,7 +178,7 @@ article *:last-child {
 	}
 	
 	article section.sample pre > span {
-		background-color: #EAEFFF;
+		background-color: #E3EAFF;
 	}
 	
 	@media (min-width:52em) {
