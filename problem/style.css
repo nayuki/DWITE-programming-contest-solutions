@@ -139,9 +139,25 @@ article > *:last-child {
 	body {
 		padding-top: 1.0em;
 		padding-bottom: 1.5em;
+		padding-left: 0.5em;
+		padding-right: 0.5em;
 	}
 	
-	@media not (min-width:52em) {
+	@media not (min-width:30em) {
+		header > div {
+			flex-direction: column-reverse;
+			align-items: stretch;
+		}
+		header > div > h2 {
+			text-align: center;
+		}
+		header > div > div {
+			margin-bottom: 1.0em;
+			text-align: center;
+		}
+	}
+	
+	@media (min-width:30em) {
 		body {
 			padding-left: 1.0em;
 			padding-right: 1.0em;
