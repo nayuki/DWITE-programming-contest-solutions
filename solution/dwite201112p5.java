@@ -66,11 +66,11 @@ public final class dwite201112p5 extends DwiteSolution {
 			expect(in, ' ');
 			toReversePolishNotation(in, out);  // Right subformula
 			expect(in, ')');
-			switch (op) {
-				case '^':  out.append("&");  break;
-				case 'v':  out.append("|");  break;
-				default:   throw new IllegalArgumentException();
-			}
+			out.append(switch (op) {
+				case '^' -> "&";
+				case 'v' -> "|";
+				default -> throw new IllegalArgumentException();
+			});
 			
 		} else
 			throw new IllegalArgumentException();

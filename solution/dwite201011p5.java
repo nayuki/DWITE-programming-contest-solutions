@@ -50,13 +50,13 @@ public final class dwite201011p5 extends DwiteSolution {
 	
 	
 	private static char oppositeDirection(char dir) {
-		switch (dir) {
-			case 0:    return 0;
-			case 'A':  return 'B';
-			case 'B':  return 'A';
-			case 'L':  return 'L';
-			default:   throw new IllegalArgumentException();
-		}
+		return switch (dir) {
+			case 0 -> 0;
+			case 'A' -> 'B';
+			case 'B' -> 'A';
+			case 'L' -> 'L';
+			default -> throw new IllegalArgumentException();
+		};
 	}
 	
 }

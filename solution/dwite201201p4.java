@@ -68,11 +68,11 @@ public final class dwite201201p4 extends DwiteSolution {
 		}
 		
 		// See if the starting position is Alice's win or her loss
-		switch (verdict[(1 << n) - 1]) {
-			case 1:  io.print("B");  break;
-			case 2:  io.print("A");  break;
-			default:  throw new AssertionError();
-		}
+		io.print(switch (verdict[(1 << n) - 1]) {
+			case 1 -> "B";
+			case 2 -> "A";
+			default -> throw new AssertionError();
+		});
 	}
 	
 }

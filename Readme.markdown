@@ -12,6 +12,6 @@ This project package contains:
 
 ----
 
-Copyright © 2020 Project Nayuki. All rights reserved. No warranty.
+Copyright © 2022 Project Nayuki. All rights reserved. No warranty.
 
 Project home page: https://www.nayuki.io/page/dwite-programming-contest-solutions 

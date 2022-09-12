@@ -46,14 +46,13 @@ public final class dwite200410p3 extends DwiteSolution {
 		
 		public Student(String name, String height, String unit) {
 			this.name = name;
-			int scale;
-			switch (unit) {
-				case  "m":  scale = 3;  break;
-				case "dm":  scale = 2;  break;
-				case "cm":  scale = 1;  break;
-				case "mm":  scale = 0;  break;
-				default:  throw new AssertionError("Invalid unit");
-			}
+			int scale = switch (unit) {
+				case  "m" -> 3;
+				case "dm" -> 2;
+				case "cm" -> 1;
+				case "mm" -> 0;
+				default -> throw new AssertionError("Invalid unit");
+			};
 			this.height = new BigDecimal(height).movePointRight(scale);
 		}
 		

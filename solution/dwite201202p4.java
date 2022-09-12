@@ -32,12 +32,12 @@ public final class dwite201202p4 extends DwiteSolution {
 		int[][] distance = new int[HEIGHT + 2][WIDTH + 2];
 		for (int i = 0; i < HEIGHT + 2; i++) {
 			for (int j = 0; j < WIDTH + 2; j++) {
-				switch (map[i][j]) {
-					case '.':  distance[i][j] = 999;  break;
-					case 'T':  distance[i][j] = 999;  break;
-					case 'F':  distance[i][j] =   0;  break;
-					default:  throw new IllegalArgumentException();
-				}
+				distance[i][j] = switch (map[i][j]) {
+					case '.' -> 999;
+					case 'T' -> 999;
+					case 'F' ->   0;
+					default -> throw new IllegalArgumentException();
+				};
 			}
 		}
 		

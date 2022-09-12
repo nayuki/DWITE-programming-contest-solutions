@@ -21,13 +21,13 @@ public final class dwite201004p2 extends DwiteSolution {
 	
 	
 	private static int round(int n) {
-		switch (n) {
-			case 0:   return 1;
-			case 1:   return 1;
-			case 2:   return 2;
-			case 3:   return 4;
-			default:  return round(n / 2) * 2;
-		}
+		return switch (n) {
+			case 0  -> 1;
+			case 1  -> 1;
+			case 2  -> 2;
+			case 3  -> 4;
+			default -> round(n / 2) * 2;
+		};
 	}
 	
 }

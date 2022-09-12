@@ -152,25 +152,14 @@ public final class dwite200902p5 extends DwiteSolution {
 				if (op instanceof Double)
 					stack.push((Double)op);
 				else if (op instanceof Character) {
-					switch ((Character)op) {
-						case 'x':
-							stack.push(flow + 1.0);
-							break;
-						case '+':
-							stack.push(stack.pop() + stack.pop());
-							break;
-						case '-':
-							stack.push(-stack.pop() + stack.pop());
-							break;
-						case '*':
-							stack.push(stack.pop() * stack.pop());
-							break;
-						case '/':
-							stack.push(1 / stack.pop() * stack.pop());
-							break;
-						default:
-							throw new AssertionError();
-					}
+					stack.push(switch ((Character)op) {
+						case 'x' -> flow + 1.0;
+						case '+' -> stack.pop() + stack.pop();
+						case '-' -> -stack.pop() + stack.pop();
+						case '*' -> stack.pop() * stack.pop();
+						case '/' -> 1 / stack.pop() * stack.pop();
+						default -> throw new AssertionError();
+					});
 				} else
 					throw new AssertionError();
 			}
