@@ -23,31 +23,25 @@ public final class dwite200711p4 extends DwiteSolution {
 		for (int i = 0; i < line.length(); i++) {
 			char c = line.charAt(i);
 			switch (c) {
-				case '(':
-				case '[':
-				case '{':
-					stack.push(c);
-					break;
-				case ')':
+				case '(', '[', '{' -> stack.push(c);
+				case ')' -> {
 					if (stack.isEmpty() || stack.pop() != '(') {
 						io.println("not balanced");
 						return;
 					}
-					break;
-				case ']':
+				}
+				case ']' -> {
 					if (stack.isEmpty() || stack.pop() != '[') {
 						io.println("not balanced");
 						return;
 					}
-					break;
-				case '}':
+				}
+				case '}' -> {
 					if (stack.isEmpty() || stack.pop() != '{') {
 						io.println("not balanced");
 						return;
 					}
-					break;
-				default:
-					break;
+				}
 			}
 		}
 		if (stack.isEmpty())

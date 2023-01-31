@@ -22,19 +22,18 @@ public final class dwite200711p2 extends DwiteSolution {
 			String line = io.readLine();
 			for (int j = 0; j < line.length(); j++) {
 				switch (line.charAt(j)) {
-					case '+':
+					case '+' -> {
 						balance++;
-						break;
-					case '-':
+					}
+					case '-' -> {
 						balance--;
 						if (balance < 0) {
 							io.println("OH NOES!");
 							balance = 0;
 							continue outer;
 						}
-						break;
-					default:
-						throw new IllegalArgumentException();
+					}
+					default -> throw new IllegalArgumentException();
 				}
 			}
 			io.println(balance);

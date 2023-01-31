@@ -31,20 +31,18 @@ public final class dwite200710p5 extends DwiteSolution {
 		for (int y = 0; y < grid.length; y++) {
 			for (int x = 0; x < grid[0].length; x++) {
 				switch (grid[y][x]) {
-					case 'E':
+					case 'E' -> {
 						exitX = x;
 						exitY = y;
-						break;
-					case 'H':
+					}
+					case 'H' -> {
 						humanX = x;
 						humanY = y;
-						break;
-					case 'V':
+					}
+					case 'V' -> {
 						raptorX = x;
 						raptorY = y;
-						break;
-					default:
-						break;
+					}
 				}
 			}
 		}

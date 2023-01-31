@@ -128,11 +128,10 @@ public final class dwite200601p2 extends DwiteSolution {
 		for (int i = start; i <= end; i++) {
 			int letterscore = valueByLetter.get(board[y][i]);
 			switch (boardvalue[y][i]) {
-				case 6:  wordmult *= 2;  break;
-				case 7:  wordmult *= 3;  break;
-				case 8:  letterscore *= 2;  break;
-				case 9:  letterscore *= 3;  break;
-				default:  break;
+				case 6 -> wordmult *= 2;
+				case 7 -> wordmult *= 3;
+				case 8 -> letterscore *= 2;
+				case 9 -> letterscore *= 3;
 			}
 			score += letterscore;
 			if (boardvalue[y][i] >= 5)
@@ -155,11 +154,10 @@ public final class dwite200601p2 extends DwiteSolution {
 		for (int i = start; i <= end; i++) {
 			int letterscore = valueByLetter.get(board[i][x]);
 			switch (boardvalue[i][x]) {
-				case 6:  wordmult *= 2;  break;
-				case 7:  wordmult *= 3;  break;
-				case 8:  letterscore *= 2;  break;
-				case 9:  letterscore *= 3;  break;
-				default:  break;
+				case 6 -> wordmult *= 2;
+				case 7 -> wordmult *= 3;
+				case 8 -> letterscore *= 2;
+				case 9 -> letterscore *= 3;
 			}
 			score += letterscore;
 			if (boardvalue[i][x] >= 5)

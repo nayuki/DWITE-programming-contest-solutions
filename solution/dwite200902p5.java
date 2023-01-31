@@ -114,17 +114,13 @@ public final class dwite200902p5 extends DwiteSolution {
 				} else {
 					char c = expr.charAt(0);
 					switch (c) {
-						case 'x':
-							ops.add(c);
-							break;
-						case '+':
-						case '-':
+						case 'x' -> ops.add(c);
+						case '+', '-' -> {
 							while (!operators.isEmpty())
 								ops.add(operators.pop());
 							operators.push(c);
-							break;
-						case '*':
-						case '/':
+						}
+						case '*', '/' -> {
 							while (!operators.isEmpty()) {
 								char op = operators.peek();
 								if (op == '*' || op == '/')
@@ -133,9 +129,8 @@ public final class dwite200902p5 extends DwiteSolution {
 									break;
 							}
 							operators.push(c);
-							break;
-						default:
-							throw new IllegalArgumentException();
+						}
+						default -> throw new IllegalArgumentException();
 					}
 					expr = expr.substring(1);
 				}
